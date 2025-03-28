@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Multiplus Card</title>
+    <link>http://localhost:1313/pt/</link>
+    <description>Recent content on Multiplus Card</description>
+    <generator>Hugo</generator>
+    <language>pt</language>
+    <copyright>Copyright (c) 2025 Multiplus Card</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 17:19:07 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/pt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Example Post</title>
+      <link>http://localhost:1313/pt/blog/example-post/</link>
+      <pubDate>Thu, 07 Sep 2023 16:27:22 +0200</pubDate>
+      <guid>http://localhost:1313/pt/blog/example-post/</guid>
+      <description>You can use blog posts for announcing product updates and features.</description>
+    </item>
+    <item>
+      <title>Privacy Policy</title>
+      <link>http://localhost:1313/pt/privacy/</link>
+      <pubDate>Thu, 07 Sep 2023 17:19:07 +0200</pubDate>
+      <guid>http://localhost:1313/pt/privacy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DLL TefClientMC - Modo Interativo (DLL Transparente)</title>
+      <link>http://localhost:1313/pt/documentacao/dll/dlltransparente/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/dll/dlltransparente/</guid>
+      <description>&lt;p&gt;A DLL &lt;strong&gt;TefClientMC&lt;/strong&gt; proporciona uma integração flexível, permitindo à automação um alto nível de controle sobre o fluxo da transação e ampla personalização por meio de um processo iterativo. É ideal para automações que buscam preservar sua identidade visual e ter maior controle sobre cada etapa da transação.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DLL TefClientMC (Modo Client)</title>
+      <link>http://localhost:1313/pt/documentacao/dll/dllcomtela/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/dll/dllcomtela/</guid>
+      <description>&lt;p&gt;Integração com a DLL TefCLientMC Modo Client&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Integração com DLL on My Docs</title>
+    <link>http://localhost:1313/pt/documentacao/dll/</link>
+    <description>Recent content in Integração com DLL on My Docs</description>
+    <generator>Hugo</generator>
+    <language>pt</language>
+    <copyright>Copyright (c) 2025 Multiplus Card</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 16:33:54 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/pt/documentacao/dll/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DLL TefClientMC (Modo Client)</title>
+      <link>http://localhost:1313/pt/documentacao/dll/dllcomtela/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/dll/dllcomtela/</guid>
+      <description>&lt;p&gt;Integração com a DLL TefCLientMC Modo Client&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DLL TefClientMC Modo Interativo (DLL Transparente)</title>
+      <link>http://localhost:1313/pt/documentacao/dll/dlltransparente/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/dll/dlltransparente/</guid>
+      <description>&lt;h2 id=&#34;apresentação&#34;&gt;Apresentação&lt;/h2&gt;&#xA;&lt;p&gt;A DLL TefClientMC é uma forma de integração de aplicativos de Automação Comercial com as Soluções TEF Express e TEF Plus através da DLL TefClientMC da Multiplus Card no modo interativo.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
