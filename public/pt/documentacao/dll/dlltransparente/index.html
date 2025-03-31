@@ -185,10 +185,10 @@
                 <a class="nav-link" href="http://localhost:1313/pt/exemplos/">Exemplos</a>
               </li>
             <li class="nav-item">
-                <a class="nav-link" href="http://localhost:1313/blog/">Tutoriais</a>
+                <a class="nav-link" href="http://localhost:1313/pt/tutoriais">Tutoriais</a>
               </li>
             <li class="nav-item">
-                <a class="nav-link" href="http://localhost:1313/blog/">FAQ</a>
+                <a class="nav-link" href="http://localhost:1313/pt/faq">FAQ</a>
               </li>
             </ul>
 
@@ -379,6 +379,14 @@
 		</nav>
 		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
 		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/pt/">Home</a></li>
+<li class="breadcrumb-item"><a href="/pt/documentacao/">Documentacao</a></li>
+<li class="breadcrumb-item active" aria-current="page">DLL TefClientMC - Modo Interativo (DLL Transparente)</li>
+					</ol>
+				</nav>
+			
 			<h1>DLL TefClientMC - Modo Interativo (DLL Transparente)</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
@@ -962,7 +970,7 @@ Ao utilizar esta função os seguintes retornos poderão ser obtidos: SUCESSO ou
   <figcaption class="header">
     <span class="title">Formato do Retorno</span>
   </figcaption>
-  <pre tabindex="0"><code>[MENU]#TÍTULO DO MENU#1,1-OPÇÃO 1|2,2-OPÇÃO 2</code></pre>
+  <pre tabindex="0"><code>  [MENU]#TÍTULO DO MENU#1,1-OPÇÃO 1|2,2-OPÇÃO 2</code></pre>
   </figure>
 </div>
 <table>
@@ -1142,6 +1150,49 @@ Ao utilizar esta função os seguintes retornos poderão ser obtidos: SUCESSO ou
 <p>Quando a função possuir um retorno com a tag [MSG], não é necessário utilizar a função ContinuaFuncaoMCInterativo, pois a DLL está informando o que está ocorrendo durante o processo, e a exibição destas mensagens fica a critério da implementação na automação, assim decide-se quais serão relevantes para a exibição.</p>
 <p>A função para Coleta de CPF retorna para a automação uma string no seguinte formato <strong>[RETORNO]#CPF=12345678912</strong>, sendo necessário que a mesma realize a validação do CPF coletado.</p>
 <h3 id="continuafuncaomcinterativo">ContinuaFuncaoMCInterativo<a href="#continuafuncaomcinterativo" class="anchor" aria-hidden="true">#</a> </h3>
+<p>A função ContinuaFuncaoMCInterativo possui como parâmetro uma string. A função deve ser chamada após o retorno da AguardaFuncaoMCInterativo para dar continuidade ao processo da transação, quando este conter uma tag que solicita interação ex.: [PERGUNTA], [MENU]; tags como [MSG], [RETORNO] não necessitam que seja chamada a função.</p>
+<p>Esta função também pode ser utilizada para abortar a transação, um cenário de utilização é quando o pinpad está solicitando que seja inserido o cartão e se deseja cancelar o processo, para isso basta fazer a chamada da forma abaixo, em caso de sucesso o retorno será 0, em seguida deve ser aguardado o seguinte retorno:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Retorno</span>
+  </figcaption>
+  <pre tabindex="0"><code>  [ERROABORTAR]#CANCELADO PELO OPERADOR.</code></pre>
+  </figure>
+</div>
+<ul>
+<li>Códigos de Erro</li>
+</ul>
+<p>Como retorno a função pode ter os códigos da tabela abaixo, quando for 0 o fluxo continua.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Código</th>
+          <th>Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0</td>
+          <td>Retorno OK</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>Erro Genérico na execução</td>
+      </tr>
+      <tr>
+          <td>35</td>
+          <td>Erro interno do ClientD.exe</td>
+      </tr>
+      <tr>
+          <td>36</td>
+          <td>Erro interno do ClientD.exe</td>
+      </tr>
+  </tbody>
+</table>
 <h3 id="finalizafuncaomcinterativo">FinalizaFuncaoMCInterativo<a href="#finalizafuncaomcinterativo" class="anchor" aria-hidden="true">#</a> </h3>
 <h3 id="cancelarfluxomcinterativo">CancelarFluxoMCInterativo<a href="#cancelarfluxomcinterativo" class="anchor" aria-hidden="true">#</a> </h3>
 <h2 id="relatório-de-transações">Relatório de Transações<a href="#relatório-de-transações" class="anchor" aria-hidden="true">#</a> </h2>

@@ -243,7 +243,7 @@ Tag [MENU]
 
 Solicita a exibição de um menu para o usuário selecionar opções relativas à transação, como tipo de financiamento, opções de reimpressão, seleção de produtos, etc. O formato utilizado é o seguinte:
 ```{title="Formato do Retorno"}
-[MENU]#TÍTULO DO MENU#1,1-OPÇÃO 1|2,2-OPÇÃO 2
+  [MENU]#TÍTULO DO MENU#1,1-OPÇÃO 1|2,2-OPÇÃO 2
 ```
 
 | Descrição dos Campos   | Descrição dos Campos                                                                                                        |
@@ -341,6 +341,25 @@ A função para Coleta de CPF retorna para a automação uma string no seguinte 
 
 
 ### ContinuaFuncaoMCInterativo
+
+A função ContinuaFuncaoMCInterativo possui como parâmetro uma string. A função deve ser chamada após o retorno da AguardaFuncaoMCInterativo para dar continuidade ao processo da transação, quando este conter uma tag que solicita interação ex.: [PERGUNTA], [MENU]; tags como [MSG], [RETORNO] não necessitam que seja chamada a função.
+
+Esta função também pode ser utilizada para abortar a transação, um cenário de utilização é quando o pinpad está solicitando que seja inserido o cartão e se deseja cancelar o processo, para isso basta fazer a chamada da forma abaixo, em caso de sucesso o retorno será 0, em seguida deve ser aguardado o seguinte retorno:
+
+```{title="Exemplo de Retorno"}
+  [ERROABORTAR]#CANCELADO PELO OPERADOR.
+```
+
+- Códigos de Erro
+
+Como retorno a função pode ter os códigos da tabela abaixo, quando for 0 o fluxo continua.
+
+|   Código | Descrição                   |
+|----------|-----------------------------|
+|        0 | Retorno OK                  |
+|        1 | Erro Genérico na execução   |
+|       35 | Erro interno do ClientD.exe |
+|       36 | Erro interno do ClientD.exe |
 
 ### FinalizaFuncaoMCInterativo
 

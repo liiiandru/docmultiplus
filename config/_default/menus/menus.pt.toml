@@ -1,8 +1,8 @@
-# [[docs]]
-#   name = "Prologue"
-#   weight = 10
-#   identifier = "prologue"
-#   url = "/docs/prologue/"
+[[docs]]
+  name = "Documentação"
+  weight = 10
+  identifier = "documentacao"
+  url = "/documentacao"
 
 # [[docs]]
 #   name = "Help"
@@ -15,18 +15,6 @@
 #   weight = 70
 #   identifier = "lorem"
 #   url = "/docs/lorem/"
-
-[[guide]]
-  name = "Lorem"
-  weight = 10
-  identifier = "lorem"
-  url = "/guide/lorem/"
-
-[[tutorial]]
-  name = "Lorem"
-  weight = 10
-  identifier = "lorem"
-  url = "/tutorial/lorem/"
 
 [[main]]
   name = "Documentação"
@@ -45,12 +33,12 @@
 
 [[main]]
   name = "Tutoriais"
-  url = "/blog/"
+  url = "pt/tutoriais"
   weight = 50
 
 [[main]]
   name = "FAQ"
-  url = "/blog/"
+  url = "pt/faq"
   weight = 60
 
 # [[social]]
@@ -72,19 +60,23 @@
   post = "v0.1.0"
   weight = 30
 
-[[sidebar_docs]]
+[[docs]]
   name = "Documentacao"
-  pageRef = "pt/documentacao" #"/docs/guides"
+  pageRef = "pt/documentacao"
   weight = 10
 
-[[sidebar_docs]]
-  name = "Reference"
-  pageRef = "/docs/reference"
-  weight = 20
-[[sidebar_docs]]
-  name = "Resources"
-  pageRef = "/docs/resources"
-  weight = 30
+# [[sidebar_docs]]
+#   name = "Documentacao"
+#   pageRef = "pt/documentacao"
+#   weight = 10
+
+# [[sidebar_docs]]
+#   name = "DLL"
+#   pageRef = "pt/documentacao/dll"
+#   weight = 20
+
+#"/docs/guides"
+
 
 [[footer]]
   name = "Privacy Policy"

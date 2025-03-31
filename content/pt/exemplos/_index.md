@@ -1,13 +1,12 @@
 ---
-title: "Política de Privacidade"
+title: "Exemplos"
 description: ""
-summary: ""
-date: 2023-09-07T17:19:07+02:00
-lastmod: 2023-09-07T17:19:07+02:00
+lead: "Congrats on setting up a new Doks project!"
+date: 2023-09-07T16:33:54+02:00
+lastmod: 2023-09-07T16:33:54+02:00
 draft: false
-type: "legal"
 seo:
-  title: "" # custom title (optional)
+  title: "Exemplos" # custom title (optional)
   description: "" # custom description (recommended)
   canonical: "" # custom canonical URL (optional)
   robots: "" # custom robot tags (optional)
