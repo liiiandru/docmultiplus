@@ -223,13 +223,13 @@
   <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Search</h1>
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Pesquisar</h1>
         <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="search-input flex-grow-1 d-none">
           <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
-            <label for="query" class="visually-hidden">Search</label>
+            <label for="query" class="visually-hidden">Pesquisar</label>
             <div class="d-flex">
-              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Search" aria-label="Search" maxlength="128" autocomplete="off">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Pesquisar" aria-label="Pesquisar" maxlength="128" autocomplete="off">
               <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
             </div>
           </form>
@@ -237,8 +237,8 @@
       </div>
       <div class="modal-body">
         <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
-        <p class="search-no-recent message d-none mt-3 text-center">No recent searches</p>
-        <p class="search-no-results message d-none mt-3 text-center">No results for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <p class="search-no-recent message d-none mt-3 text-center">Nenhuma pesquisa recente</p>
+        <p class="search-no-results message d-none mt-3 text-center">Nenhum resultado encontrado for "<strong><span class="query-no-results">Query here</span></strong>"</p>
         <div id="searchResults" class="search-results"></div>
         <template>
           <article class="search-result list-view">
@@ -275,7 +275,7 @@
 		
 		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
 			<div class="page-links">
-  <h3>On this page</h3>
+  <h3>Nesta página</h3>
     <nav id="toc">
   <ul>
     <li><a href="#requisitos-para-execução">Requisitos para Execução</a></li>
@@ -293,6 +293,8 @@
     <li><a href="#integração-com-qrmultiplus-pix">Integração com QRMultiplus (PIX)</a></li>
     <li><a href="#integração-com-o-app-pinpdv-lite">Integração com o App PinPDV Lite</a></li>
     <li><a href="#funções-de-pinpad">Funções de Pinpad</a></li>
+    <li><a href="#códigos-de-erro">Códigos de Erro</a></li>
+    <li><a href="#solução-de-problemas">Solução de Problemas</a></li>
   </ul>
 </nav>
 </div>
@@ -304,7 +306,7 @@
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
 				<details>
-    <summary>On this page</summary>
+    <summary>Nesta página</summary>
     <div class="page-links">
       <nav id="TableOfContents">
   <ul>
@@ -323,6 +325,8 @@
     <li><a href="#integração-com-qrmultiplus-pix">Integração com QRMultiplus (PIX)</a></li>
     <li><a href="#integração-com-o-app-pinpdv-lite">Integração com o App PinPDV Lite</a></li>
     <li><a href="#funções-de-pinpad">Funções de Pinpad</a></li>
+    <li><a href="#códigos-de-erro">Códigos de Erro</a></li>
+    <li><a href="#solução-de-problemas">Solução de Problemas</a></li>
   </ul>
 </nav>
     </div>
@@ -353,6 +357,12 @@
 <li>1 porta USB para a conexão do Pinpad</li>
 </ul>
 <h2 id="fluxo-de-utilização">Fluxo de Utilização<a href="#fluxo-de-utilização" class="anchor" aria-hidden="true">#</a> </h2>
+<p>A integração com a DLL TefClientMC ocorre por meio da implementação das funções básicas de comunicação da biblioteca. O processo de transação se inicia com a chamada da função <strong>IniciaFuncaoMCInterativo</strong>.</p>
+<p>Ao chamar essa função com os parâmetros adequados (detalhados posteriormente), deve-se verificar o retorno. Se for 0, o processo continua normalmente; caso contrário (retorno maior que 0), a transação deve ser encerrada.</p>
+<p>Em seguida, dentro de um laço de repetição, a função <strong>AguardaFuncaoMCInterativo</strong> é chamada. Essa função retorna um <strong>BSTR</strong> contendo informações essenciais para a transação. Se o retorno for <strong>[ERROABORTAR]</strong> ou <strong>[ERRODISPLAY]</strong>, o processo deve ser interrompido imediatamente. Caso contrário, a comunicação prossegue por meio da função <strong>ContinuaFuncaoMCInterativo</strong>. O laço se encerra quando <strong>AguardaFuncaoMCInterativo</strong> retorna a tag <strong>[RETORNO]</strong>.</p>
+<p>Após o recebimento dessa tag, deve-se imprimir o comprovante da transação, armazenar suas informações e, por fim, chamar a função <strong>FinalizaFuncaoMCInterativo</strong>, confirmando assim a transação.</p>
+<p>Se for necessário cancelar a transação a qualquer momento, a função <strong>CancelarFluxoMCInterativo</strong> pode ser chamada. Essa função retorna 0 em caso de sucesso e interrompe imediatamente o fluxo da transação.</p>
+<p>O retorno das funções indica o sucesso de sua execução. No caso específico de <strong>FinalizaFuncaoMCInterativo</strong>, o resultado da confirmação ou do cancelamento da transação pode ser obtido por meio da função AguardaFuncaoMCInterativo ou pela verificação do status da transação.</p>
 <h2 id="funções-da-dll">Funções da DLL<a href="#funções-da-dll" class="anchor" aria-hidden="true">#</a> </h2>
 <h3 id="iniciafuncaomcinterativo">IniciaFuncaoMCInterativo<a href="#iniciafuncaomcinterativo" class="anchor" aria-hidden="true">#</a> </h3>
 <h3 id="aguardafuncaomcinterativo">AguardaFuncaoMCInterativo<a href="#aguardafuncaomcinterativo" class="anchor" aria-hidden="true">#</a> </h3>
@@ -363,6 +373,8 @@
 <h2 id="integração-com-qrmultiplus-pix">Integração com QRMultiplus (PIX)<a href="#integração-com-qrmultiplus-pix" class="anchor" aria-hidden="true">#</a> </h2>
 <h2 id="integração-com-o-app-pinpdv-lite">Integração com o App PinPDV Lite<a href="#integração-com-o-app-pinpdv-lite" class="anchor" aria-hidden="true">#</a> </h2>
 <h2 id="funções-de-pinpad">Funções de Pinpad<a href="#funções-de-pinpad" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="códigos-de-erro">Códigos de Erro<a href="#códigos-de-erro" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="solução-de-problemas">Solução de Problemas<a href="#solução-de-problemas" class="anchor" aria-hidden="true">#</a> </h2>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
@@ -371,7 +383,7 @@
 	<div class="card text-end w-100">
 			<div class="card-body d-flex justify-content-end">
 				<div class="d-flex flex-column">
-					<div class="text-body-secondary">Next</div>
+					<div class="text-body-secondary">Próximo</div>
 					<a href="/pt/documentacao/dll/dllcomtela/" class="stretched-link text-reset text-decoration-none">DLL TefClientMC (Modo Client)</a>
 				</div>
 				<div class="d-flex flex-column justify-content-center">

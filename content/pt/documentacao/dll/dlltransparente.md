@@ -39,6 +39,18 @@ Para um **melhor desempenho** e establididade recomendamos a seguinte configura�
 
 ## Fluxo de Utilização
 
+A integração com a DLL TefClientMC ocorre por meio da implementação das funções básicas de comunicação da biblioteca. O processo de transação se inicia com a chamada da função **IniciaFuncaoMCInterativo**.
+
+Ao chamar essa função com os parâmetros adequados (detalhados posteriormente), deve-se verificar o retorno. Se for 0, o processo continua normalmente; caso contrário (retorno maior que 0), a transação deve ser encerrada.
+
+Em seguida, dentro de um laço de repetição, a função **AguardaFuncaoMCInterativo** é chamada. Essa função retorna um **BSTR** contendo informações essenciais para a transação. Se o retorno for **[ERROABORTAR]** ou **[ERRODISPLAY]**, o processo deve ser interrompido imediatamente. Caso contrário, a comunicação prossegue por meio da função **ContinuaFuncaoMCInterativo**. O laço se encerra quando **AguardaFuncaoMCInterativo** retorna a tag **[RETORNO]**.
+
+Após o recebimento dessa tag, deve-se imprimir o comprovante da transação, armazenar suas informações e, por fim, chamar a função **FinalizaFuncaoMCInterativo**, confirmando assim a transação.
+
+Se for necessário cancelar a transação a qualquer momento, a função **CancelarFluxoMCInterativo** pode ser chamada. Essa função retorna 0 em caso de sucesso e interrompe imediatamente o fluxo da transação.
+
+O retorno das funções indica o sucesso de sua execução. No caso específico de **FinalizaFuncaoMCInterativo**, o resultado da confirmação ou do cancelamento da transação pode ser obtido por meio da função AguardaFuncaoMCInterativo ou pela verificação do status da transação.
+
 ## Funções da DLL
 
 ### IniciaFuncaoMCInterativo
@@ -58,3 +70,7 @@ Para um **melhor desempenho** e establididade recomendamos a seguinte configura�
 ## Integração com o App PinPDV Lite
 
 ## Funções de Pinpad
+
+## Códigos de Erro
+
+## Solução de Problemas

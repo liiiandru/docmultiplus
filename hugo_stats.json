@@ -253,6 +253,7 @@
       "cancelarfluxomcinterativo",
       "comece-agora",
       "continuafuncaomcinterativo",
+      "códigos-de-erro",
       "doks-docs-nav",
       "doks-language-current",
       "doks-languages",
@@ -264,7 +265,6 @@
       "further-reading",
       "iniciafuncaomcinterativo",
       "integração-com-o-app-pinpdv-lite",
-      "integração-com-pinpdv-lite",
       "integração-com-qrmultiplus-pix",
       "nossas-soluções-de-integração",
       "offcanvasNavMain",
@@ -281,6 +281,7 @@
       "searchToggleDesktop",
       "searchToggleMobile",
       "socialMenu",
+      "solução-de-problemas",
       "toc"
     ]
   }
