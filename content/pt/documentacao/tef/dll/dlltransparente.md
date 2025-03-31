@@ -344,7 +344,15 @@ A função para Coleta de CPF retorna para a automação uma string no seguinte 
 
 A função ContinuaFuncaoMCInterativo possui como parâmetro uma string. A função deve ser chamada após o retorno da AguardaFuncaoMCInterativo para dar continuidade ao processo da transação, quando este conter uma tag que solicita interação ex.: [PERGUNTA], [MENU]; tags como [MSG], [RETORNO] não necessitam que seja chamada a função.
 
+```csharp {title="Protótipo da Função"}
+  int ContinuaFuncaoMCInterativo(string sInformacao)
+```
+
 Esta função também pode ser utilizada para abortar a transação, um cenário de utilização é quando o pinpad está solicitando que seja inserido o cartão e se deseja cancelar o processo, para isso basta fazer a chamada da forma abaixo, em caso de sucesso o retorno será 0, em seguida deve ser aguardado o seguinte retorno:
+
+```csharp {title="Exemplo de utilização"}
+  Retorno = ContinuaFuncaoMCInterativo(“ABORTAR”);
+```
 
 ```{title="Exemplo de Retorno"}
   [ERROABORTAR]#CANCELADO PELO OPERADOR.
@@ -362,12 +370,250 @@ Como retorno a função pode ter os códigos da tabela abaixo, quando for 0 o fl
 |       36 | Erro interno do ClientD.exe |
 
 ### FinalizaFuncaoMCInterativo
+A função FinalizaFuncaoMCInterativo, deve ser chamada após a impressão do comprovante da transação, ela vai confirmar a transação. Seus parâmetros, retornos e códigos de erro são idênticos a IniciaFuncaoMCInterativo, inclusive os parâmetros a serem passados devem ser os mesmos com a diferença que o parâmetro iComando deverá ser 98 para confirmar a transação ou 99 se desejar desfazer a transação, e o parâmetro sNSU é o que está no CAMPO0133 do retorno da transação.
+
+```csharp {title="Protótipo da Função"}
+  int FinalizaFuncaoMCInterativo(int iComando, string sCnpjCliente, int iParcela, string sCupom, string sValor, string sNsu, string sData, string sNumeroPDV, string sCodigoLoja, int iTipoComunicacao, string sParametro)
+```
+
+Ao utilizar esta função com o parâmetro de confirmação automática configurado com o valor NÃO ou em uma transação com múltiplos cartões após seu retorno é obrigatório chamar a AguardaFuncaoMCInterativo para obter o status da confirmação ou desfazimento. Este retorno possui o seguinte formato:
+
+```{title="Exemplo de Retorno"}
+  [RETORNO]#TRANSACAO NSU=81949 CONFIRMADA COM SUCESSO
+  [RETORNO]#TRANSACAO NSU=81949 HOUVE ERROS AO CONFIRMAR
+```
+
+<div style="border-left: 5px solid #dc2626; background-color: #fee2e2; padding: 15px; border-radius: 8px; font-family: Arial, sans-serif;">
+    <strong style="color: #b91c1c;">⚠ Atenção</strong><br>
+    <p style="margin: 5px 0 0; color: #7f1d1d;">
+      Essa função deve ser chamada obrigatoriamente. Caso contrário, a transação poderá ser estornada, pois não terá sido devidamente confirmada.
+    </p>
+</div>
+
 
 ### CancelarFluxoMCInterativo
 
+A função CancelarFluxoMCInterativo, interrompe o processo de transação ela pode ser chamada a qualquer momento, mas é obrigatório a sua chamada sempre que retornar as TAG "[ERROABORTAR]" ou "[ERRODISPLAY]". Em caso de sucesso retorna 0, se ocorrer algum erro durante sua execução os códigos serão os mesmos das funções anteriores. Ao utilizar esta função o fluxo de utilização da DLL (laço de repetição) deve ser interrompido, pois a função AguardaFuncaoMCInterativo deixará de retornar valores. Para continuar a transacionar se deve reiniciar o processo.
+
+```csharp {title="Protótipo da Função"}
+  int CancelarFluxoMCInterativo()
+```
+
+### Verificar Status da Transação
+
+Esta função tem por finalidade verificar o status de uma transação realizada; seu uso é possível a partir do momento que é retornado o NSU da transação; na tabela a seguir estão os possíveis status.
+
+Uma recomendação de uso é realizar esta verificação antes da impressão do comprovante para o cliente, criando uma camada extra de segurança para a correta finalização da transação.
+
+| Status       |
+|--------------|
+| 00-APROVADA  |
+| 77-PENDENTE  |
+| 78-CANCELADA |
+| 86-DESFEITA  |
+
+Para utilizar a função o fluxo é basicamente o mesmo de uma venda, deve ser realizada a chamada da função IniciaFuncaoMCInterativo, com o código 700, o NSU retornado, os demais parâmetros (data, valor, etc.) são os mesmos utilizados para iniciar a transação; em seguida entrar no loop com a função **AguardaFuncaoMCInterativo**, até obter o retorno que possui o seguinte formato:
+
+```csharp {title="Exemplo de chamada"}
+  IniciaFuncaoMCInterativo(700, "12345678000100", 1, "100", "50,00", "110500", "20250331", "001", "123", 0, "")
+```
+
+Obs.: Não é necessário utilizar a função FinalizaFuncaoMCInterativo para concluir o processo de verificação do status.
+
+### Comprovante de Transação POS
+
+Esta função tem por finalidade recuperar comprovantes de transações efetuadas em terminais POS da Multiplus Pay ou SmartPOS que utilizam apps da Multiplus Card, para a geração posterior de NFe/NFCe.
+
+Para utilizar esta função deve ser realizada a chamada da função IniciaFuncaoMCInterativo com o código de operação 400, e o parâmetro sParametro com pelo menos a indicação de data e hora da transação que deseja obter o comprovante. Na tabela a seguir estão os parâmetros disponíveis para utilização.
+
+| Parâmetro   | Valores    | Descrição                                | Tipo   |
+|-------------|------------|------------------------------------------|--------|
+| DATAINICIO  | dd/MM/yyyy | Data inicial do período a ser consultado | M      |
+| DATAFIM     | dd/MM/yyyy | Data final do período a ser consultado   | M      |
+| HORAINICIO  | HH:mm:ss   | Hora inicial do período a ser consultado | M      |
+| HORAFIM     | HH:mm:ss   | Hora final do período a ser consultado   | M      |
+| AUTORIZACAO | STRING     | Código de autorização da transação       | O      |
+
+(M: Mandatório, O: Opcional)
+
+Caso não seja informado o Código de Autorização da transação, será retornada uma pergunta (tag [PERGUNTA]) para que seja informado, a resposta não é obrigatória, pois pode ocorrer uma situação em que esse código não esteja disponível; contudo haverá uma filtragem das transações com base no parâmetro sValor informado. O retorno das transações é feito através da tag [MENU], e sua utilização é igual aos demais menus.
+
+```csharp {title="Protótipo da Função"}
+  IniciaFuncaoMCInterativo(400, “12348650000170”, 1, “1”, “1,00”, “1”, “20230706”, “1”, “123”, 0,
+  “DATAINICIO=10/09/2024;DATAFIM=10/09/2024;HORAINICIO=00:00:00;HORAFIM=23:59:59;AUTORIZACAO=123”);
+```
+
+Observação: Para esta função não é necessária a realização da chamada da função FinalizaFuncaoMCInterativo, pois a mesma não é passível de confirmação ou desfazimento.
+
+- Retorno da Transação
+
+Ao realizar a consulta se for encontrada apenas 1 (uma) transação e o código de autorização foi informado, não haverá a exibição de menu, será retornada a tag [RETORNO] contendo os dados da transação e o comprovante, no mesmo formato de uma transação realizada com TEF. Caso existam 1 ou mais será retornado o menu contendo as seguintes informações: Bandeira, Valor, Data e Hora, Parcelas e Status da impressão.
+
+```{title="Exemplo de Retorno"}
+  [MENU]#INFORME A TRANSACAO DESEJADA PARA A IMPRESSAO DO COMPROVANTE#
+  1,1-VISA;0,1;09/09/2024 12:21:46;1;IMPRESSO|
+  2,2-ELO;0,1;09/09/2024 12:26:17;1;NAO IMPRESSO|
+  3,3-MASTERCARD;0,1;09/09/2024 12:43:52;1;NAO IMPRESSO|
+  4,4-ELO;0,1;09/09/2024 12:46:19;1;NAO IMPRESSO
+```
+
+Uma vez impresso esse status será alterado, e todas as impressões seguintes da mesma transação virá com a indicação de que se trata de uma Reimpressão.
+
 ## Relatório de Transações
 
+O Relatório de Transações permite obter uma lista das transações realizadas durante um período específico. Sua utilização segue um fluxo semelhante ao de uma venda, com a diferença de que se utiliza o parâmetro sParametro na função IniciaFuncaoMCInterativo para fornecer os parâmetros da consulta. Após a inicialização deve ser chamada em loop a função AguardaFuncaoMCInterativo até que seja retornada a string contendo a tag [RETORNO] e os dados do relatório; não é necessária a utilização da função FinalizaFuncaoMCInterativo.  A seguir está um exemplo de utilização:
+
+```csharp {title="Exemplo de utilização"}
+  IniciaFuncaoMCInterativo(300, “12348650000170”, 1, “1”, “1,00”, “1”, “20230706”, “1”, “123”, 0,
+  “DATAINICIO=05/07/2023;DATAFIM=05/07/2023;HORAINICIO=00:00:00;HORAFIM=23:59:59;PDV=1;JSON=SIM;PAGINA=1”);
+```
+
+### Parâmetros da Consulta
+
+Os parâmetros necessários para realizar a consulta estão descritos na tabela a seguir:
+
+| Parâmetro   | Valores    | Descrição                                                                           |
+|-------------|------------|-------------------------------------------------------------------------------------|
+| DATAINICIO  | dd/MM/yyyy | Data inicial do período a ser consultado                                            |
+| DATAFIM     | dd/MM/yyyy | Data final do período a ser consultado                                              |
+| HORAINICIO  | HH:mm:ss   | Hora inicial do período a ser consultado                                            |
+| HORAFIM     | HH:mm:ss   | Hora final do período a ser consultado                                              |
+| PDV         | INT        | Número do PDV                                                                       |
+| JSON        | SIM/NAO    | Formato de Retorno, SIM retorna em Json, NÃO retorna em CSV                         |
+| PAGINA      | INT        | Número da Página caso haja muitas transações, utilizado somente para o formato Json |
+
+Obs.: Todos os parâmetros são necessários para realizar a consulta.
+
+### Retorno da Consulta
+
+O Relatório retornado possui os mesmos campos tanto em Json quanto em CSV, com a diferença que em Json existe a informação da paginação dos resultados. É recomendado a consulta de períodos não muito longos (superior a 2 dias), assim o processo será concluído de forma mais rápida.
+
+- Campos Retornados
+| Campo                            | Tipo de Dado   | Descrição                    |
+|----------------------------------|----------------|------------------------------|
+| RedeNome                         | String         |                              |
+| ServicoDescricao                 | String         | Ex: Crédito a vista          |
+| TransacaoNSU                     | String         |                              |
+| TransacaoDataHoraEstabelecimento | DateTime       |                              |
+| TransacaoDataHoraAdministradora  | DateTime       |                              |
+| TransacaoValor                   | Decimal        |                              |
+| TransacaoValorTaxaServico        | Decimal        |                              |
+| TransacaoNumeroCartao            | String         |                              |
+| TransacaoCodigoAutorizacao       | String         |                              |
+| TransacaoNsuHost                 | String         | NSU da operadora             |
+| TransacaoStatus                  | String         |                              |
+| TransacaoQtdParcelas             | INT            |                              |
+| TransacaoTerminal                | String         |                              |
+| PaginaAtual                      | INT            | Informações da paginação     |
+| UltimaPagina                     | INT            | Informações da paginação     |
+| QtdeRegistrosPorPagina           | INT            | Informações da paginação     |
+| Transacoes                       | List           | Lista contendo as transações |
+
+
+```csv {title="Retorno em CSV"}
+REDENOME;BANDEIRANOME;SERVICODESCRICAO;TRANSACAONSU;TRANSACAODATAHORAESTABELECIMENTO;TRANSACAODATAHORAADMINISTRADORA;TRANSACAOVALOR;TRANSACAOVALORTAXASERVICO;TRANSACAONUMEROCARTAO;TRANSACAOCODIGOAUTORIZACAO;TRANSACAONSUHOST;TRANSACAOSTATUS;TRANSACAOQTDPARCELAS;TRANSACAOTERMINAL
+NAO INFORMADO;NAO INFORMADO;NAO INFORMADO;000000;12/07/2023 04:01:57;12/07/2023 04:01:57;8,90;0;;010157;000000;58-ERRO AO REALIZAR TRANSACAO;1;001
+REDE;MAESTRO;NAO INFORMADO;111018;12/07/2023 04:03:03;12/07/2023 04:03:03;8,90;0;;741052;407003963;00-APROVADA;1;001
+REDE;ELECTRON;NAO INFORMADO;111022;12/07/2023 04:17:20;12/07/2023 04:17:20;28,90;0;;312269;164193262;78-CANCELADA;1;001
+NAO INFORMADO;NAO INFORMADO;NAO INFORMADO;111022;12/07/2023 04:20:49;12/07/2023 04:20:49;28,90;0;;012049;111022;58-ERRO AO REALIZAR TRANSACAO;1;001
+REDE;ELECTRON;NAO INFORMADO;111029;12/07/2023 04:22:54;12/07/2023 04:22:54;28,90;0;;028719;866758376;00-APROVADA;0;001
+BB;PIX;PIX;;12/07/2023 11:27:13;12/07/2023 11:27:13;0,02;0;;;;86-DESFEITA;1;160
+REDE;MASTERCARD;NAO INFORMADO;111049;12/07/2023 11:36:09;12/07/2023 11:36:09;3,42;0;;083300;044521791;78-CANCELADA;1;001
+REDE;MASTERCARD;NAO INFORMADO;111055;12/07/2023 11:38:00;12/07/2023 11:38:00;3,42;0;;503483;756225302;00-APROVADA;0;001
+```
+
+```json {title="Retorno em JSON"}
+  {
+    "PaginaAtual": 1,
+    "UltimaPagina": 1,
+    "QtdeRegistrosPorPagina": 3,
+    "Transacoes": [
+      {
+        "RedeNome": "NAO INFORMADO",
+        "BandeiraNome": "NAO INFORMADO",
+        "ServicoDescricao": "Nao Informado",
+        "TransacaoNSU": "000000",
+        "TransacaoDataHoraEstabelecimento": "2023-07-12T04:01:57Z",
+        "TransacaoDataHoraAdministradora": "2023-07-12T04:01:57Z",
+        "TransacaoValor": 8.9,
+        "TransacaoValorTaxaServico": 0,
+        "TransacaoNumeroCartao": null,
+        "TransacaoCodigoAutorizacao": "010157",
+        "TransacaoNsuHost": "000000",
+        "TransacaoStatus": "58-ERRO AO REALIZAR TRANSACAO",
+        "TransacaoQtdParcelas": 1,
+        "TransacaoTerminal": "001"
+      },
+      {
+        "RedeNome": "NAO INFORMADO",
+        "BandeiraNome": "NAO INFORMADO",
+        "ServicoDescricao": "Nao Informado",
+        "TransacaoNSU": "000000",
+        "TransacaoDataHoraEstabelecimento": "2023-07-12T04:02:27Z",
+        "TransacaoDataHoraAdministradora": "2023-07-12T04:02:27Z",
+        "TransacaoValor": 8.9,
+        "TransacaoValorTaxaServico": 0,
+        "TransacaoNumeroCartao": null,
+        "TransacaoCodigoAutorizacao": "010227",
+        "TransacaoNsuHost": "000000",
+        "TransacaoStatus": "58-ERRO AO REALIZAR TRANSACAO",
+        "TransacaoQtdParcelas": 1,
+        "TransacaoTerminal": "001"
+      },
+      {
+        "RedeNome": "REDE",
+        "BandeiraNome": "MAESTRO",
+        "ServicoDescricao": "Nao Informado",
+        "TransacaoNSU": "111018",
+        "TransacaoDataHoraEstabelecimento": "2023-07-12T04:03:03Z",
+        "TransacaoDataHoraAdministradora": "2023-07-12T04:03:03Z",
+        "TransacaoValor": 8.9,
+        "TransacaoValorTaxaServico": 0,
+        "TransacaoNumeroCartao": null,
+        "TransacaoCodigoAutorizacao": "990052",
+        "TransacaoNsuHost": "407623963",
+        "TransacaoStatus": "00-APROVADA",
+        "TransacaoQtdParcelas": 1,
+        "TransacaoTerminal": "001"
+      },
+    ]
+  }
+
+```
+
 ## Integração com QRMultiplus (PIX)
+
+### Configuração
+
+### Parâmetro de Timeout para Exibição do QR Code no Pinpad
+
+### Parâmetro de Retorno da String do QR Code
+
+### Utilizando as Funções do QR Multiplus
+
+#### Códigos das Funções
+
+#### Fluxo de Utilização
+
+#### Criação da Cobrança
+
+##### Retornos da Função
+
+##### Impressão do QR Code
+
+#### Cancelamento/Estorno
+
+#### Remoção da Cobrança
+
+#### Status da Cobrança
+
+#### Reimpressão do Comprovante
+
+#### Retorno da Transação
+
+#### Restrições de Utilização
+
+#### Observações Sobre o Fluxo de Transação
 
 ## Integração com o App PinPDV Lite
 

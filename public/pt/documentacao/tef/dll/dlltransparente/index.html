@@ -14,9 +14,9 @@
 
 <link rel="stylesheet" href="/main.dc2f5458ab98613899cfadbb551e078821f7645691e4dfc57bb48d7697fe7be6885b7aea93d9ab15c53a25e38128c09220a1b4dcab934e04d1a7b374499b9872.css" integrity="sha512-3C9UWKuYYTiZz627VR4HiCH3ZFaR5N/Fe7SNdpf&#43;e&#43;aIW3rqk9mrFcU6JeOBKMCSIKG03KuTTgTRp7N0SZuYcg==" crossorigin="anonymous">
 
-<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/pt/documentacao/dll/dlltransparente/">
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/pt/documentacao/tef/dll/dlltransparente/">
 
-  <link rel="canonical" href="http://localhost:1313/pt/documentacao/dll/dlltransparente/">
+  <link rel="canonical" href="http://localhost:1313/pt/documentacao/tef/dll/dlltransparente/">
 
 
 <title>DLL TefCLientMC</title>
@@ -47,7 +47,7 @@
       >
 <link rel="manifest" href="/manifest.webmanifest">
 
-<meta property="og:url" content="http://localhost:1313/pt/documentacao/dll/dlltransparente/">
+<meta property="og:url" content="http://localhost:1313/pt/documentacao/tef/dll/dlltransparente/">
   <meta property="og:site_name" content="Multiplus Card">
   <meta property="og:title" content="DLL TefClientMC - Modo Interativo (DLL Transparente)">
   <meta property="og:description" content="A DLL TefClientMC proporciona uma integração flexível, permitindo à automação um alto nível de controle sobre o fluxo da transação e ampla personalização por meio de um processo iterativo. É ideal para automações que buscam preservar sua identidade visual e ter maior controle sobre cada etapa da transação.">
@@ -64,6 +64,7 @@
   <meta name="twitter:description" content="A DLL TefClientMC proporciona uma integração flexível, permitindo à automação um alto nível de controle sobre o fluxo da transação e ampla personalização por meio de um processo iterativo. É ideal para automações que buscam preservar sua identidade visual e ter maior controle sobre cada etapa da transação.">
       <meta name="twitter:site" content="@getdoks">
 
+    
     
     <script type="application/ld+json">
   {
@@ -84,8 +85,14 @@
      },
      {
        "@type": "ListItem",
-       "name": "Dll Tef Client MC Modo Interativo ( Dll Transparente)",
+       "item": "http://localhost:1313/pt/documentacao/tef/",
+       "name": "Tef",
        "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "Dll Tef Client MC Modo Interativo ( Dll Transparente)",
+       "position": 4
      }
    ]
  }
@@ -144,11 +151,31 @@
   <ul class="list-unstyled">
 
   <li>
-      <a href="/pt/documentacao/tef/"></a>
+      <a href="/pt/documentacao/pinpdv/">PinPDV</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tefdial/"></a>
+      <a href="/pt/documentacao/qrmultiplus/">QRMultiplus</a>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Tef</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li class="active" >
+      <a aria-current="page" href="/pt/documentacao/tef/dll/dlltransparente/">DLL TefClientMC - Modo Interativo (DLL Transparente)</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/dllcomtela/">DLL TefClientMC (Modo Client)</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/tef/tefdial/"></a>
+  </li>
+      </ul>
+    </details>
   </li>
   </ul>
 </nav>
@@ -324,11 +351,31 @@
   <ul class="list-unstyled">
 
   <li>
-      <a href="/pt/documentacao/tef/"></a>
+      <a href="/pt/documentacao/pinpdv/">PinPDV</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tefdial/"></a>
+      <a href="/pt/documentacao/qrmultiplus/">QRMultiplus</a>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Tef</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li class="active" >
+      <a aria-current="page" href="/pt/documentacao/tef/dll/dlltransparente/">DLL TefClientMC - Modo Interativo (DLL Transparente)</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/dllcomtela/">DLL TefClientMC (Modo Client)</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/tef/tefdial/"></a>
+  </li>
+      </ul>
+    </details>
   </li>
   </ul>
 </nav>
@@ -372,10 +419,37 @@
         <li><a href="#continuafuncaomcinterativo">ContinuaFuncaoMCInterativo</a></li>
         <li><a href="#finalizafuncaomcinterativo">FinalizaFuncaoMCInterativo</a></li>
         <li><a href="#cancelarfluxomcinterativo">CancelarFluxoMCInterativo</a></li>
+        <li><a href="#verificar-status-da-transação">Verificar Status da Transação</a></li>
+        <li><a href="#comprovante-de-transação-pos">Comprovante de Transação POS</a></li>
       </ul>
     </li>
-    <li><a href="#relatório-de-transações">Relatório de Transações</a></li>
-    <li><a href="#integração-com-qrmultiplus-pix">Integração com QRMultiplus (PIX)</a></li>
+    <li><a href="#relatório-de-transações">Relatório de Transações</a>
+      <ul>
+        <li><a href="#parâmetros-da-consulta">Parâmetros da Consulta</a></li>
+        <li><a href="#retorno-da-consulta">Retorno da Consulta</a></li>
+      </ul>
+    </li>
+    <li><a href="#integração-com-qrmultiplus-pix">Integração com QRMultiplus (PIX)</a>
+      <ul>
+        <li><a href="#configuração">Configuração</a></li>
+        <li><a href="#parâmetro-de-timeout-para-exibição-do-qr-code-no-pinpad">Parâmetro de Timeout para Exibição do QR Code no Pinpad</a></li>
+        <li><a href="#parâmetro-de-retorno-da-string-do-qr-code">Parâmetro de Retorno da String do QR Code</a></li>
+        <li><a href="#utilizando-as-funções-do-qr-multiplus">Utilizando as Funções do QR Multiplus</a>
+          <ul>
+            <li><a href="#códigos-das-funções">Códigos das Funções</a></li>
+            <li><a href="#fluxo-de-utilização-1">Fluxo de Utilização</a></li>
+            <li><a href="#criação-da-cobrança">Criação da Cobrança</a></li>
+            <li><a href="#cancelamentoestorno">Cancelamento/Estorno</a></li>
+            <li><a href="#remoção-da-cobrança">Remoção da Cobrança</a></li>
+            <li><a href="#status-da-cobrança">Status da Cobrança</a></li>
+            <li><a href="#reimpressão-do-comprovante">Reimpressão do Comprovante</a></li>
+            <li><a href="#retorno-da-transação">Retorno da Transação</a></li>
+            <li><a href="#restrições-de-utilização">Restrições de Utilização</a></li>
+            <li><a href="#observações-sobre-o-fluxo-de-transação">Observações Sobre o Fluxo de Transação</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
     <li><a href="#integração-com-o-app-pinpdv-lite">Integração com o App PinPDV Lite</a></li>
     <li><a href="#funções-de-pinpad">Funções de Pinpad</a></li>
     <li><a href="#códigos-de-erro-1">Códigos de Erro</a></li>
@@ -387,14 +461,6 @@
 		</nav>
 		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
 		
-				<nav aria-label="breadcrumb">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="/pt/">Home</a></li>
-<li class="breadcrumb-item"><a href="/pt/documentacao/">Documentacao</a></li>
-<li class="breadcrumb-item active" aria-current="page">DLL TefClientMC - Modo Interativo (DLL Transparente)</li>
-					</ol>
-				</nav>
-			
 			<h1>DLL TefClientMC - Modo Interativo (DLL Transparente)</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
@@ -433,10 +499,37 @@
         <li><a href="#continuafuncaomcinterativo">ContinuaFuncaoMCInterativo</a></li>
         <li><a href="#finalizafuncaomcinterativo">FinalizaFuncaoMCInterativo</a></li>
         <li><a href="#cancelarfluxomcinterativo">CancelarFluxoMCInterativo</a></li>
+        <li><a href="#verificar-status-da-transação">Verificar Status da Transação</a></li>
+        <li><a href="#comprovante-de-transação-pos">Comprovante de Transação POS</a></li>
       </ul>
     </li>
-    <li><a href="#relatório-de-transações">Relatório de Transações</a></li>
-    <li><a href="#integração-com-qrmultiplus-pix">Integração com QRMultiplus (PIX)</a></li>
+    <li><a href="#relatório-de-transações">Relatório de Transações</a>
+      <ul>
+        <li><a href="#parâmetros-da-consulta">Parâmetros da Consulta</a></li>
+        <li><a href="#retorno-da-consulta">Retorno da Consulta</a></li>
+      </ul>
+    </li>
+    <li><a href="#integração-com-qrmultiplus-pix">Integração com QRMultiplus (PIX)</a>
+      <ul>
+        <li><a href="#configuração">Configuração</a></li>
+        <li><a href="#parâmetro-de-timeout-para-exibição-do-qr-code-no-pinpad">Parâmetro de Timeout para Exibição do QR Code no Pinpad</a></li>
+        <li><a href="#parâmetro-de-retorno-da-string-do-qr-code">Parâmetro de Retorno da String do QR Code</a></li>
+        <li><a href="#utilizando-as-funções-do-qr-multiplus">Utilizando as Funções do QR Multiplus</a>
+          <ul>
+            <li><a href="#códigos-das-funções">Códigos das Funções</a></li>
+            <li><a href="#fluxo-de-utilização-1">Fluxo de Utilização</a></li>
+            <li><a href="#criação-da-cobrança">Criação da Cobrança</a></li>
+            <li><a href="#cancelamentoestorno">Cancelamento/Estorno</a></li>
+            <li><a href="#remoção-da-cobrança">Remoção da Cobrança</a></li>
+            <li><a href="#status-da-cobrança">Status da Cobrança</a></li>
+            <li><a href="#reimpressão-do-comprovante">Reimpressão do Comprovante</a></li>
+            <li><a href="#retorno-da-transação">Retorno da Transação</a></li>
+            <li><a href="#restrições-de-utilização">Restrições de Utilização</a></li>
+            <li><a href="#observações-sobre-o-fluxo-de-transação">Observações Sobre o Fluxo de Transação</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
     <li><a href="#integração-com-o-app-pinpdv-lite">Integração com o App PinPDV Lite</a></li>
     <li><a href="#funções-de-pinpad">Funções de Pinpad</a></li>
     <li><a href="#códigos-de-erro-1">Códigos de Erro</a></li>
@@ -1159,7 +1252,29 @@ Ao utilizar esta função os seguintes retornos poderão ser obtidos: SUCESSO ou
 <p>A função para Coleta de CPF retorna para a automação uma string no seguinte formato <strong>[RETORNO]#CPF=12345678912</strong>, sendo necessário que a mesma realize a validação do CPF coletado.</p>
 <h3 id="continuafuncaomcinterativo">ContinuaFuncaoMCInterativo<a href="#continuafuncaomcinterativo" class="anchor" aria-hidden="true">#</a> </h3>
 <p>A função ContinuaFuncaoMCInterativo possui como parâmetro uma string. A função deve ser chamada após o retorno da AguardaFuncaoMCInterativo para dar continuidade ao processo da transação, quando este conter uma tag que solicita interação ex.: [PERGUNTA], [MENU]; tags como [MSG], [RETORNO] não necessitam que seja chamada a função.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">ContinuaFuncaoMCInterativo</span><span class="p">(</span><span class="kt">string</span> <span class="n">sInformacao</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
 <p>Esta função também pode ser utilizada para abortar a transação, um cenário de utilização é quando o pinpad está solicitando que seja inserido o cartão e se deseja cancelar o processo, para isso basta fazer a chamada da forma abaixo, em caso de sucesso o retorno será 0, em seguida deve ser aguardado o seguinte retorno:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de utilização</span>
+  </figcaption>
+  <div class="highlight" title="Exemplo de utilização"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">Retorno</span> <span class="p">=</span> <span class="n">ContinuaFuncaoMCInterativo</span><span class="p">(</span><span class="err">“</span><span class="n">ABORTAR</span><span class="err">”</span><span class="p">);</span></span></span></code></pre></div>
+  </figure>
+</div>
 
 
 
@@ -1202,9 +1317,433 @@ Ao utilizar esta função os seguintes retornos poderão ser obtidos: SUCESSO ou
   </tbody>
 </table>
 <h3 id="finalizafuncaomcinterativo">FinalizaFuncaoMCInterativo<a href="#finalizafuncaomcinterativo" class="anchor" aria-hidden="true">#</a> </h3>
+<p>A função FinalizaFuncaoMCInterativo, deve ser chamada após a impressão do comprovante da transação, ela vai confirmar a transação. Seus parâmetros, retornos e códigos de erro são idênticos a IniciaFuncaoMCInterativo, inclusive os parâmetros a serem passados devem ser os mesmos com a diferença que o parâmetro iComando deverá ser 98 para confirmar a transação ou 99 se desejar desfazer a transação, e o parâmetro sNSU é o que está no CAMPO0133 do retorno da transação.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">FinalizaFuncaoMCInterativo</span><span class="p">(</span><span class="kt">int</span> <span class="n">iComando</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjCliente</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iParcela</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCupom</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sValor</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sNsu</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sData</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sNumeroPDV</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCodigoLoja</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iTipoComunicacao</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sParametro</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Ao utilizar esta função com o parâmetro de confirmação automática configurado com o valor NÃO ou em uma transação com múltiplos cartões após seu retorno é obrigatório chamar a AguardaFuncaoMCInterativo para obter o status da confirmação ou desfazimento. Este retorno possui o seguinte formato:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Retorno</span>
+  </figcaption>
+  <pre tabindex="0"><code>  [RETORNO]#TRANSACAO NSU=81949 CONFIRMADA COM SUCESSO
+  [RETORNO]#TRANSACAO NSU=81949 HOUVE ERROS AO CONFIRMAR</code></pre>
+  </figure>
+</div>
+<div style="border-left: 5px solid #dc2626; background-color: #fee2e2; padding: 15px; border-radius: 8px; font-family: Arial, sans-serif;">
+    <strong style="color: #b91c1c;">⚠ Atenção</strong><br>
+    <p style="margin: 5px 0 0; color: #7f1d1d;">
+      Essa função deve ser chamada obrigatoriamente. Caso contrário, a transação poderá ser estornada, pois não terá sido devidamente confirmada.
+    </p>
+</div>
 <h3 id="cancelarfluxomcinterativo">CancelarFluxoMCInterativo<a href="#cancelarfluxomcinterativo" class="anchor" aria-hidden="true">#</a> </h3>
+<p>A função CancelarFluxoMCInterativo, interrompe o processo de transação ela pode ser chamada a qualquer momento, mas é obrigatório a sua chamada sempre que retornar as TAG &ldquo;[ERROABORTAR]&rdquo; ou &ldquo;[ERRODISPLAY]&rdquo;. Em caso de sucesso retorna 0, se ocorrer algum erro durante sua execução os códigos serão os mesmos das funções anteriores. Ao utilizar esta função o fluxo de utilização da DLL (laço de repetição) deve ser interrompido, pois a função AguardaFuncaoMCInterativo deixará de retornar valores. Para continuar a transacionar se deve reiniciar o processo.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">CancelarFluxoMCInterativo</span><span class="p">()</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="verificar-status-da-transação">Verificar Status da Transação<a href="#verificar-status-da-transação" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Esta função tem por finalidade verificar o status de uma transação realizada; seu uso é possível a partir do momento que é retornado o NSU da transação; na tabela a seguir estão os possíveis status.</p>
+<p>Uma recomendação de uso é realizar esta verificação antes da impressão do comprovante para o cliente, criando uma camada extra de segurança para a correta finalização da transação.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Status</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>00-APROVADA</td>
+      </tr>
+      <tr>
+          <td>77-PENDENTE</td>
+      </tr>
+      <tr>
+          <td>78-CANCELADA</td>
+      </tr>
+      <tr>
+          <td>86-DESFEITA</td>
+      </tr>
+  </tbody>
+</table>
+<p>Para utilizar a função o fluxo é basicamente o mesmo de uma venda, deve ser realizada a chamada da função IniciaFuncaoMCInterativo, com o código 700, o NSU retornado, os demais parâmetros (data, valor, etc.) são os mesmos utilizados para iniciar a transação; em seguida entrar no loop com a função <strong>AguardaFuncaoMCInterativo</strong>, até obter o retorno que possui o seguinte formato:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de chamada</span>
+  </figcaption>
+  <div class="highlight" title="Exemplo de chamada"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">IniciaFuncaoMCInterativo</span><span class="p">(</span><span class="m">700</span><span class="p">,</span> <span class="s">&#34;12345678000100&#34;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="s">&#34;100&#34;</span><span class="p">,</span> <span class="s">&#34;50,00&#34;</span><span class="p">,</span> <span class="s">&#34;110500&#34;</span><span class="p">,</span> <span class="s">&#34;20250331&#34;</span><span class="p">,</span> <span class="s">&#34;001&#34;</span><span class="p">,</span> <span class="s">&#34;123&#34;</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Obs.: Não é necessário utilizar a função FinalizaFuncaoMCInterativo para concluir o processo de verificação do status.</p>
+<h3 id="comprovante-de-transação-pos">Comprovante de Transação POS<a href="#comprovante-de-transação-pos" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Esta função tem por finalidade recuperar comprovantes de transações efetuadas em terminais POS da Multiplus Pay ou SmartPOS que utilizam apps da Multiplus Card, para a geração posterior de NFe/NFCe.</p>
+<p>Para utilizar esta função deve ser realizada a chamada da função IniciaFuncaoMCInterativo com o código de operação 400, e o parâmetro sParametro com pelo menos a indicação de data e hora da transação que deseja obter o comprovante. Na tabela a seguir estão os parâmetros disponíveis para utilização.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Parâmetro</th>
+          <th>Valores</th>
+          <th>Descrição</th>
+          <th>Tipo</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>DATAINICIO</td>
+          <td>dd/MM/yyyy</td>
+          <td>Data inicial do período a ser consultado</td>
+          <td>M</td>
+      </tr>
+      <tr>
+          <td>DATAFIM</td>
+          <td>dd/MM/yyyy</td>
+          <td>Data final do período a ser consultado</td>
+          <td>M</td>
+      </tr>
+      <tr>
+          <td>HORAINICIO</td>
+          <td>HH:mm:ss</td>
+          <td>Hora inicial do período a ser consultado</td>
+          <td>M</td>
+      </tr>
+      <tr>
+          <td>HORAFIM</td>
+          <td>HH:mm:ss</td>
+          <td>Hora final do período a ser consultado</td>
+          <td>M</td>
+      </tr>
+      <tr>
+          <td>AUTORIZACAO</td>
+          <td>STRING</td>
+          <td>Código de autorização da transação</td>
+          <td>O</td>
+      </tr>
+  </tbody>
+</table>
+<p>(M: Mandatório, O: Opcional)</p>
+<p>Caso não seja informado o Código de Autorização da transação, será retornada uma pergunta (tag [PERGUNTA]) para que seja informado, a resposta não é obrigatória, pois pode ocorrer uma situação em que esse código não esteja disponível; contudo haverá uma filtragem das transações com base no parâmetro sValor informado. O retorno das transações é feito através da tag [MENU], e sua utilização é igual aos demais menus.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">IniciaFuncaoMCInterativo</span><span class="p">(</span><span class="m">400</span><span class="p">,</span> <span class="err">“</span><span class="m">12348650000170</span><span class="err">”</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="err">“</span><span class="m">1</span><span class="err">”</span><span class="p">,</span> <span class="err">“</span><span class="m">1</span><span class="p">,</span><span class="m">00</span><span class="err">”</span><span class="p">,</span> <span class="err">“</span><span class="m">1</span><span class="err">”</span><span class="p">,</span> <span class="err">“</span><span class="m">20230706</span><span class="err">”</span><span class="p">,</span> <span class="err">“</span><span class="m">1</span><span class="err">”</span><span class="p">,</span> <span class="err">“</span><span class="m">123</span><span class="err">”</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="err">“</span><span class="n">DATAINICIO</span><span class="p">=</span><span class="m">10</span><span class="p">/</span><span class="m">09</span><span class="p">/</span><span class="m">2024</span><span class="p">;</span><span class="n">DATAFIM</span><span class="p">=</span><span class="m">10</span><span class="p">/</span><span class="m">09</span><span class="p">/</span><span class="m">2024</span><span class="p">;</span><span class="n">HORAINICIO</span><span class="p">=</span><span class="m">00</span><span class="p">:</span><span class="m">00</span><span class="p">:</span><span class="m">00</span><span class="p">;</span><span class="n">HORAFIM</span><span class="p">=</span><span class="m">23</span><span class="p">:</span><span class="m">59</span><span class="p">:</span><span class="m">59</span><span class="p">;</span><span class="n">AUTORIZACAO</span><span class="p">=</span><span class="m">123</span><span class="err">”</span><span class="p">);</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Observação: Para esta função não é necessária a realização da chamada da função FinalizaFuncaoMCInterativo, pois a mesma não é passível de confirmação ou desfazimento.</p>
+<ul>
+<li>Retorno da Transação</li>
+</ul>
+<p>Ao realizar a consulta se for encontrada apenas 1 (uma) transação e o código de autorização foi informado, não haverá a exibição de menu, será retornada a tag [RETORNO] contendo os dados da transação e o comprovante, no mesmo formato de uma transação realizada com TEF. Caso existam 1 ou mais será retornado o menu contendo as seguintes informações: Bandeira, Valor, Data e Hora, Parcelas e Status da impressão.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Retorno</span>
+  </figcaption>
+  <pre tabindex="0"><code>  [MENU]#INFORME A TRANSACAO DESEJADA PARA A IMPRESSAO DO COMPROVANTE#
+  1,1-VISA;0,1;09/09/2024 12:21:46;1;IMPRESSO|
+  2,2-ELO;0,1;09/09/2024 12:26:17;1;NAO IMPRESSO|
+  3,3-MASTERCARD;0,1;09/09/2024 12:43:52;1;NAO IMPRESSO|
+  4,4-ELO;0,1;09/09/2024 12:46:19;1;NAO IMPRESSO</code></pre>
+  </figure>
+</div>
+<p>Uma vez impresso esse status será alterado, e todas as impressões seguintes da mesma transação virá com a indicação de que se trata de uma Reimpressão.</p>
 <h2 id="relatório-de-transações">Relatório de Transações<a href="#relatório-de-transações" class="anchor" aria-hidden="true">#</a> </h2>
+<p>O Relatório de Transações permite obter uma lista das transações realizadas durante um período específico. Sua utilização segue um fluxo semelhante ao de uma venda, com a diferença de que se utiliza o parâmetro sParametro na função IniciaFuncaoMCInterativo para fornecer os parâmetros da consulta. Após a inicialização deve ser chamada em loop a função AguardaFuncaoMCInterativo até que seja retornada a string contendo a tag [RETORNO] e os dados do relatório; não é necessária a utilização da função FinalizaFuncaoMCInterativo.  A seguir está um exemplo de utilização:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de utilização</span>
+  </figcaption>
+  <div class="highlight" title="Exemplo de utilização"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">IniciaFuncaoMCInterativo</span><span class="p">(</span><span class="m">300</span><span class="p">,</span> <span class="err">“</span><span class="m">12348650000170</span><span class="err">”</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="err">“</span><span class="m">1</span><span class="err">”</span><span class="p">,</span> <span class="err">“</span><span class="m">1</span><span class="p">,</span><span class="m">00</span><span class="err">”</span><span class="p">,</span> <span class="err">“</span><span class="m">1</span><span class="err">”</span><span class="p">,</span> <span class="err">“</span><span class="m">20230706</span><span class="err">”</span><span class="p">,</span> <span class="err">“</span><span class="m">1</span><span class="err">”</span><span class="p">,</span> <span class="err">“</span><span class="m">123</span><span class="err">”</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="err">“</span><span class="n">DATAINICIO</span><span class="p">=</span><span class="m">05</span><span class="p">/</span><span class="m">07</span><span class="p">/</span><span class="m">2023</span><span class="p">;</span><span class="n">DATAFIM</span><span class="p">=</span><span class="m">05</span><span class="p">/</span><span class="m">07</span><span class="p">/</span><span class="m">2023</span><span class="p">;</span><span class="n">HORAINICIO</span><span class="p">=</span><span class="m">00</span><span class="p">:</span><span class="m">00</span><span class="p">:</span><span class="m">00</span><span class="p">;</span><span class="n">HORAFIM</span><span class="p">=</span><span class="m">23</span><span class="p">:</span><span class="m">59</span><span class="p">:</span><span class="m">59</span><span class="p">;</span><span class="n">PDV</span><span class="p">=</span><span class="m">1</span><span class="p">;</span><span class="n">JSON</span><span class="p">=</span><span class="n">SIM</span><span class="p">;</span><span class="n">PAGINA</span><span class="p">=</span><span class="m">1</span><span class="err">”</span><span class="p">);</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="parâmetros-da-consulta">Parâmetros da Consulta<a href="#parâmetros-da-consulta" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Os parâmetros necessários para realizar a consulta estão descritos na tabela a seguir:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Parâmetro</th>
+          <th>Valores</th>
+          <th>Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>DATAINICIO</td>
+          <td>dd/MM/yyyy</td>
+          <td>Data inicial do período a ser consultado</td>
+      </tr>
+      <tr>
+          <td>DATAFIM</td>
+          <td>dd/MM/yyyy</td>
+          <td>Data final do período a ser consultado</td>
+      </tr>
+      <tr>
+          <td>HORAINICIO</td>
+          <td>HH:mm:ss</td>
+          <td>Hora inicial do período a ser consultado</td>
+      </tr>
+      <tr>
+          <td>HORAFIM</td>
+          <td>HH:mm:ss</td>
+          <td>Hora final do período a ser consultado</td>
+      </tr>
+      <tr>
+          <td>PDV</td>
+          <td>INT</td>
+          <td>Número do PDV</td>
+      </tr>
+      <tr>
+          <td>JSON</td>
+          <td>SIM/NAO</td>
+          <td>Formato de Retorno, SIM retorna em Json, NÃO retorna em CSV</td>
+      </tr>
+      <tr>
+          <td>PAGINA</td>
+          <td>INT</td>
+          <td>Número da Página caso haja muitas transações, utilizado somente para o formato Json</td>
+      </tr>
+  </tbody>
+</table>
+<p>Obs.: Todos os parâmetros são necessários para realizar a consulta.</p>
+<h3 id="retorno-da-consulta">Retorno da Consulta<a href="#retorno-da-consulta" class="anchor" aria-hidden="true">#</a> </h3>
+<p>O Relatório retornado possui os mesmos campos tanto em Json quanto em CSV, com a diferença que em Json existe a informação da paginação dos resultados. É recomendado a consulta de períodos não muito longos (superior a 2 dias), assim o processo será concluído de forma mais rápida.</p>
+<ul>
+<li>Campos Retornados
+<table>
+  <thead>
+      <tr>
+          <th>Campo</th>
+          <th>Tipo de Dado</th>
+          <th>Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>RedeNome</td>
+          <td>String</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>ServicoDescricao</td>
+          <td>String</td>
+          <td>Ex: Crédito a vista</td>
+      </tr>
+      <tr>
+          <td>TransacaoNSU</td>
+          <td>String</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>TransacaoDataHoraEstabelecimento</td>
+          <td>DateTime</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>TransacaoDataHoraAdministradora</td>
+          <td>DateTime</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>TransacaoValor</td>
+          <td>Decimal</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>TransacaoValorTaxaServico</td>
+          <td>Decimal</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>TransacaoNumeroCartao</td>
+          <td>String</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>TransacaoCodigoAutorizacao</td>
+          <td>String</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>TransacaoNsuHost</td>
+          <td>String</td>
+          <td>NSU da operadora</td>
+      </tr>
+      <tr>
+          <td>TransacaoStatus</td>
+          <td>String</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>TransacaoQtdParcelas</td>
+          <td>INT</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>TransacaoTerminal</td>
+          <td>String</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>PaginaAtual</td>
+          <td>INT</td>
+          <td>Informações da paginação</td>
+      </tr>
+      <tr>
+          <td>UltimaPagina</td>
+          <td>INT</td>
+          <td>Informações da paginação</td>
+      </tr>
+      <tr>
+          <td>QtdeRegistrosPorPagina</td>
+          <td>INT</td>
+          <td>Informações da paginação</td>
+      </tr>
+      <tr>
+          <td>Transacoes</td>
+          <td>List</td>
+          <td>Lista contendo as transações</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+</ul>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Retorno em CSV</span>
+  </figcaption>
+  <div class="highlight" title="Retorno em CSV"><pre tabindex="0" class="chroma"><code class="language-csv" data-lang="csv"><span class="line"><span class="cl"><span class="s">REDENOME;BANDEIRANOME;SERVICODESCRICAO;TRANSACAONSU;TRANSACAODATAHORAESTABELECIMENTO;TRANSACAODATAHORAADMINISTRADORA;TRANSACAOVALOR;TRANSACAOVALORTAXASERVICO;TRANSACAONUMEROCARTAO;TRANSACAOCODIGOAUTORIZACAO;TRANSACAONSUHOST;TRANSACAOSTATUS;TRANSACAOQTDPARCELAS;TRANSACAOTERMINAL</span><span class="p">
+</span></span></span><span class="line"><span class="cl"><span class="p"></span><span class="s">NAO INFORMADO;NAO INFORMADO;NAO INFORMADO;000000;12/07/2023 04:01:57;12/07/2023 04:01:57;8</span><span class="p">,</span><span class="s">90;0;;010157;000000;58-ERRO AO REALIZAR TRANSACAO;1;001</span><span class="p">
+</span></span></span><span class="line"><span class="cl"><span class="p"></span><span class="s">REDE;MAESTRO;NAO INFORMADO;111018;12/07/2023 04:03:03;12/07/2023 04:03:03;8</span><span class="p">,</span><span class="s">90;0;;741052;407003963;00-APROVADA;1;001</span><span class="p">
+</span></span></span><span class="line"><span class="cl"><span class="p"></span><span class="s">REDE;ELECTRON;NAO INFORMADO;111022;12/07/2023 04:17:20;12/07/2023 04:17:20;28</span><span class="p">,</span><span class="s">90;0;;312269;164193262;78-CANCELADA;1;001</span><span class="p">
+</span></span></span><span class="line"><span class="cl"><span class="p"></span><span class="s">NAO INFORMADO;NAO INFORMADO;NAO INFORMADO;111022;12/07/2023 04:20:49;12/07/2023 04:20:49;28</span><span class="p">,</span><span class="s">90;0;;012049;111022;58-ERRO AO REALIZAR TRANSACAO;1;001</span><span class="p">
+</span></span></span><span class="line"><span class="cl"><span class="p"></span><span class="s">REDE;ELECTRON;NAO INFORMADO;111029;12/07/2023 04:22:54;12/07/2023 04:22:54;28</span><span class="p">,</span><span class="s">90;0;;028719;866758376;00-APROVADA;0;001</span><span class="p">
+</span></span></span><span class="line"><span class="cl"><span class="p"></span><span class="s">BB;PIX;PIX;;12/07/2023 11:27:13;12/07/2023 11:27:13;0</span><span class="p">,</span><span class="s">02;0;;;;86-DESFEITA;1;160</span><span class="p">
+</span></span></span><span class="line"><span class="cl"><span class="p"></span><span class="s">REDE;MASTERCARD;NAO INFORMADO;111049;12/07/2023 11:36:09;12/07/2023 11:36:09;3</span><span class="p">,</span><span class="s">42;0;;083300;044521791;78-CANCELADA;1;001</span><span class="p">
+</span></span></span><span class="line"><span class="cl"><span class="p"></span><span class="s">REDE;MASTERCARD;NAO INFORMADO;111055;12/07/2023 11:38:00;12/07/2023 11:38:00;3</span><span class="p">,</span><span class="s">42;0;;503483;756225302;00-APROVADA;0;001</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Retorno em JSON</span>
+  </figcaption>
+  <div class="highlight" title="Retorno em JSON"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;PaginaAtual&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;UltimaPagina&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;QtdeRegistrosPorPagina&#34;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;Transacoes&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;RedeNome&#34;</span><span class="p">:</span> <span class="s2">&#34;NAO INFORMADO&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;BandeiraNome&#34;</span><span class="p">:</span> <span class="s2">&#34;NAO INFORMADO&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ServicoDescricao&#34;</span><span class="p">:</span> <span class="s2">&#34;Nao Informado&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoNSU&#34;</span><span class="p">:</span> <span class="s2">&#34;000000&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoDataHoraEstabelecimento&#34;</span><span class="p">:</span> <span class="s2">&#34;2023-07-12T04:01:57Z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoDataHoraAdministradora&#34;</span><span class="p">:</span> <span class="s2">&#34;2023-07-12T04:01:57Z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoValor&#34;</span><span class="p">:</span> <span class="mf">8.9</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoValorTaxaServico&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoNumeroCartao&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoCodigoAutorizacao&#34;</span><span class="p">:</span> <span class="s2">&#34;010157&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoNsuHost&#34;</span><span class="p">:</span> <span class="s2">&#34;000000&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoStatus&#34;</span><span class="p">:</span> <span class="s2">&#34;58-ERRO AO REALIZAR TRANSACAO&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoQtdParcelas&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoTerminal&#34;</span><span class="p">:</span> <span class="s2">&#34;001&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;RedeNome&#34;</span><span class="p">:</span> <span class="s2">&#34;NAO INFORMADO&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;BandeiraNome&#34;</span><span class="p">:</span> <span class="s2">&#34;NAO INFORMADO&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ServicoDescricao&#34;</span><span class="p">:</span> <span class="s2">&#34;Nao Informado&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoNSU&#34;</span><span class="p">:</span> <span class="s2">&#34;000000&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoDataHoraEstabelecimento&#34;</span><span class="p">:</span> <span class="s2">&#34;2023-07-12T04:02:27Z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoDataHoraAdministradora&#34;</span><span class="p">:</span> <span class="s2">&#34;2023-07-12T04:02:27Z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoValor&#34;</span><span class="p">:</span> <span class="mf">8.9</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoValorTaxaServico&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoNumeroCartao&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoCodigoAutorizacao&#34;</span><span class="p">:</span> <span class="s2">&#34;010227&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoNsuHost&#34;</span><span class="p">:</span> <span class="s2">&#34;000000&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoStatus&#34;</span><span class="p">:</span> <span class="s2">&#34;58-ERRO AO REALIZAR TRANSACAO&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoQtdParcelas&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoTerminal&#34;</span><span class="p">:</span> <span class="s2">&#34;001&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;RedeNome&#34;</span><span class="p">:</span> <span class="s2">&#34;REDE&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;BandeiraNome&#34;</span><span class="p">:</span> <span class="s2">&#34;MAESTRO&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ServicoDescricao&#34;</span><span class="p">:</span> <span class="s2">&#34;Nao Informado&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoNSU&#34;</span><span class="p">:</span> <span class="s2">&#34;111018&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoDataHoraEstabelecimento&#34;</span><span class="p">:</span> <span class="s2">&#34;2023-07-12T04:03:03Z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoDataHoraAdministradora&#34;</span><span class="p">:</span> <span class="s2">&#34;2023-07-12T04:03:03Z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoValor&#34;</span><span class="p">:</span> <span class="mf">8.9</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoValorTaxaServico&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoNumeroCartao&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoCodigoAutorizacao&#34;</span><span class="p">:</span> <span class="s2">&#34;990052&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoNsuHost&#34;</span><span class="p">:</span> <span class="s2">&#34;407623963&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoStatus&#34;</span><span class="p">:</span> <span class="s2">&#34;00-APROVADA&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoQtdParcelas&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;TransacaoTerminal&#34;</span><span class="p">:</span> <span class="s2">&#34;001&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
 <h2 id="integração-com-qrmultiplus-pix">Integração com QRMultiplus (PIX)<a href="#integração-com-qrmultiplus-pix" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="configuração">Configuração<a href="#configuração" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="parâmetro-de-timeout-para-exibição-do-qr-code-no-pinpad">Parâmetro de Timeout para Exibição do QR Code no Pinpad<a href="#parâmetro-de-timeout-para-exibição-do-qr-code-no-pinpad" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="parâmetro-de-retorno-da-string-do-qr-code">Parâmetro de Retorno da String do QR Code<a href="#parâmetro-de-retorno-da-string-do-qr-code" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="utilizando-as-funções-do-qr-multiplus">Utilizando as Funções do QR Multiplus<a href="#utilizando-as-funções-do-qr-multiplus" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="códigos-das-funções">Códigos das Funções<a href="#códigos-das-funções" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="fluxo-de-utilização-1">Fluxo de Utilização<a href="#fluxo-de-utilização-1" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="criação-da-cobrança">Criação da Cobrança<a href="#criação-da-cobrança" class="anchor" aria-hidden="true">#</a> </h4>
+<h5 id="retornos-da-função">Retornos da Função<a href="#retornos-da-função" class="anchor" aria-hidden="true">#</a> </h5>
+<h5 id="impressão-do-qr-code">Impressão do QR Code<a href="#impressão-do-qr-code" class="anchor" aria-hidden="true">#</a> </h5>
+<h4 id="cancelamentoestorno">Cancelamento/Estorno<a href="#cancelamentoestorno" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="remoção-da-cobrança">Remoção da Cobrança<a href="#remoção-da-cobrança" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="status-da-cobrança">Status da Cobrança<a href="#status-da-cobrança" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="reimpressão-do-comprovante">Reimpressão do Comprovante<a href="#reimpressão-do-comprovante" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="retorno-da-transação">Retorno da Transação<a href="#retorno-da-transação" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="restrições-de-utilização">Restrições de Utilização<a href="#restrições-de-utilização" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="observações-sobre-o-fluxo-de-transação">Observações Sobre o Fluxo de Transação<a href="#observações-sobre-o-fluxo-de-transação" class="anchor" aria-hidden="true">#</a> </h4>
 <h2 id="integração-com-o-app-pinpdv-lite">Integração com o App PinPDV Lite<a href="#integração-com-o-app-pinpdv-lite" class="anchor" aria-hidden="true">#</a> </h2>
 <h2 id="funções-de-pinpad">Funções de Pinpad<a href="#funções-de-pinpad" class="anchor" aria-hidden="true">#</a> </h2>
 <h2 id="códigos-de-erro-1">Códigos de Erro<a href="#códigos-de-erro-1" class="anchor" aria-hidden="true">#</a> </h2>
@@ -1218,7 +1757,7 @@ Ao utilizar esta função os seguintes retornos poderão ser obtidos: SUCESSO ou
 			<div class="card-body d-flex justify-content-end">
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Próximo</div>
-					<a href="/pt/documentacao/dll/dllcomtela/" class="stretched-link text-reset text-decoration-none">DLL TefClientMC (Modo Client)</a>
+					<a href="/pt/documentacao/tef/dll/dllcomtela/" class="stretched-link text-reset text-decoration-none">DLL TefClientMC (Modo Client)</a>
 				</div>
 				<div class="d-flex flex-column justify-content-center">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
