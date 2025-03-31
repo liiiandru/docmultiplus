@@ -19,7 +19,7 @@
   <link rel="canonical" href="http://localhost:1313/pt/documentacao/dll/dlltransparente/">
 
 
-<title>Welcome to Doks</title>
+<title>DLL TefCLientMC</title>
 <meta name="description" content="Congrats on setting up a new Doks project!">
 
     
@@ -115,6 +115,46 @@
       </svg>
     </button>
     
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Documentacao</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+      <a href="/pt/documentacao/tefdial/"></a>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
     
     <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -272,6 +312,22 @@
       
         
 	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+      <a href="/pt/documentacao/tefdial/"></a>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
 		
 		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
 			<div class="page-links">
@@ -279,11 +335,32 @@
     <nav id="toc">
   <ul>
     <li><a href="#requisitos-para-execução">Requisitos para Execução</a></li>
-    <li><a href="#fluxo-de-utilização">Fluxo de Utilização</a></li>
+    <li><a href="#fluxo-de-utilização">Fluxo de Utilização</a>
+      <ul>
+        <li><a href="#observações-sobre-o-processo-iterativo">Observações sobre o Processo Iterativo</a></li>
+      </ul>
+    </li>
+    <li><a href="#instalaçãoconfiguração">Instalação/Configuração</a>
+      <ul>
+        <li><a href="#configurações-adicionais">Configurações Adicionais</a></li>
+        <li><a href="#processo-de-atualização">Processo de Atualização</a></li>
+      </ul>
+    </li>
     <li><a href="#funções-da-dll">Funções da DLL</a>
       <ul>
-        <li><a href="#iniciafuncaomcinterativo">IniciaFuncaoMCInterativo</a></li>
-        <li><a href="#aguardafuncaomcinterativo">AguardaFuncaoMCInterativo</a></li>
+        <li><a href="#iniciafuncaomcinterativo">IniciaFuncaoMCInterativo</a>
+          <ul>
+            <li><a href="#códigos-de-erro">Códigos de Erro</a></li>
+            <li><a href="#códigos-de-operação">Códigos de Operação</a></li>
+            <li><a href="#observações-sobre-os-códigos-de-operação">Observações Sobre os Códigos de Operação</a></li>
+            <li><a href="#seleção-do-dispositivo-para-realizar-a-transação">Seleção do Dispositivo para Realizar a Transação</a></li>
+          </ul>
+        </li>
+        <li><a href="#aguardafuncaomcinterativo">AguardaFuncaoMCInterativo</a>
+          <ul>
+            <li><a href="#tags-retornadas">Tags Retornadas</a></li>
+          </ul>
+        </li>
         <li><a href="#continuafuncaomcinterativo">ContinuaFuncaoMCInterativo</a></li>
         <li><a href="#finalizafuncaomcinterativo">FinalizaFuncaoMCInterativo</a></li>
         <li><a href="#cancelarfluxomcinterativo">CancelarFluxoMCInterativo</a></li>
@@ -293,7 +370,7 @@
     <li><a href="#integração-com-qrmultiplus-pix">Integração com QRMultiplus (PIX)</a></li>
     <li><a href="#integração-com-o-app-pinpdv-lite">Integração com o App PinPDV Lite</a></li>
     <li><a href="#funções-de-pinpad">Funções de Pinpad</a></li>
-    <li><a href="#códigos-de-erro">Códigos de Erro</a></li>
+    <li><a href="#códigos-de-erro-1">Códigos de Erro</a></li>
     <li><a href="#solução-de-problemas">Solução de Problemas</a></li>
   </ul>
 </nav>
@@ -311,11 +388,32 @@
       <nav id="TableOfContents">
   <ul>
     <li><a href="#requisitos-para-execução">Requisitos para Execução</a></li>
-    <li><a href="#fluxo-de-utilização">Fluxo de Utilização</a></li>
+    <li><a href="#fluxo-de-utilização">Fluxo de Utilização</a>
+      <ul>
+        <li><a href="#observações-sobre-o-processo-iterativo">Observações sobre o Processo Iterativo</a></li>
+      </ul>
+    </li>
+    <li><a href="#instalaçãoconfiguração">Instalação/Configuração</a>
+      <ul>
+        <li><a href="#configurações-adicionais">Configurações Adicionais</a></li>
+        <li><a href="#processo-de-atualização">Processo de Atualização</a></li>
+      </ul>
+    </li>
     <li><a href="#funções-da-dll">Funções da DLL</a>
       <ul>
-        <li><a href="#iniciafuncaomcinterativo">IniciaFuncaoMCInterativo</a></li>
-        <li><a href="#aguardafuncaomcinterativo">AguardaFuncaoMCInterativo</a></li>
+        <li><a href="#iniciafuncaomcinterativo">IniciaFuncaoMCInterativo</a>
+          <ul>
+            <li><a href="#códigos-de-erro">Códigos de Erro</a></li>
+            <li><a href="#códigos-de-operação">Códigos de Operação</a></li>
+            <li><a href="#observações-sobre-os-códigos-de-operação">Observações Sobre os Códigos de Operação</a></li>
+            <li><a href="#seleção-do-dispositivo-para-realizar-a-transação">Seleção do Dispositivo para Realizar a Transação</a></li>
+          </ul>
+        </li>
+        <li><a href="#aguardafuncaomcinterativo">AguardaFuncaoMCInterativo</a>
+          <ul>
+            <li><a href="#tags-retornadas">Tags Retornadas</a></li>
+          </ul>
+        </li>
         <li><a href="#continuafuncaomcinterativo">ContinuaFuncaoMCInterativo</a></li>
         <li><a href="#finalizafuncaomcinterativo">FinalizaFuncaoMCInterativo</a></li>
         <li><a href="#cancelarfluxomcinterativo">CancelarFluxoMCInterativo</a></li>
@@ -325,7 +423,7 @@
     <li><a href="#integração-com-qrmultiplus-pix">Integração com QRMultiplus (PIX)</a></li>
     <li><a href="#integração-com-o-app-pinpdv-lite">Integração com o App PinPDV Lite</a></li>
     <li><a href="#funções-de-pinpad">Funções de Pinpad</a></li>
-    <li><a href="#códigos-de-erro">Códigos de Erro</a></li>
+    <li><a href="#códigos-de-erro-1">Códigos de Erro</a></li>
     <li><a href="#solução-de-problemas">Solução de Problemas</a></li>
   </ul>
 </nav>
@@ -363,9 +461,686 @@
 <p>Após o recebimento dessa tag, deve-se imprimir o comprovante da transação, armazenar suas informações e, por fim, chamar a função <strong>FinalizaFuncaoMCInterativo</strong>, confirmando assim a transação.</p>
 <p>Se for necessário cancelar a transação a qualquer momento, a função <strong>CancelarFluxoMCInterativo</strong> pode ser chamada. Essa função retorna 0 em caso de sucesso e interrompe imediatamente o fluxo da transação.</p>
 <p>O retorno das funções indica o sucesso de sua execução. No caso específico de <strong>FinalizaFuncaoMCInterativo</strong>, o resultado da confirmação ou do cancelamento da transação pode ser obtido por meio da função AguardaFuncaoMCInterativo ou pela verificação do status da transação.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Retorno</th>
+          <th>Função</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>INT</td>
+          <td>IniciaFuncaoMCInterativo</td>
+      </tr>
+      <tr>
+          <td>*BSTR</td>
+          <td>AguardaFuncaoMCInterativo</td>
+      </tr>
+      <tr>
+          <td>INT</td>
+          <td>ContinuaFuncaoMCInterativo</td>
+      </tr>
+      <tr>
+          <td>INT</td>
+          <td>FinalizaFuncaoMCInterativo</td>
+      </tr>
+      <tr>
+          <td>INT</td>
+          <td>CancelarFluxoMCInterativo</td>
+      </tr>
+  </tbody>
+</table>
+<p>*Informações sobre o tipo BSTR <a href="https://docs.microsoft.com/en-us/previous-versions/windows/desktop/automat/bstr">(Clique aqui)</a></p>
+<p>(diagrama)</p>
+<h3 id="observações-sobre-o-processo-iterativo">Observações sobre o Processo Iterativo<a href="#observações-sobre-o-processo-iterativo" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Durante a execução do laço de repetição, evite a inclusão de <em>delays</em>, <em>sleeps</em> ou qualquer instrução que possa resultar em atrasos na execução. Isso é crucial, pois pode levar à perda de dados ou ao encerramento inesperado da execução.
+As chamadas para a função <strong>AguardaFuncaoMCInterativo</strong> devem ser feitas de maneira contínua, com tratamento adequado para cada tag.
+Se uma mensagem for exibida pela automação e você receber uma nova mensagem ou algum outro retorno, substitua a mensagem anterior apenas nesses casos. Durante o processo, é importante estar ciente de que em certos momentos, podem ser retornadas strings vazias.</p>
+<h2 id="instalaçãoconfiguração">Instalação/Configuração<a href="#instalaçãoconfiguração" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Esta solução foi desenhada para funcionar no modelo <em>standalone</em>, ou seja, todos os componentes requeridos devem estar instalados no mesmo dispositivo (disco C:\). As funções TEF somente podem ser executadas através de um equipamento que possua o Pinpad, conexão de banda larga e a solução instalada.</p>
+<p>Para o funcionamento da DLL são necessários que os arquivos da DLL e o <strong>ConfigMC.ini</strong> estejam presentes na mesma pasta em que está o executável do sistema. O Conteúdo do arquivo <strong>ConfigMC.ini</strong>, deve apontar o caminho da pasta onde está o executável <strong>ClientD.exe</strong>.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">ConfigMC.ini</span>
+  </figcaption>
+  <pre tabindex="0"><code>  CAMINHO=C:\ClientD</code></pre>
+  </figure>
+</div>
+<p>O arquivo <strong>CliMC.ini</strong> deve estar presente na pasta em que o executável ClientD.exe foi instalado, nele são adicionadas as configurações relacionadas ao Pinpad, confirmação de transações, venda digitada, etc. A seguir um exemplo de como deve ser o arquivo e os campos básicos que devem ser configurados.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">CliMC.ini</span>
+  </figcaption>
+  <pre tabindex="0"><code>  Porta=3
+  MensagemPadrao=MUTLIPLUS CARD
+  TransacoesAdicionaisHabilitadas=29
+  ConfirmacaoAutomatica=SIM</code></pre>
+  </figure>
+</div>
+<table>
+  <thead>
+      <tr>
+          <th>Campo</th>
+          <th>Valor</th>
+          <th>Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Porta</td>
+          <td>Número da porta ou AUTO_USB para identificar de forma automática</td>
+          <td>Configuração de porta do Pinpad</td>
+      </tr>
+      <tr>
+          <td>MensagemPadrao</td>
+          <td>Texto</td>
+          <td>Mensagem padrão exibida na tela do Pinpad</td>
+      </tr>
+      <tr>
+          <td>TransacoesAdicionaisHabilitadas</td>
+          <td>Verificar configurações adicionais</td>
+          <td>Configurações referente a serviços disponibilizados</td>
+      </tr>
+      <tr>
+          <td>ConfirmacaoAutomatica</td>
+          <td>SIM/NAO</td>
+          <td>Realiza a confirmação automática de todas as transações realizadas (a opção deve ter o valor NAO, quando são realizadas transações com múltiplos cartões)</td>
+      </tr>
+      <tr>
+          <td>NomeImpressora</td>
+          <td>Nome da Impressora selecionada</td>
+          <td>Parâmetro gerado automaticamente ao salvar a impressora padrão do QR Code</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="configurações-adicionais">Configurações Adicionais<a href="#configurações-adicionais" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Valores configurações adicionais</p>
+<ul>
+<li>
+<table>
+  <thead>
+      <tr>
+          <th>Código</th>
+          <th>Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>29</td>
+          <td>Opcional, habilita venda crédito digitada (em alguns cartões não é permitido esse modo de utilização)</td>
+      </tr>
+      <tr>
+          <td>42</td>
+          <td>Opcional habilita venda débito digitada (em alguns cartões não é permitido esse modo de utilização)</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+<li>Requisitos de Execução</li>
+</ul>
+<p>Para que o funcionamento da DLL ocorra de forma correta é necessário que a automação seja executada em <strong>Modo Administrador</strong>, caso não seja seguido erros poderão ser ocasionados. A aplicação ClientD.exe também deve estar configurada para executar em Modo Administrador.</p>
+<h3 id="processo-de-atualização">Processo de Atualização<a href="#processo-de-atualização" class="anchor" aria-hidden="true">#</a> </h3>
+<p>A aplicação ClientD.exe é atualizada automaticamente em momentos estratégicos, ou seja, quando não está realizando transações. Se, por algum motivo, estiver em processo de atualização e uma transação for iniciada, você receberá o código de erro 41. Nesse caso, tente realizar a transação novamente até que o erro não seja mais retornado.
+No entanto, a DLL TefClientMC requer uma <strong>atualização manual</strong>, pois tem um impacto direto na automação. Em caso de mudanças significativas na versão disponibilizada (<em>break changes</em>), haverá um aviso no Portal. Sempre é recomendável testar as novas versões antes de liberar a automação para produção.</p>
 <h2 id="funções-da-dll">Funções da DLL<a href="#funções-da-dll" class="anchor" aria-hidden="true">#</a> </h2>
 <h3 id="iniciafuncaomcinterativo">IniciaFuncaoMCInterativo<a href="#iniciafuncaomcinterativo" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Esta função dá inicio ao processo de transação, seja com cartão, Pix ou administrativa, somente em algumas exceções que ela não é utilizada. Seus parâmetros são os seguintes:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Tipo</th>
+          <th>Nome</th>
+          <th>Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>INT</td>
+          <td>iComando</td>
+          <td>Comando para executar uma operação, por ex.: venda Crédito, Débito, verifique na tabela seguinte todos os comandos disponíveis</td>
+      </tr>
+      <tr>
+          <td>STRING</td>
+          <td>sCnpjCliente</td>
+          <td>CNPJ do Cliente (apenas números ex.: 12345678000100)</td>
+      </tr>
+      <tr>
+          <td>INT</td>
+          <td>iParcela</td>
+          <td>Número de Parcelas</td>
+      </tr>
+      <tr>
+          <td>STRING</td>
+          <td>sCupom</td>
+          <td>Número do cupom fiscal (Até 6 caracteres, Ex:123456)</td>
+      </tr>
+      <tr>
+          <td>STRING</td>
+          <td>sValor</td>
+          <td>Valor da transação utilizando virgula como separador, ex.: 100,00</td>
+      </tr>
+      <tr>
+          <td>STRING</td>
+          <td>sNSU</td>
+          <td>Número do NSU gerado pela frente de caixa (Até 6 caracteres, Ex:123456)</td>
+      </tr>
+      <tr>
+          <td>STRING</td>
+          <td>sData</td>
+          <td>Data da transação no seguinte formato yyyyMMdd, ex.: 20211207</td>
+      </tr>
+      <tr>
+          <td>STRING</td>
+          <td>sNumeroPDV</td>
+          <td>Número do PDV que está realizando a transação.</td>
+      </tr>
+      <tr>
+          <td>STRING</td>
+          <td>sCodigoLoja</td>
+          <td>Código da Loja (Solicitar para Multiplus Card)</td>
+      </tr>
+      <tr>
+          <td>INT</td>
+          <td>iTipoComunicação</td>
+          <td>Parâmetro de comunicação, preencher com 0</td>
+      </tr>
+      <tr>
+          <td>STRING</td>
+          <td>sParametro</td>
+          <td>Preencher com uma string vazia “”, string caso não seja utilizado</td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">IniciaFuncaoMCInterativo</span><span class="p">(</span><span class="kt">int</span> <span class="n">iComando</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjCliente</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iParcela</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCupom</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sValor</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sNsu</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sData</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sNumeroPDV</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCodigoLoja</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iTipoComunicacao</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sParametro</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h4 id="códigos-de-erro">Códigos de Erro<a href="#códigos-de-erro" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Quando executada corretamente a função retorna 0, e o fluxo deve continuar; caso ocorra algum erro serão retornados um dos códigos da tabela a seguir:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Código</th>
+          <th>Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0</td>
+          <td>Retorno OK (função foi executada sem erros)</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>Erro genérico na execução</td>
+      </tr>
+      <tr>
+          <td>30</td>
+          <td>Não foi encontrado o caminho do ClientD.exe</td>
+      </tr>
+      <tr>
+          <td>31</td>
+          <td>ConfigMC.ini está vazio</td>
+      </tr>
+      <tr>
+          <td>32</td>
+          <td>ClientD.exe não encontrado</td>
+      </tr>
+      <tr>
+          <td>33</td>
+          <td>ClientD.exe não está em execução</td>
+      </tr>
+      <tr>
+          <td>34</td>
+          <td>Erro ao iniciar ClientD.exe</td>
+      </tr>
+      <tr>
+          <td>35</td>
+          <td>Erro interno do ClientD.exe</td>
+      </tr>
+      <tr>
+          <td>36</td>
+          <td>Erro interno do ClientD.exe</td>
+      </tr>
+      <tr>
+          <td>37</td>
+          <td>Erro na leitura do arquivo ConfigMC.ini</td>
+      </tr>
+      <tr>
+          <td>38</td>
+          <td>Valor da transação com formato incorreto</td>
+      </tr>
+      <tr>
+          <td>39</td>
+          <td>Executável de envio de transações não encontrado</td>
+      </tr>
+      <tr>
+          <td>40</td>
+          <td>CNPJ Inválido ou no formato incorreto</td>
+      </tr>
+      <tr>
+          <td>41</td>
+          <td>ClientD.exe está em processo de atualização</td>
+      </tr>
+      <tr>
+          <td>42</td>
+          <td>A automação não está sendo executada no modo administrador</td>
+      </tr>
+      <tr>
+          <td>43</td>
+          <td>ClientD.exe está em execução devido a uma transação anterior</td>
+      </tr>
+      <tr>
+          <td>44</td>
+          <td>Parâmetros ausentes em operação que utiliza o sParametro</td>
+      </tr>
+      <tr>
+          <td>45</td>
+          <td>Parâmetros no formato incorreto em operação que utiliza o sParametro</td>
+      </tr>
+      <tr>
+          <td>46</td>
+          <td>Erro ao identificar localização da DLL</td>
+      </tr>
+      <tr>
+          <td>47</td>
+          <td>Não Foi encontrada a localização da DLL</td>
+      </tr>
+      <tr>
+          <td>48</td>
+          <td>Não houve confirmação da conclusão da execução do ClientD</td>
+      </tr>
+      <tr>
+          <td>49</td>
+          <td>Número de parcelas inválido</td>
+      </tr>
+      <tr>
+          <td>52</td>
+          <td>Código de operação inválido para a função</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="códigos-de-operação">Códigos de Operação<a href="#códigos-de-operação" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Para utilizar as funções disponíveis, informe um dos códigos da tabela abaixo no parâmetro <strong>iComando</strong>. A maioria das funções segue o mesmo fluxo; caso haja um fluxo alternativo, ele será especificado.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Código</th>
+          <th>Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>4</td>
+          <td>Venda Débito</td>
+      </tr>
+      <tr>
+          <td>20</td>
+          <td>Venda Débito a Vista</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>Venda Crédito</td>
+      </tr>
+      <tr>
+          <td>0</td>
+          <td>Venda Crédito a Vista</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Venda Crédito Parcelado Loja</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>Venda Crédito Parcelado Adm</td>
+      </tr>
+      <tr>
+          <td>11</td>
+          <td>Venda Frota</td>
+      </tr>
+      <tr>
+          <td>18</td>
+          <td>Venda Voucher</td>
+      </tr>
+      <tr>
+          <td>9</td>
+          <td>Consulta saldo credito</td>
+      </tr>
+      <tr>
+          <td>10</td>
+          <td>Consulta saldo debito</td>
+      </tr>
+      <tr>
+          <td>15</td>
+          <td>Pré Autorização</td>
+      </tr>
+      <tr>
+          <td>16</td>
+          <td>Confirma Pré Autorização</td>
+      </tr>
+      <tr>
+          <td>17</td>
+          <td>Cancela Pré Autorização</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>Cancelamento</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>Reimpressão</td>
+      </tr>
+      <tr>
+          <td>98</td>
+          <td>Confirma Transação</td>
+      </tr>
+      <tr>
+          <td>99</td>
+          <td>Desfaz Transação</td>
+      </tr>
+      <tr>
+          <td>110</td>
+          <td>Limpeza de Tabelas</td>
+      </tr>
+      <tr>
+          <td>200</td>
+          <td>Coleta de CPF</td>
+      </tr>
+      <tr>
+          <td>300</td>
+          <td>Relatório de Transações</td>
+      </tr>
+      <tr>
+          <td>400</td>
+          <td>Comprovante de Transação com POS</td>
+      </tr>
+      <tr>
+          <td>700</td>
+          <td>Status da Transação</td>
+      </tr>
+      <tr>
+          <td>806</td>
+          <td>Status do Pin Pad</td>
+      </tr>
+      <tr>
+          <td>807</td>
+          <td>Informações do Pin Pad</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="observações-sobre-os-códigos-de-operação">Observações Sobre os Códigos de Operação<a href="#observações-sobre-os-códigos-de-operação" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Os códigos de operação em sua maioria são autoexplicativos, a seguir estão descritos alguns códigos, e nomenclaturas que possam gerar dúvidas.</p>
+<ul>
+<li>
+<p><strong>Venda Crédito e Venda Crédito a Vista</strong>: a primeira opção apresenta um menu para que seja escolhida a modalidade a vista ou parcelada; a segunda opção inicia a venda à vista.</p>
+</li>
+<li>
+<p><strong>Parcelado Loja e Parcelado Adm</strong>: A utilização destas opções está vinculada diretamente com a operadora do cliente, pois determina quem irá pagar os juros do parcelamento, dependendo da configuração da operadora pode não estar disponível os dois tipos.</p>
+</li>
+<li>
+<p><strong>Limpeza de Tabelas</strong>: Na primeira inicialização ou venda do dia, a operadora realiza uma atualização das informações no Pinpad. Contudo, ao longo do dia, podem ocorrer erros que impedem a conclusão das transações, frequentemente manifestados através da mensagem &ldquo;Cartão Inválido&rdquo;. Nesses casos, uma solução possível é realizar uma atualização forçada das tabelas, o que é feito utilizando a função &ldquo;Limpeza de Tabelas&rdquo;. Após essa ação, ao efetuar uma nova transação, o Pinpad receberá a carga de tabelas atualizada, permitindo o funcionamento correto do TEF.
+Ao utilizar esta função os seguintes retornos poderão ser obtidos: SUCESSO ou FALHA, no formato: [RETORNO]#SUCESSO, [RETORNO]#FALHA.
+<strong>Obs.</strong>: Para esta operação <strong>não é necessário</strong> chamar a função FinalizaFuncaoMCInterativo.</p>
+</li>
+<li>
+<p><strong>Coleta de CPF</strong>: Esta função tem por objetivo de auxiliar a automação, tornando a coleta mais discreta para o cliente, no seu funcionamento o CPF é inserido, em seguida deve ser confirmado pelo cliente se o mesmo está correto. A validação do mesmo deve ser feita pela automação, caso esteja incorreto deve ser solicitado novamente.</p>
+</li>
+<li>
+<p><strong>Cancelamento e Reimpressão</strong>: o fluxo destas transações pode ter alguma pequena variação dependendo da operadora (algumas não permitem reimpressão), ao utilizar elas para finalizar o fluxo a função FinalizaFuncaoMCInterativo, deve ser chamada com o comando 98, pois nestas funções não é realizado desfazimento.</p>
+</li>
+</ul>
+<h4 id="seleção-do-dispositivo-para-realizar-a-transação">Seleção do Dispositivo para Realizar a Transação<a href="#seleção-do-dispositivo-para-realizar-a-transação" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Caso esteja habilitado o uso da função POS TEF será possível definir em qual dispositivo a transação será realizada, no Pinpad ou no SmartPOS, para isso é necessário realizar a chamada da função IniciaFuncaoMCInterativo, preenchendo o parâmetro sParametro da seguinte forma:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Dispositivo</th>
+          <th>Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Pinpad</td>
+          <td>LEITOR=1</td>
+      </tr>
+      <tr>
+          <td>SmartPOS</td>
+          <td>LEITOR=3</td>
+      </tr>
+  </tbody>
+</table>
+<p>Caso não seja informado nenhum valor ou algum diferente dos mencionados acima, será questionado o dispositivo em que a transação será realizada.</p>
 <h3 id="aguardafuncaomcinterativo">AguardaFuncaoMCInterativo<a href="#aguardafuncaomcinterativo" class="anchor" aria-hidden="true">#</a> </h3>
+<p>A função <strong>AguardaFuncaoMCInterativo</strong> não possui parâmetros, ela deve ser chamada continuamente em um laço até que o processo da transação seja finalizado, com base em seus retornos serão exibidas mensagens solicitando a interação do operador e do cliente. Cada retorno tem um tratamento diferente, porém todos iniciam a string com uma tag informando a ação.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSTR</span> <span class="n">AguardaFuncaoMCInterativo</span><span class="p">()</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>A tag sempre é no seguinte formato [Ação] e possui como separador um #, em seguida vem o campo a ser exibido.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Retorno</span>
+  </figcaption>
+  <pre tabindex="0"><code>  [MENU]#MODO#1,1-MAGNETICO/CHIP|2,2-DIGITADO</code></pre>
+  </figure>
+</div>
+<p><strong>Observação</strong>: o tipo de retorno é <strong>BSTR</strong>, na linguagem que for implementada a utilização da DLL verifique qual é a melhor forma de realizar uma possível conversão.</p>
+<h4 id="tags-retornadas">Tags Retornadas<a href="#tags-retornadas" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Tag [MENU]</p>
+<p>Solicita a exibição de um menu para o usuário selecionar opções relativas à transação, como tipo de financiamento, opções de reimpressão, seleção de produtos, etc. O formato utilizado é o seguinte:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Formato do Retorno</span>
+  </figcaption>
+  <pre tabindex="0"><code>[MENU]#TÍTULO DO MENU#1,1-OPÇÃO 1|2,2-OPÇÃO 2</code></pre>
+  </figure>
+</div>
+<table>
+  <thead>
+      <tr>
+          <th>Descrição dos Campos</th>
+          <th>Descrição dos Campos</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Título do Menu</td>
+          <td>O título que deve ser exibido na interface</td>
+      </tr>
+      <tr>
+          <td>1,1-Opção</td>
+          <td>As opções do menu são separadas por “</td>
+      </tr>
+  </tbody>
+</table>
+<p>Para selecionar um item deve ser informado o índice (valor antes da virgula e não a posição na lista/array com as opções). Exemplo de utilização:</p>
+<p>Retornando para a DLL o valor “3”, será escolhida a opção Crédito parcelado loja.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Retorno</span>
+  </figcaption>
+  <pre tabindex="0"><code>  [MENU]#TIPO DE FINCANCIAMENTO#1,1-CREDITO A VISTA|2,2-CREDITO PARCELADO ADM|3,3-CREDITO PARCELADO LOJA</code></pre>
+  </figure>
+</div>
+<ul>
+<li>Tag [MSG]</li>
+</ul>
+<p>Retorna uma mensagem que deve ser exibida pela automação, durante o processo podem ser retornadas mensagens vazias, e estas devem ser desconsideradas. Ao receber esta tag não é necessário retornar valores para a DLL.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Retorno</span>
+  </figcaption>
+  <pre tabindex="0"><code>  [MSG]#AGUARDE A SENHA
+  [MSG]#CONECTANDO COM O SERVIDOR
+  [MSG]#TRANSACAO APROVADA</code></pre>
+  </figure>
+</div>
+<ul>
+<li>Tag [PERGUNTA]</li>
+</ul>
+<p>Solicita informações para a realização transação, como número de parcelas, valores, data de vencimento, etc. As perguntas podem ter os seguintes tipos de dado INT (inteiro), STRING, DECIMAL e DATE (data).</p>
+<p>Estas são retornadas no seguinte formato:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Formato do Retorno</span>
+  </figcaption>
+  <pre tabindex="0"><code>  [PERGUNTA]#TEXTO DA PERGUNTA#TIPO DE DADO#TAMANHO MINÍMO#TAMANHO MÁXIMO#VALOR MINÍMO#VALOR MÁXIMO#CASAS DECIMAIS</code></pre>
+  </figure>
+</div>
+<table>
+  <thead>
+      <tr>
+          <th>Descrição dos Campos</th>
+          <th>Descrição dos Campos</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Texto da pergunta</td>
+          <td>A pergunta que deve ser exibida para o usuário.</td>
+      </tr>
+      <tr>
+          <td>Tipo de Dado</td>
+          <td>Tipo de dado que deve ser utilizado para a validação na resposta.</td>
+      </tr>
+      <tr>
+          <td>Tamanho Mínimo</td>
+          <td>O tamanho mínimo do valor informado, se for 0 não há restrição.</td>
+      </tr>
+      <tr>
+          <td>Tamanho Máximo</td>
+          <td>O tamanho máximo do valor informado, se for 0 não há restrição.</td>
+      </tr>
+      <tr>
+          <td>Valor Mínimo</td>
+          <td>Valor mínimo para ser informado, se for 0 não há restrição.</td>
+      </tr>
+      <tr>
+          <td>Valor Máximo</td>
+          <td>Valor máximo para ser informado, se for 0 não há restrição.</td>
+      </tr>
+      <tr>
+          <td>Casas decimais</td>
+          <td>Número de casas decimais solicitada, se for 0 significa que não está solicitando.</td>
+      </tr>
+  </tbody>
+</table>
+<p>Para o tipo DATE no tamanho deve ser considerada a máscara do campo (caso utilize), ex.: (DD/MM/AA) tem o tamanho 8, valores mínimo e máximo não são retornados.</p>
+<p>A seguir exemplos de perguntas que podem ser retornadas:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Retorno</span>
+  </figcaption>
+  <pre tabindex="0"><code>  [PERGUNTA]#INFORME O NSU#INT#0#0#0,00#0,00#0
+  [PERGUNTA]#INFORME A DATA DE VALIDADE (MM/AA) #DATE#0#0#0,00#0,00#0
+  [PERGUNTA]#BOM PARA (DD/MM/AA)#DATE#0#0#0,00#0,00#0
+  [PERGUNTA]#INFORME O VALOR#DECIMAL#0#0#0,00#0,00#2</code></pre>
+  </figure>
+</div>
+<ul>
+<li><strong>Tag [RETORNO]</strong></li>
+</ul>
+<p>Esta tag indica para a automação que a função solicitada foi concluída e os dados retornados podem estar relacionados a transações com cartão, Pix, captura de CPF ou relatório de transações. Assim que recebida deve ser processada para armazenar as informações necessárias para a automação e finalização da transação, além de realizar a impressão do comprovante. Seu formato varia de acordo com a transação realizada, a seguir está um exemplo de retorno de uma transação com cartão.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Retorno</span>
+  </figcaption>
+  <pre tabindex="0"><code>  [RETORNO]#CAMPO0160=CUPOM#CAMPO0002=VALOR#CAMPO0132=COD BANDEIRA#CAMPO0131=COD REDE#CAMPO0135=COD AUTORIZACAO#
+  CAMPO0133=NSU#CAMPO0505=QTDE DE PARCELAS#CAMPO0504=VALOR TAXA SERVICO#CAMPO0136=PRIMEIROS NUMEROS CARTAO#
+  CAMPO1190=ULTIMOS NUMEROS CARTAO#CAMPO0950=CNPJ AUTORIZADORA#CAMPO1003=NOME CLIENTE#CAMPO0134=NSU REDE#
+  CAMPO0513=VENCTO CARTAO#CAMPO122=COMPROVANTE PARA IMPRESSAO UTILIZANDO ‘|’ COMO SEPARADOR |CORTAR#
+  CAMPO0003=NUMERO DE VIAS DO COMPROVANTE#CAMPO9999=NOME DA BANDEIRA#CAMPO9998=NOME DA REDE#CAMPO4221=CARTAO PRE PAGO#
+  CAMPO0101#DESC DO TIPO DE TRANSACAO#CAMPO0121=COMPROV REDUZIDO</code></pre>
+  </figure>
+</div>
+<ul>
+<li><strong>Tag [ERROABORTAR]</strong></li>
+</ul>
+<p>É retornada quando ocorre algum erro durante a execução, ou quando um comando de cancelamento é enviado, seja pela automação ou pelo pin pad. Ao receber esta tag, o fluxo deve ser interrompido imediatamente, acionando a função <strong>CancelarFluxoMCInterativo</strong> A mensagem informa a razão da interrupção do fluxo. Exemplo:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Retorno</span>
+  </figcaption>
+  <pre tabindex="0"><code>  [ERROABORTAR]#CANCELADO PELO OPERADOR
+  [ERROABORTAR]#SEM COMUNICACAO COM O TEF</code></pre>
+  </figure>
+</div>
+<ul>
+<li><strong>Tag [ERRODISPLAY]</strong></li>
+</ul>
+<p>Esta tag indica a ocorrência de erros no fluxo de transação, frequentemente relacionados com o pin pad ou problemas com o cartão. A ação a ser tomada após recebe-la é a mesma da tag <strong>[ERROABORTAR]</strong>: o fluxo deve ser interrompido imediatamente, acionando a função <strong>CancelarFluxoMCInterativo</strong>. Exemplos de retorno:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Retorno</span>
+  </figcaption>
+  <pre tabindex="0"><code>  [ERRODISPLAY]#T-14 ERRO PINPAD
+  [ERRODISPLAY]#ERRO AO REALIZAR REIMPRESSAO DA TRANSACAO</code></pre>
+  </figure>
+</div>
+<ul>
+<li><strong>Observações</strong></li>
+</ul>
+<p>No <strong>[RETORNO]</strong> o Campo122 contém o comprovante a ser impresso, a palavra <strong>CORTAR</strong>, ela indica que é o fim do comprovante, facilitando para a automação imprimir as vias separadamente, realizar o acionamento da guilhotina da impressora ou imprimir uma linha para corte manual.</p>
+<p>Quando a função possuir um retorno com a tag [MSG], não é necessário utilizar a função ContinuaFuncaoMCInterativo, pois a DLL está informando o que está ocorrendo durante o processo, e a exibição destas mensagens fica a critério da implementação na automação, assim decide-se quais serão relevantes para a exibição.</p>
+<p>A função para Coleta de CPF retorna para a automação uma string no seguinte formato <strong>[RETORNO]#CPF=12345678912</strong>, sendo necessário que a mesma realize a validação do CPF coletado.</p>
 <h3 id="continuafuncaomcinterativo">ContinuaFuncaoMCInterativo<a href="#continuafuncaomcinterativo" class="anchor" aria-hidden="true">#</a> </h3>
 <h3 id="finalizafuncaomcinterativo">FinalizaFuncaoMCInterativo<a href="#finalizafuncaomcinterativo" class="anchor" aria-hidden="true">#</a> </h3>
 <h3 id="cancelarfluxomcinterativo">CancelarFluxoMCInterativo<a href="#cancelarfluxomcinterativo" class="anchor" aria-hidden="true">#</a> </h3>
@@ -373,7 +1148,7 @@
 <h2 id="integração-com-qrmultiplus-pix">Integração com QRMultiplus (PIX)<a href="#integração-com-qrmultiplus-pix" class="anchor" aria-hidden="true">#</a> </h2>
 <h2 id="integração-com-o-app-pinpdv-lite">Integração com o App PinPDV Lite<a href="#integração-com-o-app-pinpdv-lite" class="anchor" aria-hidden="true">#</a> </h2>
 <h2 id="funções-de-pinpad">Funções de Pinpad<a href="#funções-de-pinpad" class="anchor" aria-hidden="true">#</a> </h2>
-<h2 id="códigos-de-erro">Códigos de Erro<a href="#códigos-de-erro" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="códigos-de-erro-1">Códigos de Erro<a href="#códigos-de-erro-1" class="anchor" aria-hidden="true">#</a> </h2>
 <h2 id="solução-de-problemas">Solução de Problemas<a href="#solução-de-problemas" class="anchor" aria-hidden="true">#</a> </h2>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">

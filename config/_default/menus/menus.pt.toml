@@ -74,7 +74,7 @@
 
 [[sidebar_docs]]
   name = "Documentacao"
-  pageRef = "/docs/guides"
+  pageRef = "pt/documentacao" #"/docs/guides"
   weight = 10
 
 [[sidebar_docs]]
