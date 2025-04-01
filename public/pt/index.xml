@@ -30,5 +30,12 @@
       <guid>http://localhost:1313/pt/documentacao/tef/dll/dllcomtela/</guid>
       <description>&lt;p&gt;Integração com a DLL TefCLientMC Modo Client&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Tef Dial (Troca de Arquivos)</title>
+      <link>http://localhost:1313/pt/documentacao/tef/tefdial/trocaarquivos/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/tefdial/trocaarquivos/</guid>
+      <description>&lt;p&gt;Teste teste&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

@@ -11,4 +11,4 @@ seo:
   canonical: "" # custom canonical URL (optional)
   robots: "" # custom robot tags (optional)
 ---
-Forma de integração utilizando troca de arquivos entre a Automação e o Gerenciador de Pagamentos (Gerenciador Padrão) da Multiplus Card.
+Teste teste
