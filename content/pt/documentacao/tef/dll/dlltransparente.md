@@ -75,13 +75,13 @@ Esta solução foi desenhada para funcionar no modelo *standalone*, ou seja, tod
 
 Para o funcionamento da DLL são necessários que os arquivos da DLL e o **ConfigMC.ini** estejam presentes na mesma pasta em que está o executável do sistema. O Conteúdo do arquivo **ConfigMC.ini**, deve apontar o caminho da pasta onde está o executável **ClientD.exe**.
 
-```{title="ConfigMC.ini"}
+```txt{title="ConfigMC.ini"}
   CAMINHO=C:\ClientD
 ```
 
 O arquivo **CliMC.ini** deve estar presente na pasta em que o executável ClientD.exe foi instalado, nele são adicionadas as configurações relacionadas ao Pinpad, confirmação de transações, venda digitada, etc. A seguir um exemplo de como deve ser o arquivo e os campos básicos que devem ser configurados.
 
-```{title="CliMC.ini"}
+```txt{title="CliMC.ini"}
   Porta=3
   MensagemPadrao=MUTLIPLUS CARD
   TransacoesAdicionaisHabilitadas=29
@@ -231,7 +231,7 @@ A função **AguardaFuncaoMCInterativo** não possui parâmetros, ela deve ser c
 ```
 A tag sempre é no seguinte formato [Ação] e possui como separador um #, em seguida vem o campo a ser exibido.
 
-```{title="Exemplo de Retorno"}
+```txt{title="Exemplo de Retorno"}
   [MENU]#MODO#1,1-MAGNETICO/CHIP|2,2-DIGITADO
 ```
 
@@ -242,7 +242,7 @@ A tag sempre é no seguinte formato [Ação] e possui como separador um #, em se
 Tag [MENU]
 
 Solicita a exibição de um menu para o usuário selecionar opções relativas à transação, como tipo de financiamento, opções de reimpressão, seleção de produtos, etc. O formato utilizado é o seguinte:
-```{title="Formato do Retorno"}
+```txt{title="Formato do Retorno"}
   [MENU]#TÍTULO DO MENU#1,1-OPÇÃO 1|2,2-OPÇÃO 2
 ```
 
@@ -255,7 +255,7 @@ Para selecionar um item deve ser informado o índice (valor antes da virgula e n
 
 Retornando para a DLL o valor “3”, será escolhida a opção Crédito parcelado loja.
 
-```{title="Exemplo de Retorno"}
+```txt{title="Exemplo de Retorno"}
   [MENU]#TIPO DE FINCANCIAMENTO#1,1-CREDITO A VISTA|2,2-CREDITO PARCELADO ADM|3,3-CREDITO PARCELADO LOJA
 ```
 
@@ -263,7 +263,7 @@ Retornando para a DLL o valor “3”, será escolhida a opção Crédito parcel
 
 Retorna uma mensagem que deve ser exibida pela automação, durante o processo podem ser retornadas mensagens vazias, e estas devem ser desconsideradas. Ao receber esta tag não é necessário retornar valores para a DLL.
 
-```{title="Exemplo de Retorno"}
+```txt{title="Exemplo de Retorno"}
   [MSG]#AGUARDE A SENHA
   [MSG]#CONECTANDO COM O SERVIDOR
   [MSG]#TRANSACAO APROVADA
@@ -275,7 +275,7 @@ Solicita informações para a realização transação, como número de parcelas
 
 Estas são retornadas no seguinte formato:
 
-```{title="Formato do Retorno"}
+```txt{title="Formato do Retorno"}
   [PERGUNTA]#TEXTO DA PERGUNTA#TIPO DE DADO#TAMANHO MINÍMO#TAMANHO MÁXIMO#VALOR MINÍMO#VALOR MÁXIMO#CASAS DECIMAIS
 ```
 
@@ -293,7 +293,7 @@ Para o tipo DATE no tamanho deve ser considerada a máscara do campo (caso utili
 
 A seguir exemplos de perguntas que podem ser retornadas:
 
-```{title="Exemplo de Retorno"}
+```txt{title="Exemplo de Retorno"}
   [PERGUNTA]#INFORME O NSU#INT#0#0#0,00#0,00#0
   [PERGUNTA]#INFORME A DATA DE VALIDADE (MM/AA) #DATE#0#0#0,00#0,00#0
   [PERGUNTA]#BOM PARA (DD/MM/AA)#DATE#0#0#0,00#0,00#0
@@ -304,7 +304,7 @@ A seguir exemplos de perguntas que podem ser retornadas:
 
 Esta tag indica para a automação que a função solicitada foi concluída e os dados retornados podem estar relacionados a transações com cartão, Pix, captura de CPF ou relatório de transações. Assim que recebida deve ser processada para armazenar as informações necessárias para a automação e finalização da transação, além de realizar a impressão do comprovante. Seu formato varia de acordo com a transação realizada, a seguir está um exemplo de retorno de uma transação com cartão.
 
-```{title="Exemplo de Retorno"}
+```txt{title="Exemplo de Retorno"}
   [RETORNO]#CAMPO0160=CUPOM#CAMPO0002=VALOR#CAMPO0132=COD BANDEIRA#CAMPO0131=COD REDE#CAMPO0135=COD AUTORIZACAO#
   CAMPO0133=NSU#CAMPO0505=QTDE DE PARCELAS#CAMPO0504=VALOR TAXA SERVICO#CAMPO0136=PRIMEIROS NUMEROS CARTAO#
   CAMPO1190=ULTIMOS NUMEROS CARTAO#CAMPO0950=CNPJ AUTORIZADORA#CAMPO1003=NOME CLIENTE#CAMPO0134=NSU REDE#
@@ -317,7 +317,7 @@ Esta tag indica para a automação que a função solicitada foi concluída e os
 
 É retornada quando ocorre algum erro durante a execução, ou quando um comando de cancelamento é enviado, seja pela automação ou pelo pin pad. Ao receber esta tag, o fluxo deve ser interrompido imediatamente, acionando a função **CancelarFluxoMCInterativo** A mensagem informa a razão da interrupção do fluxo. Exemplo:
 
-```{title="Exemplo de Retorno"}
+```txt{title="Exemplo de Retorno"}
   [ERROABORTAR]#CANCELADO PELO OPERADOR
   [ERROABORTAR]#SEM COMUNICACAO COM O TEF
 ```
@@ -326,7 +326,7 @@ Esta tag indica para a automação que a função solicitada foi concluída e os
 
 Esta tag indica a ocorrência de erros no fluxo de transação, frequentemente relacionados com o pin pad ou problemas com o cartão. A ação a ser tomada após recebe-la é a mesma da tag **[ERROABORTAR]**: o fluxo deve ser interrompido imediatamente, acionando a função **CancelarFluxoMCInterativo**. Exemplos de retorno:
 
-```{title="Exemplo de Retorno"}
+```txt{title="Exemplo de Retorno"}
   [ERRODISPLAY]#T-14 ERRO PINPAD
   [ERRODISPLAY]#ERRO AO REALIZAR REIMPRESSAO DA TRANSACAO
 ```
@@ -354,7 +354,7 @@ Esta função também pode ser utilizada para abortar a transação, um cenário
   Retorno = ContinuaFuncaoMCInterativo(“ABORTAR”);
 ```
 
-```{title="Exemplo de Retorno"}
+```txt{title="Exemplo de Retorno"}
   [ERROABORTAR]#CANCELADO PELO OPERADOR.
 ```
 
@@ -378,17 +378,14 @@ A função FinalizaFuncaoMCInterativo, deve ser chamada após a impressão do co
 
 Ao utilizar esta função com o parâmetro de confirmação automática configurado com o valor NÃO ou em uma transação com múltiplos cartões após seu retorno é obrigatório chamar a AguardaFuncaoMCInterativo para obter o status da confirmação ou desfazimento. Este retorno possui o seguinte formato:
 
-```{title="Exemplo de Retorno"}
+```txt{title="Exemplo de Retorno"}
   [RETORNO]#TRANSACAO NSU=81949 CONFIRMADA COM SUCESSO
   [RETORNO]#TRANSACAO NSU=81949 HOUVE ERROS AO CONFIRMAR
 ```
 
-<div style="border-left: 5px solid #dc2626; background-color: #fee2e2; padding: 15px; border-radius: 8px; font-family: Arial, sans-serif;">
-    <strong style="color: #b91c1c;">⚠ Atenção</strong><br>
-    <p style="margin: 5px 0 0; color: #7f1d1d;">
-      Essa função deve ser chamada obrigatoriamente. Caso contrário, a transação poderá ser estornada, pois não terá sido devidamente confirmada.
-    </p>
-</div>
+{{< callout context="danger" title="Atenção" icon="outline/alert-octagon" >}}
+Essa função deve ser chamada obrigatoriamente. Caso contrário, a transação poderá ser estornada, pois não terá sido devidamente confirmada.
+{{< /callout >}}
 
 
 ### CancelarFluxoMCInterativo
@@ -449,7 +446,7 @@ Observação: Para esta função não é necessária a realização da chamada d
 
 Ao realizar a consulta se for encontrada apenas 1 (uma) transação e o código de autorização foi informado, não haverá a exibição de menu, será retornada a tag [RETORNO] contendo os dados da transação e o comprovante, no mesmo formato de uma transação realizada com TEF. Caso existam 1 ou mais será retornado o menu contendo as seguintes informações: Bandeira, Valor, Data e Hora, Parcelas e Status da impressão.
 
-```{title="Exemplo de Retorno"}
+```txt{title="Exemplo de Retorno"}
   [MENU]#INFORME A TRANSACAO DESEJADA PARA A IMPRESSAO DO COMPROVANTE#
   1,1-VISA;0,1;09/09/2024 12:21:46;1;IMPRESSO|
   2,2-ELO;0,1;09/09/2024 12:26:17;1;NAO IMPRESSO|
@@ -583,37 +580,145 @@ REDE;MASTERCARD;NAO INFORMADO;111055;12/07/2023 11:38:00;12/07/2023 11:38:00;3,4
 
 ## Integração com QRMultiplus (PIX)
 
+A realização de transações com o QR Multiplus (PIX) segue um fluxo semelhante ao realizado nas transações com cartão. São utilizadas as mesmas funções, diferenciando os códigos de operação (não são os mesmos da transação com cartão) e um parâmetro que deve ser configurado no arquivo CliMC.ini.
+
 ### Configuração
 
-### Parâmetro de Timeout para Exibição do QR Code no Pinpad
+Antes da utilização é necessária a realização da configuração do modo de utilização, ou seja, a forma de exibição ou retorno dos dados da transação juntamente com o QR Code. O modo de utilização é escolhido alterando o parâmetro ExibirQrCode no arquivo CliMC.ini, na tabela a seguir estão os códigos e a descrição do modo de exibição. Uma observação deve ser especificada a porta utilizada no Pinpad, e não utilizado o modo procurar automático.
 
-### Parâmetro de Retorno da String do QR Code
+|   Código | Exibição do QR Code                                                                  |
+|----------|--------------------------------------------------------------------------------------|
+|        0 | Retorno por string para a automação realizar a exibição em uma janela personalizada. |
+|        1 | Exibe no Pinpad e em uma janela padrão.                                              |
+|        2 | Exibe apenas na janela padrão.                                                       |
+|        3 | Exibe apenas no Pinpad.                                                              |
+
+#### Parâmetro de Timeout para Exibição do QR Code no Pinpad
+
+Se optar pela exibição no Pinpad, é opcional configurar o tempo de refresh do QR Code na tela do mesmo, com o parâmetro TimeoutPinPad=N. A partir da versão 1.2023.12.230 do ClientD.exe default é 8 segundos, sendo desaconselhado tempos inferiores a 3 segundos, pois pode comprometer a leitura do QR Code pelo cliente. A alteração desse parâmetro pode resultar em uma otimização do tempo necessário para a conclusão de uma transação. Caso clientes estejam enfrentando dificuldades na leitura o tempo pode ser aumentado.
+
+#### Parâmetro de Retorno da String do QR Code
+
+Para que a automação obtenha a string contendo o QR Code do PIX nos modos de exibição 1, 2 e 3; deve ser adicionado no arquivo CliMC.ini o seguinte parâmetro:
+```txt{title="CliMC.ini"}
+  RetornaStrQrCode=SIM.
+```
+
+Após iniciar o fluxo de transação, assim que for gerada a cobrança a string será retornada para a automação para a automação no formato abaixo. Em seguida, será exibido o QR Code no local configurado.
+
+```txt{title="Exemplo da string retornada"}
+  [MSG]#NSU=900011802|ORIGEM=GERENCIANET|VALOR=20,00|
+  QRCODE=00020101021226830014BR.GOV.BCB.PIX2561qrcodespix.sejaefi.com.br/v2/0f90f0af8523422d9f8025908a127777204000053099865802BR5905EFISA6008SAOPAULO62070000***6304FFE6
+```
+
+
+**Observação**: A string será retornada apena uma vez.
 
 ### Utilizando as Funções do QR Multiplus
 
+Para realizar uma transação, estorno ou remoção da cobrança deve ser chamada a função IniciaFuncaoMCInterativo, passando como código de operação que serão descritos a seguir. Deve ser mantido o mesmo fluxo de leitura e respostas realizado em uma transação de cartão utilizando as funções AguardaFuncaoMCInterativo e ContinuaFuncaoMCInterativo; ao final deve ser chamada a função FinalizaFuncaoMCInterativo, respeitando os códigos 98 se foi realizada e 99 se foi cancelada. Os códigos de erro são os mesmos descritos em seções anteriores.
+
 #### Códigos das Funções
+
+Para utilizar o QR Multiplus os códigos das operações são diferentes dos utilizadas para uma transação com TEF.
+
+| Código | Função                                                      |
+|--------|-------------------------------------------------------------|
+|     50 | Retorna um Menu com as opções de PSP para realizar a cobrança  |
+|     51 | Realiza a cobrança com o PSP padrão configurado para o Cliente |
+|     52 | Realiza a Cobrança com Mercado Pago                            |
+|     53 | Realiza a Cobrança com PicPay                                  |
+|     54 | Cancelar/Estorno Transação                                     |
+|     55 | Remover Transação                                              |
+|     56 | Status da Transação                                            |
+|     59 | Reimpressão de Comprovante                                     |
 
 #### Fluxo de Utilização
 
 #### Criação da Cobrança
 
+Esta função gera uma cobrança com o QR Multiplus, que pode ser o PIX no PSP padrão do cliente ou uma das carteiras digitais disponíveis. Para isso basta escolher uma das operações disponíves para criação: 50, 51, 52 ou 53; em seguida com o uso da função IniciaFuncaoMCInterativo dar início ao processo.
+
 ##### Retornos da Função
+
+Durante o fluxo a função AguardaFuncaoMCInterativo retornará o local onde está sendo exibido o qr code para realizar o pagamento.
+
+```txt{title="Exemplos de Retorno"}
+  [MSG]#AGUARDANDO PAGAMENTO – PINPAD
+  [MSG]#AGUARDANDO PAGAMENTO – FRENTE DE CAIXA
+  [MSG]#AGUARDANDO PAGAMENTO – TELA E PINPAD
+```
+
+**Observação**: Quando utilizado o Pix da Multiplus Pay, antes de retornar o qr code para o local configurado, será solicitado o telefone do cliente, o mesmo deve ser devolvido para DLL através da função ContinuaFuncaoMCInterativo, com o seguinte formato: **(00)00000-0000**;
+
+```txt{title="Solicitação de telefone"}
+  [PERGUNTA]#SOLICITE O TELEFONE DO CLIENTE
+```
 
 ##### Impressão do QR Code
 
+Na tela de exibição padrão existe a possibilidade de realizar a impressão do QR Code para o cliente; em sua primeira utilização é necessário definir qual será a impressora padrão, para isso é exibida a caixa de seleção da imagem a seguir.
+
+Caso seja necessária a redefinição da impressora o parâmetro NomeImpressora deve ser apagado do arquivo CliMC.ini.
+
+```txt{title="CliMC.ini",hl_lines=5}
+  Porta=3
+  MensagemPadrao=MUTLIPLUS CARD
+  TransacoesAdicionaisHabilitadas=29
+  ConfirmacaoAutomatica=SIM
+  NomeImpressora=Microsoft Print to PDF
+```
+
 #### Cancelamento/Estorno
+
+Esta função realiza o cancelamento/estorno de uma cobrança com o QR Multiplus, por questões de segurança transações com a Multiplus Pay não podem ser canceladas desta maneira.
 
 #### Remoção da Cobrança
 
+Esta função realiza a remoção de uma cobrança com o QR Multiplus, para que no relatório de transações não existam valores pendentes de recebimento. Seu uso se dá no cenário, onde o cliente desistiu de utilizar a forma de pagamento, ou houve um cancelamento do processo de venda. No fluxo de utilização ao realizar um cancelamento na tela padrão ou no Pinpad, esta operação é feita automaticamente; caso esteja sendo utilizada o retorno por string, ou a aplicação ClientD.exe seja encerrada de forma inesperada, essa função deve ser chamada antes de iniciar novamente o ciclo da transação, informando no campo NSU, o código da cobrança retornado inicialmente.
+
 #### Status da Cobrança
+
+Esta função retorna o status de uma cobrança (APROVADA, PENDENTE, CANCELADA, DESFEITA), e também outros detalhes relativos a ela como código, NSU, valor, PSP de origem, Identificação do pagamento e data/hora.
 
 #### Reimpressão do Comprovante
 
+Esta função reimprime o comprovante da transação com o NSU informado, além do comprovante também são retornados os mesmos campos com os dados da transação.
+
 #### Retorno da Transação
+
+As informações de retorno de uma transação efetuada por meio do QR Multiplus seguem o padrão das transações com cartão. Nem todos os campos são utilizados, uma vez que o tipo de transação difere. Além disso, há um campo adicional no retorno, denominado **CAMPO2620**. Esse campo corresponde à identificação do pagamento **(E2E)** e contém uma sequência alfanumérica de 32 caracteres. Essa informação é empregada em determinadas Unidades Federativas (UFs) para a geração da NFCe (Nota Fiscal de Consumidor eletrônica).
+
+O CAMPO0121 também é retornado contendo o comprovante reduzido da transação.
+
+```txt{title="Exemplo de Retorno"}
+  [RETORNO]#CAMPO0160=1000#CAMPO0002=0,02#CAMPO0132=000#CAMPO0131=000#CAMPO0133=955801668#
+  CAMPO0135=955801668#CAMPO0505=1#CAMPO0504=0.00#CAMPO0136=000000XXXXXX0000#CAMPO1190=0000#
+  CAMPO0950=#CAMPO1003=SEM NOME#CAMPO0134=955801668#CAMPO0513=00/00#
+  CAMPO122=           VENDA PIX|            |      TEF EXPRESS|  |DATA: 2023-08-29 12:22:19|
+  AUT: 955801668|NSU: 955801668|ID PGTO:  E18236170601304201626s0305512762 |
+  VALOR TOTAL: R$ 10,00|  |
+  CUPOM FISCAL: 1000        PDV: 001|CNPJ EMITENTE: 60.177.876/0001-30|29/08/2023 09:22:22|CORTAR#
+  CAMPO2620=E18236170601304201626s0305512762#CAMPO0121= VENDA   PIX	29/08/2023 09:22:22|
+  NSU: 955801668	AUT: 955801668|VALOR: R$ 10,00|ID PGTO: E18236170601304201626s0305512762|
+  CUPOM FISCAL: 1000|	PDV: 001|CNPJ EMITENTE:   60.177.876/0001-30
+```
 
 #### Restrições de Utilização
 
+Atualmente a exibição do QR Code no Pinpad, está disponível somente para o modelo **Gertec PPC 930**, os demais não são suportados. Se não estiver disponível este Pinpad, não utilize as opções de exibição 1 e 3, pois ocorrerá falha na geração do QR Code.
+
 #### Observações Sobre o Fluxo de Transação
+
+Durante o processo de realizar uma transação com PIX, pode ocorrer o seguinte cenário: o cliente efetua o pagamento e recebe o comprovante de que o mesmo foi enviado ao PSP do estabelecimento. No entanto, o QR Code ainda permanece visível. Caso não haja resposta após um período de espera de aproximadamente 2 minutos, o operador do caixa opta por cancelar a transação. Nesse momento, podem ocorrer duas situações distintas:
+
+**Primeira situação**: Mesmo após o cancelamento, o comprovante de pagamento é recebido.
+
+**Segunda situação**: O processo é encerrado sem o retorno do comprovante.
+
+Se a segunda situação ocorrer e o sistema não tiver armazenado o código da transação, é necessário acessar o Portal do Cliente para visualizar a transação e obter o código, possibilitando o estorno. Em seguida, o processo de pagamento deve ser repetido para finalizar o fluxo de venda corretamente. Outra opção é implementar a função "Relatório de Transações" no PDV, o que permitirá obter diretamente todas as transações realizadas e automatizar o processo de identificação da transação PIX realizada de forma incompleta.
+
+A explicação para situações como esta ocorrer pode ocorrer devido ao tempo de resposta dos PSPs ou momentos de alta demanda de transações. Garantindo o acesso ao Portal do Cliente ou a implementação do Relatório de Transações é possível lidar com essa inconveniência de maneira eficiente e garantir a conclusão adequada da transação PIX.
 
 ## Integração com o App PinPDV Lite
 

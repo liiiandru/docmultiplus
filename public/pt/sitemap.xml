@@ -62,7 +62,17 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://localhost:1313/pt/documentacao/pinpdv/pinpdv/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/pt/documentacao/qrmultiplus/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/pt/documentacao/qrmultiplus/qrmultiplus/</loc>
     <lastmod>2023-09-07T16:33:54+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -88,6 +98,11 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/pt/documentacao/tef/webservice/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/pt/documentacao/tef/webservice/webservice/</loc>
     <lastmod>2023-09-07T16:33:54+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

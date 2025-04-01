@@ -31,11 +31,32 @@
       <description>&lt;p&gt;Integração com a DLL TefCLientMC Modo Client&lt;/p&gt;</description>
     </item>
     <item>
+      <title>PinPDV</title>
+      <link>http://localhost:1313/pt/documentacao/pinpdv/pinpdv/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/pinpdv/pinpdv/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>QRMultiplus</title>
+      <link>http://localhost:1313/pt/documentacao/qrmultiplus/qrmultiplus/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/qrmultiplus/qrmultiplus/</guid>
+      <description>&lt;p&gt;Integração com QRMultiplus por API&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Tef Dial (Troca de Arquivos)</title>
       <link>http://localhost:1313/pt/documentacao/tef/tefdial/trocaarquivos/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
       <guid>http://localhost:1313/pt/documentacao/tef/tefdial/trocaarquivos/</guid>
       <description>&lt;p&gt;Teste teste&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WebService</title>
+      <link>http://localhost:1313/pt/documentacao/tef/webservice/webservice/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/webservice/webservice/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>
