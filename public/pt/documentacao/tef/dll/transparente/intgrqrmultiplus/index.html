@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="pt" data-bs-theme="auto">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
+</script>
+
+
+<link rel="stylesheet" href="/main.dc2f5458ab98613899cfadbb551e078821f7645691e4dfc57bb48d7697fe7be6885b7aea93d9ab15c53a25e38128c09220a1b4dcab934e04d1a7b374499b9872.css" integrity="sha512-3C9UWKuYYTiZz627VR4HiCH3ZFaR5N/Fe7SNdpf&#43;e&#43;aIW3rqk9mrFcU6JeOBKMCSIKG03KuTTgTRp7N0SZuYcg==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/pt/documentacao/tef/dll/transparente/intgrqrmultiplus/">
+
+  <link rel="canonical" href="http://localhost:1313/pt/documentacao/tef/dll/transparente/intgrqrmultiplus/">
+
+
+<title>Integração com QRMultiplus (PIX)</title>
+<meta name="description" content="Congrats on setting up a new Doks project!">
+
+    
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    
+      <link
+        rel="apple-touch-icon"
+        href="/apple-touch-icon.png"
+        sizes="180x180"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/favicon-192x192.png"
+        sizes="192x192"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/favicon-512x512.png"
+        sizes="512x512"
+        type="image/png"
+      >
+<link rel="manifest" href="/manifest.webmanifest">
+
+<meta property="og:url" content="http://localhost:1313/pt/documentacao/tef/dll/transparente/intgrqrmultiplus/">
+  <meta property="og:site_name" content="Multiplus Card">
+  <meta property="og:title" content="Integração com QRMultiplus (PIX)">
+  <meta property="og:description" content="A realização de transações com o QR Multiplus (PIX) segue um fluxo semelhante ao realizado nas transações com cartão. São utilizadas as mesmas funções, diferenciando os códigos de operação (não são os mesmos da transação com cartão) e um parâmetro que deve ser configurado no arquivo CliMC.ini.">
+  <meta property="og:locale" content="pt">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="documentacao">
+    <meta property="article:published_time" content="2023-09-07T16:33:54+02:00">
+    <meta property="article:modified_time" content="2023-09-07T16:33:54+02:00">
+    <meta property="og:image" content="http://localhost:1313/cover.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/cover.png">
+  <meta name="twitter:title" content="Integração com QRMultiplus (PIX)">
+  <meta name="twitter:description" content="A realização de transações com o QR Multiplus (PIX) segue um fluxo semelhante ao realizado nas transações com cartão. São utilizadas as mesmas funções, diferenciando os códigos de operação (não são os mesmos da transação com cartão) e um parâmetro que deve ser configurado no arquivo CliMC.ini.">
+      <meta name="twitter:site" content="@getdoks">
+
+    
+    
+    
+    <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/pt/",
+       "name": "",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/pt/documentacao/",
+       "name": "Documentação",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/pt/documentacao/tef/",
+       "name": "Tef",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/pt/documentacao/tef/dll/transparente/",
+       "name": "Dll Tef Client MC ( Dll Transparente)",
+       "position": 4
+     },
+     {
+       "@type": "ListItem",
+       "name": "Integração Com Qrmultiplus ( Pix)",
+       "position": 5
+     }
+   ]
+ }
+</script>
+
+
+
+
+
+</head>
+
+  
+  <body class="single section documentacao" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<header class="navbar navbar-expand-lg">
+  <div class="container-lg">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/pt/">Multiplus Card</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Documentacao</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open open>
+      <summary>TEF</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open open>
+      <summary>DLL TefClientMC (DLL Transparente)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/transparente/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/transparente/configuracao/">Instalação/Configuração</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/transparente/funcoes/">Funções da DLL</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/transparente/pinpad/">Funções de Pinpad</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/pt/documentacao/tef/dll/transparente/intgrqrmultiplus/">Integração com QRMultiplus (PIX)</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/transparente/intgrpinpdv/">Integração com App PinPDV Lite</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/transparente/solucaoproblemas/">Solução de Problemas</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/dllcomtela/">DLL TefClientMC (Modo Client)</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tef Dial (Troca de Arquivos)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/pt/documentacao/tef/tefdial/trocaarquivos/">Tef Dial (Troca de Arquivos)</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Webservice</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/pt/documentacao/tef/webservice/webservice/">WebService</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>PinPDV</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/pt/documentacao/pinpdv/pinpdv/">PinPDV</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>QRMultiplus</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/qrmultiplus/">QRMultiplus</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Multiplus Card</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/pt/documentacao/">Documentação</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/pt/exemplos/">Exemplos</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/pt/tutoriais">Tutoriais</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/pt/faq">FAQ</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        <div class="dropdown mt-1 order-lg-2">
+          <button class="btn btn-dropdown dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+            <span class="dropdown-caret">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M4 5h7"></path>
+                <path d="M9 3v2c0 4.418 -2.239 8 -5 8"></path>
+                <path d="M5 9c0 2.144 2.952 3.908 6.7 4"></path>
+                <path d="M12 20l4 -9l4 9"></path>
+                <path d="M19.1 18h-6.2"></path>
+              </svg>
+              <span id="doks-language-current">Português</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M6 9l6 6l6 -6"></path>
+              </svg>
+            </span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-lg-end me-lg-2 shadow rounded border-0" aria-labelledby="doks-languages">
+
+            <li><span class="dropdown-item current" aria-current="true">Português</span></li>
+
+            <li><hr class="dropdown-divider"></li>
+
+            
+              <li><a class="dropdown-item untranslated" rel="alternate" href="/en" hreflang="en" lang="en">English</a></li>
+            
+              
+          </ul>
+        </div>
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/multipluscard"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Pesquisar</h1>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden">Pesquisar</label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Pesquisar" aria-label="Pesquisar" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
+        <p class="search-no-recent message d-none mt-3 text-center">Nenhuma pesquisa recente</p>
+        <p class="search-no-results message d-none mt-3 text-center">Nenhum resultado encontrado for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date">Date here</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-lg" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open open>
+      <summary>TEF</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open open>
+      <summary>DLL TefClientMC (DLL Transparente)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/transparente/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/transparente/configuracao/">Instalação/Configuração</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/transparente/funcoes/">Funções da DLL</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/transparente/pinpad/">Funções de Pinpad</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/pt/documentacao/tef/dll/transparente/intgrqrmultiplus/">Integração com QRMultiplus (PIX)</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/transparente/intgrpinpdv/">Integração com App PinPDV Lite</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/transparente/solucaoproblemas/">Solução de Problemas</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/dllcomtela/">DLL TefClientMC (Modo Client)</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tef Dial (Troca de Arquivos)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/pt/documentacao/tef/tefdial/trocaarquivos/">Tef Dial (Troca de Arquivos)</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Webservice</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/pt/documentacao/tef/webservice/webservice/">WebService</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>PinPDV</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/pt/documentacao/pinpdv/pinpdv/">PinPDV</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>QRMultiplus</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/qrmultiplus/">QRMultiplus</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>Nesta página</h3>
+    <nav id="toc">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#configuração">Configuração</a>
+          <ul>
+            <li><a href="#parâmetro-de-timeout-para-exibição-do-qr-code-no-pinpad">Parâmetro de Timeout para Exibição do QR Code no Pinpad</a></li>
+            <li><a href="#parâmetro-de-retorno-da-string-do-qr-code">Parâmetro de Retorno da String do QR Code</a></li>
+          </ul>
+        </li>
+        <li><a href="#utilizando-as-funções-do-qr-multiplus">Utilizando as Funções do QR Multiplus</a>
+          <ul>
+            <li><a href="#códigos-das-funções">Códigos das Funções</a></li>
+            <li><a href="#fluxo-de-utilização">Fluxo de Utilização</a></li>
+            <li><a href="#criação-da-cobrança">Criação da Cobrança</a></li>
+            <li><a href="#cancelamentoestorno">Cancelamento/Estorno</a></li>
+            <li><a href="#remoção-da-cobrança">Remoção da Cobrança</a></li>
+            <li><a href="#status-da-cobrança">Status da Cobrança</a></li>
+            <li><a href="#reimpressão-do-comprovante">Reimpressão do Comprovante</a></li>
+            <li><a href="#retorno-da-transação">Retorno da Transação</a></li>
+            <li><a href="#restrições-de-utilização">Restrições de Utilização</a></li>
+            <li><a href="#observações-sobre-o-fluxo-de-transação">Observações Sobre o Fluxo de Transação</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
+		
+			<h1>Integração com QRMultiplus (PIX)</h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>Nesta página</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#configuração">Configuração</a>
+          <ul>
+            <li><a href="#parâmetro-de-timeout-para-exibição-do-qr-code-no-pinpad">Parâmetro de Timeout para Exibição do QR Code no Pinpad</a></li>
+            <li><a href="#parâmetro-de-retorno-da-string-do-qr-code">Parâmetro de Retorno da String do QR Code</a></li>
+          </ul>
+        </li>
+        <li><a href="#utilizando-as-funções-do-qr-multiplus">Utilizando as Funções do QR Multiplus</a>
+          <ul>
+            <li><a href="#códigos-das-funções">Códigos das Funções</a></li>
+            <li><a href="#fluxo-de-utilização">Fluxo de Utilização</a></li>
+            <li><a href="#criação-da-cobrança">Criação da Cobrança</a></li>
+            <li><a href="#cancelamentoestorno">Cancelamento/Estorno</a></li>
+            <li><a href="#remoção-da-cobrança">Remoção da Cobrança</a></li>
+            <li><a href="#status-da-cobrança">Status da Cobrança</a></li>
+            <li><a href="#reimpressão-do-comprovante">Reimpressão do Comprovante</a></li>
+            <li><a href="#retorno-da-transação">Retorno da Transação</a></li>
+            <li><a href="#restrições-de-utilização">Restrições de Utilização</a></li>
+            <li><a href="#observações-sobre-o-fluxo-de-transação">Observações Sobre o Fluxo de Transação</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<p>A realização de transações com o QR Multiplus (PIX) segue um fluxo semelhante ao realizado nas transações com cartão. São utilizadas as mesmas funções, diferenciando os códigos de operação (não são os mesmos da transação com cartão) e um parâmetro que deve ser configurado no arquivo CliMC.ini.</p>
+<h3 id="configuração">Configuração<a href="#configuração" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Antes da utilização é necessária a realização da configuração do modo de utilização, ou seja, a forma de exibição ou retorno dos dados da transação juntamente com o QR Code. O modo de utilização é escolhido alterando o parâmetro ExibirQrCode no arquivo CliMC.ini, na tabela a seguir estão os códigos e a descrição do modo de exibição. Uma observação deve ser especificada a porta utilizada no Pinpad, e não utilizado o modo procurar automático.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Código</th>
+          <th>Exibição do QR Code</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0</td>
+          <td>Retorno por string para a automação realizar a exibição em uma janela personalizada.</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>Exibe no Pinpad e em uma janela padrão.</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Exibe apenas na janela padrão.</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>Exibe apenas no Pinpad.</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="parâmetro-de-timeout-para-exibição-do-qr-code-no-pinpad">Parâmetro de Timeout para Exibição do QR Code no Pinpad<a href="#parâmetro-de-timeout-para-exibição-do-qr-code-no-pinpad" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Se optar pela exibição no Pinpad, é opcional configurar o tempo de refresh do QR Code na tela do mesmo, com o parâmetro TimeoutPinPad=N. A partir da versão 1.2023.12.230 do ClientD.exe default é 8 segundos, sendo desaconselhado tempos inferiores a 3 segundos, pois pode comprometer a leitura do QR Code pelo cliente. A alteração desse parâmetro pode resultar em uma otimização do tempo necessário para a conclusão de uma transação. Caso clientes estejam enfrentando dificuldades na leitura o tempo pode ser aumentado.</p>
+<h4 id="parâmetro-de-retorno-da-string-do-qr-code">Parâmetro de Retorno da String do QR Code<a href="#parâmetro-de-retorno-da-string-do-qr-code" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Para que a automação obtenha a string contendo o QR Code do PIX nos modos de exibição 1, 2 e 3; deve ser adicionado no arquivo CliMC.ini o seguinte parâmetro:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">CliMC.ini</span>
+  </figcaption>
+  <div class="highlight" title="CliMC.ini"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">  RetornaStrQrCode=SIM.</span></span></code></pre></div>
+  </figure>
+</div>
+<p>Após iniciar o fluxo de transação, assim que for gerada a cobrança a string será retornada para a automação para a automação no formato abaixo. Em seguida, será exibido o QR Code no local configurado.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo da string retornada</span>
+  </figcaption>
+  <div class="highlight" title="Exemplo da string retornada"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">  [MSG]#NSU=900011802|ORIGEM=GERENCIANET|VALOR=20,00|
+</span></span><span class="line"><span class="cl">  QRCODE=00020101021226830014BR.GOV.BCB.PIX2561qrcodespix.sejaefi.com.br/v2/0f90f0af8523422d9f8025908a127777204000053099865802BR5905EFISA6008SAOPAULO62070000***6304FFE6</span></span></code></pre></div>
+  </figure>
+</div>
+<p><strong>Observação</strong>: A string será retornada apena uma vez.</p>
+<h3 id="utilizando-as-funções-do-qr-multiplus">Utilizando as Funções do QR Multiplus<a href="#utilizando-as-funções-do-qr-multiplus" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Para realizar uma transação, estorno ou remoção da cobrança deve ser chamada a função IniciaFuncaoMCInterativo, passando como código de operação que serão descritos a seguir. Deve ser mantido o mesmo fluxo de leitura e respostas realizado em uma transação de cartão utilizando as funções AguardaFuncaoMCInterativo e ContinuaFuncaoMCInterativo; ao final deve ser chamada a função FinalizaFuncaoMCInterativo, respeitando os códigos 98 se foi realizada e 99 se foi cancelada. Os códigos de erro são os mesmos descritos em seções anteriores.</p>
+<h4 id="códigos-das-funções">Códigos das Funções<a href="#códigos-das-funções" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Para utilizar o QR Multiplus os códigos das operações são diferentes dos utilizadas para uma transação com TEF.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Código</th>
+          <th>Função</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>50</td>
+          <td>Retorna um Menu com as opções de PSP para realizar a cobrança</td>
+      </tr>
+      <tr>
+          <td>51</td>
+          <td>Realiza a cobrança com o PSP padrão configurado para o Cliente</td>
+      </tr>
+      <tr>
+          <td>52</td>
+          <td>Realiza a Cobrança com Mercado Pago</td>
+      </tr>
+      <tr>
+          <td>53</td>
+          <td>Realiza a Cobrança com PicPay</td>
+      </tr>
+      <tr>
+          <td>54</td>
+          <td>Cancelar/Estorno Transação</td>
+      </tr>
+      <tr>
+          <td>55</td>
+          <td>Remover Transação</td>
+      </tr>
+      <tr>
+          <td>56</td>
+          <td>Status da Transação</td>
+      </tr>
+      <tr>
+          <td>59</td>
+          <td>Reimpressão de Comprovante</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="fluxo-de-utilização">Fluxo de Utilização<a href="#fluxo-de-utilização" class="anchor" aria-hidden="true">#</a> </h4>
+
+<figure>
+  <img
+    srcset="data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADwAgCdASoQABUAP1mKtkspJKKYBACTFYT0gAA9ZOQSgAD&#43;7bU1q8J7F3EPqTGYL3m0MAAA"
+        data-srcset="/images/diagrama_qrmultiplus_hu_a10abc1e2432e14c.webp 480w,/images/diagrama_qrmultiplus_hu_ec65509858d830ac.webp 576w,/images/diagrama_qrmultiplus_hu_156ce159ba31cc5e.webp 754w"
+        data-sizes="auto"
+    src="/images/diagrama_qrmultiplus_hu_bd0a9601933554a2.jpg"
+    width="754"
+    height="1011"
+    decoding="async"
+    fetchpriority="auto"
+    loading="lazy"
+    alt="Diagrama do fluxo de utilização do QRMultiplus"
+    class="lazyload blur-up"
+  ><figcaption>Diagrama do fluxo de utilização do QRMultiplus</figcaption>
+</figure>
+<h4 id="criação-da-cobrança">Criação da Cobrança<a href="#criação-da-cobrança" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Esta função gera uma cobrança com o QR Multiplus, que pode ser o PIX no PSP padrão do cliente ou uma das carteiras digitais disponíveis. Para isso basta escolher uma das operações disponíves para criação: 50, 51, 52 ou 53; em seguida com o uso da função IniciaFuncaoMCInterativo dar início ao processo.</p>
+<h5 id="retornos-da-função">Retornos da Função<a href="#retornos-da-função" class="anchor" aria-hidden="true">#</a> </h5>
+<p>Durante o fluxo a função AguardaFuncaoMCInterativo retornará o local onde está sendo exibido o qr code para realizar o pagamento.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplos de Retorno</span>
+  </figcaption>
+  <div class="highlight" title="Exemplos de Retorno"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">  [MSG]#AGUARDANDO PAGAMENTO – PINPAD
+</span></span><span class="line"><span class="cl">  [MSG]#AGUARDANDO PAGAMENTO – FRENTE DE CAIXA
+</span></span><span class="line"><span class="cl">  [MSG]#AGUARDANDO PAGAMENTO – TELA E PINPAD</span></span></code></pre></div>
+  </figure>
+</div>
+<p><strong>Observação</strong>: Quando utilizado o Pix da Multiplus Pay, antes de retornar o qr code para o local configurado, será solicitado o telefone do cliente, o mesmo deve ser devolvido para DLL através da função ContinuaFuncaoMCInterativo, com o seguinte formato: <strong>(00)00000-0000</strong>;</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Solicitação de telefone</span>
+  </figcaption>
+  <div class="highlight" title="Solicitação de telefone"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">  [PERGUNTA]#SOLICITE O TELEFONE DO CLIENTE</span></span></code></pre></div>
+  </figure>
+</div>
+<h5 id="impressão-do-qr-code">Impressão do QR Code<a href="#impressão-do-qr-code" class="anchor" aria-hidden="true">#</a> </h5>
+<p>Na tela de exibição padrão existe a possibilidade de realizar a impressão do QR Code para o cliente; em sua primeira utilização é necessário definir qual será a impressora padrão, para isso é exibida a caixa de seleção da imagem a seguir.</p>
+
+<figure>
+  <img
+    srcset="data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABwAwCdASoQABMAP1mKtkspJKKYBACTFYTgAAXANkMyjjK&#43;oMAA/tTl9Ros0Dn2XA/Yr&#43;11ipMsfNrom03dpNZHKzavKgkoCnDitbi7YKOgQAAA"
+        data-srcset="/images/janelapadrao_hu_6132138a8da7759a.webp 447w"
+        data-sizes="auto"
+    src="/images/janelapadrao_hu_7de0856ce32dda4d.jpg"
+    width="447"
+    height="530"
+    decoding="async"
+    fetchpriority="auto"
+    loading="lazy"
+    alt="Janela padrão de exibição do Qr Code"
+    class="lazyload blur-up"
+  ><figcaption>Janela padrão de exibição do Qr Code</figcaption>
+</figure>
+
+<figure>
+  <img
+    srcset="data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAwAgCdASoQAAwAAph8JwBOj&#43;DE/wPOJ7nI4AD&#43;xNUBn&#43;QGgsr/N2x7XjFZJ3C5FAQjKFi7AnD4AAAA"
+        data-srcset="/images/impressora_hu_e0da64d29ee7429b.webp 425w"
+        data-sizes="auto"
+    src="/images/impressora_hu_ffff7ae132949b27.jpg"
+    width="425"
+    height="320"
+    decoding="async"
+    fetchpriority="auto"
+    loading="lazy"
+    alt="Janela de selção da impressora"
+    class="lazyload blur-up"
+  ><figcaption>Janela de selção da impressora</figcaption>
+</figure>
+<p>Caso seja necessária a redefinição da impressora o parâmetro NomeImpressora deve ser apagado do arquivo CliMC.ini.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">CliMC.ini</span>
+  </figcaption>
+  <div class="highlight" title="CliMC.ini"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">  Porta=3
+</span></span><span class="line"><span class="cl">  MensagemPadrao=MUTLIPLUS CARD
+</span></span><span class="line"><span class="cl">  TransacoesAdicionaisHabilitadas=29
+</span></span><span class="line"><span class="cl">  ConfirmacaoAutomatica=SIM
+</span></span><span class="line hl"><span class="cl">  NomeImpressora=Microsoft Print to PDF</span></span></code></pre></div>
+  </figure>
+</div>
+<h4 id="cancelamentoestorno">Cancelamento/Estorno<a href="#cancelamentoestorno" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Esta função realiza o cancelamento/estorno de uma cobrança com o QR Multiplus, por questões de segurança transações com a Multiplus Pay não podem ser canceladas desta maneira.</p>
+<h4 id="remoção-da-cobrança">Remoção da Cobrança<a href="#remoção-da-cobrança" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Esta função realiza a remoção de uma cobrança com o QR Multiplus, para que no relatório de transações não existam valores pendentes de recebimento. Seu uso se dá no cenário, onde o cliente desistiu de utilizar a forma de pagamento, ou houve um cancelamento do processo de venda. No fluxo de utilização ao realizar um cancelamento na tela padrão ou no Pinpad, esta operação é feita automaticamente; caso esteja sendo utilizada o retorno por string, ou a aplicação ClientD.exe seja encerrada de forma inesperada, essa função deve ser chamada antes de iniciar novamente o ciclo da transação, informando no campo NSU, o código da cobrança retornado inicialmente.</p>
+<h4 id="status-da-cobrança">Status da Cobrança<a href="#status-da-cobrança" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Esta função retorna o status de uma cobrança (APROVADA, PENDENTE, CANCELADA, DESFEITA), e também outros detalhes relativos a ela como código, NSU, valor, PSP de origem, Identificação do pagamento e data/hora.</p>
+<h4 id="reimpressão-do-comprovante">Reimpressão do Comprovante<a href="#reimpressão-do-comprovante" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Esta função reimprime o comprovante da transação com o NSU informado, além do comprovante também são retornados os mesmos campos com os dados da transação.</p>
+<h4 id="retorno-da-transação">Retorno da Transação<a href="#retorno-da-transação" class="anchor" aria-hidden="true">#</a> </h4>
+<p>As informações de retorno de uma transação efetuada por meio do QR Multiplus seguem o padrão das transações com cartão. Nem todos os campos são utilizados, uma vez que o tipo de transação difere. Além disso, há um campo adicional no retorno, denominado <strong>CAMPO2620</strong>. Esse campo corresponde à identificação do pagamento <strong>(E2E)</strong> e contém uma sequência alfanumérica de 32 caracteres. Essa informação é empregada em determinadas Unidades Federativas (UFs) para a geração da NFCe (Nota Fiscal de Consumidor eletrônica).</p>
+<p>O CAMPO0121 também é retornado contendo o comprovante reduzido da transação.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Retorno</span>
+  </figcaption>
+  <div class="highlight" title="Exemplo de Retorno"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">  [RETORNO]#CAMPO0160=1000#CAMPO0002=0,02#CAMPO0132=000#CAMPO0131=000#CAMPO0133=955801668#
+</span></span><span class="line"><span class="cl">  CAMPO0135=955801668#CAMPO0505=1#CAMPO0504=0.00#CAMPO0136=000000XXXXXX0000#CAMPO1190=0000#
+</span></span><span class="line"><span class="cl">  CAMPO0950=#CAMPO1003=SEM NOME#CAMPO0134=955801668#CAMPO0513=00/00#
+</span></span><span class="line"><span class="cl">  CAMPO122=           VENDA PIX|            |      TEF EXPRESS|  |DATA: 2023-08-29 12:22:19|
+</span></span><span class="line"><span class="cl">  AUT: 955801668|NSU: 955801668|ID PGTO:  E18236170601304201626s0305512762 |
+</span></span><span class="line"><span class="cl">  VALOR TOTAL: R$ 10,00|  |
+</span></span><span class="line"><span class="cl">  CUPOM FISCAL: 1000        PDV: 001|CNPJ EMITENTE: 60.177.876/0001-30|29/08/2023 09:22:22|CORTAR#
+</span></span><span class="line"><span class="cl">  CAMPO2620=E18236170601304201626s0305512762#CAMPO0121= VENDA   PIX	29/08/2023 09:22:22|
+</span></span><span class="line"><span class="cl">  NSU: 955801668	AUT: 955801668|VALOR: R$ 10,00|ID PGTO: E18236170601304201626s0305512762|
+</span></span><span class="line"><span class="cl">  CUPOM FISCAL: 1000|	PDV: 001|CNPJ EMITENTE:   60.177.876/0001-30</span></span></code></pre></div>
+  </figure>
+</div>
+<h4 id="restrições-de-utilização">Restrições de Utilização<a href="#restrições-de-utilização" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Atualmente a exibição do QR Code no Pinpad, está disponível somente para o modelo <strong>Gertec PPC 930</strong>, os demais não são suportados. Se não estiver disponível este Pinpad, não utilize as opções de exibição 1 e 3, pois ocorrerá falha na geração do QR Code.</p>
+<h4 id="observações-sobre-o-fluxo-de-transação">Observações Sobre o Fluxo de Transação<a href="#observações-sobre-o-fluxo-de-transação" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Durante o processo de realizar uma transação com PIX, pode ocorrer o seguinte cenário: o cliente efetua o pagamento e recebe o comprovante de que o mesmo foi enviado ao PSP do estabelecimento. No entanto, o QR Code ainda permanece visível. Caso não haja resposta após um período de espera de aproximadamente 2 minutos, o operador do caixa opta por cancelar a transação. Nesse momento, podem ocorrer duas situações distintas:</p>
+<p><strong>Primeira situação</strong>: Mesmo após o cancelamento, o comprovante de pagamento é recebido.</p>
+<p><strong>Segunda situação</strong>: O processo é encerrado sem o retorno do comprovante.</p>
+<p>Se a segunda situação ocorrer e o sistema não tiver armazenado o código da transação, é necessário acessar o Portal do Cliente para visualizar a transação e obter o código, possibilitando o estorno. Em seguida, o processo de pagamento deve ser repetido para finalizar o fluxo de venda corretamente. Outra opção é implementar a função &ldquo;Relatório de Transações&rdquo; no PDV, o que permitirá obter diretamente todas as transações realizadas e automatizar o processo de identificação da transação PIX realizada de forma incompleta.</p>
+<p>A explicação para situações como esta ocorrer pode ocorrer devido ao tempo de resposta dos PSPs ou momentos de alta demanda de transações. Garantindo o acesso ao Portal do Cliente ou a implementação do Relatório de Transações é possível lidar com essa inconveniência de maneira eficiente e garantir a conclusão adequada da transação PIX.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Anterior</div>
+					<a href="/pt/documentacao/tef/dll/transparente/pinpad/" class="stretched-link text-reset text-decoration-none">Funções de Pinpad</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Próximo</div>
+					<a href="/pt/documentacao/tef/dll/transparente/intgrpinpdv/" class="stretched-link text-reset text-decoration-none">Integração com App PinPDV Lite</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Trazido a você por <a class="text-muted" href="https://thulite.io/">Thulite</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/js/app.47f6a6c3399e53195d63748449649495beae4647f054819de74bf1b3798e946e.js"
+  integrity="sha256-R/amwzmeUxldY3SESWSUlb6uRkfwVIGd50vxs3mOlG4=">
+</script>
+
+
+
+
+
+<script async
+  src="/js/flexsearch.pt.623541f6d70c792115623f5c604496d8ee6f71cd620181a46dba403063824194.js"
+  integrity="sha256-YjVB9tcMeSEVYj9cYESW2O5vcc1iAYGkbbpAMGOCQZQ=">
+</script>
+<script async
+  src="/js/search-modal.877cece5b6bc789456f89fa1955ccfcd8a5acdb2179e7882e292a6caa49efe68.js"
+  integrity="sha256-h3zs5ba8eJRW&#43;J&#43;hlVzPzYpazbIXnniC4pKmyqSe/mg=">
+</script>
+
+    
+  </body>
+</html>

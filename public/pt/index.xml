@@ -10,11 +10,60 @@
     <lastBuildDate>Thu, 07 Sep 2023 17:19:07 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/pt/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>DLL TefClientMC - Modo Interativo (DLL Transparente)</title>
-      <link>http://localhost:1313/pt/documentacao/tef/dll/dlltransparente/</link>
+      <title>Tef Dial (Troca de Arquivos)</title>
+      <link>http://localhost:1313/pt/documentacao/tef/tefdial/trocaarquivos/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
-      <guid>http://localhost:1313/pt/documentacao/tef/dll/dlltransparente/</guid>
+      <guid>http://localhost:1313/pt/documentacao/tef/tefdial/trocaarquivos/</guid>
+      <description>&lt;p&gt;Teste teste&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introdução</title>
+      <link>http://localhost:1313/pt/documentacao/tef/dll/transparente/introducao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/dll/transparente/introducao/</guid>
       <description>&lt;p&gt;A DLL &lt;strong&gt;TefClientMC&lt;/strong&gt; proporciona uma integração flexível, permitindo à automação um alto nível de controle sobre o fluxo da transação e ampla personalização por meio de um processo iterativo. É ideal para automações que buscam preservar sua identidade visual e ter maior controle sobre cada etapa da transação.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Instalação/Configuração</title>
+      <link>http://localhost:1313/pt/documentacao/tef/dll/transparente/configuracao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/dll/transparente/configuracao/</guid>
+      <description>&lt;h2 id=&#34;instalaçãoconfiguração&#34;&gt;Instalação/Configuração&lt;/h2&gt;&#xA;&lt;p&gt;Esta solução foi desenhada para funcionar no modelo &lt;em&gt;standalone&lt;/em&gt;, ou seja, todos os componentes requeridos devem estar instalados no mesmo dispositivo (disco C:\). As funções TEF somente podem ser executadas através de um equipamento que possua o Pinpad, conexão de banda larga e a solução instalada.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Funções da DLL</title>
+      <link>http://localhost:1313/pt/documentacao/tef/dll/transparente/funcoes/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/dll/transparente/funcoes/</guid>
+      <description>&lt;h3 id=&#34;iniciafuncaomcinterativo&#34;&gt;IniciaFuncaoMCInterativo&lt;/h3&gt;&#xA;&lt;p&gt;Esta função dá inicio ao processo de transação, seja com cartão, Pix ou administrativa, somente em algumas exceções que ela não é utilizada. Seus parâmetros são os seguintes:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Funções de Pinpad</title>
+      <link>http://localhost:1313/pt/documentacao/tef/dll/transparente/pinpad/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/dll/transparente/pinpad/</guid>
+      <description>&lt;p&gt;Estas funções são destinadas para que a automação obtenha dados sobre o dispositivo que está sendo utilizado, se o mesmo está conectado e funcionando corretamente.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Integração com QRMultiplus (PIX)</title>
+      <link>http://localhost:1313/pt/documentacao/tef/dll/transparente/intgrqrmultiplus/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/dll/transparente/intgrqrmultiplus/</guid>
+      <description>&lt;p&gt;A realização de transações com o QR Multiplus (PIX) segue um fluxo semelhante ao realizado nas transações com cartão. São utilizadas as mesmas funções, diferenciando os códigos de operação (não são os mesmos da transação com cartão) e um parâmetro que deve ser configurado no arquivo CliMC.ini.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Integração com App PinPDV Lite</title>
+      <link>http://localhost:1313/pt/documentacao/tef/dll/transparente/intgrpinpdv/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/dll/transparente/intgrpinpdv/</guid>
+      <description>&lt;p&gt;O app PinPdv Lite da Multiplus Card para SmartPOS está integrado à DLL TefClientMC, permitindo o uso de diversas funcionalidades. Em uma automação já homologada sua implementação exige poucos ajustes – ou até nenhum, dependendo da forma de utilização desejada. A seguir apresentamos os passos para a utilização.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Solução de Problemas</title>
+      <link>http://localhost:1313/pt/documentacao/tef/dll/transparente/solucaoproblemas/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/dll/transparente/solucaoproblemas/</guid>
+      <description>&lt;p&gt;Algumas situações podem retornar erros já descritos em seções anteriores, a tabela a seguir tem o objetivo de agilizar a resolução destes erros.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DLL TefClientMC (Modo Client)</title>
@@ -24,38 +73,10 @@
       <description>&lt;p&gt;Integração com a DLL TefCLientMC Modo Client&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Tef Dial (Troca de Arquivos)</title>
-      <link>http://localhost:1313/pt/documentacao/tef/tefdial/trocaarquivos/</link>
-      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
-      <guid>http://localhost:1313/pt/documentacao/tef/tefdial/trocaarquivos/</guid>
-      <description>&lt;p&gt;Teste teste&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Política de Privacidade</title>
       <link>http://localhost:1313/pt/privacy/</link>
       <pubDate>Thu, 07 Sep 2023 17:19:07 +0200</pubDate>
       <guid>http://localhost:1313/pt/privacy/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>PinPDV</title>
-      <link>http://localhost:1313/pt/documentacao/pinpdv/pinpdv/</link>
-      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
-      <guid>http://localhost:1313/pt/documentacao/pinpdv/pinpdv/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>QRMultiplus</title>
-      <link>http://localhost:1313/pt/documentacao/qrmultiplus/qrmultiplus/</link>
-      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
-      <guid>http://localhost:1313/pt/documentacao/qrmultiplus/qrmultiplus/</guid>
-      <description>&lt;p&gt;Integração com QRMultiplus por API&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>WebService</title>
-      <link>http://localhost:1313/pt/documentacao/tef/webservice/webservice/</link>
-      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
-      <guid>http://localhost:1313/pt/documentacao/tef/webservice/webservice/</guid>
       <description></description>
     </item>
   </channel>

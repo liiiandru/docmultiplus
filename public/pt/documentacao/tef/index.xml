@@ -10,13 +10,6 @@
     <lastBuildDate>Thu, 07 Sep 2023 16:33:54 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/pt/documentacao/tef/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>DLL TefClientMC - Modo Interativo (DLL Transparente)</title>
-      <link>http://localhost:1313/pt/documentacao/tef/dll/dlltransparente/</link>
-      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
-      <guid>http://localhost:1313/pt/documentacao/tef/dll/dlltransparente/</guid>
-      <description>&lt;p&gt;A DLL &lt;strong&gt;TefClientMC&lt;/strong&gt; proporciona uma integração flexível, permitindo à automação um alto nível de controle sobre o fluxo da transação e ampla personalização por meio de um processo iterativo. É ideal para automações que buscam preservar sua identidade visual e ter maior controle sobre cada etapa da transação.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>DLL TefClientMC (Modo Client)</title>
       <link>http://localhost:1313/pt/documentacao/tef/dll/dllcomtela/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>

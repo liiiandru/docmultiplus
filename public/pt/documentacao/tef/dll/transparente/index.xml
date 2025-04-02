@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DLL TefClientMC (DLL Transparente) on Multiplus Card</title>
+    <link>http://localhost:1313/pt/documentacao/tef/dll/transparente/</link>
+    <description>Recent content in DLL TefClientMC (DLL Transparente) on Multiplus Card</description>
+    <generator>Hugo</generator>
+    <language>pt</language>
+    <copyright>Copyright (c) 2025 Multiplus Card</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 16:33:54 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/pt/documentacao/tef/dll/transparente/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introdução</title>
+      <link>http://localhost:1313/pt/documentacao/tef/dll/transparente/introducao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/dll/transparente/introducao/</guid>
+      <description>&lt;p&gt;A DLL &lt;strong&gt;TefClientMC&lt;/strong&gt; proporciona uma integração flexível, permitindo à automação um alto nível de controle sobre o fluxo da transação e ampla personalização por meio de um processo iterativo. É ideal para automações que buscam preservar sua identidade visual e ter maior controle sobre cada etapa da transação.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Instalação/Configuração</title>
+      <link>http://localhost:1313/pt/documentacao/tef/dll/transparente/configuracao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/dll/transparente/configuracao/</guid>
+      <description>&lt;h2 id=&#34;instalaçãoconfiguração&#34;&gt;Instalação/Configuração&lt;/h2&gt;&#xA;&lt;p&gt;Esta solução foi desenhada para funcionar no modelo &lt;em&gt;standalone&lt;/em&gt;, ou seja, todos os componentes requeridos devem estar instalados no mesmo dispositivo (disco C:\). As funções TEF somente podem ser executadas através de um equipamento que possua o Pinpad, conexão de banda larga e a solução instalada.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Funções da DLL</title>
+      <link>http://localhost:1313/pt/documentacao/tef/dll/transparente/funcoes/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/dll/transparente/funcoes/</guid>
+      <description>&lt;h3 id=&#34;iniciafuncaomcinterativo&#34;&gt;IniciaFuncaoMCInterativo&lt;/h3&gt;&#xA;&lt;p&gt;Esta função dá inicio ao processo de transação, seja com cartão, Pix ou administrativa, somente em algumas exceções que ela não é utilizada. Seus parâmetros são os seguintes:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Funções de Pinpad</title>
+      <link>http://localhost:1313/pt/documentacao/tef/dll/transparente/pinpad/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/dll/transparente/pinpad/</guid>
+      <description>&lt;p&gt;Estas funções são destinadas para que a automação obtenha dados sobre o dispositivo que está sendo utilizado, se o mesmo está conectado e funcionando corretamente.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Integração com QRMultiplus (PIX)</title>
+      <link>http://localhost:1313/pt/documentacao/tef/dll/transparente/intgrqrmultiplus/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/dll/transparente/intgrqrmultiplus/</guid>
+      <description>&lt;p&gt;A realização de transações com o QR Multiplus (PIX) segue um fluxo semelhante ao realizado nas transações com cartão. São utilizadas as mesmas funções, diferenciando os códigos de operação (não são os mesmos da transação com cartão) e um parâmetro que deve ser configurado no arquivo CliMC.ini.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Integração com App PinPDV Lite</title>
+      <link>http://localhost:1313/pt/documentacao/tef/dll/transparente/intgrpinpdv/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/dll/transparente/intgrpinpdv/</guid>
+      <description>&lt;p&gt;O app PinPdv Lite da Multiplus Card para SmartPOS está integrado à DLL TefClientMC, permitindo o uso de diversas funcionalidades. Em uma automação já homologada sua implementação exige poucos ajustes – ou até nenhum, dependendo da forma de utilização desejada. A seguir apresentamos os passos para a utilização.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Solução de Problemas</title>
+      <link>http://localhost:1313/pt/documentacao/tef/dll/transparente/solucaoproblemas/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/dll/transparente/solucaoproblemas/</guid>
+      <description>&lt;p&gt;Algumas situações podem retornar erros já descritos em seções anteriores, a tabela a seguir tem o objetivo de agilizar a resolução destes erros.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
