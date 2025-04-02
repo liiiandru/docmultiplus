@@ -5,6 +5,7 @@ lead: "Congrats on setting up a new Doks project!"
 date: 2023-09-07T16:33:54+02:00
 lastmod: 2023-09-07T16:33:54+02:00
 draft: false
+weight: 1
 seo:
   title: "DLL TefCLientMC" # custom title (optional)
   description: "" # custom description (recommended)
@@ -61,7 +62,13 @@ O retorno das funções indica o sucesso de sua execução. No caso específico 
 
 *Informações sobre o tipo BSTR [(Clique aqui)](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/automat/bstr)
 
-(diagrama)
+{{< figure
+  src="images/diagrama_dll.png"
+  alt="Diagrama do fluxo de utilização da DLL"
+  caption="Diagrama do fluxo de utilização da DLL"
+  max-width="100%"
+>}}
+
 
 ### Observações sobre o Processo Iterativo
 
@@ -99,7 +106,7 @@ O arquivo **CliMC.ini** deve estar presente na pasta em que o executável Client
 ### Configurações Adicionais
 
 Valores configurações adicionais
-- |   Código | Descrição                                                                                             |
+|   Código | Descrição                                                                                             |
 |----------|-------------------------------------------------------------------------------------------------------|
 |       29 | Opcional, habilita venda crédito digitada (em alguns cartões não é permitido esse modo de utilização) |
 |       42 | Opcional habilita venda débito digitada (em alguns cartões não é permitido esse modo de utilização)   |

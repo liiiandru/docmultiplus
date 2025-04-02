@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/pt/documentacao/tef/dll/dlltransparente/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/pt/documentacao/tef/dll/dllcomtela/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/pt/documentacao/tef/tefdial/trocaarquivos/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/pt/</loc>
     <lastmod>2023-09-07T17:19:07+02:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -31,16 +46,6 @@
                 hreflang="pt"
                 href="http://localhost:1313/pt/privacy/"
                 />
-  </url><url>
-    <loc>http://localhost:1313/pt/documentacao/tef/dll/dlltransparente/</loc>
-    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/pt/documentacao/tef/dll/dllcomtela/</loc>
-    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/pt/documentacao/</loc>
     <lastmod>2023-09-07T16:33:54+02:00</lastmod>
@@ -83,11 +88,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/pt/documentacao/tef/tefdial/</loc>
-    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/pt/documentacao/tef/tefdial/trocaarquivos/</loc>
     <lastmod>2023-09-07T16:33:54+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

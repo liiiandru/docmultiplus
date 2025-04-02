@@ -679,7 +679,22 @@
   </tbody>
 </table>
 <p>*Informações sobre o tipo BSTR <a href="https://docs.microsoft.com/en-us/previous-versions/windows/desktop/automat/bstr">(Clique aqui)</a></p>
-<p>(diagrama)</p>
+
+<figure>
+  <img
+    srcset="data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADwAgCdASoQABUAP1mMtkswpKKYBAELFYT0gAA9WVteAAD&#43;7bV&#43;3dyxhFuWxlTY9m1bvht/w2cgAAAA"
+        data-srcset="/images/diagrama_dll_hu_de6fd5e299adf544.webp 480w,/images/diagrama_dll_hu_3c43329a4cba5acc.webp 576w,/images/diagrama_dll_hu_2ca287ce9ec16a93.webp 619w"
+        data-sizes="auto"
+    src="/images/diagrama_dll_hu_d21286b7b97eb255.jpg"
+    width="619"
+    height="803"
+    decoding="async"
+    fetchpriority="auto"
+    loading="lazy"
+    alt="Diagrama do fluxo de utilização da DLL"
+    class="lazyload blur-up"
+  ><figcaption>Diagrama do fluxo de utilização da DLL</figcaption>
+</figure>
 <h3 id="observações-sobre-o-processo-iterativo">Observações sobre o Processo Iterativo<a href="#observações-sobre-o-processo-iterativo" class="anchor" aria-hidden="true">#</a> </h3>
 <p>Durante a execução do laço de repetição, evite a inclusão de <em>delays</em>, <em>sleeps</em> ou qualquer instrução que possa resultar em atrasos na execução. Isso é crucial, pois pode levar à perda de dados ou ao encerramento inesperado da execução.
 As chamadas para a função <strong>AguardaFuncaoMCInterativo</strong> devem ser feitas de maneira contínua, com tratamento adequado para cada tag.
@@ -751,8 +766,6 @@ Se uma mensagem for exibida pela automação e você receber uma nova mensagem o
 </table>
 <h3 id="configurações-adicionais">Configurações Adicionais<a href="#configurações-adicionais" class="anchor" aria-hidden="true">#</a> </h3>
 <p>Valores configurações adicionais</p>
-<ul>
-<li>
 <table>
   <thead>
       <tr>
@@ -771,7 +784,7 @@ Se uma mensagem for exibida pela automação e você receber uma nova mensagem o
       </tr>
   </tbody>
 </table>
-</li>
+<ul>
 <li>Requisitos de Execução</li>
 </ul>
 <p>Para que o funcionamento da DLL ocorra de forma correta é necessário que a automação seja executada em <strong>Modo Administrador</strong>, caso não seja seguido erros poderão ser ocasionados. A aplicação ClientD.exe também deve estar configurada para executar em Modo Administrador.</p>

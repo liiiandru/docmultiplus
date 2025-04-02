@@ -10,13 +10,6 @@
     <lastBuildDate>Thu, 07 Sep 2023 17:19:07 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/pt/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Política de Privacidade</title>
-      <link>http://localhost:1313/pt/privacy/</link>
-      <pubDate>Thu, 07 Sep 2023 17:19:07 +0200</pubDate>
-      <guid>http://localhost:1313/pt/privacy/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>DLL TefClientMC - Modo Interativo (DLL Transparente)</title>
       <link>http://localhost:1313/pt/documentacao/tef/dll/dlltransparente/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
@@ -31,6 +24,20 @@
       <description>&lt;p&gt;Integração com a DLL TefCLientMC Modo Client&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Tef Dial (Troca de Arquivos)</title>
+      <link>http://localhost:1313/pt/documentacao/tef/tefdial/trocaarquivos/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/tefdial/trocaarquivos/</guid>
+      <description>&lt;p&gt;Teste teste&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Política de Privacidade</title>
+      <link>http://localhost:1313/pt/privacy/</link>
+      <pubDate>Thu, 07 Sep 2023 17:19:07 +0200</pubDate>
+      <guid>http://localhost:1313/pt/privacy/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>PinPDV</title>
       <link>http://localhost:1313/pt/documentacao/pinpdv/pinpdv/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
@@ -43,13 +50,6 @@
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
       <guid>http://localhost:1313/pt/documentacao/qrmultiplus/qrmultiplus/</guid>
       <description>&lt;p&gt;Integração com QRMultiplus por API&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Tef Dial (Troca de Arquivos)</title>
-      <link>http://localhost:1313/pt/documentacao/tef/tefdial/trocaarquivos/</link>
-      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
-      <guid>http://localhost:1313/pt/documentacao/tef/tefdial/trocaarquivos/</guid>
-      <description>&lt;p&gt;Teste teste&lt;/p&gt;</description>
     </item>
     <item>
       <title>WebService</title>
