@@ -50,7 +50,7 @@
 <meta property="og:url" content="http://localhost:1313/pt/documentacao/tef/dll/transparente/configuracao/">
   <meta property="og:site_name" content="Multiplus Card">
   <meta property="og:title" content="Instalação/Configuração">
-  <meta property="og:description" content="Instalação/Configuração Esta solução foi desenhada para funcionar no modelo standalone, ou seja, todos os componentes requeridos devem estar instalados no mesmo dispositivo (disco C:\). As funções TEF somente podem ser executadas através de um equipamento que possua o Pinpad, conexão de banda larga e a solução instalada.">
+  <meta property="og:description" content="Esta solução foi desenhada para funcionar no modelo standalone, ou seja, todos os componentes requeridos devem estar instalados no mesmo dispositivo (disco C:\). As funções TEF somente podem ser executadas através de um equipamento que possua o Pinpad, conexão de banda larga e a solução instalada.">
   <meta property="og:locale" content="pt">
   <meta property="og:type" content="article">
     <meta property="article:section" content="documentacao">
@@ -61,7 +61,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/cover.png">
   <meta name="twitter:title" content="Instalação/Configuração">
-  <meta name="twitter:description" content="Instalação/Configuração Esta solução foi desenhada para funcionar no modelo standalone, ou seja, todos os componentes requeridos devem estar instalados no mesmo dispositivo (disco C:\). As funções TEF somente podem ser executadas através de um equipamento que possua o Pinpad, conexão de banda larga e a solução instalada.">
+  <meta name="twitter:description" content="Esta solução foi desenhada para funcionar no modelo standalone, ou seja, todos os componentes requeridos devem estar instalados no mesmo dispositivo (disco C:\). As funções TEF somente podem ser executadas através de um equipamento que possua o Pinpad, conexão de banda larga e a solução instalada.">
       <meta name="twitter:site" content="@getdoks">
 
     
@@ -93,7 +93,7 @@
      {
        "@type": "ListItem",
        "item": "http://localhost:1313/pt/documentacao/tef/dll/transparente/",
-       "name": "Dll Tef Client MC ( Dll Transparente)",
+       "name": "Dll Tef Client MC Modo Interativo",
        "position": 4
      },
      {
@@ -164,7 +164,7 @@
 
   <li>
     <details open open>
-      <summary>DLL TefClientMC (DLL Transparente)</summary>
+      <summary>DLL TefClientMC - Modo Interativo</summary>
       <ul class="list-unstyled list-nested">
 
   <li>
@@ -199,7 +199,15 @@
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/dllcomtela/">DLL TefClientMC (Modo Client)</a>
+    <details open>
+      <summary>DLL TefClientMC - Modo Client</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/comtela/introducao/">Introdução</a>
+  </li>
+      </ul>
+    </details>
   </li>
 
   <li>
@@ -285,7 +293,7 @@
       
       <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
         <ul class="navbar-nav flex-grow-1"><li class="nav-item">
-                <a class="nav-link" href="http://localhost:1313/pt/documentacao/">Documentação</a>
+                <a class="nav-link" href="http://localhost:1313/pt/documentacao/apresentacao">Documentação</a>
               </li>
             <li class="nav-item">
                 <a class="nav-link" href="http://localhost:1313/pt/exemplos/">Exemplos</a>
@@ -432,7 +440,7 @@
 
   <li>
     <details open open>
-      <summary>DLL TefClientMC (DLL Transparente)</summary>
+      <summary>DLL TefClientMC - Modo Interativo</summary>
       <ul class="list-unstyled list-nested">
 
   <li>
@@ -467,7 +475,15 @@
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/dllcomtela/">DLL TefClientMC (Modo Client)</a>
+    <details open>
+      <summary>DLL TefClientMC - Modo Client</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/comtela/introducao/">Introdução</a>
+  </li>
+      </ul>
+    </details>
   </li>
 
   <li>
@@ -532,12 +548,9 @@
   <h3>Nesta página</h3>
     <nav id="toc">
   <ul>
-    <li><a href="#instalaçãoconfiguração">Instalação/Configuração</a>
-      <ul>
-        <li><a href="#configurações-adicionais">Configurações Adicionais</a></li>
-        <li><a href="#processo-de-atualização">Processo de Atualização</a></li>
-      </ul>
-    </li>
+    <li><a href="#configurações-adicionais">Configurações Adicionais</a></li>
+    <li><a href="#requisitos-de-execução">Requisitos de Execução</a></li>
+    <li><a href="#processo-de-atualização">Processo de Atualização</a></li>
   </ul>
 </nav>
 </div>
@@ -553,20 +566,16 @@
     <div class="page-links">
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#instalaçãoconfiguração">Instalação/Configuração</a>
-      <ul>
-        <li><a href="#configurações-adicionais">Configurações Adicionais</a></li>
-        <li><a href="#processo-de-atualização">Processo de Atualização</a></li>
-      </ul>
-    </li>
+    <li><a href="#configurações-adicionais">Configurações Adicionais</a></li>
+    <li><a href="#requisitos-de-execução">Requisitos de Execução</a></li>
+    <li><a href="#processo-de-atualização">Processo de Atualização</a></li>
   </ul>
 </nav>
     </div>
   </details>
 
 			</nav>
-			<h2 id="instalaçãoconfiguração">Instalação/Configuração<a href="#instalaçãoconfiguração" class="anchor" aria-hidden="true">#</a> </h2>
-<p>Esta solução foi desenhada para funcionar no modelo <em>standalone</em>, ou seja, todos os componentes requeridos devem estar instalados no mesmo dispositivo (disco C:\). As funções TEF somente podem ser executadas através de um equipamento que possua o Pinpad, conexão de banda larga e a solução instalada.</p>
+			<p>Esta solução foi desenhada para funcionar no modelo <em>standalone</em>, ou seja, todos os componentes requeridos devem estar instalados no mesmo dispositivo (disco C:\). As funções TEF somente podem ser executadas através de um equipamento que possua o Pinpad, conexão de banda larga e a solução instalada.</p>
 <p>Para o funcionamento da DLL são necessários que os arquivos da DLL e o <strong>ConfigMC.ini</strong> estejam presentes na mesma pasta em que está o executável do sistema. O Conteúdo do arquivo <strong>ConfigMC.ini</strong>, deve apontar o caminho da pasta onde está o executável <strong>ClientD.exe</strong>.</p>
 
 
@@ -630,7 +639,7 @@
       </tr>
   </tbody>
 </table>
-<h3 id="configurações-adicionais">Configurações Adicionais<a href="#configurações-adicionais" class="anchor" aria-hidden="true">#</a> </h3>
+<h2 id="configurações-adicionais">Configurações Adicionais<a href="#configurações-adicionais" class="anchor" aria-hidden="true">#</a> </h2>
 <p>Valores configurações adicionais</p>
 <table>
   <thead>
@@ -650,11 +659,20 @@
       </tr>
   </tbody>
 </table>
-<ul>
-<li>Requisitos de Execução</li>
-</ul>
+<div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  
+  <div class="callout-content">
+    
+    <div class="callout-body">
+      <p>Se sua automação não realiza vendas com cartão digitado, mantenha o parâmetro <strong>TransacoesAdicionaisHabilitadas</strong> sem valor.</p>
+
+    </div>
+  </div>
+</div>
+
+<h2 id="requisitos-de-execução">Requisitos de Execução<a href="#requisitos-de-execução" class="anchor" aria-hidden="true">#</a> </h2>
 <p>Para que o funcionamento da DLL ocorra de forma correta é necessário que a automação seja executada em <strong>Modo Administrador</strong>, caso não seja seguido erros poderão ser ocasionados. A aplicação ClientD.exe também deve estar configurada para executar em Modo Administrador.</p>
-<h3 id="processo-de-atualização">Processo de Atualização<a href="#processo-de-atualização" class="anchor" aria-hidden="true">#</a> </h3>
+<h2 id="processo-de-atualização">Processo de Atualização<a href="#processo-de-atualização" class="anchor" aria-hidden="true">#</a> </h2>
 <p>A aplicação ClientD.exe é atualizada automaticamente em momentos estratégicos, ou seja, quando não está realizando transações. Se, por algum motivo, estiver em processo de atualização e uma transação for iniciada, você receberá o código de erro 41. Nesse caso, tente realizar a transação novamente até que o erro não seja mais retornado.
 No entanto, a DLL TefClientMC requer uma <strong>atualização manual</strong>, pois tem um impacto direto na automação. Em caso de mudanças significativas na versão disponibilizada (<em>break changes</em>), haverá um aviso no Portal. Sempre é recomendável testar as novas versões antes de liberar a automação para produção.</p>
 

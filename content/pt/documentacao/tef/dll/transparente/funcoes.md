@@ -69,32 +69,40 @@ Quando executada corretamente a função retorna 0, e o fluxo deve continuar; ca
 
 Para utilizar as funções disponíveis, informe um dos códigos da tabela abaixo no parâmetro **iComando**. A maioria das funções segue o mesmo fluxo; caso haja um fluxo alternativo, ele será especificado.
 
-|   Código | Descrição                        |
-|----------|----------------------------------|
-|        4 | Venda Débito                     |
-|       20 | Venda Débito à Vista             |
-|        1 | Venda Crédito                    |
-|        0 | Venda Crédito à Vista            |
-|        2 | Venda Crédito Parcelado Loja     |
-|        3 | Venda Crédito Parcelado Adm      |
-|       11 | Venda Frota                      |
-|       18 | Venda Voucher                    |
-|        9 | Consulta Saldo Crédito           |
-|       10 | Consulta Saldo Débito            |
-|       15 | Pré Autorização                  |
-|       16 | Confirmar Pré Autorização        |
-|       17 | Cancelar Pré Autorização         |
-|        5 | Cancelamento                     |
-|        6 | Reimpressão                      |
-|       98 | Confirmar Transação              |
-|       99 | Desfazer Transação               |
-|      110 | Limpeza de Tabelas               |
-|      200 | Coleta de CPF                    |
-|      300 | Relatório de Transações          |
-|      400 | Comprovante de Transação com POS |
-|      700 | Status da Transação              |
-|      806 | Status do Pin Pad                |
-|      807 | Informações do Pin Pad           |
+|   Código | Descrição                                                      |
+|----------|----------------------------------------------------------------|
+|        4 | Venda Débito                                                   |
+|       20 | Venda Débito à Vista                                           |
+|        1 | Venda Crédito                                                  |
+|        0 | Venda Crédito à Vista                                          |
+|        2 | Venda Crédito Parcelado Loja                                   |
+|        3 | Venda Crédito Parcelado Adm                                    |
+|       11 | Venda Frota                                                    |
+|       18 | Venda Voucher                                                  |
+|        9 | Consulta Saldo Crédito                                         |
+|       10 | Consulta Saldo Débito                                          |
+|       15 | Pré Autorização                                                |
+|       16 | Confirmar Pré Autorização                                      |
+|       17 | Cancelar Pré Autorização                                       |
+|        5 | Cancelamento                                                   |
+|        6 | Reimpressão                                                    |
+|       98 | Confirmar Transação                                            |
+|       99 | Desfazer Transação                                             |
+|      110 | Limpeza de Tabelas                                             |
+|      200 | Coleta de CPF                                                  |
+|      300 | Relatório de Transações                                        |
+|      400 | Comprovante de Transação com POS                               |
+|      700 | Status da Transação                                            |
+|      806 | Status do Pin Pad                                              |
+|      807 | Informações do Pin Pad                                         |
+|       50 | Retorna um Menu com as opções de PSP para realizar a cobrança  |
+|       51 | Realiza a cobrança com o PSP padrão configurado para o Cliente |
+|       52 | Realiza a Cobrança com Mercado Pago                            |
+|       53 | Realiza a Cobrança com PicPay                                  |
+|       54 | Cancelar/Estorno Transação PIX                                 |
+|       55 | Remover Transação PIX                                          |
+|       56 | Status da Transação PIX                                        |
+|       59 | Reimpressão de Comprovante PIX                                 |
 
 #### Observações Sobre os Códigos de Operação
 

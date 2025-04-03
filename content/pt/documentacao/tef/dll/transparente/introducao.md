@@ -69,7 +69,7 @@ O retorno das funções indica o sucesso de sua execução. No caso específico 
 >}}
 
 
-### Observações sobre o Processo Iterativo
+## Observações sobre o Processo Iterativo
 
 Durante a execução do laço de repetição, evite a inclusão de *delays*, *sleeps* ou qualquer instrução que possa resultar em atrasos na execução. Isso é crucial, pois pode levar à perda de dados ou ao encerramento inesperado da execução.
 As chamadas para a função **AguardaFuncaoMCInterativo** devem ser feitas de maneira contínua, com tratamento adequado para cada tag.

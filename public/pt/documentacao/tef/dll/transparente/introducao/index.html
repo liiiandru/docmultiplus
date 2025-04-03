@@ -93,7 +93,7 @@
      {
        "@type": "ListItem",
        "item": "http://localhost:1313/pt/documentacao/tef/dll/transparente/",
-       "name": "Dll Tef Client MC ( Dll Transparente)",
+       "name": "Dll Tef Client MC Modo Interativo",
        "position": 4
      },
      {
@@ -164,7 +164,7 @@
 
   <li>
     <details open open>
-      <summary>DLL TefClientMC (DLL Transparente)</summary>
+      <summary>DLL TefClientMC - Modo Interativo</summary>
       <ul class="list-unstyled list-nested">
 
   <li class="active" >
@@ -199,7 +199,15 @@
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/dllcomtela/">DLL TefClientMC (Modo Client)</a>
+    <details open>
+      <summary>DLL TefClientMC - Modo Client</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/comtela/introducao/">Introdução</a>
+  </li>
+      </ul>
+    </details>
   </li>
 
   <li>
@@ -285,7 +293,7 @@
       
       <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
         <ul class="navbar-nav flex-grow-1"><li class="nav-item">
-                <a class="nav-link" href="http://localhost:1313/pt/documentacao/">Documentação</a>
+                <a class="nav-link" href="http://localhost:1313/pt/documentacao/apresentacao">Documentação</a>
               </li>
             <li class="nav-item">
                 <a class="nav-link" href="http://localhost:1313/pt/exemplos/">Exemplos</a>
@@ -432,7 +440,7 @@
 
   <li>
     <details open open>
-      <summary>DLL TefClientMC (DLL Transparente)</summary>
+      <summary>DLL TefClientMC - Modo Interativo</summary>
       <ul class="list-unstyled list-nested">
 
   <li class="active" >
@@ -467,7 +475,15 @@
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/dllcomtela/">DLL TefClientMC (Modo Client)</a>
+    <details open>
+      <summary>DLL TefClientMC - Modo Client</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/comtela/introducao/">Introdução</a>
+  </li>
+      </ul>
+    </details>
   </li>
 
   <li>
@@ -533,11 +549,8 @@
     <nav id="toc">
   <ul>
     <li><a href="#requisitos-para-execução">Requisitos para Execução</a></li>
-    <li><a href="#fluxo-de-utilização">Fluxo de Utilização</a>
-      <ul>
-        <li><a href="#observações-sobre-o-processo-iterativo">Observações sobre o Processo Iterativo</a></li>
-      </ul>
-    </li>
+    <li><a href="#fluxo-de-utilização">Fluxo de Utilização</a></li>
+    <li><a href="#observações-sobre-o-processo-iterativo">Observações sobre o Processo Iterativo</a></li>
   </ul>
 </nav>
 </div>
@@ -554,11 +567,8 @@
       <nav id="TableOfContents">
   <ul>
     <li><a href="#requisitos-para-execução">Requisitos para Execução</a></li>
-    <li><a href="#fluxo-de-utilização">Fluxo de Utilização</a>
-      <ul>
-        <li><a href="#observações-sobre-o-processo-iterativo">Observações sobre o Processo Iterativo</a></li>
-      </ul>
-    </li>
+    <li><a href="#fluxo-de-utilização">Fluxo de Utilização</a></li>
+    <li><a href="#observações-sobre-o-processo-iterativo">Observações sobre o Processo Iterativo</a></li>
   </ul>
 </nav>
     </div>
@@ -642,7 +652,7 @@
     class="lazyload blur-up"
   ><figcaption>Diagrama do fluxo de utilização da DLL</figcaption>
 </figure>
-<h3 id="observações-sobre-o-processo-iterativo">Observações sobre o Processo Iterativo<a href="#observações-sobre-o-processo-iterativo" class="anchor" aria-hidden="true">#</a> </h3>
+<h2 id="observações-sobre-o-processo-iterativo">Observações sobre o Processo Iterativo<a href="#observações-sobre-o-processo-iterativo" class="anchor" aria-hidden="true">#</a> </h2>
 <p>Durante a execução do laço de repetição, evite a inclusão de <em>delays</em>, <em>sleeps</em> ou qualquer instrução que possa resultar em atrasos na execução. Isso é crucial, pois pode levar à perda de dados ou ao encerramento inesperado da execução.
 As chamadas para a função <strong>AguardaFuncaoMCInterativo</strong> devem ser feitas de maneira contínua, com tratamento adequado para cada tag.
 Se uma mensagem for exibida pela automação e você receber uma nova mensagem ou algum outro retorno, substitua a mensagem anterior apenas nesses casos. Durante o processo, é importante estar ciente de que em certos momentos, podem ser retornadas strings vazias.</p>
@@ -663,7 +673,7 @@ Se uma mensagem for exibida pela automação e você receber uma nova mensagem o
 				</div>
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Anterior</div>
-					<a href="/pt/documentacao/tef/tefdial/trocaarquivos/" class="stretched-link text-reset text-decoration-none">Tef Dial (Troca de Arquivos)</a>
+					<a href="/pt/documentacao/apresentacao/" class="stretched-link text-reset text-decoration-none">Comece Agora!</a>
 				</div>
 			</div>
 		</div>

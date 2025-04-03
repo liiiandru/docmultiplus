@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DLL TefClientMC - Modo Client on Multiplus Card</title>
+    <link>http://localhost:1313/pt/documentacao/tef/dll/comtela/</link>
+    <description>Recent content in DLL TefClientMC - Modo Client on Multiplus Card</description>
+    <generator>Hugo</generator>
+    <language>pt</language>
+    <copyright>Copyright (c) 2025 Multiplus Card</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 16:33:54 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/pt/documentacao/tef/dll/comtela/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introdução</title>
+      <link>http://localhost:1313/pt/documentacao/tef/dll/comtela/introducao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/dll/comtela/introducao/</guid>
+      <description>&lt;p&gt;TESTE TESTE&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

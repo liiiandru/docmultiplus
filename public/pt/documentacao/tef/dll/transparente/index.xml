@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DLL TefClientMC (DLL Transparente) on Multiplus Card</title>
+    <title>DLL TefClientMC - Modo Interativo on Multiplus Card</title>
     <link>http://localhost:1313/pt/documentacao/tef/dll/transparente/</link>
-    <description>Recent content in DLL TefClientMC (DLL Transparente) on Multiplus Card</description>
+    <description>Recent content in DLL TefClientMC - Modo Interativo on Multiplus Card</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <copyright>Copyright (c) 2025 Multiplus Card</copyright>
@@ -21,7 +21,7 @@
       <link>http://localhost:1313/pt/documentacao/tef/dll/transparente/configuracao/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
       <guid>http://localhost:1313/pt/documentacao/tef/dll/transparente/configuracao/</guid>
-      <description>&lt;h2 id=&#34;instalaçãoconfiguração&#34;&gt;Instalação/Configuração&lt;/h2&gt;&#xA;&lt;p&gt;Esta solução foi desenhada para funcionar no modelo &lt;em&gt;standalone&lt;/em&gt;, ou seja, todos os componentes requeridos devem estar instalados no mesmo dispositivo (disco C:\). As funções TEF somente podem ser executadas através de um equipamento que possua o Pinpad, conexão de banda larga e a solução instalada.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Esta solução foi desenhada para funcionar no modelo &lt;em&gt;standalone&lt;/em&gt;, ou seja, todos os componentes requeridos devem estar instalados no mesmo dispositivo (disco C:\). As funções TEF somente podem ser executadas através de um equipamento que possua o Pinpad, conexão de banda larga e a solução instalada.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Funções da DLL</title>
