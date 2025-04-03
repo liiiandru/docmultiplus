@@ -28,6 +28,7 @@ Para garantir o funcionamento adequado da DLL, o ambiente deve atender aos segui
 - 3GB de memória RAM
 - 1GB de espaço disponível no HD
 - 1 porta USB para a conexão do Pinpad
+- Pinpad
 
 Para um **melhor desempenho** e establididade recomendamos a seguinte configuração:
 
@@ -36,6 +37,7 @@ Para um **melhor desempenho** e establididade recomendamos a seguinte configura�
 - 4GB de memória RAM
 - 1,5GB de espaço disponível no SSD
 - 1 porta USB para a conexão do Pinpad
+- Pinpad
 
 ## Fluxo de Utilização
 

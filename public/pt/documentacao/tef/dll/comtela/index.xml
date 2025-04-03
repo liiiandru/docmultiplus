@@ -14,7 +14,21 @@
       <link>http://localhost:1313/pt/documentacao/tef/dll/comtela/introducao/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
       <guid>http://localhost:1313/pt/documentacao/tef/dll/comtela/introducao/</guid>
-      <description>&lt;p&gt;TESTE TESTE&lt;/p&gt;</description>
+      <description>&lt;p&gt;A DLL &lt;strong&gt;TefClientMC&lt;/strong&gt; Modo Client oferece uma integração ágil e eficiente com o Gerenciador de Pagamentos da Multiplus Card, responsável por gerenciar todo o fluxo de pagamento. Ideal para automações que exigem uma implementação simples, rápida e confiável.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Instalação/Configuração</title>
+      <link>http://localhost:1313/pt/documentacao/tef/dll/comtela/configuracao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/dll/comtela/configuracao/</guid>
+      <description>&lt;p&gt;Esta solução foi desenhada para funcionar no modelo &lt;em&gt;standalone&lt;/em&gt;, ou seja, todos os componentes requeridos devem estar instalados no mesmo dispositivo (disco C:\). As funções TEF somente podem ser executadas através de um equipamento que possua o Pinpad, conexão de banda larga e a solução instalada.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Funções da DLL</title>
+      <link>http://localhost:1313/pt/documentacao/tef/dll/comtela/funcoes/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/dll/comtela/funcoes/</guid>
+      <description>&lt;p&gt;Para realizar transações e operações administrativas, é necessário implementar a função correspondente ao recurso desejado. A seguir, são descritas todas as funções disponíveis, juntamente com seus parâmetros e tipos de retorno.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
