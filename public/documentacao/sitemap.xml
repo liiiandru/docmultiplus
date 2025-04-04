@@ -2,6 +2,20 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
+      <loc>http://localhost:1313/documentacao/apresentacao/</loc>
+      <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/documentacao/tef/</loc>
+      <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
       <loc>http://localhost:1313/documentacao/pinpdv/</loc>
       <lastmod>2023-09-07T16:33:54+02:00</lastmod>
       <changefreq>monthly</changefreq>
@@ -14,21 +28,14 @@
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
-    
     <url>
-      <loc>http://localhost:1313/documentacao/tef/</loc>
-      <lastmod>2023-09-07T16:33:54+02:00</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>http://localhost:1313/documentacao/tef/dll/dlltransparente/</loc>
+        <loc>http://localhost:1313/documentacao/tef/dll/transparente/</loc>
         <lastmod>2023-09-07T16:33:54+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/documentacao/tef/dll/dllcomtela/</loc>
+        <loc>http://localhost:1313/documentacao/tef/dll/comtela/</loc>
         <lastmod>2023-09-07T16:33:54+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
@@ -41,6 +48,18 @@
       </url>
       <url>
         <loc>http://localhost:1313/documentacao/tef/webservice/</loc>
+        <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/documentacao/pinpdv/pinpdv/</loc>
+        <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/documentacao/qrmultiplus/qrmultiplus/</loc>
         <lastmod>2023-09-07T16:33:54+02:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>

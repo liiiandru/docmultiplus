@@ -50,7 +50,7 @@
 <meta property="og:url" content="http://localhost:1313/documentacao/tef/tefdial/">
   <meta property="og:site_name" content="Multiplus Card">
   <meta property="og:title" content="Tef Dial (Troca de Arquivos)">
-  <meta property="og:description" content="Congrats on setting up a new Doks project!">
+  <meta property="og:description" content="Forma de integração utilizando troca de arquivos entre a Automação e o Gerenciador de Pagamentos (Gerenciador Padrão) da Multiplus Card.">
   <meta property="og:locale" content="pt">
   <meta property="og:type" content="website">
     <meta property="og:image" content="http://localhost:1313/cover.png">
@@ -58,7 +58,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/cover.png">
   <meta name="twitter:title" content="Tef Dial (Troca de Arquivos)">
-  <meta name="twitter:description" content="Congrats on setting up a new Doks project!">
+  <meta name="twitter:description" content="Forma de integração utilizando troca de arquivos entre a Automação e o Gerenciador de Pagamentos (Gerenciador Padrão) da Multiplus Card.">
       <meta name="twitter:site" content="@getdoks">
 
     
@@ -148,32 +148,116 @@
   <ul class="list-unstyled">
 
   <li>
-      <a href="/documentacao/pinpdv/">PinPDV</a>
-  </li>
-
-  <li>
-      <a href="/documentacao/qrmultiplus/">QRMultiplus</a>
-  </li>
-
-  <li>
     <details open open>
       <summary>TEF</summary>
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/documentacao/tef/dll/dlltransparente/">DLL TefClientMC - Modo Interativo (DLL Transparente)</a>
+    <details open>
+      <summary>DLL TefClientMC - Modo Interativo</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/introducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/documentacao/tef/dll/dllcomtela/">DLL TefClientMC (Modo Client)</a>
+      <a href="/documentacao/tef/dll/transparente/configuracao/">Instalação/Configuração</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/funcoes/">Funções da DLL</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/pinpad/">Funções de Pinpad</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/intgrqrmultiplus/">Integração com QRMultiplus (PIX)</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/intgrpinpdv/">Integração com App PinPDV Lite</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/solucaoproblemas/">Solução de Problemas</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>DLL TefClientMC - Modo Client (Com Tela)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/dll/comtela/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/comtela/configuracao/">Instalação/Configuração</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/comtela/funcoes/">Funções da DLL</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/comtela/retorno/">Layout do Retorno</a>
+  </li>
+      </ul>
+    </details>
   </li>
 
   <li class="active" >
-      <a aria-current="page" href="/documentacao/tef/tefdial/">Tef Dial (Troca de Arquivos)</a>
+    <details open open>
+      <summary>Tef Dial (Troca de Arquivos)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/tefdial/trocaarquivos/">Tef Dial (Troca de Arquivos)</a>
+  </li>
+      </ul>
+    </details>
   </li>
 
   <li>
-      <a href="/documentacao/tef/webservice/">Webservice</a>
+    <details open>
+      <summary>Webservice</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/webservice/webservice/">WebService</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>PinPDV</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/pinpdv/pinpdv/">PinPDV</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>QRMultiplus</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/qrmultiplus/qrmultiplus/">QRMultiplus</a>
   </li>
       </ul>
     </details>
@@ -211,7 +295,7 @@
       
       <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
         <ul class="navbar-nav flex-grow-1"><li class="nav-item">
-                <a class="nav-link" href="http://localhost:1313/pt/documentacao/">Documentação</a>
+                <a class="nav-link" href="http://localhost:1313/pt/documentacao/apresentacao">Documentação</a>
               </li>
             <li class="nav-item">
                 <a class="nav-link" href="http://localhost:1313/pt/exemplos/">Exemplos</a>
@@ -347,10 +431,45 @@
   <div class="col-md-12 col-lg-10 col-xl-8">
     <article>
       <h1 class="text-center">Tef Dial (Troca de Arquivos)</h1>
-      
+      <div class="text-center"><p>Forma de integração utilizando troca de arquivos entre a Automação e o Gerenciador de Pagamentos (Gerenciador Padrão) da Multiplus Card.</p>
+</div>
 			<div class="card-list">
 				
 				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+						<div class="card my-3">
+							<div class="card-body">
+								<a class="stretched-link" href="/documentacao/tef/tefdial/trocaarquivos/">Tef Dial (Troca De Arquivos) &rarr;</a>
+							</div>
+						</div>
 					
 				
 					

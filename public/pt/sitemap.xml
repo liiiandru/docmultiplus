@@ -82,6 +82,31 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://localhost:1313/pt/documentacao/tef/tefdial/introducao/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/pt/documentacao/tef/tefdial/configuracao/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/pt/documentacao/tef/tefdial/fluxoutilizacao/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/pt/documentacao/tef/tefdial/layoutcomunicacao/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/pt/documentacao/tef/tefdial/exemplocomunicacao/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/pt/documentacao/tef/tefdial/trocaarquivos/</loc>
     <lastmod>2023-09-07T16:33:54+02:00</lastmod>
     <changefreq>monthly</changefreq>

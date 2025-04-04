@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DLL TefClientMC - Modo Client (Com Tela) on Multiplus Card</title>
+    <link>http://localhost:1313/documentacao/tef/dll/comtela/</link>
+    <description>Recent content in DLL TefClientMC - Modo Client (Com Tela) on Multiplus Card</description>
+    <generator>Hugo</generator>
+    <language>pt</language>
+    <lastBuildDate>Thu, 07 Sep 2023 16:33:54 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/documentacao/tef/dll/comtela/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introdução</title>
+      <link>http://localhost:1313/documentacao/tef/dll/comtela/introducao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/documentacao/tef/dll/comtela/introducao/</guid>
+      <description>&lt;p&gt;A DLL &lt;strong&gt;TefClientMC&lt;/strong&gt; Modo Client oferece uma integração ágil e eficiente com o Gerenciador de Pagamentos da Multiplus Card, responsável por gerenciar todo o fluxo de pagamento. Ideal para automações que exigem uma implementação simples, rápida e confiável.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Instalação/Configuração</title>
+      <link>http://localhost:1313/documentacao/tef/dll/comtela/configuracao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/documentacao/tef/dll/comtela/configuracao/</guid>
+      <description>&lt;p&gt;Esta solução foi desenhada para funcionar no modelo &lt;em&gt;standalone&lt;/em&gt;, ou seja, todos os componentes requeridos devem estar instalados no mesmo dispositivo (disco C:\). As funções TEF somente podem ser executadas através de um equipamento que possua o Pinpad, conexão de banda larga e a solução instalada.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Funções da DLL</title>
+      <link>http://localhost:1313/documentacao/tef/dll/comtela/funcoes/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/documentacao/tef/dll/comtela/funcoes/</guid>
+      <description>&lt;p&gt;Para realizar transações e operações administrativas, é necessário implementar a função correspondente ao recurso desejado. A seguir, são descritas todas as funções disponíveis, juntamente com seus parâmetros e tipos de retorno.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Layout do Retorno</title>
+      <link>http://localhost:1313/documentacao/tef/dll/comtela/retorno/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/documentacao/tef/dll/comtela/retorno/</guid>
+      <description>&lt;p&gt;O layout de retorno é composto por três partes:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;1ª iniciando pelo caractere ‘S’ indica o status da transação;&lt;/li&gt;&#xA;&lt;li&gt;2ª iniciada pelo caractere ‘C’ os dados do comprovante (valor, bandeira, nsu, etc.);&lt;/li&gt;&#xA;&lt;li&gt;3ª iniciada por ‘I’ indica as linhas do comprovante a serem impressas. Uma observação será disponibilizada apenas uma via, a automação será responsável por imprimir quantas vias forem necessárias, e pelo menos duas devem ser impressas.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Na 1ª linha ‘S’, o segundo campo (S;1;Transacao Aceita.) pode ser retornado com os seguintes valores:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

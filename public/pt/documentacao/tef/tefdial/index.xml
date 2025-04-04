@@ -10,6 +10,41 @@
     <lastBuildDate>Thu, 07 Sep 2023 16:33:54 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/pt/documentacao/tef/tefdial/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Introdução</title>
+      <link>http://localhost:1313/pt/documentacao/tef/tefdial/introducao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/tefdial/introducao/</guid>
+      <description>&lt;p&gt;A integração TEF Dial via Troca de Arquivos é uma solução simples, eficaz e amplamente consolidada no mercado para a implementação de TEF (Transferência Eletrônica de Fundos).&#xA;Essa abordagem permite explorar todo o potencial do Gerenciador de Pagamentos (Gerenciador Padrão) da Multiplus Card, garantindo uma integração robusta e confiável com a automação comercial.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configuração/Instalação</title>
+      <link>http://localhost:1313/pt/documentacao/tef/tefdial/configuracao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/tefdial/configuracao/</guid>
+      <description>&lt;p&gt;Esta solução foi desenhada para funcionar no modelo &lt;em&gt;standalone&lt;/em&gt;, ou seja, todos os componentes requeridos devem estar instalados no mesmo dispositivo (disco C:\). As funções TEF somente podem ser executadas através de um equipamento que possua o Pinpad, conexão de banda larga e a solução instalada.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fluxo de Utilização</title>
+      <link>http://localhost:1313/pt/documentacao/tef/tefdial/fluxoutilizacao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/tefdial/fluxoutilizacao/</guid>
+      <description>&lt;p&gt;A integração é fundamentada na troca de arquivos entre o sistema de Automação e o Gerenciador de Pagamentos (GP). Após a finalização de uma venda, a Automação aciona a solução de TEF, iniciando o processo de pagamento.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Layout das Mensagens</title>
+      <link>http://localhost:1313/pt/documentacao/tef/tefdial/layoutcomunicacao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/tefdial/layoutcomunicacao/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Exemplo de Comunicação</title>
+      <link>http://localhost:1313/pt/documentacao/tef/tefdial/exemplocomunicacao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/tefdial/exemplocomunicacao/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Tef Dial (Troca de Arquivos)</title>
       <link>http://localhost:1313/pt/documentacao/tef/tefdial/trocaarquivos/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>

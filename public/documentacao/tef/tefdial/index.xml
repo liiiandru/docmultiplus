@@ -6,8 +6,14 @@
     <description>Recent content in Tef Dial (Troca de Arquivos) on Multiplus Card</description>
     <generator>Hugo</generator>
     <language>pt</language>
-    <copyright>Copyright (c) 2025 Multiplus Card</copyright>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Thu, 07 Sep 2023 16:33:54 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/documentacao/tef/tefdial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tef Dial (Troca de Arquivos)</title>
+      <link>http://localhost:1313/documentacao/tef/tefdial/trocaarquivos/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/documentacao/tef/tefdial/trocaarquivos/</guid>
+      <description>&lt;p&gt;Teste teste&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

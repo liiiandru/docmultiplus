@@ -1,0 +1,1187 @@
+<!doctype html>
+<html lang="pt" data-bs-theme="auto">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
+</script>
+
+
+<link rel="stylesheet" href="/main.dc2f5458ab98613899cfadbb551e078821f7645691e4dfc57bb48d7697fe7be6885b7aea93d9ab15c53a25e38128c09220a1b4dcab934e04d1a7b374499b9872.css" integrity="sha512-3C9UWKuYYTiZz627VR4HiCH3ZFaR5N/Fe7SNdpf&#43;e&#43;aIW3rqk9mrFcU6JeOBKMCSIKG03KuTTgTRp7N0SZuYcg==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/documentacao/tef/dll/comtela/funcoes/">
+
+  <link rel="canonical" href="http://localhost:1313/documentacao/tef/dll/comtela/funcoes/">
+
+
+<title>Funções da DLL</title>
+<meta name="description" content="Congrats on setting up a new Doks project!">
+
+    
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    
+      <link
+        rel="apple-touch-icon"
+        href="/apple-touch-icon.png"
+        sizes="180x180"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/favicon-192x192.png"
+        sizes="192x192"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/favicon-512x512.png"
+        sizes="512x512"
+        type="image/png"
+      >
+<link rel="manifest" href="/manifest.webmanifest">
+
+<meta property="og:url" content="http://localhost:1313/documentacao/tef/dll/comtela/funcoes/">
+  <meta property="og:site_name" content="Multiplus Card">
+  <meta property="og:title" content="Funções da DLL">
+  <meta property="og:description" content="Para realizar transações e operações administrativas, é necessário implementar a função correspondente ao recurso desejado. A seguir, são descritas todas as funções disponíveis, juntamente com seus parâmetros e tipos de retorno.">
+  <meta property="og:locale" content="pt">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="documentacao">
+    <meta property="article:published_time" content="2023-09-07T16:33:54+02:00">
+    <meta property="article:modified_time" content="2023-09-07T16:33:54+02:00">
+    <meta property="og:image" content="http://localhost:1313/cover.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/cover.png">
+  <meta name="twitter:title" content="Funções da DLL">
+  <meta name="twitter:description" content="Para realizar transações e operações administrativas, é necessário implementar a função correspondente ao recurso desejado. A seguir, são descritas todas as funções disponíveis, juntamente com seus parâmetros e tipos de retorno.">
+      <meta name="twitter:site" content="@getdoks">
+
+    
+    
+    
+    <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/documentacao/",
+       "name": "Documentação",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/documentacao/tef/",
+       "name": "Tef",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/documentacao/tef/dll/comtela/",
+       "name": "Dll Tef Client MC Modo Client ( Com Tela)",
+       "position": 4
+     },
+     {
+       "@type": "ListItem",
+       "name": "Funções Da Dll",
+       "position": 5
+     }
+   ]
+ }
+</script>
+
+
+
+
+
+</head>
+
+  
+  <body class="single section documentacao" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<header class="navbar navbar-expand-lg">
+  <div class="container-lg">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/">Multiplus Card</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Documentacao</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open open>
+      <summary>TEF</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>DLL TefClientMC - Modo Interativo</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/configuracao/">Instalação/Configuração</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/funcoes/">Funções da DLL</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/pinpad/">Funções de Pinpad</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/intgrqrmultiplus/">Integração com QRMultiplus (PIX)</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/intgrpinpdv/">Integração com App PinPDV Lite</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/solucaoproblemas/">Solução de Problemas</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>DLL TefClientMC - Modo Client (Com Tela)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/dll/comtela/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/comtela/configuracao/">Instalação/Configuração</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/documentacao/tef/dll/comtela/funcoes/">Funções da DLL</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/comtela/retorno/">Layout do Retorno</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tef Dial (Troca de Arquivos)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/tefdial/trocaarquivos/">Tef Dial (Troca de Arquivos)</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Webservice</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/webservice/webservice/">WebService</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>PinPDV</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/pinpdv/pinpdv/">PinPDV</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>QRMultiplus</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/qrmultiplus/qrmultiplus/">QRMultiplus</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Multiplus Card</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/pt/documentacao/apresentacao">Documentação</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/pt/exemplos/">Exemplos</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/pt/tutoriais">Tutoriais</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/pt/faq">FAQ</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        <div class="dropdown mt-1 order-lg-2">
+          <button class="btn btn-dropdown dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+            <span class="dropdown-caret">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M4 5h7"></path>
+                <path d="M9 3v2c0 4.418 -2.239 8 -5 8"></path>
+                <path d="M5 9c0 2.144 2.952 3.908 6.7 4"></path>
+                <path d="M12 20l4 -9l4 9"></path>
+                <path d="M19.1 18h-6.2"></path>
+              </svg>
+              <span id="doks-language-current">Português</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M6 9l6 6l6 -6"></path>
+              </svg>
+            </span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-lg-end me-lg-2 shadow rounded border-0" aria-labelledby="doks-languages">
+
+            <li><span class="dropdown-item current" aria-current="true">Português</span></li>
+
+            <li><hr class="dropdown-divider"></li>
+
+            
+              <li><a class="dropdown-item untranslated" rel="alternate" href="/en" hreflang="en" lang="en">English</a></li>
+            
+              
+          </ul>
+        </div>
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/multipluscard"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Pesquisar</h1>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden">Pesquisar</label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Pesquisar" aria-label="Pesquisar" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
+        <p class="search-no-recent message d-none mt-3 text-center">Nenhuma pesquisa recente</p>
+        <p class="search-no-results message d-none mt-3 text-center">Nenhum resultado encontrado for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date">Date here</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-lg" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open open>
+      <summary>TEF</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>DLL TefClientMC - Modo Interativo</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/configuracao/">Instalação/Configuração</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/funcoes/">Funções da DLL</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/pinpad/">Funções de Pinpad</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/intgrqrmultiplus/">Integração com QRMultiplus (PIX)</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/intgrpinpdv/">Integração com App PinPDV Lite</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/solucaoproblemas/">Solução de Problemas</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>DLL TefClientMC - Modo Client (Com Tela)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/dll/comtela/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/comtela/configuracao/">Instalação/Configuração</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/documentacao/tef/dll/comtela/funcoes/">Funções da DLL</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/comtela/retorno/">Layout do Retorno</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tef Dial (Troca de Arquivos)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/tefdial/trocaarquivos/">Tef Dial (Troca de Arquivos)</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Webservice</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/webservice/webservice/">WebService</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>PinPDV</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/pinpdv/pinpdv/">PinPDV</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>QRMultiplus</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/qrmultiplus/qrmultiplus/">QRMultiplus</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>Nesta página</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#parâmetros-utilizados">Parâmetros Utilizados</a></li>
+    <li><a href="#funções-de-venda">Funções de Venda</a>
+      <ul>
+        <li><a href="#venda-crédito">Venda Crédito</a></li>
+        <li><a href="#venda-crédito-à-vista">Venda Crédito À Vista</a></li>
+        <li><a href="#venda-crédito-parcelada-loja">Venda Crédito Parcelada Loja</a></li>
+        <li><a href="#venda-crédito-parcelada-adm">Venda Crédito Parcelada Adm</a></li>
+        <li><a href="#venda-débito">Venda Débito</a></li>
+        <li><a href="#venda-débito-à-vista">Venda Débito À Vista</a></li>
+        <li><a href="#venda-genérica">Venda Genérica</a></li>
+        <li><a href="#venda-frota-completo">Venda Frota Completo</a></li>
+        <li><a href="#venda-menu-private-label">Venda Menu Private Label</a></li>
+        <li><a href="#venda-com-carteira-digital---pix">Venda com Carteira Digital - PIX</a></li>
+        <li><a href="#recarga-de-celular">Recarga de Celular</a></li>
+        <li><a href="#parcele-mais">Parcele Mais</a></li>
+      </ul>
+    </li>
+    <li><a href="#finalização-da-venda">Finalização da Venda</a>
+      <ul>
+        <li><a href="#confirmação">Confirmação</a></li>
+        <li><a href="#desfazimento">Desfazimento</a></li>
+      </ul>
+    </li>
+    <li><a href="#link-de-pagamento">Link de Pagamento</a>
+      <ul>
+        <li><a href="#realizar-venda">Realizar Venda</a></li>
+        <li><a href="#listar-link-de-pagamento">Listar Link de Pagamento</a></li>
+        <li><a href="#manutenção-de-link-de-pagamento">Manutenção de Link de Pagamento</a></li>
+      </ul>
+    </li>
+    <li><a href="#funções-administrativas">Funções Administrativas</a>
+      <ul>
+        <li><a href="#cancelamento">Cancelamento</a></li>
+        <li><a href="#reimpressão">Reimpressão</a></li>
+        <li><a href="#reimpressão-direta">Reimpressão Direta</a></li>
+        <li><a href="#relatório">Relatório</a></li>
+        <li><a href="#função-adm">Função Adm</a></li>
+        <li><a href="#função-atv">Função Atv</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
+		
+			<h1>Funções da DLL</h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>Nesta página</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#parâmetros-utilizados">Parâmetros Utilizados</a></li>
+    <li><a href="#funções-de-venda">Funções de Venda</a>
+      <ul>
+        <li><a href="#venda-crédito">Venda Crédito</a></li>
+        <li><a href="#venda-crédito-à-vista">Venda Crédito À Vista</a></li>
+        <li><a href="#venda-crédito-parcelada-loja">Venda Crédito Parcelada Loja</a></li>
+        <li><a href="#venda-crédito-parcelada-adm">Venda Crédito Parcelada Adm</a></li>
+        <li><a href="#venda-débito">Venda Débito</a></li>
+        <li><a href="#venda-débito-à-vista">Venda Débito À Vista</a></li>
+        <li><a href="#venda-genérica">Venda Genérica</a></li>
+        <li><a href="#venda-frota-completo">Venda Frota Completo</a></li>
+        <li><a href="#venda-menu-private-label">Venda Menu Private Label</a></li>
+        <li><a href="#venda-com-carteira-digital---pix">Venda com Carteira Digital - PIX</a></li>
+        <li><a href="#recarga-de-celular">Recarga de Celular</a></li>
+        <li><a href="#parcele-mais">Parcele Mais</a></li>
+      </ul>
+    </li>
+    <li><a href="#finalização-da-venda">Finalização da Venda</a>
+      <ul>
+        <li><a href="#confirmação">Confirmação</a></li>
+        <li><a href="#desfazimento">Desfazimento</a></li>
+      </ul>
+    </li>
+    <li><a href="#link-de-pagamento">Link de Pagamento</a>
+      <ul>
+        <li><a href="#realizar-venda">Realizar Venda</a></li>
+        <li><a href="#listar-link-de-pagamento">Listar Link de Pagamento</a></li>
+        <li><a href="#manutenção-de-link-de-pagamento">Manutenção de Link de Pagamento</a></li>
+      </ul>
+    </li>
+    <li><a href="#funções-administrativas">Funções Administrativas</a>
+      <ul>
+        <li><a href="#cancelamento">Cancelamento</a></li>
+        <li><a href="#reimpressão">Reimpressão</a></li>
+        <li><a href="#reimpressão-direta">Reimpressão Direta</a></li>
+        <li><a href="#relatório">Relatório</a></li>
+        <li><a href="#função-adm">Função Adm</a></li>
+        <li><a href="#função-atv">Função Atv</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<p>Para realizar transações e operações administrativas, é necessário implementar a função correspondente ao recurso desejado. A seguir, são descritas todas as funções disponíveis, juntamente com seus parâmetros e tipos de retorno.</p>
+<h2 id="parâmetros-utilizados">Parâmetros Utilizados<a href="#parâmetros-utilizados" class="anchor" aria-hidden="true">#</a> </h2>
+<p>A maioria das funções utiliza um conjunto comum de parâmetros. Abaixo, apresentamos esses parâmetros com seus respectivos tamanhos e uma breve descrição de cada um.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Parâmetro</th>
+          <th>Tamanho</th>
+          <th>Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>sCNPJCliente</td>
+          <td>14 caracteres</td>
+          <td>CNPJ do Cliente que está utilizando o ClientTEF</td>
+      </tr>
+      <tr>
+          <td>sCnpjParceiro</td>
+          <td>14 caracteres</td>
+          <td>CNPJ do Representante/Desenvolvedor da Automação</td>
+      </tr>
+      <tr>
+          <td>iCupom</td>
+          <td></td>
+          <td>Número do Cupom Fiscal, um número inteiro</td>
+      </tr>
+      <tr>
+          <td>dValor</td>
+          <td></td>
+          <td>Valor da Transação, com duas casas decimais e virgula como separador.</td>
+      </tr>
+      <tr>
+          <td>iLeitor</td>
+          <td></td>
+          <td>Informa se a venda será finalizada pelo <strong>Pinpad=0</strong> ou <strong>SmartPOS=3</strong></td>
+      </tr>
+  </tbody>
+</table>
+<div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  
+  <div class="callout-content">
+    
+    <div class="callout-body">
+      <p>Caso não utilize integração com o App PinPDV, o parâmetro <strong>iLeitor</strong> deve ter o valor <strong>0</strong>.</p>
+
+    </div>
+  </div>
+</div>
+
+<h2 id="funções-de-venda">Funções de Venda<a href="#funções-de-venda" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="venda-crédito">Venda Crédito<a href="#venda-crédito" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Realiza uma Transação com Cartão de Crédito, sendo necessário selecionar a modalidade e parcelas posteriormente.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">VendeCredito</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="venda-crédito-à-vista">Venda Crédito À Vista<a href="#venda-crédito-à-vista" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Realiza uma Transação com Cartão de Crédito na modalidade À Vista, não há questionamento sobre parcelamento.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">VendeCreditoVista</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="venda-crédito-parcelada-loja">Venda Crédito Parcelada Loja<a href="#venda-crédito-parcelada-loja" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Realiza uma Transação com Cartão de Crédito na modalidade Parcelada Loja, as parcelas já devem ser informadas na chamada da função.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">VendeCreditoParcLoja</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iParcelas</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="venda-crédito-parcelada-adm">Venda Crédito Parcelada Adm<a href="#venda-crédito-parcelada-adm" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Realiza uma Transação com Cartão de Crédito na modalidade Parcelada Adm, as parcelas já devem ser informadas na chamada da função.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">VendeCreditoparcAdm</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="venda-débito">Venda Débito<a href="#venda-débito" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Realiza uma Transação com Cartão de Débito, sendo necessário selecionar a modalidade posteriormente (Depende das configurações da Operadora).</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">VendeDebito</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="venda-débito-à-vista">Venda Débito À Vista<a href="#venda-débito-à-vista" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Realiza uma Transação com Cartão de Débito, na modalidade Débito à Vista.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">VendeDebitoAVista</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="venda-genérica">Venda Genérica<a href="#venda-genérica" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Inicia uma transação sem definir a modalidade de pagamento (por ex: Crédito ou Débito) e parcelamento, estas informações serão solicitadas posteriormente pelo Gerenciador Padrão.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">VendaGenerica</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="venda-frota-completo">Venda Frota Completo<a href="#venda-frota-completo" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Realiza uma Transação com Cartão Frota (Abastecimento/Combustível), sendo necessário enviar todos os parâmetros da função.</p>
+<p>O parâmetro sItens possuí um layout específico para ser utilizado, as informações sobre o item são separadas por hífen “<strong>-</strong>“ e os itens separados por pipe “<strong>|</strong>”.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Layout do parâmetro</span>
+  </figcaption>
+  <div class="highlight" title="Layout do parâmetro"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">  [Código]-[Descrição]-[Quantidade]-[Vl Unitário]-[Desconto]-[Vl Total Item]</span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo</span>
+  </figcaption>
+  <div class="highlight" title="Exemplo"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">  01-ETANOL-1,000-,3,699-0,00-3,70|02-GASOLINACOMUM-2,000-5,699-0,00-11,40</span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">VendeFrotaCompleto</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">string</span> <span class="n">sKM</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sPlaca</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sMatricula</span><span class="p">,</span> <span class="kt">int</span> <span class="n">QtdeItens</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sItens</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="venda-menu-private-label">Venda Menu Private Label<a href="#venda-menu-private-label" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Realiza uma Transação com Cartão do tipo Private Label.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">MenuPrivate</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="venda-com-carteira-digital---pix">Venda com Carteira Digital - PIX<a href="#venda-com-carteira-digital---pix" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Realiza uma Transação com PIX e Carteiras Digitais, já previamente configuradas para o cliente.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">VendeCarteiraDigitalPix</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="recarga-de-celular">Recarga de Celular<a href="#recarga-de-celular" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Realiza uma transação de Recarga de Celular.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">ReacargaCelular</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="parcele-mais">Parcele Mais<a href="#parcele-mais" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Realiza o acionamento da função Parcele mais.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">ParceleMais</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="finalização-da-venda">Finalização da Venda<a href="#finalização-da-venda" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="confirmação">Confirmação<a href="#confirmação" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Realiza a Confirmação da última transação realizada.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">Confirmar</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iCupom</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="desfazimento">Desfazimento<a href="#desfazimento" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Realiza o Desfazimento de uma transação com o status Pendente.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">Desfazimento</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="link-de-pagamento">Link de Pagamento<a href="#link-de-pagamento" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="realizar-venda">Realizar Venda<a href="#realizar-venda" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Em uma Transação com Link de Pagamento, para que seja exibida ao cliente no momento do pagamento informações relacionadas a compra (produtos, valores) ou alguma observação, devem ser preenchidos os parâmetros: QtdeItens, sItens e sTexto; o parâmetro sTelefone é utilizado para enviar o link por SMS ao cliente.
+O parâmetro sItens possui layout onde as informações do item são separadas pelo caractere negação lógica “<strong>¬</strong>” e os itens são separados por pipe “<strong>|</strong>”:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Layout do parâmetro</span>
+  </figcaption>
+  <div class="highlight" title="Layout do parâmetro"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">  [Código]¬[Descrição]¬[Quantidade]¬[Vl Unitário]¬[Desconto]¬[Vl Total Item]</span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo</span>
+  </figcaption>
+  <div class="highlight" title="Exemplo"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">  1¬Mouse¬1¬10,00¬0,00¬10,00|2¬Teclado¬1¬35,00¬0,00¬35,00</span></span></code></pre></div>
+  </figure>
+</div>
+<p>O parâmetro sTexto se refere a uma observação que pode ser incluída na transação.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">LinkPagamento</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iParcelas</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">QtdeItens</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sItens</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sTelefone</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">string</span> <span class="n">sTexto</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="listar-link-de-pagamento">Listar Link de Pagamento<a href="#listar-link-de-pagamento" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Esta função retorna os links de pagamento gerados e que possuem pagamento realizado.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">ListarLinkPagamentoPago</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="manutenção-de-link-de-pagamento">Manutenção de Link de Pagamento<a href="#manutenção-de-link-de-pagamento" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Esta função exibe uma tela onde é possível listar os links gerados, realizar cancelamentos e verificar seu status.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">ManutencaoLinkPagamento</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="funções-administrativas">Funções Administrativas<a href="#funções-administrativas" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="cancelamento">Cancelamento<a href="#cancelamento" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Realiza o Cancelamento da transação informada, o parâmetro sControle não é obrigatório, pode ser enviado vazio.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">Cancelar</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">string</span> <span class="n">sControle</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="reimpressão">Reimpressão<a href="#reimpressão" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Exibe uma tela listando todas as transações realizadas no PDV, onde deve ser selecionada a desejada para reimprimir o cupom.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">Reimpressao</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="reimpressão-direta">Reimpressão Direta<a href="#reimpressão-direta" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Realiza a reimpressão do comprovante de uma transação sem a exibição de telas.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">ReimpressaoDireto</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sNSU</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">string</span> <span class="n">Data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="relatório">Relatório<a href="#relatório" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Exibe uma tela para a geração e impressão de relatórios com base nos filtros selecionados.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">Relatorio</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="função-adm">Função Adm<a href="#função-adm" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Realiza a chamada da tela de funções administrativas do TEF (configurações, cancelamento, reimpressão e relatórios).</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">Adm</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="função-atv">Função Atv<a href="#função-atv" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Verifica se o ClientTEF está em execução.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Protótipo da Função</span>
+  </figcaption>
+  <div class="highlight" title="Protótipo da Função"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">  <span class="n">BSRT</span> <span class="n">Atv</span><span class="p">(</span><span class="kt">string</span> <span class="n">sCNPJCliente</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sCnpjParceiro</span><span class="p">,</span> <span class="kt">double</span> <span class="n">dValor</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">iCupom</span><span class="p">,</span> <span class="kt">int</span> <span class="n">iLeitor</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Anterior</div>
+					<a href="/documentacao/tef/dll/comtela/configuracao/" class="stretched-link text-reset text-decoration-none">Instalação/Configuração</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Próximo</div>
+					<a href="/documentacao/tef/dll/comtela/retorno/" class="stretched-link text-reset text-decoration-none">Layout do Retorno</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Trazido a você por <a class="text-muted" href="https://thulite.io/">Thulite</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/js/app.47f6a6c3399e53195d63748449649495beae4647f054819de74bf1b3798e946e.js"
+  integrity="sha256-R/amwzmeUxldY3SESWSUlb6uRkfwVIGd50vxs3mOlG4=">
+</script>
+
+
+
+
+
+<script async
+  src="/js/flexsearch.8350d2f520e131f8552ed57c1eadd05c50eccf0427267781442dd8ddf8fdcdf7.js"
+  integrity="sha256-g1DS9SDhMfhVLtV8Hq3QXFDszwQnJneBRC3Y3fj9zfc=">
+</script>
+<script async
+  src="/js/search-modal.877cece5b6bc789456f89fa1955ccfcd8a5acdb2179e7882e292a6caa49efe68.js"
+  integrity="sha256-h3zs5ba8eJRW&#43;J&#43;hlVzPzYpazbIXnniC4pKmyqSe/mg=">
+</script>
+
+    
+  </body>
+</html>
