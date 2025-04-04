@@ -14,12 +14,12 @@
 
 <link rel="stylesheet" href="/main.dc2f5458ab98613899cfadbb551e078821f7645691e4dfc57bb48d7697fe7be6885b7aea93d9ab15c53a25e38128c09220a1b4dcab934e04d1a7b374499b9872.css" integrity="sha512-3C9UWKuYYTiZz627VR4HiCH3ZFaR5N/Fe7SNdpf&#43;e&#43;aIW3rqk9mrFcU6JeOBKMCSIKG03KuTTgTRp7N0SZuYcg==" crossorigin="anonymous">
 
-<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/pt/documentacao/tef/dll/transparente/introducao/">
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/pt/documentacao/tef/dll/comtela/retorno/">
 
-  <link rel="canonical" href="http://localhost:1313/pt/documentacao/tef/dll/transparente/introducao/">
+  <link rel="canonical" href="http://localhost:1313/pt/documentacao/tef/dll/comtela/retorno/">
 
 
-<title>Introdução</title>
+<title>Layout do Retorno</title>
 <meta name="description" content="Congrats on setting up a new Doks project!">
 
     
@@ -47,10 +47,11 @@
       >
 <link rel="manifest" href="/manifest.webmanifest">
 
-<meta property="og:url" content="http://localhost:1313/pt/documentacao/tef/dll/transparente/introducao/">
+<meta property="og:url" content="http://localhost:1313/pt/documentacao/tef/dll/comtela/retorno/">
   <meta property="og:site_name" content="Multiplus Card">
-  <meta property="og:title" content="Introdução">
-  <meta property="og:description" content="A DLL TefClientMC proporciona uma integração flexível, permitindo à automação um alto nível de controle sobre o fluxo da transação e ampla personalização por meio de um processo iterativo. É ideal para automações que buscam preservar sua identidade visual e ter maior controle sobre cada etapa da transação.">
+  <meta property="og:title" content="Layout do Retorno">
+  <meta property="og:description" content="O layout de retorno é composto por três partes:
+1ª iniciando pelo caractere ‘S’ indica o status da transação; 2ª iniciada pelo caractere ‘C’ os dados do comprovante (valor, bandeira, nsu, etc.); 3ª iniciada por ‘I’ indica as linhas do comprovante a serem impressas. Uma observação será disponibilizada apenas uma via, a automação será responsável por imprimir quantas vias forem necessárias, e pelo menos duas devem ser impressas. Na 1ª linha ‘S’, o segundo campo (S;1;Transacao Aceita.) pode ser retornado com os seguintes valores:">
   <meta property="og:locale" content="pt">
   <meta property="og:type" content="article">
     <meta property="article:section" content="documentacao">
@@ -60,8 +61,9 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/cover.png">
-  <meta name="twitter:title" content="Introdução">
-  <meta name="twitter:description" content="A DLL TefClientMC proporciona uma integração flexível, permitindo à automação um alto nível de controle sobre o fluxo da transação e ampla personalização por meio de um processo iterativo. É ideal para automações que buscam preservar sua identidade visual e ter maior controle sobre cada etapa da transação.">
+  <meta name="twitter:title" content="Layout do Retorno">
+  <meta name="twitter:description" content="O layout de retorno é composto por três partes:
+1ª iniciando pelo caractere ‘S’ indica o status da transação; 2ª iniciada pelo caractere ‘C’ os dados do comprovante (valor, bandeira, nsu, etc.); 3ª iniciada por ‘I’ indica as linhas do comprovante a serem impressas. Uma observação será disponibilizada apenas uma via, a automação será responsável por imprimir quantas vias forem necessárias, e pelo menos duas devem ser impressas. Na 1ª linha ‘S’, o segundo campo (S;1;Transacao Aceita.) pode ser retornado com os seguintes valores:">
       <meta name="twitter:site" content="@getdoks">
 
     
@@ -92,13 +94,13 @@
      },
      {
        "@type": "ListItem",
-       "item": "http://localhost:1313/pt/documentacao/tef/dll/transparente/",
-       "name": "Dll Tef Client MC Modo Interativo",
+       "item": "http://localhost:1313/pt/documentacao/tef/dll/comtela/",
+       "name": "Dll Tef Client MC Modo Client ( Com Tela)",
        "position": 4
      },
      {
        "@type": "ListItem",
-       "name": "Introdução",
+       "name": "Layout Do Retorno",
        "position": 5
      }
    ]
@@ -163,12 +165,12 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-    <details open open>
+    <details open>
       <summary>DLL TefClientMC - Modo Interativo</summary>
       <ul class="list-unstyled list-nested">
 
-  <li class="active" >
-      <a aria-current="page" href="/pt/documentacao/tef/dll/transparente/introducao/">Introdução</a>
+  <li>
+      <a href="/pt/documentacao/tef/dll/transparente/introducao/">Introdução</a>
   </li>
 
   <li>
@@ -199,7 +201,7 @@
   </li>
 
   <li>
-    <details open>
+    <details open open>
       <summary>DLL TefClientMC - Modo Client (Com Tela)</summary>
       <ul class="list-unstyled list-nested">
 
@@ -215,8 +217,8 @@
       <a href="/pt/documentacao/tef/dll/comtela/funcoes/">Funções da DLL</a>
   </li>
 
-  <li>
-      <a href="/pt/documentacao/tef/dll/comtela/retorno/">Layout do Retorno</a>
+  <li class="active" >
+      <a aria-current="page" href="/pt/documentacao/tef/dll/comtela/retorno/">Layout do Retorno</a>
   </li>
       </ul>
     </details>
@@ -451,12 +453,12 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-    <details open open>
+    <details open>
       <summary>DLL TefClientMC - Modo Interativo</summary>
       <ul class="list-unstyled list-nested">
 
-  <li class="active" >
-      <a aria-current="page" href="/pt/documentacao/tef/dll/transparente/introducao/">Introdução</a>
+  <li>
+      <a href="/pt/documentacao/tef/dll/transparente/introducao/">Introdução</a>
   </li>
 
   <li>
@@ -487,7 +489,7 @@
   </li>
 
   <li>
-    <details open>
+    <details open open>
       <summary>DLL TefClientMC - Modo Client (Com Tela)</summary>
       <ul class="list-unstyled list-nested">
 
@@ -503,8 +505,8 @@
       <a href="/pt/documentacao/tef/dll/comtela/funcoes/">Funções da DLL</a>
   </li>
 
-  <li>
-      <a href="/pt/documentacao/tef/dll/comtela/retorno/">Layout do Retorno</a>
+  <li class="active" >
+      <a aria-current="page" href="/pt/documentacao/tef/dll/comtela/retorno/">Layout do Retorno</a>
   </li>
       </ul>
     </details>
@@ -572,9 +574,8 @@
   <h3>Nesta página</h3>
     <nav id="toc">
   <ul>
-    <li><a href="#requisitos-para-execução">Requisitos para Execução</a></li>
-    <li><a href="#fluxo-de-utilização">Fluxo de Utilização</a></li>
-    <li><a href="#observações-sobre-o-processo-iterativo">Observações sobre o Processo Iterativo</a></li>
+    <li><a href="#descrição-dos-campos">Descrição dos Campos</a></li>
+    <li><a href="#tipos-de-transação">Tipos de Transação</a></li>
   </ul>
 </nav>
 </div>
@@ -582,7 +583,7 @@
 		</nav>
 		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
 		
-			<h1>Introdução</h1>
+			<h1>Layout do Retorno</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
 				<details>
@@ -590,98 +591,286 @@
     <div class="page-links">
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#requisitos-para-execução">Requisitos para Execução</a></li>
-    <li><a href="#fluxo-de-utilização">Fluxo de Utilização</a></li>
-    <li><a href="#observações-sobre-o-processo-iterativo">Observações sobre o Processo Iterativo</a></li>
+    <li><a href="#descrição-dos-campos">Descrição dos Campos</a></li>
+    <li><a href="#tipos-de-transação">Tipos de Transação</a></li>
   </ul>
 </nav>
     </div>
   </details>
 
 			</nav>
-			<p>A DLL <strong>TefClientMC</strong> proporciona uma integração flexível, permitindo à automação um alto nível de controle sobre o fluxo da transação e ampla personalização por meio de um processo iterativo. É ideal para automações que buscam preservar sua identidade visual e ter maior controle sobre cada etapa da transação.</p>
-<h2 id="requisitos-para-execução">Requisitos para Execução<a href="#requisitos-para-execução" class="anchor" aria-hidden="true">#</a> </h2>
-<p>Para a execução da DLL, é necessário que os seguintes componentes de software estejam instalados:</p>
+			<p>O layout de retorno é composto por três partes:</p>
 <ul>
-<li>Microsoft .Net Framework 4.6.2 <a href="https://dotnet.microsoft.com/pt-br/download/dotnet-framework/net462">(download)</a></li>
-<li>Microsoft Visual C++ 2015-2022 Redistributable <a href="https://learn.microsoft.com/pt-br/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022">(download)</a></li>
+<li>1ª iniciando pelo caractere ‘S’ indica o status da transação;</li>
+<li>2ª iniciada pelo caractere ‘C’ os dados do comprovante (valor, bandeira, nsu, etc.);</li>
+<li>3ª iniciada por ‘I’ indica as linhas do comprovante a serem impressas. Uma observação será disponibilizada apenas uma via, a automação será responsável por imprimir quantas vias forem necessárias, e pelo menos duas devem ser impressas.</li>
 </ul>
-<p>Para garantir o funcionamento adequado da DLL, o ambiente deve atender aos seguintes requisitos mínimos:</p>
-<ul>
-<li>Windows 7 SP1</li>
-<li>Processador Intel Core i3</li>
-<li>3GB de memória RAM</li>
-<li>1GB de espaço disponível no HD</li>
-<li>1 porta USB para a conexão do Pinpad</li>
-<li>Pinpad</li>
-</ul>
-<p>Para um <strong>melhor desempenho</strong> e establididade recomendamos a seguinte configuração:</p>
-<ul>
-<li>Windows 10 ou superior</li>
-<li>Processador Intel Core i3, AMD Ryzen 3 ou superior</li>
-<li>4GB de memória RAM</li>
-<li>1,5GB de espaço disponível no SSD</li>
-<li>1 porta USB para a conexão do Pinpad</li>
-<li>Pinpad</li>
-</ul>
-<h2 id="fluxo-de-utilização">Fluxo de Utilização<a href="#fluxo-de-utilização" class="anchor" aria-hidden="true">#</a> </h2>
-<p>A integração com a DLL TefClientMC ocorre por meio da implementação das funções básicas de comunicação da biblioteca. O processo de transação se inicia com a chamada da função <strong>IniciaFuncaoMCInterativo</strong>.</p>
-<p>Ao chamar essa função com os parâmetros adequados (detalhados posteriormente), deve-se verificar o retorno. Se for 0, o processo continua normalmente; caso contrário (retorno maior que 0), a transação deve ser encerrada.</p>
-<p>Em seguida, dentro de um laço de repetição, a função <strong>AguardaFuncaoMCInterativo</strong> é chamada. Essa função retorna um <strong>BSTR</strong> contendo informações essenciais para a transação. Se o retorno for <strong>[ERROABORTAR]</strong> ou <strong>[ERRODISPLAY]</strong>, o processo deve ser interrompido imediatamente. Caso contrário, a comunicação prossegue por meio da função <strong>ContinuaFuncaoMCInterativo</strong>. O laço se encerra quando <strong>AguardaFuncaoMCInterativo</strong> retorna a tag <strong>[RETORNO]</strong>.</p>
-<p>Após o recebimento dessa tag, deve-se imprimir o comprovante da transação, armazenar suas informações e, por fim, chamar a função <strong>FinalizaFuncaoMCInterativo</strong>, confirmando assim a transação.</p>
-<p>Se for necessário cancelar a transação a qualquer momento, a função <strong>CancelarFluxoMCInterativo</strong> pode ser chamada. Essa função retorna 0 em caso de sucesso e interrompe imediatamente o fluxo da transação.</p>
-<p>O retorno das funções indica o sucesso de sua execução. No caso específico de <strong>FinalizaFuncaoMCInterativo</strong>, o resultado da confirmação ou do cancelamento da transação pode ser obtido por meio da função AguardaFuncaoMCInterativo ou pela verificação do status da transação.</p>
+<p>Na 1ª linha ‘S’, o segundo campo (S;1;Transacao Aceita.) pode ser retornado com os seguintes valores:</p>
 <table>
   <thead>
       <tr>
-          <th>Retorno</th>
-          <th>Função</th>
+          <th>Valor</th>
+          <th>Descrição</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>INT</td>
-          <td>IniciaFuncaoMCInterativo</td>
+          <td>0</td>
+          <td>Ocorreu um erro.</td>
       </tr>
       <tr>
-          <td>*BSTR</td>
-          <td>AguardaFuncaoMCInterativo</td>
+          <td>1</td>
+          <td>Possui cupom/comprovante gerado.</td>
       </tr>
       <tr>
-          <td>INT</td>
-          <td>ContinuaFuncaoMCInterativo</td>
-      </tr>
-      <tr>
-          <td>INT</td>
-          <td>FinalizaFuncaoMCInterativo</td>
-      </tr>
-      <tr>
-          <td>INT</td>
-          <td>CancelarFluxoMCInterativo</td>
+          <td>2</td>
+          <td>Não retornou cupom/comprovante.</td>
       </tr>
   </tbody>
 </table>
-<p>*Informações sobre o tipo BSTR <a href="https://docs.microsoft.com/en-us/previous-versions/windows/desktop/automat/bstr">(Clique aqui)</a></p>
+<p>Uma observação alguns campos como “Nome do Portador” podem ser retornados com uma string vazia em algumas situações.  Na utilização do cartão via <em>Contactless</em> existe outro possível retorno, o nome da tecnologia utilizada, em cartões Visa por exemplo é retornado PAYWAVE/VISA.</p>
 
-<figure>
-  <img
-    srcset="data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADwAgCdASoQABUAP1mMtkswpKKYBAELFYT0gAA9WVteAAD&#43;7bV&#43;3dyxhFuWxlTY9m1bvht/w2cgAAAA"
-        data-srcset="/images/diagrama_dll_hu_de6fd5e299adf544.webp 480w,/images/diagrama_dll_hu_3c43329a4cba5acc.webp 576w,/images/diagrama_dll_hu_2ca287ce9ec16a93.webp 619w"
-        data-sizes="auto"
-    src="/images/diagrama_dll_hu_d21286b7b97eb255.jpg"
-    width="619"
-    height="803"
-    decoding="async"
-    fetchpriority="auto"
-    loading="lazy"
-    alt="Diagrama do fluxo de utilização da DLL"
-    class="lazyload blur-up"
-  ><figcaption>Diagrama do fluxo de utilização da DLL</figcaption>
-</figure>
-<h2 id="observações-sobre-o-processo-iterativo">Observações sobre o Processo Iterativo<a href="#observações-sobre-o-processo-iterativo" class="anchor" aria-hidden="true">#</a> </h2>
-<p>Durante a execução do laço de repetição, evite a inclusão de <em>delays</em>, <em>sleeps</em> ou qualquer instrução que possa resultar em atrasos na execução. Isso é crucial, pois pode levar à perda de dados ou ao encerramento inesperado da execução.
-As chamadas para a função <strong>AguardaFuncaoMCInterativo</strong> devem ser feitas de maneira contínua, com tratamento adequado para cada tag.
-Se uma mensagem for exibida pela automação e você receber uma nova mensagem ou algum outro retorno, substitua a mensagem anterior apenas nesses casos. Durante o processo, é importante estar ciente de que em certos momentos, podem ser retornadas strings vazias.</p>
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Retorno</span>
+  </figcaption>
+  <div class="highlight" title="Exemplo de Retorno"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">  S;1;Transacao Aceita.
+</span></span><span class="line"><span class="cl">  C;321;100;VISA;REDE;906277;010836;10;1;010836;271705105;01425787000104;
+</span></span><span class="line"><span class="cl">  4589100000004700;ARAGAO/GUALTHER H;0125;;1234567
+</span></span><span class="line"><span class="cl">  I;&#34;               REDECARD               &#34;
+</span></span><span class="line"><span class="cl">  I;&#34;     CREDITO OU PRE-AUT &#34;
+</span></span><span class="line"><span class="cl">  I;&#34;COMPROV: 003304581 &#34;
+</span></span><span class="line"><span class="cl">  I;&#34; VALOR RS:1.00 &#34;
+</span></span><span class="line"><span class="cl">  I;&#34;03.10.23-10:47:38&#34;
+</span></span><span class="line"><span class="cl">  I;&#34;ESTAB:011867493 XXXXXX       &#34;
+</span></span><span class="line"><span class="cl">  I;&#34;06.04.09-11:42:07 TERM:PV703148/000870&#34;
+</span></span><span class="line"><span class="cl">  I;&#34;CARTAO: XXXXXXXXXXXXXXXX              &#34;
+</span></span><span class="line"><span class="cl">  I;&#34;AUTORIZACAO: 326669                   &#34;
+</span></span><span class="line"><span class="cl">  I;&#34;ARQC:8F34589B6F23F4EF&#34;
+</span></span><span class="line"><span class="cl">  I;&#34;    TRANSACAO AUTORIZADA MEDIANTE     &#34;
+</span></span><span class="line"><span class="cl">  I;&#34;    USO DE SENHA PESSOAL.             &#34;
+</span></span><span class="line"><span class="cl">  I;&#34;&#34;
+</span></span><span class="line"><span class="cl">  I;&#34;                                      &#34;
+</span></span><span class="line"><span class="cl">  I;&#34;                                  1234&#34;
+</span></span><span class="line"><span class="cl">  I;&#34;5678901234567890FIM&#34;
+</span></span><span class="line"><span class="cl">  I;&#34;        (NSU TEF   : 010836)&#34;
+</span></span><span class="line"><span class="cl">  I;&#34;&#34;
+</span></span><span class="line"><span class="cl">  I;&#34;&#34;
+</span></span><span class="line"><span class="cl">  I;&#34;CUPOM FISCAL: 321     PDV: 001&#34;
+</span></span><span class="line"><span class="cl">  I;&#34;CNPJ EMITENTE: 60.177.876/0001-30&#34;
+</span></span><span class="line"><span class="cl">  I;&#34;03/10/2023  10:47:46&#34;</span></span></code></pre></div>
+  </figure>
+</div>
+<p>A segunda parte, que corresponde aos dados da transação possui os seguintes campos:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Campos da 2ª parte do Retorno</span>
+  </figcaption>
+  <div class="highlight" title="Campos da 2ª parte do Retorno"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">C;
+</span></span><span class="line"><span class="cl">[CUPOM];
+</span></span><span class="line"><span class="cl">[VALOR];
+</span></span><span class="line"><span class="cl">[NOME DA BANDEIRA];
+</span></span><span class="line"><span class="cl">[NOME DA REDE];
+</span></span><span class="line"><span class="cl">[AUTORIZACAO];
+</span></span><span class="line"><span class="cl">[NSU];
+</span></span><span class="line"><span class="cl">[TIPO TRANSAÇÃO];
+</span></span><span class="line"><span class="cl">[QUANTIDADE DE PARCELAS];
+</span></span><span class="line"><span class="cl">[CONTROLE];
+</span></span><span class="line"><span class="cl">[NSU HOST];
+</span></span><span class="line"><span class="cl">[CNPJ DA OPERADORA];
+</span></span><span class="line"><span class="cl">[NÚMERO CARTÃO];
+</span></span><span class="line"><span class="cl">[NOME DO PORTADOR];
+</span></span><span class="line"><span class="cl">[VALIDADE DO CARTÃO];
+</span></span><span class="line"><span class="cl">[TEXTO ESPECIAL DO CLIENTE];
+</span></span><span class="line"><span class="cl">[FINALIZAÇÃO/ID PGTO (Utilizado para PIX)]</span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="descrição-dos-campos">Descrição dos Campos<a href="#descrição-dos-campos" class="anchor" aria-hidden="true">#</a> </h2>
+<ul>
+<li>
+<table>
+  <thead>
+      <tr>
+          <th>Campo</th>
+          <th>Conteúdo / Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CUPOM</td>
+          <td>Finalidade:  Indica o número de controle da solicitação que está sendo feita. Este número é gerado pelo aplicativo de automação comercial, o qual deverá colocar um conteúdo diferente a cada nova solicitação. Este mesmo conteúdo é devolvido nos arquivos de resposta.  Formato:  <strong>Numérico de até 10 bytes</strong>.</td>
+      </tr>
+      <tr>
+          <td>VALOR</td>
+          <td>Finalidade: Valor total desta forma de pagamento. Formato: <strong>Numérico de até 12 bytes</strong>, sendo duas casas decimais sem a vírgula separadora.</td>
+      </tr>
+      <tr>
+          <td>NOME DA BANDEIRA</td>
+          <td>Finalidade: Identifica a Administradora do Cartão utilizado. Formato: <strong>Alfanumérico de até 12 bytes</strong>. Conteúdos Válidos: ELECTRON MAESTRO MASTERCARD VISA ELO GOODCARD VALECARD Etc.</td>
+      </tr>
+      <tr>
+          <td>NOME DA REDE (OPERADORA/CREDENCIADORA)</td>
+          <td>Finalidade: Nome da rede que tratou a transação. Formato: <strong>Alfanumérico de até 16 bytes</strong> Conteúdos Válidos: CIELO REDE GETNET BIN STONE etc.</td>
+      </tr>
+      <tr>
+          <td>AUTORIZACAO</td>
+          <td>Finalidade: Indica o número de autorização da transação atribuída pelo Host. Cada transação TEF possui um número de autorização. Formato: <strong>Alfanumérico de até 6 bytes</strong>.</td>
+      </tr>
+      <tr>
+          <td>NSU</td>
+          <td>Finalidade: Indica o número de sequência da transação atribuído pelo TEF estabelecido para a transação, ele representa o NSU da transação a ser tratada (cancelada, confirmada etc.) Formato: <strong>Alfanumérico de até 12 bytes</strong>.</td>
+      </tr>
+      <tr>
+          <td>TIPO TRANSAÇÃO</td>
+          <td>Finalidade: Código identificando o tipo da transação executada. Formato: <strong>Numérico de até 2 bytes</strong>. Conteúdos Válidos: Consultar o item 7.2 Tipos de Transação</td>
+      </tr>
+      <tr>
+          <td>QUANTIDADE DE PARCELAS</td>
+          <td>Finalidade: Indica o número de parcelas no caso de transações Parceladas (Crédito ou Débito). Formato: <strong>Numérico de até 2 bytes</strong>.</td>
+      </tr>
+      <tr>
+          <td>CONTROLE</td>
+          <td>Finalidade: Código de controle de transação. Formato: <strong>Alfanumérico de até 12 bytes</strong>.</td>
+      </tr>
+      <tr>
+          <td>NSU HOST</td>
+          <td>Finalidade: Indica o número de sequência (NSU – Número Sequencial Único) da transação atribuído pelo Host (Sistema das Redes de Cartão que recebe e trata as solicitações das transações TEF). Formato: <strong>Alfanumérico de até 16 bytes</strong>.</td>
+      </tr>
+      <tr>
+          <td>CNPJ DA OPERADORA</td>
+          <td>Finalidade: Informar o CNPJ da rede que tratou a transação Formato: <strong>Alfanumérico de 14 bytes</strong></td>
+      </tr>
+      <tr>
+          <td>NÚMERO CARTÃO</td>
+          <td>Finalidade: Exibe o número do cartão que realizou a transação. Formato: <strong>Numérico de 16 bytes</strong>. Conteúdos Válidos: 0000000000000000 a 9999990000009999</td>
+      </tr>
+      <tr>
+          <td>NOME DO PORTADOR</td>
+          <td>Finalidade: Exibe o nome do portador do cartão que realizou a transação Formato: <strong>Alfanumérico de até 20 bytes</strong>.</td>
+      </tr>
+      <tr>
+          <td>VALIDADE DO CARTÃO</td>
+          <td>Finalidade: Exibe o número de validade do cartão que realizou a transação Formato: <strong>Numérico de 4 bytes</strong>.</td>
+      </tr>
+      <tr>
+          <td>TEXTO ESPECIAL DO CLIENTE</td>
+          <td>Finalidade: Texto que, quando presente, deve ser apresentado pelo aplicativo de Automação Comercial ao cliente. Formato: <strong>Alfanumérico de até 40 bytes</strong>.</td>
+      </tr>
+      <tr>
+          <td>FINALIZAÇÃO/ID PGTO (Utilizado para PIX)</td>
+          <td>Finalidade: Dados recebidos do Módulo TEF que executou a transação.  Obs.: O campo ID PGTO <strong>(E2E)</strong> é retornado em transações com PIX. Essa informação é empregada em algumas UFs para a geração da NFCe (Nota Fiscal de Consumidor eletrônica).  Formato: <strong>Alfanumérico de até 32 bytes</strong></td>
+      </tr>
+  </tbody>
+</table>
+</li>
+</ul>
+<h2 id="tipos-de-transação">Tipos de Transação<a href="#tipos-de-transação" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Os tipos de transação realizados são retornados por meio de códigos na tabela a seguir estão os possíveis retornos.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Código</th>
+          <th>Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>00</td>
+          <td>Administrativas – Outras (Reimpressão, inicialização de terminal</td>
+      </tr>
+      <tr>
+          <td>01</td>
+          <td>Administrativa – Fechamento/Transmissão de lote</td>
+      </tr>
+      <tr>
+          <td>10</td>
+          <td>Cartão de Crédito à Vista</td>
+      </tr>
+      <tr>
+          <td>11</td>
+          <td>Cartão de Crédito Parcelado pelo Estabelecimento</td>
+      </tr>
+      <tr>
+          <td>12</td>
+          <td>Cartão de Crédito Parcelado pela Administradora</td>
+      </tr>
+      <tr>
+          <td>13</td>
+          <td>Pré-Autorização com Cartão de Crédito</td>
+      </tr>
+      <tr>
+          <td>20</td>
+          <td>Cartão de Débito à Vista</td>
+      </tr>
+      <tr>
+          <td>21</td>
+          <td>Cartão de Débito Pré-Datado</td>
+      </tr>
+      <tr>
+          <td>22</td>
+          <td>Cartão de Débito Parcelado</td>
+      </tr>
+      <tr>
+          <td>23</td>
+          <td>Cartão de Débito à Vista Forçada</td>
+      </tr>
+      <tr>
+          <td>24</td>
+          <td>Cartão de Débito Pré-Datado Forçada</td>
+      </tr>
+      <tr>
+          <td>25</td>
+          <td>Cartão de Débito Pré-Datado sem Garantia</td>
+      </tr>
+      <tr>
+          <td>26</td>
+          <td>Cartão de Débito Pré-Pago</td>
+      </tr>
+      <tr>
+          <td>27</td>
+          <td>Cartão de Crédito Pré-Pago</td>
+      </tr>
+      <tr>
+          <td>30</td>
+          <td>Outros cartões</td>
+      </tr>
+      <tr>
+          <td>40</td>
+          <td>CDC</td>
+      </tr>
+      <tr>
+          <td>41</td>
+          <td>Consulta CDC</td>
+      </tr>
+      <tr>
+          <td>50</td>
+          <td>Convênio</td>
+      </tr>
+      <tr>
+          <td>60</td>
+          <td>Voucher</td>
+      </tr>
+      <tr>
+          <td>70</td>
+          <td>Consulta Cheque</td>
+      </tr>
+      <tr>
+          <td>71</td>
+          <td>Garantia Cheque</td>
+      </tr>
+      <tr>
+          <td>99</td>
+          <td>Outras</td>
+      </tr>
+  </tbody>
+</table>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
@@ -699,7 +888,7 @@ Se uma mensagem for exibida pela automação e você receber uma nova mensagem o
 				</div>
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Anterior</div>
-					<a href="/pt/documentacao/apresentacao/" class="stretched-link text-reset text-decoration-none">Comece Agora!</a>
+					<a href="/pt/documentacao/tef/dll/comtela/funcoes/" class="stretched-link text-reset text-decoration-none">Funções da DLL</a>
 				</div>
 			</div>
 		</div>
@@ -708,7 +897,7 @@ Se uma mensagem for exibida pela automação e você receber uma nova mensagem o
 			<div class="card-body d-flex justify-content-end">
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Próximo</div>
-					<a href="/pt/documentacao/tef/dll/transparente/configuracao/" class="stretched-link text-reset text-decoration-none">Instalação/Configuração</a>
+					<a href="/pt/documentacao/tef/tefdial/trocaarquivos/" class="stretched-link text-reset text-decoration-none">Tef Dial (Troca de Arquivos)</a>
 				</div>
 				<div class="d-flex flex-column justify-content-center">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">

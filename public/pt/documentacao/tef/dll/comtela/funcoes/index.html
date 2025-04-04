@@ -93,7 +93,7 @@
      {
        "@type": "ListItem",
        "item": "http://localhost:1313/pt/documentacao/tef/dll/comtela/",
-       "name": "Dll Tef Client MC Modo Client",
+       "name": "Dll Tef Client MC Modo Client ( Com Tela)",
        "position": 4
      },
      {
@@ -200,7 +200,7 @@
 
   <li>
     <details open open>
-      <summary>DLL TefClientMC - Modo Client</summary>
+      <summary>DLL TefClientMC - Modo Client (Com Tela)</summary>
       <ul class="list-unstyled list-nested">
 
   <li>
@@ -213,6 +213,10 @@
 
   <li class="active" >
       <a aria-current="page" href="/pt/documentacao/tef/dll/comtela/funcoes/">Funções da DLL</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/comtela/retorno/">Layout do Retorno</a>
   </li>
       </ul>
     </details>
@@ -484,7 +488,7 @@
 
   <li>
     <details open open>
-      <summary>DLL TefClientMC - Modo Client</summary>
+      <summary>DLL TefClientMC - Modo Client (Com Tela)</summary>
       <ul class="list-unstyled list-nested">
 
   <li>
@@ -497,6 +501,10 @@
 
   <li class="active" >
       <a aria-current="page" href="/pt/documentacao/tef/dll/comtela/funcoes/">Funções da DLL</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/tef/dll/comtela/retorno/">Layout do Retorno</a>
   </li>
       </ul>
     </details>
@@ -564,6 +572,7 @@
   <h3>Nesta página</h3>
     <nav id="toc">
   <ul>
+    <li><a href="#parâmetros-utilizados">Parâmetros Utilizados</a></li>
     <li><a href="#funções-de-venda">Funções de Venda</a>
       <ul>
         <li><a href="#venda-crédito">Venda Crédito</a></li>
@@ -618,6 +627,7 @@
     <div class="page-links">
       <nav id="TableOfContents">
   <ul>
+    <li><a href="#parâmetros-utilizados">Parâmetros Utilizados</a></li>
     <li><a href="#funções-de-venda">Funções de Venda</a>
       <ul>
         <li><a href="#venda-crédito">Venda Crédito</a></li>
@@ -664,6 +674,55 @@
 
 			</nav>
 			<p>Para realizar transações e operações administrativas, é necessário implementar a função correspondente ao recurso desejado. A seguir, são descritas todas as funções disponíveis, juntamente com seus parâmetros e tipos de retorno.</p>
+<h2 id="parâmetros-utilizados">Parâmetros Utilizados<a href="#parâmetros-utilizados" class="anchor" aria-hidden="true">#</a> </h2>
+<p>A maioria das funções utiliza um conjunto comum de parâmetros. Abaixo, apresentamos esses parâmetros com seus respectivos tamanhos e uma breve descrição de cada um.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Parâmetro</th>
+          <th>Tamanho</th>
+          <th>Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>sCNPJCliente</td>
+          <td>14 caracteres</td>
+          <td>CNPJ do Cliente que está utilizando o ClientTEF</td>
+      </tr>
+      <tr>
+          <td>sCnpjParceiro</td>
+          <td>14 caracteres</td>
+          <td>CNPJ do Representante/Desenvolvedor da Automação</td>
+      </tr>
+      <tr>
+          <td>iCupom</td>
+          <td></td>
+          <td>Número do Cupom Fiscal, um número inteiro</td>
+      </tr>
+      <tr>
+          <td>dValor</td>
+          <td></td>
+          <td>Valor da Transação, com duas casas decimais e virgula como separador.</td>
+      </tr>
+      <tr>
+          <td>iLeitor</td>
+          <td></td>
+          <td>Informa se a venda será finalizada pelo <strong>Pinpad=0</strong> ou <strong>SmartPOS=3</strong></td>
+      </tr>
+  </tbody>
+</table>
+<div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  
+  <div class="callout-content">
+    
+    <div class="callout-body">
+      <p>Caso não utilize integração com o App PinPDV, o parâmetro <strong>iLeitor</strong> deve ter o valor <strong>0</strong>.</p>
+
+    </div>
+  </div>
+</div>
+
 <h2 id="funções-de-venda">Funções de Venda<a href="#funções-de-venda" class="anchor" aria-hidden="true">#</a> </h2>
 <h3 id="venda-crédito">Venda Crédito<a href="#venda-crédito" class="anchor" aria-hidden="true">#</a> </h3>
 <p>Realiza uma Transação com Cartão de Crédito, sendo necessário selecionar a modalidade e parcelas posteriormente.</p>
@@ -764,7 +823,7 @@
   </figure>
 </div>
 <h3 id="venda-frota-completo">Venda Frota Completo<a href="#venda-frota-completo" class="anchor" aria-hidden="true">#</a> </h3>
-<p>Realiza uma Transação com Cartão Frota (abastecimento/Combustível), sendo necessário enviar todos os parâmetros da função.</p>
+<p>Realiza uma Transação com Cartão Frota (Abastecimento/Combustível), sendo necessário enviar todos os parâmetros da função.</p>
 <p>O parâmetro sItens possuí um layout específico para ser utilizado, as informações sobre o item são separadas por hífen “<strong>-</strong>“ e os itens separados por pipe “<strong>|</strong>”.</p>
 
 
@@ -1062,7 +1121,7 @@ O parâmetro sItens possui layout onde as informações do item são separadas p
 			<div class="card-body d-flex justify-content-end">
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Próximo</div>
-					<a href="/pt/documentacao/tef/tefdial/trocaarquivos/" class="stretched-link text-reset text-decoration-none">Tef Dial (Troca de Arquivos)</a>
+					<a href="/pt/documentacao/tef/dll/comtela/retorno/" class="stretched-link text-reset text-decoration-none">Layout do Retorno</a>
 				</div>
 				<div class="d-flex flex-column justify-content-center">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">

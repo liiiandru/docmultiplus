@@ -14,6 +14,20 @@ seo:
 ---
 Para realizar transações e operações administrativas, é necessário implementar a função correspondente ao recurso desejado. A seguir, são descritas todas as funções disponíveis, juntamente com seus parâmetros e tipos de retorno.
 
+## Parâmetros Utilizados
+
+A maioria das funções utiliza um conjunto comum de parâmetros. Abaixo, apresentamos esses parâmetros com seus respectivos tamanhos e uma breve descrição de cada um.
+
+| Parâmetro     | Tamanho       | Descrição                                                                     |
+|---------------|---------------|-------------------------------------------------------------------------------|
+| sCNPJCliente  | 14 caracteres | CNPJ do Cliente que está utilizando o ClientTEF                               |
+| sCnpjParceiro | 14 caracteres | CNPJ do Representante/Desenvolvedor da Automação                              |
+| iCupom        |               | Número do Cupom Fiscal, um número inteiro                                     |
+| dValor        |               | Valor da Transação, com duas casas decimais e virgula como separador.         |
+| iLeitor       |               | Informa se a venda será finalizada pelo **Pinpad=0** ou **SmartPOS=3**        |
+
+{{< callout note >}} Caso não utilize integração com o App PinPDV, o parâmetro **iLeitor** deve ter o valor **0**. {{< /callout >}}
+
 ## Funções de Venda
 
 ### Venda Crédito
@@ -73,7 +87,7 @@ Inicia uma transação sem definir a modalidade de pagamento (por ex: Crédito o
 ```
 
 ### Venda Frota Completo
-Realiza uma Transação com Cartão Frota (abastecimento/Combustível), sendo necessário enviar todos os parâmetros da função.
+Realiza uma Transação com Cartão Frota (Abastecimento/Combustível), sendo necessário enviar todos os parâmetros da função.
 
 O parâmetro sItens possuí um layout específico para ser utilizado, as informações sobre o item são separadas por hífen “**-**“ e os itens separados por pipe “**|**”.
 
