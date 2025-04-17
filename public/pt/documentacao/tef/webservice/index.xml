@@ -14,7 +14,7 @@
       <link>http://localhost:1313/pt/documentacao/tef/webservice/introducao/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
       <guid>http://localhost:1313/pt/documentacao/tef/webservice/introducao/</guid>
-      <description></description>
+      <description>&lt;p&gt;A integração por Web Service é voltada para sistemas web, aplicações em ambientes Terminal Service ou arquiteturas distribuídas, onde parte da aplicação está em um servidor central e o PinPad permanece conectado fisicamente no terminal do cliente. Nessa abordagem, a aplicação se comunica com o Gerenciador de Pagamentos, por meio de chamadas HTTP padronizadas.  A solução oferece alta flexibilidade, mantendo a segurança, controle das transações e compatibilidade com o fluxo operacional do TEF, sendo ideal para ambientes distribuídos e centralizados.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Instalação/Configuração</title>
@@ -28,7 +28,7 @@
       <link>http://localhost:1313/pt/documentacao/tef/webservice/comunicacao/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
       <guid>http://localhost:1313/pt/documentacao/tef/webservice/comunicacao/</guid>
-      <description></description>
+      <description>&lt;p&gt;A comunicação entre a Automação e a Web Api é realizada utilizando dois endpoints: &lt;code&gt;SetVendaTef&lt;/code&gt; responsável por criar a requisiçãoda transação e &lt;code&gt;GetVendasTef&lt;/code&gt;, responsável por realizar as consultas das transações.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Criação de Transações</title>

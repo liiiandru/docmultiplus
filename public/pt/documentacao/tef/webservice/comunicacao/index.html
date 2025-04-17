@@ -50,7 +50,7 @@
 <meta property="og:url" content="http://localhost:1313/pt/documentacao/tef/webservice/comunicacao/">
   <meta property="og:site_name" content="Multiplus Card">
   <meta property="og:title" content="Fluxo de Comunicação">
-  <meta property="og:description" content="Congrats on setting up a new Doks project!">
+  <meta property="og:description" content="A comunicação entre a Automação e a Web Api é realizada utilizando dois endpoints: SetVendaTef responsável por criar a requisiçãoda transação e GetVendasTef, responsável por realizar as consultas das transações.">
   <meta property="og:locale" content="pt">
   <meta property="og:type" content="article">
     <meta property="article:section" content="documentacao">
@@ -61,7 +61,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/cover.png">
   <meta name="twitter:title" content="Fluxo de Comunicação">
-  <meta name="twitter:description" content="Congrats on setting up a new Doks project!">
+  <meta name="twitter:description" content="A comunicação entre a Automação e a Web Api é realizada utilizando dois endpoints: SetVendaTef responsável por criar a requisiçãoda transação e GetVendasTef, responsável por realizar as consultas das transações.">
       <meta name="twitter:site" content="@getdoks">
 
     
@@ -684,7 +684,20 @@
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
 				
 			</nav>
-			
+			<p>A comunicação entre a Automação e a Web Api é realizada utilizando dois endpoints: <code>SetVendaTef</code> responsável por criar a requisiçãoda transação e <code>GetVendasTef</code>, responsável por realizar as consultas das transações.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Urls</span>
+  </figcaption>
+  <div class="highlight" title="Urls"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">GET: https://api.multipluscard.com.br/api/Servicos/SetVendaTef
+</span></span><span class="line"><span class="cl">POST: https://api.multipluscard.com.br/api/Servicos/GetVendasTef</span></span></code></pre></div>
+  </figure>
+</div>
+
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
 			<div class="page-nav d-flex flex-column flex-sm-row">

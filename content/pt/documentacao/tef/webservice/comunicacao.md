@@ -12,3 +12,10 @@ seo:
   canonical: "" # custom canonical URL (optional)
   robots: "" # custom robot tags (optional)
 ---
+
+A comunicação entre a Automação e a Web Api é realizada utilizando dois endpoints: `SetVendaTef` responsável por criar a requisiçãoda transação e `GetVendasTef`, responsável por realizar as consultas das transações.
+
+```txt {title="Urls"}
+GET: https://api.multipluscard.com.br/api/Servicos/SetVendaTef
+POST: https://api.multipluscard.com.br/api/Servicos/GetVendasTef
+```
