@@ -38,18 +38,18 @@
       <description>&lt;p&gt;As mensagens de comunicação entre a Automação e o Gerenciador de Pagamentos (GP) possuem um layout definido, onde cada linha de um arquivo texto contém um tipo de informação.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Descrição dos Campos</title>
+      <link>http://localhost:1313/pt/documentacao/tef/tefdial/descricaocampos/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/tefdial/descricaocampos/</guid>
+      <description>&lt;p&gt;Aqui é apresentada uma descrição detalhada de todos os campos possível de serm utilizados na troca de mensagens entre a Automação e  o Gerenciador de Pagamentos.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Exemplo de Comunicação</title>
       <link>http://localhost:1313/pt/documentacao/tef/tefdial/exemplocomunicacao/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
       <guid>http://localhost:1313/pt/documentacao/tef/tefdial/exemplocomunicacao/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tef Dial (Troca de Arquivos)</title>
-      <link>http://localhost:1313/pt/documentacao/tef/tefdial/trocaarquivos/</link>
-      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
-      <guid>http://localhost:1313/pt/documentacao/tef/tefdial/trocaarquivos/</guid>
-      <description>&lt;p&gt;Teste teste&lt;/p&gt;</description>
+      <description>&lt;p&gt;A seguir, é apresentado um exemplo de transação via cartão de crédito, destacando os formatos possíveis dos arquivos de requisição a serem gerados, bem como os respectivos arquivos de retorno esperados.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
