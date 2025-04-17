@@ -35,7 +35,7 @@
       <link>http://localhost:1313/pt/documentacao/tef/tefdial/layoutcomunicacao/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
       <guid>http://localhost:1313/pt/documentacao/tef/tefdial/layoutcomunicacao/</guid>
-      <description></description>
+      <description>&lt;p&gt;As mensagens de comunicação entre a Automação e o Gerenciador de Pagamentos (GP) possuem um layout definido, onde cada linha de um arquivo texto contém um tipo de informação.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Exemplo de Comunicação</title>

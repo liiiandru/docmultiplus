@@ -66,3 +66,39 @@ Este arquivo é utilizado pela Automação para receber os dados enviados pelo G
 ```
 
 ## Diagrama de Comunicação
+
+{{< figure
+  src="images/fluxo_completo_tefdial.png"
+  alt="Fluxo da Transação entre Automação e Gerenciador de Pagamentos"
+  caption="Fluxo da Transação entre Automação e Gerenciador de Pagamentos"
+  max-width="100%"
+>}}
+
+### Observações
+
+- Em caso de queda de energia durante a impressão do cupom, a Automação deverá automáticamente enviar o comando **NCN** apresentando a mensagem:
+
+```
+  Cancela a Transação:
+  Rede:
+  NSU:
+  Valor:
+```
+
+- Na exibição de mensagens de não confirmação, os campos Doc. No (campo 12) e Rede (campo 10) devem ser apresentados obrigatoriamente. O campo Valor (campo 3) deve ser exibido apenas se estiver presente no arquivo Intpos.001 localizado no diretório Resp, e possuir valor diferente de zero. Quando exibido, o campo Valor deve ser formatado como moeda.
+
+- O número de vias impressas poderá ser parametrizado; Para fins de homologação, os testes serão realizados com a impressão de duas vias.
+
+- A verificação da impressão correta do comprovante é de responsabilidade da automação
+
+- Exibição da Mensagem – Campo 30
+
+A mensagem contida no **Campo 30** deve ser apresentada pela Automação Comercial **somente quando o conteúdo for diferente de vazio**. Caso o campo esteja vazio, **nenhum Message Box deverá ser exibido**.
+
+- **Com impressão de comprovante (linhas presentes)**:
+  Se houver linhas a serem impressas, a mensagem do Campo 30 deve ser exibida **simultaneamente à impressão do comprovante TEF**.
+  O Message Box **não deve bloquear ou aguardar confirmação do usuário (OK)** para iniciar a impressão.
+  A mensagem deve permanecer visível por **no mínimo 5 segundos**, ou até o término da impressão.
+
+- **Sem impressão de comprovante (sem linhas)**:
+  Na ausência de linhas para impressão, a mensagem do Campo 30 deve ser exibida e **aguardar a confirmação (OK) do usuário** antes de ser encerrada.

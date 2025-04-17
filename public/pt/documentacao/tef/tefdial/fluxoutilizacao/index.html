@@ -618,7 +618,11 @@
         <li><a href="#diretório-de-retorno-de-dados">Diretório de Retorno de Dados</a></li>
       </ul>
     </li>
-    <li><a href="#diagrama-de-comunicação">Diagrama de Comunicação</a></li>
+    <li><a href="#diagrama-de-comunicação">Diagrama de Comunicação</a>
+      <ul>
+        <li><a href="#observações">Observações</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
@@ -640,7 +644,11 @@
         <li><a href="#diretório-de-retorno-de-dados">Diretório de Retorno de Dados</a></li>
       </ul>
     </li>
-    <li><a href="#diagrama-de-comunicação">Diagrama de Comunicação</a></li>
+    <li><a href="#diagrama-de-comunicação">Diagrama de Comunicação</a>
+      <ul>
+        <li><a href="#observações">Observações</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -751,6 +759,67 @@ Após recebido pelo GP ele realiza o processamento e excluí o mesmo.</p>
   </figure>
 </div>
 <h2 id="diagrama-de-comunicação">Diagrama de Comunicação<a href="#diagrama-de-comunicação" class="anchor" aria-hidden="true">#</a> </h2>
+
+<figure>
+  <img
+    srcset="data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAwAwCdASoQABcAP1mMuEupJKKYBACTFYT0gAA9Yamm&#43;MAAAP7t/NDt8SgzDKzjeBl6vJaRiVY7/aSoYAAAAA=="
+        data-srcset="/images/fluxo_completo_tefdial_hu_d6d9a6125b3ce9c.webp 480w,/images/fluxo_completo_tefdial_hu_166278d244039d66.webp 576w,/images/fluxo_completo_tefdial_hu_cc03591535937a9c.webp 768w,/images/fluxo_completo_tefdial_hu_ce1180968894975a.webp 799w"
+        data-sizes="auto"
+    src="/images/fluxo_completo_tefdial_hu_d7dbace93abc13ca.jpg"
+    width="799"
+    height="1141"
+    decoding="async"
+    fetchpriority="auto"
+    loading="lazy"
+    alt="Fluxo da Transação entre Automação e Gerenciador de Pagamentos"
+    class="lazyload blur-up"
+  ><figcaption>Fluxo da Transação entre Automação e Gerenciador de Pagamentos</figcaption>
+</figure>
+<h3 id="observações">Observações<a href="#observações" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>Em caso de queda de energia durante a impressão do cupom, a Automação deverá automáticamente enviar o comando <strong>NCN</strong> apresentando a mensagem:</li>
+</ul>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>  Cancela a Transação:
+  Rede:
+  NSU:
+  Valor:</code></pre>
+  </figure>
+</div>
+<ul>
+<li>
+<p>Na exibição de mensagens de não confirmação, os campos Doc. No (campo 12) e Rede (campo 10) devem ser apresentados obrigatoriamente. O campo Valor (campo 3) deve ser exibido apenas se estiver presente no arquivo Intpos.001 localizado no diretório Resp, e possuir valor diferente de zero. Quando exibido, o campo Valor deve ser formatado como moeda.</p>
+</li>
+<li>
+<p>O número de vias impressas poderá ser parametrizado; Para fins de homologação, os testes serão realizados com a impressão de duas vias.</p>
+</li>
+<li>
+<p>A verificação da impressão correta do comprovante é de responsabilidade da automação</p>
+</li>
+<li>
+<p>Exibição da Mensagem – Campo 30</p>
+</li>
+</ul>
+<p>A mensagem contida no <strong>Campo 30</strong> deve ser apresentada pela Automação Comercial <strong>somente quando o conteúdo for diferente de vazio</strong>. Caso o campo esteja vazio, <strong>nenhum Message Box deverá ser exibido</strong>.</p>
+<ul>
+<li>
+<p><strong>Com impressão de comprovante (linhas presentes)</strong>:
+Se houver linhas a serem impressas, a mensagem do Campo 30 deve ser exibida <strong>simultaneamente à impressão do comprovante TEF</strong>.
+O Message Box <strong>não deve bloquear ou aguardar confirmação do usuário (OK)</strong> para iniciar a impressão.
+A mensagem deve permanecer visível por <strong>no mínimo 5 segundos</strong>, ou até o término da impressão.</p>
+</li>
+<li>
+<p><strong>Sem impressão de comprovante (sem linhas)</strong>:
+Na ausência de linhas para impressão, a mensagem do Campo 30 deve ser exibida e <strong>aguardar a confirmação (OK) do usuário</strong> antes de ser encerrada.</p>
+</li>
+</ul>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>

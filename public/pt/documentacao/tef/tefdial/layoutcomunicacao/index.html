@@ -50,7 +50,7 @@
 <meta property="og:url" content="http://localhost:1313/pt/documentacao/tef/tefdial/layoutcomunicacao/">
   <meta property="og:site_name" content="Multiplus Card">
   <meta property="og:title" content="Layout das Mensagens">
-  <meta property="og:description" content="Congrats on setting up a new Doks project!">
+  <meta property="og:description" content="As mensagens de comunicação entre a Automação e o Gerenciador de Pagamentos (GP) possuem um layout definido, onde cada linha de um arquivo texto contém um tipo de informação.">
   <meta property="og:locale" content="pt">
   <meta property="og:type" content="article">
     <meta property="article:section" content="documentacao">
@@ -61,7 +61,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/cover.png">
   <meta name="twitter:title" content="Layout das Mensagens">
-  <meta name="twitter:description" content="Congrats on setting up a new Doks project!">
+  <meta name="twitter:description" content="As mensagens de comunicação entre a Automação e o Gerenciador de Pagamentos (GP) possuem um layout definido, onde cada linha de um arquivo texto contém um tipo de informação.">
       <meta name="twitter:site" content="@getdoks">
 
     
@@ -609,7 +609,22 @@
 		
 		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
 			<div class="page-links">
-  
+  <h3>Nesta página</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#tipos-de-operações">Tipos de Operações</a>
+      <ul>
+        <li><a href="#observações">Observações</a>
+          <ul>
+            <li><a href="#gp-ativo">GP Ativo</a></li>
+            <li><a href="#cancelamento-de-vendas">Cancelamento de Vendas</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#especificação-dos-campos-das-mensagens">Especificação dos Campos das Mensagens</a></li>
+  </ul>
+</nav>
 </div>
 
 		</nav>
@@ -618,9 +633,205 @@
 			<h1>Layout das Mensagens</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
-				
+				<details>
+    <summary>Nesta página</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#tipos-de-operações">Tipos de Operações</a>
+      <ul>
+        <li><a href="#observações">Observações</a>
+          <ul>
+            <li><a href="#gp-ativo">GP Ativo</a></li>
+            <li><a href="#cancelamento-de-vendas">Cancelamento de Vendas</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#especificação-dos-campos-das-mensagens">Especificação dos Campos das Mensagens</a></li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
 			</nav>
-			
+			<p>As mensagens de comunicação entre a Automação e o Gerenciador de Pagamentos (GP) possuem um layout definido, onde cada linha de um arquivo texto contém um tipo de informação.</p>
+<p>As linhas possuem formato padrão e tamanho variável, utilizando o conceito de palavra chave.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Layout da linha</span>
+  </figcaption>
+  <div class="highlight" title="Layout da linha"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">  AAA-BBBC = CDDDDDDD...DDDDDEF</span></span></code></pre></div>
+  </figure>
+</div>
+<table>
+  <thead>
+      <tr>
+          <th>Posição</th>
+          <th>Significado</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>AAA</code></td>
+          <td><strong>Tipo de informação ou campo</strong> (ex: &ldquo;001&rdquo; pode ser cabeçalho, &ldquo;010&rdquo; valor, etc.)</td>
+      </tr>
+      <tr>
+          <td><code>-</code></td>
+          <td>Separador fixo</td>
+      </tr>
+      <tr>
+          <td><code>BBB</code></td>
+          <td><strong>Número de sequência complementar</strong>, geralmente para repetir o mesmo tipo (ex: múltiplos itens).</td>
+      </tr>
+      <tr>
+          <td><code>C</code></td>
+          <td><strong>Espaço ou branco</strong> (sempre deve existir, pode até ser um caractere <code>' '</code> )</td>
+      </tr>
+      <tr>
+          <td><code>DD...D</code></td>
+          <td><strong>Informação propriamente dita</strong>, alinhada à esquerda, <strong>sem preenchimento de zeros ou espaços</strong>.</td>
+      </tr>
+      <tr>
+          <td><code>E</code></td>
+          <td>Fim da linha, composto por CR (Carriage Return = 13) e LF (Line Feed = 10)</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="tipos-de-operações">Tipos de Operações<a href="#tipos-de-operações" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Na tabela a seguir são descritas as operações possíveis de serem utilizadas para acionar o GP.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Código</th>
+          <th>Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ATV</td>
+          <td>Verifica se o Gerenciador de Pagamentos está ativo</td>
+      </tr>
+      <tr>
+          <td>ADM</td>
+          <td>Permite o acionamento da Solução TEF para execução das funções administrativas</td>
+      </tr>
+      <tr>
+          <td>CRT</td>
+          <td>Iniciar transação por meio de cartão</td>
+      </tr>
+      <tr>
+          <td>CEL</td>
+          <td>Iniciar transação de recarga de celular</td>
+      </tr>
+      <tr>
+          <td>REL</td>
+          <td>Permite o acionamento da Solução TEF para entrar no Relatório de Vendas</td>
+      </tr>
+      <tr>
+          <td>CNC</td>
+          <td>Cancelamento de venda efetuada por qualquer meio de pagamento</td>
+      </tr>
+      <tr>
+          <td>CNF</td>
+          <td>Confirmação da venda e impressão de cupom</td>
+      </tr>
+      <tr>
+          <td>NCN</td>
+          <td>Não confirmação da venda e/ou da impressão (desfazimento)</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="observações">Observações<a href="#observações" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="gp-ativo">GP Ativo<a href="#gp-ativo" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>
+<p>Para verificar se o GP está ativo a Automação envia a mensagem contendo o comando <strong>ATV</strong> e deve aguardar até 7 segundos para receber o arquivo <code>C:\TEF_DIAL\Resp|IntPos.sts</code> indicando que o GP está ativo.</p>
+</li>
+<li>
+<p>Sempre que o GP abrir irá informar à Automação que está ativo através do arquivo <code>C:\TEF_DIAL\RespAtivo.001</code>, se o mesmo não existir significa que o Gerenciador de Pagamentos não está ativo.</p>
+</li>
+</ul>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Conteúdo do arquivo Ativo.001</span>
+  </figcaption>
+  <div class="highlight" title="Conteúdo do arquivo Ativo.001"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">  000-000 = TEF
+</span></span><span class="line"><span class="cl">  016-000 = DDMMHHMMSS (Timestamp)
+</span></span><span class="line"><span class="cl">  999-999 = 0</span></span></code></pre></div>
+  </figure>
+</div>
+<h4 id="cancelamento-de-vendas">Cancelamento de Vendas<a href="#cancelamento-de-vendas" class="anchor" aria-hidden="true">#</a> </h4>
+<p>O cancelamento de uma venda pode ser realizado de duas formas:</p>
+<ul>
+<li>Pela operação <strong>ADM</strong>, onde o GP exibe uma tela para capturar os dados da transação a ser cancelada;</li>
+<li>Pela operação <strong>CNC</strong>, onde a Automação informa o GP os dados da transação a ser cancelada.</li>
+</ul>
+<h2 id="especificação-dos-campos-das-mensagens">Especificação dos Campos das Mensagens<a href="#especificação-dos-campos-das-mensagens" class="anchor" aria-hidden="true">#</a> </h2>
+<p>A seguir serão apresentados os campos que devem estar presentes nos arquivos criados ou recebidos pela Automação. As informações variam de acordo com o tipo de operação e possuem a seguinte indicação <strong>M</strong> quando é mandatório, <strong>O</strong> quando é opcional e <strong>-</strong> quando ausente.</p>
+<div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ 
+ class="outline/info-circle svg-inline callout-icon me-2 mb-3" id="svg-info-circle" role="img">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+  <path d="M12 9h.01" />
+  <path d="M11 12h1v4h1" />
+</svg>
+  <div class="callout-content">
+    
+    <div class="callout-body">
+      <p>É importante que o aplicativo de automação esteja preparado para reconhecer e ignorar campos desconhecidos. Essa abordagem garante maior robustez e compatibilidade com versões futuras, permitindo a evolução do sistema sem comprometer integrações já existentes.</p>
+
+    </div>
+  </div>
+</div>
+
+<div class="callout callout-caution d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ 
+ class="outline/alert-triangle svg-inline callout-icon me-2 mb-3" id="svg-alert-triangle" role="img">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 9v4" />
+  <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" />
+  <path d="M12 16h.01" />
+</svg>
+  <div class="callout-content">
+    
+    <div class="callout-body">
+      <p>Em caso de discrepância entre o valor do campo enviado pela Automação Comercial e o valor processado pelo Gerenciador de Pagamentos, <strong>prevalecerá o conteúdo definido pelo Gerenciador de Pagamentos</strong>.</p>
+
+    </div>
+  </div>
+</div>
+
+
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
 			<div class="page-nav d-flex flex-column flex-sm-row">
