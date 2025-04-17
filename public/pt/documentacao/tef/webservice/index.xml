@@ -10,10 +10,66 @@
     <lastBuildDate>Thu, 07 Sep 2023 16:33:54 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/pt/documentacao/tef/webservice/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>WebService</title>
-      <link>http://localhost:1313/pt/documentacao/tef/webservice/webservice/</link>
+      <title>Introdução</title>
+      <link>http://localhost:1313/pt/documentacao/tef/webservice/introducao/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
-      <guid>http://localhost:1313/pt/documentacao/tef/webservice/webservice/</guid>
+      <guid>http://localhost:1313/pt/documentacao/tef/webservice/introducao/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Instalação/Configuração</title>
+      <link>http://localhost:1313/pt/documentacao/tef/webservice/configuracao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/webservice/configuracao/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fluxo de Comunicação</title>
+      <link>http://localhost:1313/pt/documentacao/tef/webservice/comunicacao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/webservice/comunicacao/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Criação de Transações</title>
+      <link>http://localhost:1313/pt/documentacao/tef/webservice/criacaotrn/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/webservice/criacaotrn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Consulta de Transações</title>
+      <link>http://localhost:1313/pt/documentacao/tef/webservice/consultatrn/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/webservice/consultatrn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Layout do Header CONTEUDO</title>
+      <link>http://localhost:1313/pt/documentacao/tef/webservice/layoutheader/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/webservice/layoutheader/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tipos de Campos</title>
+      <link>http://localhost:1313/pt/documentacao/tef/webservice/tiposcampo/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/webservice/tiposcampo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Descrição dos Campos</title>
+      <link>http://localhost:1313/pt/documentacao/tef/webservice/descricaocampos/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/webservice/descricaocampos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Exemplo de Utilização</title>
+      <link>http://localhost:1313/pt/documentacao/tef/webservice/exemplotrn/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/tef/webservice/exemplotrn/</guid>
       <description></description>
     </item>
   </channel>
