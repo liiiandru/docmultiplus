@@ -2,7 +2,49 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>http://localhost:1313/pt/documentacao/pinpdv/pinpdv/</loc>
+      <loc>http://localhost:1313/pt/documentacao/pinpdv/introducao/</loc>
+      <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/pt/documentacao/pinpdv/infocomuns/</loc>
+      <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/pt/documentacao/pinpdv/produtos/</loc>
+      <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/pt/documentacao/pinpdv/prevenda/</loc>
+      <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/pt/documentacao/pinpdv/postef/</loc>
+      <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/pt/documentacao/pinpdv/vendaexpressa/</loc>
+      <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/pt/documentacao/pinpdv/consultatrn/</loc>
       <lastmod>2023-09-07T16:33:54+02:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>

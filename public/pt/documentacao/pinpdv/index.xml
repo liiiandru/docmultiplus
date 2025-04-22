@@ -10,10 +10,52 @@
     <lastBuildDate>Thu, 07 Sep 2023 16:33:54 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/pt/documentacao/pinpdv/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>PinPDV</title>
-      <link>http://localhost:1313/pt/documentacao/pinpdv/pinpdv/</link>
+      <title>Introdução</title>
+      <link>http://localhost:1313/pt/documentacao/pinpdv/introducao/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
-      <guid>http://localhost:1313/pt/documentacao/pinpdv/pinpdv/</guid>
+      <guid>http://localhost:1313/pt/documentacao/pinpdv/introducao/</guid>
+      <description>&lt;p&gt;A integração entre o sistema parceiro e o &lt;strong&gt;PINPDV&lt;/strong&gt; é realizada por meio de uma &lt;strong&gt;API Web no padrão REST&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Informações Comuns</title>
+      <link>http://localhost:1313/pt/documentacao/pinpdv/infocomuns/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/pinpdv/infocomuns/</guid>
+      <description>&lt;p&gt;Em diversos cenários de integração com a API do &lt;strong&gt;PinPDV Lite&lt;/strong&gt;, são requeridas informações específicas e/ou procedimentos operacionais.&#xA;A seguir, são descritos os elementos mais recorrentes e essenciais ao processo de integração.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cadastro de Produtos</title>
+      <link>http://localhost:1313/pt/documentacao/pinpdv/produtos/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/pinpdv/produtos/</guid>
+      <description>&lt;p&gt;Os produtos exibidos no PinPDV devem ser previamente cadastrados na API do PinPDV e os mesmos devem estar ativos.&lt;/p&gt;&#xA;&lt;h2 id=&#34;cadastro&#34;&gt;Cadastro&lt;/h2&gt;&#xA;&lt;p&gt;O cadastro de um produto é realizado no endpoint &lt;code&gt;/produto&lt;/code&gt;, informando o ID da empresa; Quando informada a imagem deve estar codificada em Base64.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pré-venda</title>
+      <link>http://localhost:1313/pt/documentacao/pinpdv/prevenda/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/pinpdv/prevenda/</guid>
+      <description>&lt;p&gt;A funcionalidade de Pré-Venda permite que operações de venda sejam iniciadas e registradas previamente, antes de sua finalização no App PinPDV. Essa funcionalidade é especialmente útil para cenários onde o atendimento começa no sistema e é finalizado fora do caixa (ex: Delivery, abastecimentos, etc.).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>POS TEF</title>
+      <link>http://localhost:1313/pt/documentacao/pinpdv/postef/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/pinpdv/postef/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Venda Expressa</title>
+      <link>http://localhost:1313/pt/documentacao/pinpdv/vendaexpressa/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/pinpdv/vendaexpressa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Consulta de Transações</title>
+      <link>http://localhost:1313/pt/documentacao/pinpdv/consultatrn/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/pinpdv/consultatrn/</guid>
       <description></description>
     </item>
   </channel>
