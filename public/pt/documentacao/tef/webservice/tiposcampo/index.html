@@ -50,7 +50,7 @@
 <meta property="og:url" content="http://localhost:1313/pt/documentacao/tef/webservice/tiposcampo/">
   <meta property="og:site_name" content="Multiplus Card">
   <meta property="og:title" content="Tipos de Campos">
-  <meta property="og:description" content="Congrats on setting up a new Doks project!">
+  <meta property="og:description" content="A seguir são apresentados os tipos de campo que deverão estar presentes no header ‘CONTEUDO’ nas requisições realizadas no endpoint SetVendaTef pela Automação. As informações variam de acordo com o tipo de operação e possuem a seguinte indicação M quando é mandatório, O quando é opcional e - quando ausente.">
   <meta property="og:locale" content="pt">
   <meta property="og:type" content="article">
     <meta property="article:section" content="documentacao">
@@ -61,7 +61,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/cover.png">
   <meta name="twitter:title" content="Tipos de Campos">
-  <meta name="twitter:description" content="Congrats on setting up a new Doks project!">
+  <meta name="twitter:description" content="A seguir são apresentados os tipos de campo que deverão estar presentes no header ‘CONTEUDO’ nas requisições realizadas no endpoint SetVendaTef pela Automação. As informações variam de acordo com o tipo de operação e possuem a seguinte indicação M quando é mandatório, O quando é opcional e - quando ausente.">
       <meta name="twitter:site" content="@getdoks">
 
     
@@ -673,7 +673,13 @@
 		
 		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
 			<div class="page-links">
-  
+  <h3>Nesta página</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#campos-do-header-conteudo---setvendatef">Campos do Header &lsquo;Conteudo&rsquo; - SetVendaTef</a></li>
+    <li><a href="#campos-retornados---getvendastef">Campos Retornados - GetVendasTef</a></li>
+  </ul>
+</nav>
 </div>
 
 		</nav>
@@ -682,9 +688,958 @@
 			<h1>Tipos de Campos</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
-				
+				<details>
+    <summary>Nesta página</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#campos-do-header-conteudo---setvendatef">Campos do Header &lsquo;Conteudo&rsquo; - SetVendaTef</a></li>
+    <li><a href="#campos-retornados---getvendastef">Campos Retornados - GetVendasTef</a></li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
 			</nav>
-			
+			<p>A seguir são apresentados os tipos de campo que deverão estar presentes no header ‘CONTEUDO’ nas requisições realizadas no endpoint <code>SetVendaTef</code> pela Automação. As informações variam de acordo com o tipo de operação e possuem a seguinte indicação <strong>M</strong> quando é mandatório, <strong>O</strong> quando é opcional e <strong>-</strong> quando ausente.</p>
+<p>Em seguida estarão os campos retornados pelo Gerenciador Padrão no endpoint <code>GetVendasTef</code>.</p>
+<div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ 
+ class="outline/info-circle svg-inline callout-icon me-2 mb-3" id="svg-info-circle" role="img">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+  <path d="M12 9h.01" />
+  <path d="M11 12h1v4h1" />
+</svg>
+  <div class="callout-content">
+    
+    <div class="callout-body">
+      <p>É importante que o aplicativo de automação esteja preparado para reconhecer e ignorar campos desconhecidos. Essa abordagem garante maior robustez e compatibilidade com versões futuras, permitindo a evolução do sistema sem comprometer integrações já existentes.</p>
+
+    </div>
+  </div>
+</div>
+
+<div class="callout callout-caution d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ 
+ class="outline/alert-triangle svg-inline callout-icon me-2 mb-3" id="svg-alert-triangle" role="img">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 9v4" />
+  <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" />
+  <path d="M12 16h.01" />
+</svg>
+  <div class="callout-content">
+    
+    <div class="callout-body">
+      <p>Em caso de discrepância entre o valor do campo enviado pela Automação Comercial e o valor processado pelo Gerenciador de Pagamentos, <strong>prevalecerá o conteúdo definido pelo Gerenciador de Pagamentos</strong>.</p>
+
+    </div>
+  </div>
+</div>
+
+<h2 id="campos-do-header-conteudo---setvendatef">Campos do Header &lsquo;Conteudo&rsquo; - SetVendaTef<a href="#campos-do-header-conteudo---setvendatef" class="anchor" aria-hidden="true">#</a> </h2>
+<table>
+  <thead>
+      <tr>
+          <th>Código do Campo</th>
+          <th>Tipo de Informação</th>
+          <th>ATV</th>
+          <th>ADM</th>
+          <th>CRT</th>
+          <th>CNC</th>
+          <th>CNF</th>
+          <th>NCN</th>
+          <th>REL</th>
+          <th>CPF</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>000-000</td>
+          <td>HEADER</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+      </tr>
+      <tr>
+          <td>001-000</td>
+          <td>IDENTIFICAÇÃO</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>002-000</td>
+          <td>DOCUMENTO FISCAL VINCULADO</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>003-000</td>
+          <td>VALOR TOTAL</td>
+          <td>-</td>
+          <td>-</td>
+          <td>M</td>
+          <td>M</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>004-000</td>
+          <td>MOEDA</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>010-000</td>
+          <td>NOME DA REDE</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>012-000</td>
+          <td>NÚMERO DA TRANSAÇÃO - NSU</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>022-000</td>
+          <td>DATA DA TRANSAÇÃO - COMPROVANTE</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>M</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>023-000</td>
+          <td>HORA DA TRANSAÇÃO - COMPROVANTE</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>M</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>027-000</td>
+          <td>FINALIZAÇÃO</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>M</td>
+          <td>M</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>250-000</td>
+          <td>KM (VENDA FROTA)</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>250-001</td>
+          <td>PLACA (VENDA FROTA)</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>250-002</td>
+          <td>MATRICULA (VENDA FROTA)</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>261-000</td>
+          <td>QUANTIDADE DE ITENS</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>261-XX1</td>
+          <td>CÓDIGO DO PRODUTO</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>261-XX2</td>
+          <td>DESCRIÇÃO DO PRODUTO</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>261-XX3</td>
+          <td>QUANTIDADE</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>261-XX4</td>
+          <td>VALOR UNITARIO</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>261-XX5</td>
+          <td>DESCONTO</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>261-XX6</td>
+          <td>VALOR TOTAL</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>800-001</td>
+          <td>TIPO DE TRANSAÇÃO</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>800-002</td>
+          <td>FORMA DE PAGAMENTO</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>800-003</td>
+          <td>JUROS DA TRANSAÇÃO</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>800-004</td>
+          <td>QUANTIDADE DE PARCELAS</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>800-005</td>
+          <td>CNPJ DO ESTABELECIMENTO</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>800-006</td>
+          <td>EQUIPAMENTO P/ RECEBIMENTO (PINPAD OU CIELO LIO)</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>800-007</td>
+          <td>CÓDIGO DE CONTROLE (CANCELAMENTO DE VENDAS)</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>800-008</td>
+          <td>EXIBE CONSULTA DE CPF</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>M</td>
+      </tr>
+      <tr>
+          <td>800-009</td>
+          <td>TEXTO LIVRE (LINK DE PAGAMENTO)</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>800-010</td>
+          <td>QUANTIDADE DE PARCELAS (LINK DE PAGAMENTO)</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>800-011</td>
+          <td>TELEFONE COM DDD (LINK DE PAGAMENTO)</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>800-012</td>
+          <td>TEXTO LIVRE (LINK DE PAGAMENTO)</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>800-013</td>
+          <td>PARAMETROS SPLIT, VALIDO SOMENTE PARA MULTIPLUS PAY</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>800-014</td>
+          <td>CAMPO LIVRE SPLIT, VALIDO SOMENTE PARA MULTIPLUS PAY</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>999-999</td>
+          <td>TRAILER - REGISTRO FINAL</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Legenda:</strong></p>
+<ul>
+<li><code>M</code> = Mandatório</li>
+<li><code>O</code> = Opcional</li>
+<li><code>-</code> = Ausente</li>
+</ul>
+<h2 id="campos-retornados---getvendastef">Campos Retornados - GetVendasTef<a href="#campos-retornados---getvendastef" class="anchor" aria-hidden="true">#</a> </h2>
+<table>
+  <thead>
+      <tr>
+          <th>Código do Campo</th>
+          <th>Tipo de Informação</th>
+          <th>ATV</th>
+          <th>ADM</th>
+          <th>CRT</th>
+          <th>CNC</th>
+          <th>REL</th>
+          <th>CPF</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>000-000</td>
+          <td>HEADER</td>
+          <td>-</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+      </tr>
+      <tr>
+          <td>001-000</td>
+          <td>IDENTIFICAÇÃO</td>
+          <td>-</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>002-000</td>
+          <td>DOCUMENTO FISCAL VINCULADO</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O(2)</td>
+          <td>O(2)</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>003-000</td>
+          <td>VALOR TOTAL</td>
+          <td>-</td>
+          <td>O</td>
+          <td>M</td>
+          <td>M</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>004-000</td>
+          <td>MOEDA</td>
+          <td>-</td>
+          <td>O</td>
+          <td>M(2)</td>
+          <td>M(2)</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>009-000</td>
+          <td>STATUS DA TRANSAÇÃO</td>
+          <td>-</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+      </tr>
+      <tr>
+          <td>010-0X0</td>
+          <td>NOME DA REDE (OPERADORA/CREDENCIADORA)</td>
+          <td>-</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>010-0X1</td>
+          <td>CNPJ DA REDE (OPERADORA/CREDENCIADORA)</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>010-0X2</td>
+          <td>CÓDIGO SAT DA REDE</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>011-00X</td>
+          <td>TIPO DA TRANSAÇÃO</td>
+          <td>-</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>012-00X</td>
+          <td>NÚMERO DA TRANSAÇÃO - NSU</td>
+          <td>-</td>
+          <td>O</td>
+          <td>M(1)</td>
+          <td>M(1)</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>013-00X</td>
+          <td>CÓDIGO DE AUTORIZAÇÃO DA TRANSAÇÃO</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>014-000</td>
+          <td>NÚMERO DO LOTE DA TRANSAÇÃO</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>015-000</td>
+          <td>TIMESTAMP DA TRANSAÇÃO - HOST</td>
+          <td>-</td>
+          <td>O</td>
+          <td>M(1)</td>
+          <td>M(1)</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>016-000</td>
+          <td>TIMESTAMP DA TRANSAÇÃO - LOCAL</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>017-00X</td>
+          <td>TIPO PARCELAMENTO</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>018-00X</td>
+          <td>QUANTIDADE DE PARCELAS</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>019-yyy</td>
+          <td>DATA VENCIMENTO DA PARCELA</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>020-yyy</td>
+          <td>VALOR DA PARCELA</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>021-yyy</td>
+          <td>NÚMERO DA TRANSAÇÃO – NSU DA PARCELA</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>022-000</td>
+          <td>DATA DA TRANSAÇÃO - COMPROVANTE</td>
+          <td>-</td>
+          <td>O</td>
+          <td>M(1)</td>
+          <td>M(1)</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>023-000</td>
+          <td>HORA DA TRANSAÇÃO - COMPROVANTE</td>
+          <td>-</td>
+          <td>O</td>
+          <td>M(1)</td>
+          <td>M(1)</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>024-000</td>
+          <td>DATA PRÉ-DATADO</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>025-000</td>
+          <td>NÚMERO DA TRANSAÇÃO CANCELADA - NSU</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>026-000</td>
+          <td>TIMESTAMP DA TRANSAÇÃO CANCELADA</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>027-000</td>
+          <td>FINALIZAÇÃO</td>
+          <td>-</td>
+          <td>O</td>
+          <td>M(1)</td>
+          <td>M(1)</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>028-000</td>
+          <td>QUANTIDADE TOTAL DE LINHAS DO COMPROVANTE (*)</td>
+          <td>-</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+      </tr>
+      <tr>
+          <td>028-001</td>
+          <td>RETORNA A ÚLTIMA LINHA DO 1º COMPROVANTE</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>029-yyy</td>
+          <td>IMAGEM DE CADA LINHA DO COMPROVANTE</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>030-000</td>
+          <td>TEXTO ESPECIAL OPERADOR</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>M</td>
+          <td>O</td>
+      </tr>
+      <tr>
+          <td>031-000</td>
+          <td>TEXTO ESPECIAL CLIENTE</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>040-00X</td>
+          <td>NOME DA ADMINISTRADORA (BANDEIRA)</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>170-000</td>
+          <td>NÚMERO DA TRANSAÇÃO – NSU HOST</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>740-00X</td>
+          <td>NÚMEROS DO CARTÃO UTILIZADO NA TRANSAÇÃO</td>
+          <td>-</td>
+          <td>-</td>
+          <td>M</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>741-00X</td>
+          <td>NOME DO PORTADOR DO CARTÃO</td>
+          <td>-</td>
+          <td>-</td>
+          <td>M</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>742-00X</td>
+          <td>VALIDADE DO CARTÃO DO PORTADOR</td>
+          <td>-</td>
+          <td>-</td>
+          <td>M</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>743-000</td>
+          <td>RESTANTE À SER PAGO (USO DE MULTI CARTÕES)</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>999-999</td>
+          <td>TRAILER - REGISTRO FINAL</td>
+          <td>-</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+          <td>M</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Legenda:</strong></p>
+<ul>
+<li><code>M</code> = Mandatório</li>
+<li><code>O</code> = Opcional</li>
+<li><code>-</code> = Ausente</li>
+<li><code>(1)</code>, <code>(2)</code> = Dependências ou condições específicas (ver a seguir)</li>
+</ul>
+<div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ 
+ class="outline/info-circle svg-inline callout-icon me-2 mb-3" id="svg-info-circle" role="img">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+  <path d="M12 9h.01" />
+  <path d="M11 12h1v4h1" />
+</svg>
+  <div class="callout-content">
+    <div class="callout-title">
+        <p>Observações</p>
+
+      </div>
+    <div class="callout-body">
+      <p>(1) Estes campos somente existem em transações aprovadas.</p>
+<p>(2) Somente estarão preenchidos se a informação for fornecida no arquivo de envio correspondente.</p>
+<p>(*) O campo 028-000 QUANTIDADE DE LINHAS DO COMPROVANTE está como obrigatório para todas as operações, por uma medida de segurança para o Aplicativo de Automação Comercial. O Gerenciador Padrão preencherá este campo com zero (0) quando não houver comprovante.</p>
+<p>(X) Quando utilizado, o <strong>X</strong> refere-se à possibilidade de variação de número de 0 a 9, que muda de acordo com a quantidade de cartões na transação.</p>
+
+    </div>
+  </div>
+</div>
+
+
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
 			<div class="page-nav d-flex flex-column flex-sm-row">

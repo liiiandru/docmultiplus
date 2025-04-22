@@ -50,7 +50,7 @@
 <meta property="og:url" content="http://localhost:1313/pt/documentacao/tef/webservice/consultatrn/">
   <meta property="og:site_name" content="Multiplus Card">
   <meta property="og:title" content="Consulta de Transações">
-  <meta property="og:description" content="Congrats on setting up a new Doks project!">
+  <meta property="og:description" content="Para realizar a consulta em uma transação criada é necessário que seja feita uam requisição GET no endpoint GetVendasTef, com os seguintes headers:">
   <meta property="og:locale" content="pt">
   <meta property="og:type" content="article">
     <meta property="article:section" content="documentacao">
@@ -61,7 +61,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/cover.png">
   <meta name="twitter:title" content="Consulta de Transações">
-  <meta name="twitter:description" content="Congrats on setting up a new Doks project!">
+  <meta name="twitter:description" content="Para realizar a consulta em uma transação criada é necessário que seja feita uam requisição GET no endpoint GetVendasTef, com os seguintes headers:">
       <meta name="twitter:site" content="@getdoks">
 
     
@@ -673,7 +673,12 @@
 		
 		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
 			<div class="page-links">
-  
+  <h3>Nesta página</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#retorno-da-consulta">Retorno da Consulta</a></li>
+  </ul>
+</nav>
 </div>
 
 		</nav>
@@ -682,9 +687,108 @@
 			<h1>Consulta de Transações</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
-				
+				<details>
+    <summary>Nesta página</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#retorno-da-consulta">Retorno da Consulta</a></li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
 			</nav>
-			
+			<p>Para realizar a consulta em uma transação criada é necessário que seja feita uam requisição <strong>GET</strong> no endpoint <code>GetVendasTef</code>, com os seguintes headers:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Header</th>
+          <th>Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>HASH</td>
+          <td>Código retornado ao realizar a requisição de criação da transação</td>
+      </tr>
+      <tr>
+          <td>TOKEN</td>
+          <td>String necessária para realizar aas requisições (fornecida pela Multiplus Card)</td>
+      </tr>
+  </tbody>
+</table>
+<div class="callout callout-caution d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ 
+ class="outline/alert-triangle svg-inline callout-icon me-2 mb-3" id="svg-alert-triangle" role="img">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 9v4" />
+  <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" />
+  <path d="M12 16h.01" />
+</svg>
+  <div class="callout-content">
+    <div class="callout-title">
+        <p>Atenção</p>
+
+      </div>
+    <div class="callout-body">
+      <p>É necessário o inttervalo mínimo de <strong>500ms</strong> antes de realizar uma nova requisição GET no endpoint <code>GetVendasTef</code>.</p>
+
+    </div>
+  </div>
+</div>
+
+<h2 id="retorno-da-consulta">Retorno da Consulta<a href="#retorno-da-consulta" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Em caso de sucesso da requisição (HTTP status 200), os possíveis retornos estão a seguir:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Retorno</th>
+          <th>Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Pendente</td>
+          <td>O Gerenciador Padrão ainda não iniciou o processo da transação.</td>
+      </tr>
+      <tr>
+          <td>Processando</td>
+          <td>O Gerenciador Padrão iniciou a transação e a mesma está sendo executada.</td>
+      </tr>
+      <tr>
+          <td>Cancelado</td>
+          <td>Venda Cancelada por parte do PDV</td>
+      </tr>
+      <tr>
+          <td>[ERRO]: Hash invalido</td>
+          <td>O Hash informado não existe</td>
+      </tr>
+      <tr>
+          <td>[ERRO]: Verificar Parâmetros</td>
+          <td>Ocorre na ausência de parâmetros necessários para a consulta.</td>
+      </tr>
+      <tr>
+          <td>[ERRO]: “descrição do erro”</td>
+          <td>Erro não previsto, retorno com a descrição do mesmo.</td>
+      </tr>
+      <tr>
+          <td>XXXX¬yyyyy¬zzzz&hellip;&hellip;</td>
+          <td>Retorno da transação realizada</td>
+      </tr>
+  </tbody>
+</table>
+
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
 			<div class="page-nav d-flex flex-column flex-sm-row">

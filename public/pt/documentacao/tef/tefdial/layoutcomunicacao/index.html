@@ -801,6 +801,10 @@
           <td>Iniciar transação por meio de cartão</td>
       </tr>
       <tr>
+          <td>CPF</td>
+          <td>Solicita para digitar o CPF na tela do PinPad</td>
+      </tr>
+      <tr>
           <td>CEL</td>
           <td>Iniciar transação de recarga de celular</td>
       </tr>
@@ -931,12 +935,14 @@
           <th>CNF</th>
           <th>NCN</th>
           <th>REL</th>
+          <th>CPF</th>
       </tr>
   </thead>
   <tbody>
       <tr>
           <td>000-000</td>
           <td>HEADER</td>
+          <td>M</td>
           <td>M</td>
           <td>M</td>
           <td>M</td>
@@ -955,6 +961,7 @@
           <td>M</td>
           <td>M</td>
           <td>M</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>002-000</td>
@@ -965,6 +972,7 @@
           <td>O</td>
           <td>O</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
       </tr>
       <tr>
@@ -977,6 +985,7 @@
           <td>-</td>
           <td>-</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>004-000</td>
@@ -984,6 +993,7 @@
           <td>-</td>
           <td>-</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
           <td>-</td>
           <td>-</td>
@@ -999,6 +1009,7 @@
           <td>M</td>
           <td>M</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>012-000</td>
@@ -1010,6 +1021,7 @@
           <td>M</td>
           <td>M</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>022-000</td>
@@ -1018,6 +1030,7 @@
           <td>-</td>
           <td>-</td>
           <td>M</td>
+          <td>-</td>
           <td>-</td>
           <td>-</td>
           <td>-</td>
@@ -1032,6 +1045,7 @@
           <td>-</td>
           <td>-</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>027-000</td>
@@ -1043,6 +1057,7 @@
           <td>M</td>
           <td>M</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>250-000</td>
@@ -1050,6 +1065,7 @@
           <td>-</td>
           <td>-</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
           <td>-</td>
           <td>-</td>
@@ -1065,6 +1081,7 @@
           <td>-</td>
           <td>-</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>250-002</td>
@@ -1072,6 +1089,7 @@
           <td>-</td>
           <td>-</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
           <td>-</td>
           <td>-</td>
@@ -1087,6 +1105,7 @@
           <td>-</td>
           <td>-</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>261-XX1</td>
@@ -1094,6 +1113,7 @@
           <td>-</td>
           <td>-</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
           <td>-</td>
           <td>-</td>
@@ -1109,6 +1129,7 @@
           <td>-</td>
           <td>-</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>261-XX3</td>
@@ -1116,6 +1137,7 @@
           <td>-</td>
           <td>-</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
           <td>-</td>
           <td>-</td>
@@ -1131,6 +1153,7 @@
           <td>-</td>
           <td>-</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>261-XX5</td>
@@ -1138,6 +1161,7 @@
           <td>-</td>
           <td>-</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
           <td>-</td>
           <td>-</td>
@@ -1153,6 +1177,7 @@
           <td>-</td>
           <td>-</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>800-001</td>
@@ -1161,6 +1186,7 @@
           <td>-</td>
           <td>O</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
           <td>-</td>
           <td>-</td>
@@ -1175,6 +1201,7 @@
           <td>-</td>
           <td>-</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>800-003</td>
@@ -1183,6 +1210,7 @@
           <td>-</td>
           <td>O</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
           <td>-</td>
           <td>-</td>
@@ -1197,6 +1225,7 @@
           <td>-</td>
           <td>-</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>800-005</td>
@@ -1204,6 +1233,7 @@
           <td>-</td>
           <td>-</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
           <td>-</td>
           <td>-</td>
@@ -1219,6 +1249,7 @@
           <td>-</td>
           <td>-</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>800-007</td>
@@ -1230,6 +1261,19 @@
           <td>-</td>
           <td>-</td>
           <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>800-008</td>
+          <td>EXIBE CONSULTA DE CPF</td>
+          <td>-</td>
+          <td>-</td>
+          <td>O</td>
+          <td>O</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>M</td>
       </tr>
       <tr>
           <td>800-009</td>
@@ -1237,6 +1281,7 @@
           <td>-</td>
           <td>-</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
           <td>-</td>
           <td>-</td>
@@ -1252,6 +1297,7 @@
           <td>-</td>
           <td>-</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>800-011</td>
@@ -1259,6 +1305,7 @@
           <td>-</td>
           <td>-</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
           <td>-</td>
           <td>-</td>
@@ -1274,6 +1321,7 @@
           <td>-</td>
           <td>-</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>800-013</td>
@@ -1281,6 +1329,7 @@
           <td>-</td>
           <td>-</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
           <td>-</td>
           <td>-</td>
@@ -1296,10 +1345,12 @@
           <td>-</td>
           <td>-</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>999-999</td>
           <td>TRAILER - REGISTRO FINAL</td>
+          <td>M</td>
           <td>M</td>
           <td>M</td>
           <td>M</td>
@@ -1406,6 +1457,7 @@
           <th>CRT</th>
           <th>CNC</th>
           <th>REL</th>
+          <th>CPF</th>
       </tr>
   </thead>
   <tbody>
@@ -1413,6 +1465,7 @@
           <td>000-000</td>
           <td>HEADER</td>
           <td>-</td>
+          <td>M</td>
           <td>M</td>
           <td>M</td>
           <td>M</td>
@@ -1426,6 +1479,7 @@
           <td>M</td>
           <td>M</td>
           <td>M</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>002-000</td>
@@ -1434,6 +1488,7 @@
           <td>O</td>
           <td>O(2)</td>
           <td>O(2)</td>
+          <td>-</td>
           <td>-</td>
       </tr>
       <tr>
@@ -1444,6 +1499,7 @@
           <td>M</td>
           <td>M</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>004-000</td>
@@ -1453,11 +1509,13 @@
           <td>M(2)</td>
           <td>M(2)</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>009-000</td>
           <td>STATUS DA TRANSAÇÃO</td>
           <td>-</td>
+          <td>M</td>
           <td>M</td>
           <td>M</td>
           <td>M</td>
@@ -1471,6 +1529,7 @@
           <td>M</td>
           <td>M</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>010-0X1</td>
@@ -1479,6 +1538,7 @@
           <td>O</td>
           <td>O</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
       </tr>
       <tr>
@@ -1489,6 +1549,7 @@
           <td>O</td>
           <td>O</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>011-00X</td>
@@ -1497,6 +1558,7 @@
           <td>O</td>
           <td>M</td>
           <td>M</td>
+          <td>-</td>
           <td>-</td>
       </tr>
       <tr>
@@ -1507,6 +1569,7 @@
           <td>M(1)</td>
           <td>M(1)</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>013-00X</td>
@@ -1515,6 +1578,7 @@
           <td>O</td>
           <td>O</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
       </tr>
       <tr>
@@ -1525,6 +1589,7 @@
           <td>O</td>
           <td>O</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>015-000</td>
@@ -1533,6 +1598,7 @@
           <td>O</td>
           <td>M(1)</td>
           <td>M(1)</td>
+          <td>-</td>
           <td>-</td>
       </tr>
       <tr>
@@ -1543,6 +1609,7 @@
           <td>O</td>
           <td>O</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>017-00X</td>
@@ -1550,6 +1617,7 @@
           <td>-</td>
           <td>-</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
           <td>-</td>
       </tr>
@@ -1561,6 +1629,7 @@
           <td>O</td>
           <td>-</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>019-yyy</td>
@@ -1568,6 +1637,7 @@
           <td>-</td>
           <td>-</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
           <td>-</td>
       </tr>
@@ -1579,6 +1649,7 @@
           <td>O</td>
           <td>-</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>021-yyy</td>
@@ -1586,6 +1657,7 @@
           <td>-</td>
           <td>-</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
           <td>-</td>
       </tr>
@@ -1597,6 +1669,7 @@
           <td>M(1)</td>
           <td>M(1)</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>023-000</td>
@@ -1606,6 +1679,7 @@
           <td>M(1)</td>
           <td>M(1)</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>024-000</td>
@@ -1613,6 +1687,7 @@
           <td>-</td>
           <td>-</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
           <td>-</td>
       </tr>
@@ -1624,6 +1699,7 @@
           <td>-</td>
           <td>O</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>026-000</td>
@@ -1632,6 +1708,7 @@
           <td>O</td>
           <td>-</td>
           <td>M</td>
+          <td>-</td>
           <td>-</td>
       </tr>
       <tr>
@@ -1642,11 +1719,13 @@
           <td>M(1)</td>
           <td>M(1)</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>028-000</td>
           <td>QUANTIDADE TOTAL DE LINHAS DO COMPROVANTE (*)</td>
           <td>-</td>
+          <td>M</td>
           <td>M</td>
           <td>M</td>
           <td>M</td>
@@ -1660,6 +1739,7 @@
           <td>O</td>
           <td>O</td>
           <td>O</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>029-yyy</td>
@@ -1668,6 +1748,7 @@
           <td>O</td>
           <td>O</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
       </tr>
       <tr>
@@ -1678,6 +1759,7 @@
           <td>O</td>
           <td>O</td>
           <td>M</td>
+          <td>O</td>
       </tr>
       <tr>
           <td>031-000</td>
@@ -1686,6 +1768,7 @@
           <td>O</td>
           <td>O</td>
           <td>O</td>
+          <td>-</td>
           <td>-</td>
       </tr>
       <tr>
@@ -1696,6 +1779,7 @@
           <td>O</td>
           <td>O</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>170-000</td>
@@ -1705,6 +1789,7 @@
           <td>O</td>
           <td>O</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>740-00X</td>
@@ -1712,6 +1797,7 @@
           <td>-</td>
           <td>-</td>
           <td>M</td>
+          <td>-</td>
           <td>-</td>
           <td>-</td>
       </tr>
@@ -1723,6 +1809,7 @@
           <td></td>
           <td></td>
           <td>M</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>742-00X</td>
@@ -1732,6 +1819,7 @@
           <td></td>
           <td></td>
           <td>M</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>743-000</td>
@@ -1741,11 +1829,13 @@
           <td>O</td>
           <td>-</td>
           <td>-</td>
+          <td>-</td>
       </tr>
       <tr>
           <td>999-999</td>
           <td>TRAILER - REGISTRO FINAL</td>
           <td>-</td>
+          <td>M</td>
           <td>M</td>
           <td>M</td>
           <td>M</td>

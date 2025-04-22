@@ -50,7 +50,7 @@
 <meta property="og:url" content="http://localhost:1313/pt/documentacao/tef/webservice/criacaotrn/">
   <meta property="og:site_name" content="Multiplus Card">
   <meta property="og:title" content="Criação de Transações">
-  <meta property="og:description" content="Congrats on setting up a new Doks project!">
+  <meta property="og:description" content="Para ser criada uma transação é necessário que seja feita uma requisição POST no endpoint SetVendaTef, com os seguintes headers:">
   <meta property="og:locale" content="pt">
   <meta property="og:type" content="article">
     <meta property="article:section" content="documentacao">
@@ -61,7 +61,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/cover.png">
   <meta name="twitter:title" content="Criação de Transações">
-  <meta name="twitter:description" content="Congrats on setting up a new Doks project!">
+  <meta name="twitter:description" content="Para ser criada uma transação é necessário que seja feita uma requisição POST no endpoint SetVendaTef, com os seguintes headers:">
       <meta name="twitter:site" content="@getdoks">
 
     
@@ -673,7 +673,13 @@
 		
 		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
 			<div class="page-links">
-  
+  <h3>Nesta página</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#callback">Callback</a></li>
+    <li><a href="#retornos-da-transação">Retornos da Transação</a></li>
+  </ul>
+</nav>
 </div>
 
 		</nav>
@@ -682,9 +688,132 @@
 			<h1>Criação de Transações</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
-				
+				<details>
+    <summary>Nesta página</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#callback">Callback</a></li>
+    <li><a href="#retornos-da-transação">Retornos da Transação</a></li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
 			</nav>
-			
+			<p>Para ser criada uma transação é necessário que seja feita uma requisição <strong>POST</strong> no endpoint <code>SetVendaTef</code>, com os seguintes headers:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Header</th>
+          <th>Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CNPJ</td>
+          <td>Cnpj (somente números) do cliente</td>
+      </tr>
+      <tr>
+          <td>PDV</td>
+          <td>Número do PDV com 3 caracteres. Ex: “001”</td>
+      </tr>
+      <tr>
+          <td>TOKEN</td>
+          <td>String necessária para as requisições, fornecida pela Multiplus Card</td>
+      </tr>
+      <tr>
+          <td>CONTEUDO</td>
+          <td>Conteúdo da requisição, nas seções seguintes será descrito os campos necessários</td>
+      </tr>
+      <tr>
+          <td>CALLBACK</td>
+          <td>(Opcional) URL que devemos notificar</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="callback">Callback<a href="#callback" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Caso inclua o header <code>CALLBACK</code> no <code>SetVendaTef</code>, seu valor deverá conter a URL que será utilizada na notificação, desta forma cada requisição pode ter um endereço de callback diferente da outra.</p>
+<p>O conteúdo do body será o mesmo que receberia ao fazer uma requisição no endpoint <code>GetVendasTef</code>, após o ClientTEF realizar a execução.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Callback</span>
+  </figcaption>
+  <div class="highlight" title="Exemplo de Callback"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">https://api.meusistema.com.br/tef/SetVendaTefCallback</span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Retorno</span>
+  </figcaption>
+  <div class="highlight" title="Exemplo de Retorno"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">000-000 = CRT¬001-000 = 3¬003-000 = 002¬009-000 = 255¬028-000 = 0¬
+</span></span><span class="line"><span class="cl">030-000 = Cancelado pelo operador.¬800-000 = v1.416.71¬999-999 = 0</span></span></code></pre></div>
+  </figure>
+</div>
+<div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ 
+ class="outline/info-circle svg-inline callout-icon me-2 mb-3" id="svg-info-circle" role="img">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+  <path d="M12 9h.01" />
+  <path d="M11 12h1v4h1" />
+</svg>
+  <div class="callout-content">
+    
+    <div class="callout-body">
+      <p>Em automações desenvolvidas com linguagens/frameworks que sigam a RFC 7230, que não permite caracteres não-ASCII nos headers (ex.: .NET Core), o caractere ‘<strong>¬</strong>’ deve ser enviado com codificação HTML da seguinte forma: ‘<strong>&amp;#172;</strong>’</p>
+
+    </div>
+  </div>
+</div>
+
+<h2 id="retornos-da-transação">Retornos da Transação<a href="#retornos-da-transação" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Ao realizar a requisição o endpoint <code>SetVendaTef</code> em caso de sucesso (HTTP status 200), poderá ter algum dos seguintes retornos:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Retorno</th>
+          <th>Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>“0000”</td>
+          <td>Hash da transação, é um número inteiro utilizado para as consultas referentes à mesma.</td>
+      </tr>
+      <tr>
+          <td>[ERRO]: Erro ao incluir a venda</td>
+          <td>Erro na inclusão da venda</td>
+      </tr>
+      <tr>
+          <td>[ERRO]: Verificar Parâmetros</td>
+          <td>Ocorre na ausência de parâmetros necessários para a consulta.</td>
+      </tr>
+      <tr>
+          <td>[ERRO]: “descrição do erro”</td>
+          <td>Erro não previsto, retorno com a descrição do mesmo.</td>
+      </tr>
+  </tbody>
+</table>
+
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
 			<div class="page-nav d-flex flex-column flex-sm-row">
