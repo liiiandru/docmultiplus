@@ -162,6 +162,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://localhost:1313/pt/documentacao/pinpdv/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/pt/documentacao/pinpdv/introducao/</loc>
     <lastmod>2023-09-07T16:33:54+02:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -202,6 +207,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://localhost:1313/pt/documentacao/qrmultiplus/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/pt/documentacao/qrmultiplus/introducao/</loc>
     <lastmod>2023-09-07T16:33:54+02:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -233,6 +243,26 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/pt/documentacao/qrmultiplus/psps/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/pt/documentacao/concilicacao/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/pt/documentacao/concilicacao/introducao/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/pt/documentacao/concilicacao/autenticacao/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/pt/documentacao/concilicacao/concilicacao/</loc>
     <lastmod>2023-09-07T16:33:54+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -278,16 +308,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/pt/faq/</loc>
-    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/pt/documentacao/pinpdv/</loc>
-    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/pt/documentacao/qrmultiplus/</loc>
     <lastmod>2023-09-07T16:33:54+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
