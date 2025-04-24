@@ -2,7 +2,49 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>http://localhost:1313/pt/documentacao/qrmultiplus/qrmultiplus/</loc>
+      <loc>http://localhost:1313/pt/documentacao/qrmultiplus/introducao/</loc>
+      <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/pt/documentacao/qrmultiplus/configuracao/</loc>
+      <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/pt/documentacao/qrmultiplus/criarcobranca/</loc>
+      <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/pt/documentacao/qrmultiplus/consultarcobranca/</loc>
+      <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/pt/documentacao/qrmultiplus/removercobranca/</loc>
+      <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/pt/documentacao/qrmultiplus/cancelarcobranca/</loc>
+      <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/pt/documentacao/qrmultiplus/psps/</loc>
       <lastmod>2023-09-07T16:33:54+02:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>

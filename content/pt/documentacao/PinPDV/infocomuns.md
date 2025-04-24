@@ -94,6 +94,47 @@ curl --request GET \
 }
 ```
 
+## Listar Dispositivos
+
+Em algumas funções é necessário que seja informado o dispositivo em que será realizada a transação, previamente deve ser realizada uma consulta para verificar quais estão disponíveis através do endpoint `/pinpdv`.
+
+```bash {title="Requisição p/ Listar Dispositivos Disponíveis"}
+curl --request GET \
+  --url 'https://webapi.pinpdv.com.br/pinpdv' \
+  --header 'Authorization: Bearer xyz' \
+```
+
+```json {title="Exemplo de Resposta"}
+200 - OK
+
+{
+	"paginaAtual": 1,
+	"itensPorPagina": 100,
+	"quantidadeDePaginas": 1,
+	"quantidadeTotalDeItens": 2,
+	"primeiroRegistro": 1,
+	"ultimoRegistro": 2,
+	"paginaAnterior": false,
+	"paginaProxima": false,
+	"data": [
+		{
+			"id": 1,
+			"codigo": "526989",
+			"nome": "CAIXA 01",
+			"isAtivo": true,
+			"heartbeat": "2024-10-04T15:49:28.894765"
+		},
+		{
+			"id": 2,
+			"codigo": "687836",
+			"nome": "CAIXA 02",
+			"isAtivo": true,
+			"heartbeat": "2024-10-01T15:04:15.204673"
+		}
+	]
+}
+```
+
 ## Impressão de Documentos
 
 Ao término dos processos que oferecem suporte à impressão de documentos fiscais ou não fiscais, o sistema, caso a impressão seja executada, deverá aplicar uma das abordagens de finalização descritas a seguir.

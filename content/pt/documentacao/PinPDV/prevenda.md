@@ -163,3 +163,15 @@ curl --request GET \
 	]
 }
 ```
+
+## Impressão
+
+Quando finalizada a venda será disponibilizado o documento para a impressão; verifique a seção sobre impressão de documentos.
+
+
+{{< link-card
+  title="Impressão de Documentos"
+  description="Mais detalhes"
+  href="/pt/documentacao/pinpdv/infocomuns/#impressão-de-documentos"
+  target="_blank"
+>}}

@@ -50,7 +50,7 @@
 <meta property="og:url" content="http://localhost:1313/pt/documentacao/pinpdv/vendaexpressa/">
   <meta property="og:site_name" content="Multiplus Card">
   <meta property="og:title" content="Venda Expressa">
-  <meta property="og:description" content="Congrats on setting up a new Doks project!">
+  <meta property="og:description" content="As vendas realizadas no SmartPOS através da função Venda Expressa, são possíveis de serem consultadas através da API do PinPDV.">
   <meta property="og:locale" content="pt">
   <meta property="og:type" content="article">
     <meta property="article:section" content="documentacao">
@@ -61,7 +61,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/cover.png">
   <meta name="twitter:title" content="Venda Expressa">
-  <meta name="twitter:description" content="Congrats on setting up a new Doks project!">
+  <meta name="twitter:description" content="As vendas realizadas no SmartPOS através da função Venda Expressa, são possíveis de serem consultadas através da API do PinPDV.">
       <meta name="twitter:site" content="@getdoks">
 
     
@@ -151,7 +151,7 @@
   <ul class="list-unstyled">
 
   <li>
-    <details open>
+    <details>
       <summary>TEF</summary>
       <ul class="list-unstyled list-nested">
 
@@ -295,7 +295,7 @@
   </li>
 
   <li>
-    <details open open>
+    <details open>
       <summary>PinPDV</summary>
       <ul class="list-unstyled list-nested">
 
@@ -326,17 +326,45 @@
   <li>
       <a href="/pt/documentacao/pinpdv/consultatrn/">Consulta de Transações</a>
   </li>
+
+  <li>
+      <a href="/pt/documentacao/pinpdv/adquirentes/">Adquirentes/Terminais</a>
+  </li>
       </ul>
     </details>
   </li>
 
   <li>
-    <details open>
+    <details>
       <summary>QRMultiplus</summary>
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/qrmultiplus/">QRMultiplus</a>
+      <a href="/pt/documentacao/qrmultiplus/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/configuracao/">Configuração</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/criarcobranca/">Criação da Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/consultarcobranca/">Consulta de Status</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/removercobranca/">Remoção de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/cancelarcobranca/">Cancelamento de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/psps/">Lista de PSPs</a>
   </li>
       </ul>
     </details>
@@ -515,7 +543,7 @@
   <ul class="list-unstyled">
 
   <li>
-    <details open>
+    <details>
       <summary>TEF</summary>
       <ul class="list-unstyled list-nested">
 
@@ -659,7 +687,7 @@
   </li>
 
   <li>
-    <details open open>
+    <details open>
       <summary>PinPDV</summary>
       <ul class="list-unstyled list-nested">
 
@@ -690,17 +718,45 @@
   <li>
       <a href="/pt/documentacao/pinpdv/consultatrn/">Consulta de Transações</a>
   </li>
+
+  <li>
+      <a href="/pt/documentacao/pinpdv/adquirentes/">Adquirentes/Terminais</a>
+  </li>
       </ul>
     </details>
   </li>
 
   <li>
-    <details open>
+    <details>
       <summary>QRMultiplus</summary>
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/qrmultiplus/">QRMultiplus</a>
+      <a href="/pt/documentacao/qrmultiplus/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/configuracao/">Configuração</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/criarcobranca/">Criação da Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/consultarcobranca/">Consulta de Status</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/removercobranca/">Remoção de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/cancelarcobranca/">Cancelamento de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/psps/">Lista de PSPs</a>
   </li>
       </ul>
     </details>
@@ -714,7 +770,12 @@
 		
 		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
 			<div class="page-links">
-  
+  <h3>Nesta página</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#consulta-de-venda-expressa">Consulta de Venda Expressa</a></li>
+  </ul>
+</nav>
 </div>
 
 		</nav>
@@ -723,9 +784,213 @@
 			<h1>Venda Expressa</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
-				
+				<details>
+    <summary>Nesta página</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#consulta-de-venda-expressa">Consulta de Venda Expressa</a></li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
 			</nav>
-			
+			<p>As vendas realizadas no SmartPOS através da função <strong>Venda Expressa</strong>, são possíveis de serem consultadas através da API do PinPDV.</p>
+<h2 id="consulta-de-venda-expressa">Consulta de Venda Expressa<a href="#consulta-de-venda-expressa" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Para consultar as vendas realizadas no PinPDV deve ser filtrado somente pelo tipo <strong>Venda Expressa</strong>.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Filtros Disponíveis</span>
+  </figcaption>
+  <div class="highlight" title="Filtros Disponíveis"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">OrdenarPor = (Id, Valor, Identificador, Comprovante, Status, PinPdv, TipoVenda,
+</span></span><span class="line"><span class="cl">CadastradoEm, AtualizadoEm)
+</span></span><span class="line"><span class="cl">OrdenarTipo = (ASC, DESC)
+</span></span><span class="line"><span class="cl">DataInicial=YYYY-MM-DDTHH:MM:SS
+</span></span><span class="line"><span class="cl">DataFinal=YYYY-MM-DDTHH:MM:SS
+</span></span><span class="line"><span class="cl">PaginaNumero=1
+</span></span><span class="line"><span class="cl">QtdRegistro=100
+</span></span><span class="line"><span class="cl">Filtros (
+</span></span><span class="line"><span class="cl">  FiltroComprovante={true,false},
+</span></span><span class="line"><span class="cl">  FiltroPinPdv={Codigo}
+</span></span><span class="line"><span class="cl">  FiltroStatus={Realizada, Cancelada, Error}
+</span></span><span class="line"><span class="cl">  FiltroTipoPagamento={Credito, Debito, Pix, Crediario}
+</span></span><span class="line"><span class="cl">)</span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal has-title not-content">
+  <figcaption class="header">
+    <span class="title">Consulta de Transação</span>
+  </figcaption>
+  <div class="highlight" title="Consulta de Transação"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl --request GET <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --url <span class="s1">&#39;https://webapi.pinpdv.com.br/venda?DataInicial=2024-12-12T00:00:00&amp;DataFinal=2024-12-12T23:59:59&amp;FiltroTipoVenda=Expressa&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --header <span class="s1">&#39;Authorization: Bearer xyz&#39;</span> <span class="err">\</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Resposta</span>
+  </figcaption>
+  <div class="highlight" title="Exemplo de Resposta"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="mi">200</span> <span class="err">-</span> <span class="err">OK</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;paginaAtual&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;itensPorPagina&#34;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;quantidadeDePaginas&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;quantidadeTotalDeItens&#34;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;primeiroRegistro&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;ultimoRegistro&#34;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;paginaAnterior&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;paginaProxima&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;data&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">1004</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;identificador&#34;</span><span class="p">:</span> <span class="s2">&#34;035c6370b8e611ef9d282f9fae714dd9&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;tipoVenda&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&#34;value&#34;</span><span class="p">:</span> <span class="s2">&#34;Expressa&#34;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">},</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;valor&#34;</span><span class="p">:</span> <span class="mf">15.0000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;comprovante&#34;</span><span class="p">:</span> <span class="s2">&#34;****************************************\n*                                      *\n*             HOMOLOGAÇÃO              *\n*                                      *\n****************************************\n*                                      *\n*         ESSE DOCUMENTO NÃO           *\n*          TEM VALOR FISCAL            *\n*                                      *\n****************************************\n\nRECEBEMOS SEU PAGAMENTO:\n\n--&gt; 035c6370b8e611ef9d282f9fae714dd9\&#34;\n\n### VALOR: 15\n### ITENS: 0\n\n\n     RETIRE SEU DOCUMENTO FISCAL        \n      NO BALCÃO DE ATENDIMENTO          \n\n\nhttp://www.sefazexemplo.gov.br/nfce/qrcode?p=28170800156225000131650110000151341562040824|2|1|1|DC6AE2C2B9A992BE59679AC365E29922DE6B7511\n\n\n\nOBRIGADO\nVOLTE SEMPRE!\n\n&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;cadastradoEm&#34;</span><span class="p">:</span> <span class="s2">&#34;2024-12-12T21:05:56.113478&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;atualizadoEm&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;status&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&#34;value&#34;</span><span class="p">:</span> <span class="s2">&#34;Realizada&#34;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">},</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;transacoes&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">				<span class="p">{</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">1039</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;valor&#34;</span><span class="p">:</span> <span class="mf">15.0000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;parcelas&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;cadastradoEm&#34;</span><span class="p">:</span> <span class="s2">&#34;2024-12-12T21:05:51.154713&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;atualizadoEm&#34;</span><span class="p">:</span> <span class="s2">&#34;2024-12-12T21:05:56.115344&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;status&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;value&#34;</span><span class="p">:</span> <span class="s2">&#34;Aprovada&#34;</span>
+</span></span><span class="line"><span class="cl">					<span class="p">},</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;tipoPagamento&#34;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;dados&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;dataHora&#34;</span><span class="p">:</span> <span class="s2">&#34;2024-12-12T21:05:51.154713&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;nsu&#34;</span><span class="p">:</span> <span class="s2">&#34;2024121200003394&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;autorizacao&#34;</span><span class="p">:</span> <span class="s2">&#34;001425&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;bandeira&#34;</span><span class="p">:</span> <span class="s2">&#34;VISA&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;adquirente&#34;</span><span class="p">:</span> <span class="s2">&#34;VERO&#34;</span>
+</span></span><span class="line"><span class="cl">					<span class="p">}</span>
+</span></span><span class="line"><span class="cl">				<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="p">],</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;produtos&#34;</span><span class="p">:</span> <span class="p">[],</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;preVenda&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;posVenda&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;pinPdv&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&#34;codigo&#34;</span><span class="p">:</span> <span class="s2">&#34;421730&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&#34;nome&#34;</span><span class="p">:</span> <span class="s2">&#34;NOME&#34;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">},</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">1005</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;identificador&#34;</span><span class="p">:</span> <span class="s2">&#34;f40f5890b8e611efbb406b5cca06cb38&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;tipoVenda&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&#34;value&#34;</span><span class="p">:</span> <span class="s2">&#34;Expressa&#34;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">},</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;valor&#34;</span><span class="p">:</span> <span class="mf">3.0000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;comprovante&#34;</span><span class="p">:</span> <span class="s2">&#34;****************************************\n*                                      *\n*             HOMOLOGAÇÃO              *\n*                                      *\n****************************************\n*                                      *\n*         ESSE DOCUMENTO NÃO           *\n*          TEM VALOR FISCAL            *\n*                                      *\n****************************************\n\nRECEBEMOS SEU PAGAMENTO:\n\n--&gt; f40f5890b8e611efbb406b5cca06cb38\&#34;\n\n### VALOR: 3\n### ITENS: 0\n\n\n     RETIRE SEU DOCUMENTO FISCAL        \n      NO BALCÃO DE ATENDIMENTO          \n\n\nhttp://www.sefazexemplo.gov.br/nfce/qrcode?p=28170800156225000131650110000151341562040824|2|1|1|DC6AE2C2B9A992BE59679AC365E29922DE6B7511\n\n\n\nOBRIGADO\nVOLTE SEMPRE!\n\n&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;cadastradoEm&#34;</span><span class="p">:</span> <span class="s2">&#34;2024-12-12T21:12:39.893618&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;atualizadoEm&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;status&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&#34;value&#34;</span><span class="p">:</span> <span class="s2">&#34;Realizada&#34;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">},</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;transacoes&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">				<span class="p">{</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">1040</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;valor&#34;</span><span class="p">:</span> <span class="mf">3.0000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;parcelas&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;cadastradoEm&#34;</span><span class="p">:</span> <span class="s2">&#34;2024-12-12T21:12:34.969081&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;atualizadoEm&#34;</span><span class="p">:</span> <span class="s2">&#34;2024-12-12T21:12:39.896144&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;status&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;value&#34;</span><span class="p">:</span> <span class="s2">&#34;Aprovada&#34;</span>
+</span></span><span class="line"><span class="cl">					<span class="p">},</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;tipoPagamento&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;dados&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;dataHora&#34;</span><span class="p">:</span> <span class="s2">&#34;2024-12-12T21:12:34.969081&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;nsu&#34;</span><span class="p">:</span> <span class="s2">&#34;2024121200003413&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;autorizacao&#34;</span><span class="p">:</span> <span class="s2">&#34;002751&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;bandeira&#34;</span><span class="p">:</span> <span class="s2">&#34;VISA&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;adquirente&#34;</span><span class="p">:</span> <span class="s2">&#34;VERO&#34;</span>
+</span></span><span class="line"><span class="cl">					<span class="p">}</span>
+</span></span><span class="line"><span class="cl">				<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="p">],</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;produtos&#34;</span><span class="p">:</span> <span class="p">[],</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;preVenda&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;posVenda&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;pinPdv&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&#34;codigo&#34;</span><span class="p">:</span> <span class="s2">&#34;421730&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&#34;nome&#34;</span><span class="p">:</span> <span class="s2">&#34;TESTE&#34;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">},</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">1006</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;identificador&#34;</span><span class="p">:</span> <span class="s2">&#34;8cf77b00b8e711efabfa4d65d86230a8&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;tipoVenda&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&#34;value&#34;</span><span class="p">:</span> <span class="s2">&#34;Expressa&#34;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">},</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;valor&#34;</span><span class="p">:</span> <span class="mf">8.0000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;comprovante&#34;</span><span class="p">:</span> <span class="s2">&#34;****************************************\n*                                      *\n*             HOMOLOGAÇÃO              *\n*                                      *\n****************************************\n*                                      *\n*         ESSE DOCUMENTO NÃO           *\n*          TEM VALOR FISCAL            *\n*                                      *\n****************************************\n\nRECEBEMOS SEU PAGAMENTO:\n\n--&gt; 8cf77b00b8e711efabfa4d65d86230a8\&#34;\n\n### VALOR: 8\n### ITENS: 0\n\n\n     RETIRE SEU DOCUMENTO FISCAL        \n      NO BALCÃO DE ATENDIMENTO          \n\n\nhttp://www.sefazexemplo.gov.br/nfce/qrcode?p=28170800156225000131650110000151341562040824|2|1|1|DC6AE2C2B9A992BE59679AC365E29922DE6B7511\n\n\n\nOBRIGADO\nVOLTE SEMPRE!\n\n&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;cadastradoEm&#34;</span><span class="p">:</span> <span class="s2">&#34;2024-12-12T21:16:56.511982&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;atualizadoEm&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;status&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&#34;value&#34;</span><span class="p">:</span> <span class="s2">&#34;Realizada&#34;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">},</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;transacoes&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">				<span class="p">{</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">1041</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;valor&#34;</span><span class="p">:</span> <span class="mf">8.0000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;parcelas&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;cadastradoEm&#34;</span><span class="p">:</span> <span class="s2">&#34;2024-12-12T21:16:51.511809&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;atualizadoEm&#34;</span><span class="p">:</span> <span class="s2">&#34;2024-12-12T21:16:56.514429&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;status&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;value&#34;</span><span class="p">:</span> <span class="s2">&#34;Aprovada&#34;</span>
+</span></span><span class="line"><span class="cl">					<span class="p">},</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;tipoPagamento&#34;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">					<span class="nt">&#34;dados&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;dataHora&#34;</span><span class="p">:</span> <span class="s2">&#34;2024-12-12T21:16:51.511809&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;nsu&#34;</span><span class="p">:</span> <span class="s2">&#34;2024121200003420&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;autorizacao&#34;</span><span class="p">:</span> <span class="s2">&#34;003590&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;bandeira&#34;</span><span class="p">:</span> <span class="s2">&#34;VISA&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">						<span class="nt">&#34;adquirente&#34;</span><span class="p">:</span> <span class="s2">&#34;VERO&#34;</span>
+</span></span><span class="line"><span class="cl">					<span class="p">}</span>
+</span></span><span class="line"><span class="cl">				<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="p">],</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;produtos&#34;</span><span class="p">:</span> <span class="p">[],</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;preVenda&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;posVenda&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;pinPdv&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&#34;codigo&#34;</span><span class="p">:</span> <span class="s2">&#34;421730&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">				<span class="nt">&#34;nome&#34;</span><span class="p">:</span> <span class="s2">&#34;TESTE&#34;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
 			<div class="page-nav d-flex flex-column flex-sm-row">

@@ -151,7 +151,7 @@
   <ul class="list-unstyled">
 
   <li>
-    <details open>
+    <details>
       <summary>TEF</summary>
       <ul class="list-unstyled list-nested">
 
@@ -295,7 +295,7 @@
   </li>
 
   <li>
-    <details open open>
+    <details open>
       <summary>PinPDV</summary>
       <ul class="list-unstyled list-nested">
 
@@ -326,17 +326,45 @@
   <li>
       <a href="/pt/documentacao/pinpdv/consultatrn/">Consulta de Transações</a>
   </li>
+
+  <li>
+      <a href="/pt/documentacao/pinpdv/adquirentes/">Adquirentes/Terminais</a>
+  </li>
       </ul>
     </details>
   </li>
 
   <li>
-    <details open>
+    <details>
       <summary>QRMultiplus</summary>
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/qrmultiplus/">QRMultiplus</a>
+      <a href="/pt/documentacao/qrmultiplus/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/configuracao/">Configuração</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/criarcobranca/">Criação da Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/consultarcobranca/">Consulta de Status</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/removercobranca/">Remoção de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/cancelarcobranca/">Cancelamento de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/psps/">Lista de PSPs</a>
   </li>
       </ul>
     </details>
@@ -515,7 +543,7 @@
   <ul class="list-unstyled">
 
   <li>
-    <details open>
+    <details>
       <summary>TEF</summary>
       <ul class="list-unstyled list-nested">
 
@@ -659,7 +687,7 @@
   </li>
 
   <li>
-    <details open open>
+    <details open>
       <summary>PinPDV</summary>
       <ul class="list-unstyled list-nested">
 
@@ -690,17 +718,45 @@
   <li>
       <a href="/pt/documentacao/pinpdv/consultatrn/">Consulta de Transações</a>
   </li>
+
+  <li>
+      <a href="/pt/documentacao/pinpdv/adquirentes/">Adquirentes/Terminais</a>
+  </li>
       </ul>
     </details>
   </li>
 
   <li>
-    <details open>
+    <details>
       <summary>QRMultiplus</summary>
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/qrmultiplus/">QRMultiplus</a>
+      <a href="/pt/documentacao/qrmultiplus/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/configuracao/">Configuração</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/criarcobranca/">Criação da Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/consultarcobranca/">Consulta de Status</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/removercobranca/">Remoção de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/cancelarcobranca/">Cancelamento de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/psps/">Lista de PSPs</a>
   </li>
       </ul>
     </details>
@@ -726,6 +782,7 @@
       </ul>
     </li>
     <li><a href="#listar-empresas">Listar Empresas</a></li>
+    <li><a href="#listar-dispositivos">Listar Dispositivos</a></li>
     <li><a href="#impressão-de-documentos">Impressão de Documentos</a>
       <ul>
         <li><a href="#atualizando-o-documento-comprovante">Atualizando o Documento (Comprovante)</a></li>
@@ -755,6 +812,7 @@
       </ul>
     </li>
     <li><a href="#listar-empresas">Listar Empresas</a></li>
+    <li><a href="#listar-dispositivos">Listar Dispositivos</a></li>
     <li><a href="#impressão-de-documentos">Impressão de Documentos</a>
       <ul>
         <li><a href="#atualizando-o-documento-comprovante">Atualizando o Documento (Comprovante)</a></li>
@@ -877,6 +935,59 @@ A seguir, são descritos os elementos mais recorrentes e essenciais ao processo 
 </span></span><span class="line"><span class="cl">      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="listar-dispositivos">Listar Dispositivos<a href="#listar-dispositivos" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Em algumas funções é necessário que seja informado o dispositivo em que será realizada a transação, previamente deve ser realizada uma consulta para verificar quais estão disponíveis através do endpoint <code>/pinpdv</code>.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal has-title not-content">
+  <figcaption class="header">
+    <span class="title">Requisição p/ Listar Dispositivos Disponíveis</span>
+  </figcaption>
+  <div class="highlight" title="Requisição p/ Listar Dispositivos Disponíveis"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl --request GET <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --url <span class="s1">&#39;https://webapi.pinpdv.com.br/pinpdv&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --header <span class="s1">&#39;Authorization: Bearer xyz&#39;</span> <span class="err">\</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Resposta</span>
+  </figcaption>
+  <div class="highlight" title="Exemplo de Resposta"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="mi">200</span> <span class="err">-</span> <span class="err">OK</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;paginaAtual&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;itensPorPagina&#34;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;quantidadeDePaginas&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;quantidadeTotalDeItens&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;primeiroRegistro&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;ultimoRegistro&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;paginaAnterior&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;paginaProxima&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&#34;data&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;codigo&#34;</span><span class="p">:</span> <span class="s2">&#34;526989&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;nome&#34;</span><span class="p">:</span> <span class="s2">&#34;CAIXA 01&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;isAtivo&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;heartbeat&#34;</span><span class="p">:</span> <span class="s2">&#34;2024-10-04T15:49:28.894765&#34;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">},</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;codigo&#34;</span><span class="p">:</span> <span class="s2">&#34;687836&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;nome&#34;</span><span class="p">:</span> <span class="s2">&#34;CAIXA 02&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;isAtivo&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			<span class="nt">&#34;heartbeat&#34;</span><span class="p">:</span> <span class="s2">&#34;2024-10-01T15:04:15.204673&#34;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
   </figure>
 </div>

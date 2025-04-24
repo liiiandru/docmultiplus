@@ -50,7 +50,7 @@
 <meta property="og:url" content="http://localhost:1313/pt/documentacao/pinpdv/postef/">
   <meta property="og:site_name" content="Multiplus Card">
   <meta property="og:title" content="POS TEF">
-  <meta property="og:description" content="Congrats on setting up a new Doks project!">
+  <meta property="og:description" content="A execução de transações no modo POS TEF permite que o SmartPOS opere de forma similar a um Pinpad tradicional, proporcionando um fluxo de pagamento alinhado à experiência oferecida por uma TEF House.">
   <meta property="og:locale" content="pt">
   <meta property="og:type" content="article">
     <meta property="article:section" content="documentacao">
@@ -61,7 +61,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/cover.png">
   <meta name="twitter:title" content="POS TEF">
-  <meta name="twitter:description" content="Congrats on setting up a new Doks project!">
+  <meta name="twitter:description" content="A execução de transações no modo POS TEF permite que o SmartPOS opere de forma similar a um Pinpad tradicional, proporcionando um fluxo de pagamento alinhado à experiência oferecida por uma TEF House.">
       <meta name="twitter:site" content="@getdoks">
 
     
@@ -151,7 +151,7 @@
   <ul class="list-unstyled">
 
   <li>
-    <details open>
+    <details>
       <summary>TEF</summary>
       <ul class="list-unstyled list-nested">
 
@@ -295,7 +295,7 @@
   </li>
 
   <li>
-    <details open open>
+    <details open>
       <summary>PinPDV</summary>
       <ul class="list-unstyled list-nested">
 
@@ -326,17 +326,45 @@
   <li>
       <a href="/pt/documentacao/pinpdv/consultatrn/">Consulta de Transações</a>
   </li>
+
+  <li>
+      <a href="/pt/documentacao/pinpdv/adquirentes/">Adquirentes/Terminais</a>
+  </li>
       </ul>
     </details>
   </li>
 
   <li>
-    <details open>
+    <details>
       <summary>QRMultiplus</summary>
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/qrmultiplus/">QRMultiplus</a>
+      <a href="/pt/documentacao/qrmultiplus/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/configuracao/">Configuração</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/criarcobranca/">Criação da Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/consultarcobranca/">Consulta de Status</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/removercobranca/">Remoção de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/cancelarcobranca/">Cancelamento de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/psps/">Lista de PSPs</a>
   </li>
       </ul>
     </details>
@@ -515,7 +543,7 @@
   <ul class="list-unstyled">
 
   <li>
-    <details open>
+    <details>
       <summary>TEF</summary>
       <ul class="list-unstyled list-nested">
 
@@ -659,7 +687,7 @@
   </li>
 
   <li>
-    <details open open>
+    <details open>
       <summary>PinPDV</summary>
       <ul class="list-unstyled list-nested">
 
@@ -690,17 +718,45 @@
   <li>
       <a href="/pt/documentacao/pinpdv/consultatrn/">Consulta de Transações</a>
   </li>
+
+  <li>
+      <a href="/pt/documentacao/pinpdv/adquirentes/">Adquirentes/Terminais</a>
+  </li>
       </ul>
     </details>
   </li>
 
   <li>
-    <details open>
+    <details>
       <summary>QRMultiplus</summary>
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/qrmultiplus/">QRMultiplus</a>
+      <a href="/pt/documentacao/qrmultiplus/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/configuracao/">Configuração</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/criarcobranca/">Criação da Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/consultarcobranca/">Consulta de Status</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/removercobranca/">Remoção de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/cancelarcobranca/">Cancelamento de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/psps/">Lista de PSPs</a>
   </li>
       </ul>
     </details>
@@ -714,7 +770,14 @@
 		
 		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
 			<div class="page-links">
-  
+  <h3>Nesta página</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#cadastro-da-venda">Cadastro da Venda</a></li>
+    <li><a href="#abortar-uma-venda">Abortar uma venda</a></li>
+    <li><a href="#consulta-de-uma-venda">Consulta de uma Venda</a></li>
+  </ul>
+</nav>
 </div>
 
 		</nav>
@@ -723,9 +786,224 @@
 			<h1>POS TEF</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
-				
+				<details>
+    <summary>Nesta página</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#cadastro-da-venda">Cadastro da Venda</a></li>
+    <li><a href="#abortar-uma-venda">Abortar uma venda</a></li>
+    <li><a href="#consulta-de-uma-venda">Consulta de uma Venda</a></li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
 			</nav>
-			
+			<p>A execução de transações no modo POS TEF permite que o SmartPOS opere de forma similar a um Pinpad tradicional, proporcionando um fluxo de pagamento alinhado à experiência oferecida por uma TEF House.</p>
+<h2 id="cadastro-da-venda">Cadastro da Venda<a href="#cadastro-da-venda" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Para iniciar uma transação deve-se primeiramente definir qual dispositivo irá receber a transação (verificar informações comuns), em seguida realizar o cadastro no endpoint <code>/pos-venda</code>.</p>
+<div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  
+  <div class="callout-content">
+    
+    <div class="callout-body">
+      <p>É obrigatório informar o valor da transação, o tipo de pagamento é opcional.</p>
+<p>Informado o tipo de pagamento a quantidade de parcelas é obrigatória.</p>
+
+    </div>
+  </div>
+</div>
+
+<p>Deve ser observado que cabe ao sistema o critério de escolha do dispositivo que será utilizado, quando retornado pela consulta cada SmartPOS é listado com Nome, Código, data e hora da última atividade.</p>
+<div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  
+  <div class="callout-content">
+    
+    <div class="callout-body">
+      <p>O SmartPOS é considerado ativo e a data/hora atualizada sempre que entrar no fluxo POS-TEF ou for para a página inicial do APP PinPDV.</p>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal has-title not-content">
+  <figcaption class="header">
+    <span class="title">Cadastro de uma Venda</span>
+  </figcaption>
+  <div class="highlight" title="Cadastro de uma Venda"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl --request POST <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --url <span class="s1">&#39;https://webapi.pinpdv.com.br/pos-venda \
+</span></span></span><span class="line"><span class="cl"><span class="s1">  --header &#39;</span>Authorization: Bearer xyz<span class="s1">&#39; \
+</span></span></span><span class="line"><span class="cl"><span class="s1">  --header &#39;</span>Content-Type: application/json<span class="s1">&#39; \
+</span></span></span><span class="line"><span class="cl"><span class="s1">  --data &#39;</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;PinPdvId&#34;</span>: <span class="o">{</span>pinpdvId<span class="o">}</span>,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Identificador&#34;</span>: <span class="s2">&#34;vendaCf981239a&#34;</span>,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Valor&#34;</span>: 100.11,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Descricao&#34;</span>: <span class="s2">&#34;mensagem&#34;</span>,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;TipoPagamento&#34;</span>: 2,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Parcelas&#34;</span>: <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span><span class="err">&#39;</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Resposta</span>
+  </figcaption>
+  <div class="highlight" title="Exemplo de Resposta"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">200 - OK
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	&#34;id&#34;: 61239
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="abortar-uma-venda">Abortar uma venda<a href="#abortar-uma-venda" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Uma venda pode ser abortada enquanto o PinPDV não iniciar a transação. Para realizar o cancealmento deve ser utilizado o endpoint <code>pos-venda</code> e o identificador fornecido pelo sistema na criação da venda.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal has-title not-content">
+  <figcaption class="header">
+    <span class="title">Abortar uma Venda</span>
+  </figcaption>
+  <div class="highlight" title="Abortar uma Venda"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl --request DELETE <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --url <span class="s1">&#39;https://webapi.pinpdv.com.br/pos-venda/{Identificador}&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --header <span class="s1">&#39;Authorization: Bearer xyz&#39;</span> <span class="err">\</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Resposta</span>
+  </figcaption>
+  <div class="highlight" title="Exemplo de Resposta"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">202 - OK</span></span></code></pre></div>
+  </figure>
+</div>
+<div class="callout callout-caution d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ 
+ class="outline/alert-triangle svg-inline callout-icon me-2 mb-3" id="svg-alert-triangle" role="img">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 9v4" />
+  <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" />
+  <path d="M12 16h.01" />
+</svg>
+  <div class="callout-content">
+    <div class="callout-title">
+        <p>Atenção</p>
+
+      </div>
+    <div class="callout-body">
+      <p>Uma vez iniciada a venda no App PinPDV, somente será possível cancelar a transação através dele.</p>
+
+    </div>
+  </div>
+</div>
+
+<h2 id="consulta-de-uma-venda">Consulta de uma Venda<a href="#consulta-de-uma-venda" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Para consultar o status de uma venda é utilizado o endpoint <code>/pos-venda</code> e o identificador fornecido pelo sistema.</p>
+<div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  
+  <div class="callout-content">
+    
+    <div class="callout-body">
+      <p>Verifique o campo venda para obter os dados do pagamento.</p>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal has-title not-content">
+  <figcaption class="header">
+    <span class="title">Consulta de uma Venda</span>
+  </figcaption>
+  <div class="highlight" title="Consulta de uma Venda"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl --request GET <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --url <span class="s1">&#39;https://webapi.pinpdv.com.br/pos-venda/{Identificador}&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --header <span class="s1">&#39;Authorization: Bearer xyz&#39;</span> <span class="err">\</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Resposta</span>
+  </figcaption>
+  <div class="highlight" title="Exemplo de Resposta"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">200 - OK
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	&#34;id&#34;: 10,
+</span></span><span class="line"><span class="cl">	&#34;identificador&#34;: &#34;Id010101&#34;,
+</span></span><span class="line"><span class="cl">	&#34;descricao&#34;: &#34;Exemplo&#34;,
+</span></span><span class="line"><span class="cl">	&#34;valor&#34;: 789.0000,
+</span></span><span class="line"><span class="cl">	&#34;parcelas&#34;: 1,
+</span></span><span class="line"><span class="cl">	&#34;tipoPagamento&#34;: 3,
+</span></span><span class="line"><span class="cl">	&#34;status&#34;: {
+</span></span><span class="line"><span class="cl">		&#34;key&#34;: 2,
+</span></span><span class="line"><span class="cl">		&#34;value&#34;: &#34;Concluido&#34;
+</span></span><span class="line"><span class="cl">	},
+</span></span><span class="line"><span class="cl">	&#34;vendas&#34;: [
+</span></span><span class="line"><span class="cl">		{
+</span></span><span class="line"><span class="cl">			&#34;identificador&#34;: &#34;90672461828311ef8e6ca79b7a6aaeae&#34;,
+</span></span><span class="line"><span class="cl">			&#34;posVendaIdentificador&#34;: &#34;Id010101&#34;,
+</span></span><span class="line"><span class="cl">			&#34;valor&#34;: 789.0000,
+</span></span><span class="line"><span class="cl">			&#34;comprovante&#34;: null,
+</span></span><span class="line"><span class="cl">			&#34;status&#34;: {
+</span></span><span class="line"><span class="cl">				&#34;key&#34;: 0,
+</span></span><span class="line"><span class="cl">				&#34;value&#34;: &#34;Realizada&#34;
+</span></span><span class="line"><span class="cl">			},
+</span></span><span class="line"><span class="cl">			&#34;transacoes&#34;: [
+</span></span><span class="line"><span class="cl">				{
+</span></span><span class="line"><span class="cl">					&#34;valor&#34;: 789.0000,
+</span></span><span class="line"><span class="cl">					&#34;parcelas&#34;: 0,
+</span></span><span class="line"><span class="cl">					&#34;status&#34;: {
+</span></span><span class="line"><span class="cl">						&#34;key&#34;: 0,
+</span></span><span class="line"><span class="cl">						&#34;value&#34;: &#34;Aprovada&#34;
+</span></span><span class="line"><span class="cl">					},
+</span></span><span class="line"><span class="cl">					&#34;tipoPagamento&#34;: 3,
+</span></span><span class="line"><span class="cl">					&#34;dados&#34;: {
+</span></span><span class="line"><span class="cl">						&#34;dataHora&#34;: &#34;2024-10-04T16:05:04.679023&#34;,
+</span></span><span class="line"><span class="cl">						&#34;nsu&#34;: &#34;000000153&#34;,
+</span></span><span class="line"><span class="cl">						&#34;autorizacao&#34;: &#34;164550&#34;,
+</span></span><span class="line"><span class="cl">						&#34;bandeira&#34;: &#34;MASTERCARD&#34;,
+</span></span><span class="line"><span class="cl">						&#34;adquirente&#34;: &#34;GETNET&#34;
+</span></span><span class="line"><span class="cl">					}
+</span></span><span class="line"><span class="cl">				}
+</span></span><span class="line"><span class="cl">			],
+</span></span><span class="line"><span class="cl">			&#34;pinPdv&#34;: {
+</span></span><span class="line"><span class="cl">				&#34;codigo&#34;: &#34;526989&#34;,
+</span></span><span class="line"><span class="cl">				&#34;nome&#34;: &#34;CAIXA01&#34;
+</span></span><span class="line"><span class="cl">			}
+</span></span><span class="line"><span class="cl">		}
+</span></span><span class="line"><span class="cl">	]
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div>
+  </figure>
+</div>
+
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
 			<div class="page-nav d-flex flex-column flex-sm-row">

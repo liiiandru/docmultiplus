@@ -42,21 +42,28 @@
       <link>http://localhost:1313/pt/documentacao/pinpdv/postef/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
       <guid>http://localhost:1313/pt/documentacao/pinpdv/postef/</guid>
-      <description></description>
+      <description>&lt;p&gt;A execução de transações no modo POS TEF permite que o SmartPOS opere de forma similar a um Pinpad tradicional, proporcionando um fluxo de pagamento alinhado à experiência oferecida por uma TEF House.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Venda Expressa</title>
       <link>http://localhost:1313/pt/documentacao/pinpdv/vendaexpressa/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
       <guid>http://localhost:1313/pt/documentacao/pinpdv/vendaexpressa/</guid>
-      <description></description>
+      <description>&lt;p&gt;As vendas realizadas no SmartPOS através da função &lt;strong&gt;Venda Expressa&lt;/strong&gt;, são possíveis de serem consultadas através da API do PinPDV.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Consulta de Transações</title>
       <link>http://localhost:1313/pt/documentacao/pinpdv/consultatrn/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
       <guid>http://localhost:1313/pt/documentacao/pinpdv/consultatrn/</guid>
-      <description></description>
+      <description>&lt;p&gt;Todas as transações realizadas por meio do PinPDV podem ser consultadas por meio da API do PinPDV. Existem diversos parâmetros que podem ser utilizados para ordenar, filtrar e controlar a paginação das consultas, a seguir estão os parâmetros disponíveis atualmente:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Adquirentes/Terminais</title>
+      <link>http://localhost:1313/pt/documentacao/pinpdv/adquirentes/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/pinpdv/adquirentes/</guid>
+      <description>&lt;p&gt;O PinPDV está homologado e disponível para instalação por meio das lojas das adquirentes, sendo compatível com os dispositivos listados a seguir.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

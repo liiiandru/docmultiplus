@@ -50,7 +50,7 @@
 <meta property="og:url" content="http://localhost:1313/pt/documentacao/pinpdv/consultatrn/">
   <meta property="og:site_name" content="Multiplus Card">
   <meta property="og:title" content="Consulta de Transações">
-  <meta property="og:description" content="Congrats on setting up a new Doks project!">
+  <meta property="og:description" content="Todas as transações realizadas por meio do PinPDV podem ser consultadas por meio da API do PinPDV. Existem diversos parâmetros que podem ser utilizados para ordenar, filtrar e controlar a paginação das consultas, a seguir estão os parâmetros disponíveis atualmente:">
   <meta property="og:locale" content="pt">
   <meta property="og:type" content="article">
     <meta property="article:section" content="documentacao">
@@ -61,7 +61,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/cover.png">
   <meta name="twitter:title" content="Consulta de Transações">
-  <meta name="twitter:description" content="Congrats on setting up a new Doks project!">
+  <meta name="twitter:description" content="Todas as transações realizadas por meio do PinPDV podem ser consultadas por meio da API do PinPDV. Existem diversos parâmetros que podem ser utilizados para ordenar, filtrar e controlar a paginação das consultas, a seguir estão os parâmetros disponíveis atualmente:">
       <meta name="twitter:site" content="@getdoks">
 
     
@@ -151,7 +151,7 @@
   <ul class="list-unstyled">
 
   <li>
-    <details open>
+    <details>
       <summary>TEF</summary>
       <ul class="list-unstyled list-nested">
 
@@ -295,7 +295,7 @@
   </li>
 
   <li>
-    <details open open>
+    <details open>
       <summary>PinPDV</summary>
       <ul class="list-unstyled list-nested">
 
@@ -326,17 +326,45 @@
   <li class="active" >
       <a aria-current="page" href="/pt/documentacao/pinpdv/consultatrn/">Consulta de Transações</a>
   </li>
+
+  <li>
+      <a href="/pt/documentacao/pinpdv/adquirentes/">Adquirentes/Terminais</a>
+  </li>
       </ul>
     </details>
   </li>
 
   <li>
-    <details open>
+    <details>
       <summary>QRMultiplus</summary>
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/qrmultiplus/">QRMultiplus</a>
+      <a href="/pt/documentacao/qrmultiplus/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/configuracao/">Configuração</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/criarcobranca/">Criação da Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/consultarcobranca/">Consulta de Status</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/removercobranca/">Remoção de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/cancelarcobranca/">Cancelamento de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/psps/">Lista de PSPs</a>
   </li>
       </ul>
     </details>
@@ -515,7 +543,7 @@
   <ul class="list-unstyled">
 
   <li>
-    <details open>
+    <details>
       <summary>TEF</summary>
       <ul class="list-unstyled list-nested">
 
@@ -659,7 +687,7 @@
   </li>
 
   <li>
-    <details open open>
+    <details open>
       <summary>PinPDV</summary>
       <ul class="list-unstyled list-nested">
 
@@ -690,17 +718,45 @@
   <li class="active" >
       <a aria-current="page" href="/pt/documentacao/pinpdv/consultatrn/">Consulta de Transações</a>
   </li>
+
+  <li>
+      <a href="/pt/documentacao/pinpdv/adquirentes/">Adquirentes/Terminais</a>
+  </li>
       </ul>
     </details>
   </li>
 
   <li>
-    <details open>
+    <details>
       <summary>QRMultiplus</summary>
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/qrmultiplus/">QRMultiplus</a>
+      <a href="/pt/documentacao/qrmultiplus/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/configuracao/">Configuração</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/criarcobranca/">Criação da Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/consultarcobranca/">Consulta de Status</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/removercobranca/">Remoção de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/cancelarcobranca/">Cancelamento de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/pt/documentacao/qrmultiplus/psps/">Lista de PSPs</a>
   </li>
       </ul>
     </details>
@@ -725,7 +781,230 @@
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
 				
 			</nav>
-			
+			<p>Todas as transações realizadas por meio do PinPDV podem ser consultadas por meio da API do PinPDV. Existem diversos parâmetros que podem ser utilizados para ordenar, filtrar e controlar a paginação das consultas, a seguir estão os parâmetros disponíveis atualmente:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Parâmetro</th>
+          <th>Tipo / Valores Possíveis</th>
+          <th>Descrição</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>OrdenarPor</code></td>
+          <td><code>Id</code>, <code>Valor</code>, <code>Identificador</code>, <code>Comprovante</code>, <code>Status</code>, <code>PinPdv</code>, <code>TipoVenda</code>, <code>CadastradoEm</code>, <code>AtualizadoEm</code></td>
+          <td>Campo pelo qual os resultados serão ordenados.</td>
+      </tr>
+      <tr>
+          <td><code>OrdenarTipo</code></td>
+          <td><code>ASC</code>, <code>DESC</code></td>
+          <td>Define a direção da ordenação: ascendente (<code>ASC</code>) ou descendente (<code>DESC</code>).</td>
+      </tr>
+      <tr>
+          <td><code>DataInicial</code></td>
+          <td><code>YYYY-MM-DDTHH:MM:SS</code></td>
+          <td>Data e hora inicial para o filtro de período.</td>
+      </tr>
+      <tr>
+          <td><code>DataFinal</code></td>
+          <td><code>YYYY-MM-DDTHH:MM:SS</code></td>
+          <td>Data e hora final para o filtro de período.</td>
+      </tr>
+      <tr>
+          <td><code>PaginaNumero</code></td>
+          <td>Número inteiro (ex: <code>1</code>)</td>
+          <td>Número da página de resultados a ser retornada.</td>
+      </tr>
+      <tr>
+          <td><code>QtdRegistro</code></td>
+          <td>Número inteiro (ex: <code>100</code>)</td>
+          <td>Quantidade de registros por página.</td>
+      </tr>
+      <tr>
+          <td><code>FiltroComprovante</code></td>
+          <td><code>true</code>, <code>false</code></td>
+          <td>Filtra se a transação possui comprovante.</td>
+      </tr>
+      <tr>
+          <td><code>FiltroTipoVenda</code></td>
+          <td><code>Avulsa</code>, <code>Expressa</code>, <code>PreVenda</code>, <code>PosVenda</code></td>
+          <td>Filtra pelo tipo da venda realizada.</td>
+      </tr>
+      <tr>
+          <td><code>FiltroPinPdv</code></td>
+          <td><code>Código</code></td>
+          <td>Filtra pelas transações associadas a um PinPDV específico.</td>
+      </tr>
+      <tr>
+          <td><code>FiltroStatus</code></td>
+          <td><code>Realizada</code>, <code>Cancelada</code>, <code>Error</code></td>
+          <td>Filtra pelo status da transação.</td>
+      </tr>
+      <tr>
+          <td><code>FiltroTipoPagamento</code></td>
+          <td><code>Dinheiro</code>, <code>Credito</code>, <code>Debito</code>, <code>Pix</code>, <code>Crediario</code></td>
+          <td>Filtra pelo meio de pagamento utilizado.</td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal has-title not-content">
+  <figcaption class="header">
+    <span class="title">Consulta de Transações</span>
+  </figcaption>
+  <div class="highlight" title="Consulta de Transações"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl --request GET <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --url <span class="s1">&#39;https://webapi.pinpdv.com.br/venda?DataInicial=2024-12-12T00:00:00&amp;DataFinal=2024-12-12T23:59:59&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --header <span class="s1">&#39;Authorization: Bearer xyz&#39;</span> <span class="err">\</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Exemplo de Retorno</span>
+  </figcaption>
+  <div class="highlight" title="Exemplo de Retorno"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">200 - OK
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	&#34;paginaAtual&#34;: 1,
+</span></span><span class="line"><span class="cl">	&#34;itensPorPagina&#34;: 100,
+</span></span><span class="line"><span class="cl">	&#34;quantidadeDePaginas&#34;: 1,
+</span></span><span class="line"><span class="cl">	&#34;quantidadeTotalDeItens&#34;: 2,
+</span></span><span class="line"><span class="cl">	&#34;primeiroRegistro&#34;: 1,
+</span></span><span class="line"><span class="cl">	&#34;ultimoRegistro&#34;: 2,
+</span></span><span class="line"><span class="cl">	&#34;paginaAnterior&#34;: false,
+</span></span><span class="line"><span class="cl">	&#34;paginaProxima&#34;: false,
+</span></span><span class="line"><span class="cl">	&#34;data&#34;: [
+</span></span><span class="line"><span class="cl">		{
+</span></span><span class="line"><span class="cl">			&#34;id&#34;: 1002,
+</span></span><span class="line"><span class="cl">			&#34;identificador&#34;: &#34;68164940b8e411efb1804576f07d30fa&#34;,
+</span></span><span class="line"><span class="cl">			&#34;tipoVenda&#34;: {
+</span></span><span class="line"><span class="cl">				&#34;key&#34;: 0,
+</span></span><span class="line"><span class="cl">				&#34;value&#34;: &#34;Avulsa&#34;
+</span></span><span class="line"><span class="cl">			},
+</span></span><span class="line"><span class="cl">			&#34;valor&#34;: 23.0000,
+</span></span><span class="line"><span class="cl">			&#34;comprovante&#34;: &#34;****************************************\n*                                      *\n*             HOMOLOGAÇÃO              *\n*                                      *\n****************************************\n*                                      *\n*         ESSE DOCUMENTO NÃO           *\n*          TEM VALOR FISCAL            *\n*                                      *\n****************************************\n\nRECEBEMOS SEU PAGAMENTO:\n\n--&gt; 68164940b8e411efb1804576f07d30fa\&#34;\n\n### VALOR: 23\n### ITENS: 2\n\n\n     RETIRE SEU DOCUMENTO FISCAL        \n      NO BALCÃO DE ATENDIMENTO          \n\n\nhttp://www.sefazexemplo.gov.br/nfce/qrcode?p=28170800156225000131650110000151341562040824|2|1|1|DC6AE2C2B9A992BE59679AC365E29922DE6B7511\n\n\n\nOBRIGADO\nVOLTE SEMPRE!\n\n&#34;,
+</span></span><span class="line"><span class="cl">			&#34;cadastradoEm&#34;: &#34;2024-12-12T20:54:23.449928&#34;,
+</span></span><span class="line"><span class="cl">			&#34;atualizadoEm&#34;: &#34;2024-12-12T20:54:33.783144&#34;,
+</span></span><span class="line"><span class="cl">			&#34;status&#34;: {
+</span></span><span class="line"><span class="cl">				&#34;key&#34;: 0,
+</span></span><span class="line"><span class="cl">				&#34;value&#34;: &#34;Realizada&#34;
+</span></span><span class="line"><span class="cl">			},
+</span></span><span class="line"><span class="cl">			&#34;transacoes&#34;: [
+</span></span><span class="line"><span class="cl">				{
+</span></span><span class="line"><span class="cl">					&#34;id&#34;: 1037,
+</span></span><span class="line"><span class="cl">					&#34;valor&#34;: 23.0000,
+</span></span><span class="line"><span class="cl">					&#34;parcelas&#34;: 1,
+</span></span><span class="line"><span class="cl">					&#34;cadastradoEm&#34;: &#34;2024-12-12T20:54:23.451749&#34;,
+</span></span><span class="line"><span class="cl">					&#34;atualizadoEm&#34;: null,
+</span></span><span class="line"><span class="cl">					&#34;status&#34;: {
+</span></span><span class="line"><span class="cl">						&#34;key&#34;: 0,
+</span></span><span class="line"><span class="cl">						&#34;value&#34;: &#34;Aprovada&#34;
+</span></span><span class="line"><span class="cl">					},
+</span></span><span class="line"><span class="cl">					&#34;tipoPagamento&#34;: 1,
+</span></span><span class="line"><span class="cl">					&#34;dados&#34;: null
+</span></span><span class="line"><span class="cl">				}
+</span></span><span class="line"><span class="cl">			],
+</span></span><span class="line"><span class="cl">			&#34;produtos&#34;: [
+</span></span><span class="line"><span class="cl">				{
+</span></span><span class="line"><span class="cl">					&#34;id&#34;: 16,
+</span></span><span class="line"><span class="cl">					&#34;identificador&#34;: &#34;bd11f408cc714c8eba069e8bb69a88de&#34;,
+</span></span><span class="line"><span class="cl">					&#34;nome&#34;: &#34;Hot Dog ??&#34;,
+</span></span><span class="line"><span class="cl">					&#34;descricao&#34;: null,
+</span></span><span class="line"><span class="cl">					&#34;quantidade&#34;: 1,
+</span></span><span class="line"><span class="cl">					&#34;precoUnitario&#34;: 10.5000,
+</span></span><span class="line"><span class="cl">					&#34;precoTotal&#34;: 10.5000
+</span></span><span class="line"><span class="cl">				},
+</span></span><span class="line"><span class="cl">				{
+</span></span><span class="line"><span class="cl">					&#34;id&#34;: 17,
+</span></span><span class="line"><span class="cl">					&#34;identificador&#34;: &#34;1cd99ebf09864438adbb943ed8fbdc39&#34;,
+</span></span><span class="line"><span class="cl">					&#34;nome&#34;: &#34;Pastel&#34;,
+</span></span><span class="line"><span class="cl">					&#34;descricao&#34;: null,
+</span></span><span class="line"><span class="cl">					&#34;quantidade&#34;: 1,
+</span></span><span class="line"><span class="cl">					&#34;precoUnitario&#34;: 12.5000,
+</span></span><span class="line"><span class="cl">					&#34;precoTotal&#34;: 12.5000
+</span></span><span class="line"><span class="cl">				}
+</span></span><span class="line"><span class="cl">			],
+</span></span><span class="line"><span class="cl">			&#34;preVenda&#34;: null,
+</span></span><span class="line"><span class="cl">			&#34;posVenda&#34;: null,
+</span></span><span class="line"><span class="cl">			&#34;pinPdv&#34;: {
+</span></span><span class="line"><span class="cl">				&#34;codigo&#34;: &#34;421730&#34;,
+</span></span><span class="line"><span class="cl">				&#34;nome&#34;: &#34;TESTE&#34;
+</span></span><span class="line"><span class="cl">			}
+</span></span><span class="line"><span class="cl">		},
+</span></span><span class="line"><span class="cl">		{
+</span></span><span class="line"><span class="cl">			&#34;id&#34;: 1003,
+</span></span><span class="line"><span class="cl">			&#34;identificador&#34;: &#34;32d312d0b8e511efb0c5abe3013abda6&#34;,
+</span></span><span class="line"><span class="cl">			&#34;tipoVenda&#34;: {
+</span></span><span class="line"><span class="cl">				&#34;key&#34;: 0,
+</span></span><span class="line"><span class="cl">				&#34;value&#34;: &#34;Avulsa&#34;
+</span></span><span class="line"><span class="cl">			},
+</span></span><span class="line"><span class="cl">			&#34;valor&#34;: 21.2500,
+</span></span><span class="line"><span class="cl">			&#34;comprovante&#34;: &#34;****************************************\n*                                      *\n*             HOMOLOGAÇÃO              *\n*                                      *\n****************************************\n*                                      *\n*         ESSE DOCUMENTO NÃO           *\n*          TEM VALOR FISCAL            *\n*                                      *\n****************************************\n\nRECEBEMOS SEU PAGAMENTO:\n\n--&gt; 32d312d0b8e511efb0c5abe3013abda6\&#34;\n\n### VALOR: 21.25\n### ITENS: 2\n\n\n     RETIRE SEU DOCUMENTO FISCAL        \n      NO BALCÃO DE ATENDIMENTO          \n\n\nhttp://www.sefazexemplo.gov.br/nfce/qrcode?p=28170800156225000131650110000151341562040824|2|1|1|DC6AE2C2B9A992BE59679AC365E29922DE6B7511\n\n\n\nOBRIGADO\nVOLTE SEMPRE!\n\n&#34;,
+</span></span><span class="line"><span class="cl">			&#34;cadastradoEm&#34;: &#34;2024-12-12T21:00:02.583575&#34;,
+</span></span><span class="line"><span class="cl">			&#34;atualizadoEm&#34;: &#34;2024-12-12T21:00:07.908576&#34;,
+</span></span><span class="line"><span class="cl">			&#34;status&#34;: {
+</span></span><span class="line"><span class="cl">				&#34;key&#34;: 0,
+</span></span><span class="line"><span class="cl">				&#34;value&#34;: &#34;Realizada&#34;
+</span></span><span class="line"><span class="cl">			},
+</span></span><span class="line"><span class="cl">			&#34;transacoes&#34;: [
+</span></span><span class="line"><span class="cl">				{
+</span></span><span class="line"><span class="cl">					&#34;id&#34;: 1038,
+</span></span><span class="line"><span class="cl">					&#34;valor&#34;: 21.2500,
+</span></span><span class="line"><span class="cl">					&#34;parcelas&#34;: 1,
+</span></span><span class="line"><span class="cl">					&#34;cadastradoEm&#34;: &#34;2024-12-12T21:00:01.151783&#34;,
+</span></span><span class="line"><span class="cl">					&#34;atualizadoEm&#34;: &#34;2024-12-12T21:00:02.585883&#34;,
+</span></span><span class="line"><span class="cl">					&#34;status&#34;: {
+</span></span><span class="line"><span class="cl">						&#34;key&#34;: 0,
+</span></span><span class="line"><span class="cl">						&#34;value&#34;: &#34;Aprovada&#34;
+</span></span><span class="line"><span class="cl">					},
+</span></span><span class="line"><span class="cl">					&#34;tipoPagamento&#34;: 2,
+</span></span><span class="line"><span class="cl">					&#34;dados&#34;: {
+</span></span><span class="line"><span class="cl">						&#34;dataHora&#34;: &#34;2024-12-12T21:00:01.151783&#34;,
+</span></span><span class="line"><span class="cl">						&#34;nsu&#34;: &#34;2024121200003377&#34;,
+</span></span><span class="line"><span class="cl">						&#34;autorizacao&#34;: &#34;000279&#34;,
+</span></span><span class="line"><span class="cl">						&#34;bandeira&#34;: &#34;VISA&#34;,
+</span></span><span class="line"><span class="cl">						&#34;adquirente&#34;: &#34;VERO&#34;
+</span></span><span class="line"><span class="cl">					}
+</span></span><span class="line"><span class="cl">				}
+</span></span><span class="line"><span class="cl">			],
+</span></span><span class="line"><span class="cl">			&#34;produtos&#34;: [
+</span></span><span class="line"><span class="cl">				{
+</span></span><span class="line"><span class="cl">					&#34;id&#34;: 17,
+</span></span><span class="line"><span class="cl">					&#34;identificador&#34;: &#34;1cd99ebf09864438adbb943ed8fbdc39&#34;,
+</span></span><span class="line"><span class="cl">					&#34;nome&#34;: &#34;Pastel&#34;,
+</span></span><span class="line"><span class="cl">					&#34;descricao&#34;: null,
+</span></span><span class="line"><span class="cl">					&#34;quantidade&#34;: 1,
+</span></span><span class="line"><span class="cl">					&#34;precoUnitario&#34;: 12.5000,
+</span></span><span class="line"><span class="cl">					&#34;precoTotal&#34;: 12.5000
+</span></span><span class="line"><span class="cl">				},
+</span></span><span class="line"><span class="cl">				{
+</span></span><span class="line"><span class="cl">					&#34;id&#34;: 41,
+</span></span><span class="line"><span class="cl">					&#34;identificador&#34;: &#34;4c6b53be5cff45b0b3a17b654a7e76c0&#34;,
+</span></span><span class="line"><span class="cl">					&#34;nome&#34;: &#34;Coca Cola Lata 350ml&#34;,
+</span></span><span class="line"><span class="cl">					&#34;descricao&#34;: null,
+</span></span><span class="line"><span class="cl">					&#34;quantidade&#34;: 1,
+</span></span><span class="line"><span class="cl">					&#34;precoUnitario&#34;: 8.7500,
+</span></span><span class="line"><span class="cl">					&#34;precoTotal&#34;: 8.7500
+</span></span><span class="line"><span class="cl">				}
+</span></span><span class="line"><span class="cl">			],
+</span></span><span class="line"><span class="cl">			&#34;preVenda&#34;: null,
+</span></span><span class="line"><span class="cl">			&#34;posVenda&#34;: null,
+</span></span><span class="line"><span class="cl">			&#34;pinPdv&#34;: {
+</span></span><span class="line"><span class="cl">				&#34;codigo&#34;: &#34;421730&#34;,
+</span></span><span class="line"><span class="cl">				&#34;nome&#34;: &#34;TESTE&#34;
+</span></span><span class="line"><span class="cl">			}
+</span></span><span class="line"><span class="cl">		}
+</span></span><span class="line"><span class="cl">	]
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div>
+  </figure>
+</div>
+
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
 			<div class="page-nav d-flex flex-column flex-sm-row">
@@ -751,7 +1030,7 @@
 			<div class="card-body d-flex justify-content-end">
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Próximo</div>
-					<a href="/pt/documentacao/qrmultiplus/qrmultiplus/" class="stretched-link text-reset text-decoration-none">QRMultiplus</a>
+					<a href="/pt/documentacao/pinpdv/adquirentes/" class="stretched-link text-reset text-decoration-none">Adquirentes/Terminais</a>
 				</div>
 				<div class="d-flex flex-column justify-content-center">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
