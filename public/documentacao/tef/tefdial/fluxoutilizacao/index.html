@@ -1,0 +1,1120 @@
+<!doctype html>
+<html lang="pt" data-bs-theme="auto">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
+</script>
+
+
+<link rel="stylesheet" href="/main.dc2f5458ab98613899cfadbb551e078821f7645691e4dfc57bb48d7697fe7be6885b7aea93d9ab15c53a25e38128c09220a1b4dcab934e04d1a7b374499b9872.css" integrity="sha512-3C9UWKuYYTiZz627VR4HiCH3ZFaR5N/Fe7SNdpf&#43;e&#43;aIW3rqk9mrFcU6JeOBKMCSIKG03KuTTgTRp7N0SZuYcg==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/documentacao/tef/tefdial/fluxoutilizacao/">
+
+  <link rel="canonical" href="http://localhost:1313/documentacao/tef/tefdial/fluxoutilizacao/">
+
+
+<title>Fluxo de Utilização</title>
+<meta name="description" content="Congrats on setting up a new Doks project!">
+
+    
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    
+      <link
+        rel="apple-touch-icon"
+        href="/apple-touch-icon.png"
+        sizes="180x180"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/favicon-192x192.png"
+        sizes="192x192"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/favicon-512x512.png"
+        sizes="512x512"
+        type="image/png"
+      >
+<link rel="manifest" href="/manifest.webmanifest">
+
+<meta property="og:url" content="http://localhost:1313/documentacao/tef/tefdial/fluxoutilizacao/">
+  <meta property="og:site_name" content="Multiplus Card">
+  <meta property="og:title" content="Fluxo de Utilização">
+  <meta property="og:description" content="A integração é fundamentada na troca de arquivos entre o sistema de Automação e o Gerenciador de Pagamentos (GP). Após a finalização de uma venda, a Automação aciona a solução de TEF, iniciando o processo de pagamento.">
+  <meta property="og:locale" content="pt">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="documentacao">
+    <meta property="article:published_time" content="2023-09-07T16:33:54+02:00">
+    <meta property="article:modified_time" content="2023-09-07T16:33:54+02:00">
+    <meta property="og:image" content="http://localhost:1313/cover.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/cover.png">
+  <meta name="twitter:title" content="Fluxo de Utilização">
+  <meta name="twitter:description" content="A integração é fundamentada na troca de arquivos entre o sistema de Automação e o Gerenciador de Pagamentos (GP). Após a finalização de uma venda, a Automação aciona a solução de TEF, iniciando o processo de pagamento.">
+      <meta name="twitter:site" content="@getdoks">
+
+    
+    
+    
+    <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/documentacao/",
+       "name": "Documentação",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/documentacao/tef/",
+       "name": "Tef",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/documentacao/tef/tefdial/",
+       "name": "Tef Dial ( Troca De Arquivos)",
+       "position": 4
+     },
+     {
+       "@type": "ListItem",
+       "name": "Fluxo De Utilização",
+       "position": 5
+     }
+   ]
+ }
+</script>
+
+
+
+
+
+</head>
+
+  
+  <body class="single section documentacao" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<header class="navbar navbar-expand-lg">
+  <div class="container-lg">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/">Multiplus Card</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Documentacao</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>TEF</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>DLL TefClientMC - Modo Interativo</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/configuracao/">Instalação/Configuração</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/funcoes/">Funções da DLL</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/pinpad/">Funções de Pinpad</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/intgrqrmultiplus/">Integração com QRMultiplus (PIX)</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/intgrpinpdv/">Integração com App PinPDV Lite</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/solucaoproblemas/">Solução de Problemas</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>DLL TefClientMC - Modo Client (Com Tela)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/dll/comtela/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/comtela/configuracao/">Instalação/Configuração</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/comtela/funcoes/">Funções da DLL</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/comtela/retorno/">Layout do Retorno</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Tef Dial (Troca de Arquivos)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/tefdial/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/tefdial/configuracao/">Configuração/Instalação</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/documentacao/tef/tefdial/fluxoutilizacao/">Fluxo de Utilização</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/tefdial/layoutcomunicacao/">Layout das Mensagens</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/tefdial/descricaocampos/">Descrição dos Campos</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/tefdial/exemplocomunicacao/">Exemplo de Comunicação</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Webservice</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/webservice/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/webservice/configuracao/">Instalação/Configuração</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/webservice/comunicacao/">Fluxo de Comunicação</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/webservice/criacaotrn/">Criação de Transações</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/webservice/consultatrn/">Consulta de Transações</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/webservice/layoutheader/">Layout do Header CONTEUDO</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/webservice/tiposcampo/">Tipos de Campos</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/webservice/descricaocampos/">Descrição dos Campos</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/webservice/exemplotrn/">Exemplo de Utilização</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary>PinPDV</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/pinpdv/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/pinpdv/infocomuns/">Informações Comuns</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/pinpdv/produtos/">Cadastro de Produtos</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/pinpdv/prevenda/">Pré-venda</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/pinpdv/postef/">POS TEF</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/pinpdv/vendaexpressa/">Venda Expressa</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/pinpdv/consultatrn/">Consulta de Transações</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/pinpdv/adquirentes/">Adquirentes/Terminais</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary>QRMultiplus</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/qrmultiplus/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/qrmultiplus/configuracao/">Configuração</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/qrmultiplus/criarcobranca/">Criação da Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/qrmultiplus/consultarcobranca/">Consulta de Status</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/qrmultiplus/removercobranca/">Remoção de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/qrmultiplus/cancelarcobranca/">Cancelamento de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/qrmultiplus/psps/">Lista de PSPs</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary>Conciliação</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/concilicacao/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/concilicacao/autenticacao/">Autenticação</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/concilicacao/concilicacao/">Conciliação</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Multiplus Card</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/pt/documentacao/apresentacao">Documentação</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/pt/exemplos/">Exemplos</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/pt/tutoriais">Tutoriais</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/pt/faq">FAQ</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        <div class="dropdown mt-1 order-lg-2">
+          <button class="btn btn-dropdown dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+            <span class="dropdown-caret">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M4 5h7"></path>
+                <path d="M9 3v2c0 4.418 -2.239 8 -5 8"></path>
+                <path d="M5 9c0 2.144 2.952 3.908 6.7 4"></path>
+                <path d="M12 20l4 -9l4 9"></path>
+                <path d="M19.1 18h-6.2"></path>
+              </svg>
+              <span id="doks-language-current">Português</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M6 9l6 6l6 -6"></path>
+              </svg>
+            </span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-lg-end me-lg-2 shadow rounded border-0" aria-labelledby="doks-languages">
+
+            <li><span class="dropdown-item current" aria-current="true">Português</span></li>
+
+            <li><hr class="dropdown-divider"></li>
+
+            
+              <li><a class="dropdown-item untranslated" rel="alternate" href="/en" hreflang="en" lang="en">English</a></li>
+            
+              
+          </ul>
+        </div>
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/multipluscard"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Pesquisar</h1>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden">Pesquisar</label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Pesquisar" aria-label="Pesquisar" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
+        <p class="search-no-recent message d-none mt-3 text-center">Nenhuma pesquisa recente</p>
+        <p class="search-no-results message d-none mt-3 text-center">Nenhum resultado encontrado for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date">Date here</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-lg" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>TEF</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>DLL TefClientMC - Modo Interativo</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/configuracao/">Instalação/Configuração</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/funcoes/">Funções da DLL</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/pinpad/">Funções de Pinpad</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/intgrqrmultiplus/">Integração com QRMultiplus (PIX)</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/intgrpinpdv/">Integração com App PinPDV Lite</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/transparente/solucaoproblemas/">Solução de Problemas</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>DLL TefClientMC - Modo Client (Com Tela)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/dll/comtela/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/comtela/configuracao/">Instalação/Configuração</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/comtela/funcoes/">Funções da DLL</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/dll/comtela/retorno/">Layout do Retorno</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Tef Dial (Troca de Arquivos)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/tefdial/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/tefdial/configuracao/">Configuração/Instalação</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/documentacao/tef/tefdial/fluxoutilizacao/">Fluxo de Utilização</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/tefdial/layoutcomunicacao/">Layout das Mensagens</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/tefdial/descricaocampos/">Descrição dos Campos</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/tefdial/exemplocomunicacao/">Exemplo de Comunicação</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Webservice</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/tef/webservice/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/webservice/configuracao/">Instalação/Configuração</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/webservice/comunicacao/">Fluxo de Comunicação</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/webservice/criacaotrn/">Criação de Transações</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/webservice/consultatrn/">Consulta de Transações</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/webservice/layoutheader/">Layout do Header CONTEUDO</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/webservice/tiposcampo/">Tipos de Campos</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/webservice/descricaocampos/">Descrição dos Campos</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/tef/webservice/exemplotrn/">Exemplo de Utilização</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary>PinPDV</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/pinpdv/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/pinpdv/infocomuns/">Informações Comuns</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/pinpdv/produtos/">Cadastro de Produtos</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/pinpdv/prevenda/">Pré-venda</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/pinpdv/postef/">POS TEF</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/pinpdv/vendaexpressa/">Venda Expressa</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/pinpdv/consultatrn/">Consulta de Transações</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/pinpdv/adquirentes/">Adquirentes/Terminais</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary>QRMultiplus</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/qrmultiplus/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/qrmultiplus/configuracao/">Configuração</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/qrmultiplus/criarcobranca/">Criação da Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/qrmultiplus/consultarcobranca/">Consulta de Status</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/qrmultiplus/removercobranca/">Remoção de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/qrmultiplus/cancelarcobranca/">Cancelamento de Cobrança</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/qrmultiplus/psps/">Lista de PSPs</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details>
+      <summary>Conciliação</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/documentacao/concilicacao/introducao/">Introdução</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/concilicacao/autenticacao/">Autenticação</a>
+  </li>
+
+  <li>
+      <a href="/documentacao/concilicacao/concilicacao/">Conciliação</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>Nesta página</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#estrutura-de-diretórios">Estrutura de Diretórios</a>
+      <ul>
+        <li><a href="#diretório-de-envio-de-dados">Diretório de Envio de Dados</a></li>
+        <li><a href="#diretório-de-retorno-de-dados">Diretório de Retorno de Dados</a></li>
+      </ul>
+    </li>
+    <li><a href="#diagrama-de-comunicação">Diagrama de Comunicação</a>
+      <ul>
+        <li><a href="#observações">Observações</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
+		
+			<h1>Fluxo de Utilização</h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>Nesta página</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#estrutura-de-diretórios">Estrutura de Diretórios</a>
+      <ul>
+        <li><a href="#diretório-de-envio-de-dados">Diretório de Envio de Dados</a></li>
+        <li><a href="#diretório-de-retorno-de-dados">Diretório de Retorno de Dados</a></li>
+      </ul>
+    </li>
+    <li><a href="#diagrama-de-comunicação">Diagrama de Comunicação</a>
+      <ul>
+        <li><a href="#observações">Observações</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<p>A integração é fundamentada na troca de arquivos entre o sistema de Automação e o Gerenciador de Pagamentos (GP). Após a finalização de uma venda, a Automação aciona a solução de TEF, iniciando o processo de pagamento.</p>
+<p>O diagrama a seguir apresenta em detalhes o fluxo de comunicação entre a Automação e o GP.</p>
+
+<figure>
+  <img
+    srcset="data:image/webp;base64,UklGRi4AAABXRUJQVlA4ICIAAAAwAQCdASoQAAwAAph8J6QAA3AA/vBn1TD/BGTrX&#43;voMYAA"
+        data-srcset="/images/fluxo_tefdial_hu_f97cc2ed5e54f6f1.webp 480w,/images/fluxo_tefdial_hu_c58ed1fedecba425.webp 574w"
+        data-sizes="auto"
+    src="/images/fluxo_tefdial_hu_f267e6b2308a3748.jpg"
+    width="574"
+    height="441"
+    decoding="async"
+    fetchpriority="auto"
+    loading="lazy"
+    alt="Interação entre Automação e Gerenciador de Pagamentos"
+    class="lazyload blur-up"
+  ><figcaption>Interação entre Automação e Gerenciador de Pagamentos</figcaption>
+</figure>
+<div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  
+  <div class="callout-content">
+    
+    <div class="callout-body">
+      <p>Para a transação <strong>ATV</strong>, o fluxo é encerrado na <strong>Etapa 2</strong>. Já para transações que <strong>não exigem</strong> a impressão do comprovante TEF, o fluxo se encerra na <strong>Etapa 4</strong>. Caso a impressão seja necessária, o processo deve seguir até a <strong>Etapa 6</strong>.</p>
+<p>Ressalta-se que <strong>não é possível determinar previamente</strong>, apenas com base no tipo de transação, se a impressão do comprovante TEF será requerida. O Aplicativo de Automação Comercial deve sempre analisar todas as informações contidas no arquivo recebido na <strong>Etapa 4</strong> para tomar a decisão adequada.</p>
+
+    </div>
+  </div>
+</div>
+
+<h2 id="estrutura-de-diretórios">Estrutura de Diretórios<a href="#estrutura-de-diretórios" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Para que ocorra a troca de arquivos são necessárias que existam duas pastas:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">  C:\TEF_DIAL\REQ
+</span></span><span class="line"><span class="cl">  C:\TEF_DIAL\RESP</span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="diretório-de-envio-de-dados">Diretório de Envio de Dados<a href="#diretório-de-envio-de-dados" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Este é utilizado pela Automação para enviar os dados para o Gerenciador de Pagamentos (GP). A automação deve gerar uma arquivo para <strong>cada envio</strong> de mensagem.
+Após recebido pelo GP ele realiza o processamento e excluí o mesmo.</p>
+<p>O arquivo a ser criado deve ter o seguinte nome: <strong>IntPos.001</strong></p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Arquivo de Requisição</span>
+  </figcaption>
+  <div class="highlight" title="Arquivo de Requisição"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">  C:\TEF_DIAL\REQ\IntPos.001</span></span></code></pre></div>
+  </figure>
+</div>
+<div class="callout callout-tip d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ 
+ class="outline/rocket svg-inline callout-icon me-2 mb-3" id="svg-rocket" role="img">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
+  <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
+  <path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+</svg>
+  <div class="callout-content">
+    <div class="callout-title">
+        <p>Dica</p>
+
+      </div>
+    <div class="callout-body">
+      <p>Para a geração do arquivo <strong>IntPos.001</strong>, recomenda-se inicialmente a criação de um arquivo temporário, nomeado como <strong>IntPos.tmp</strong>. Após a inclusão completa de todos os dados necessários para o envio da mensagem, o arquivo deve ser renomeado para <strong>IntPos.001</strong>.</p>
+<p>Essa abordagem evita que o Gerenciador de Pagamentos (GP) realize a leitura do arquivo antes de sua finalização, garantindo a integridade da comunicação.</p>
+
+    </div>
+  </div>
+</div>
+
+<h3 id="diretório-de-retorno-de-dados">Diretório de Retorno de Dados<a href="#diretório-de-retorno-de-dados" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Este arquivo é utilizado pela Automação para receber os dados enviados pelo Gerenciador de Pagamentos (GP). Durante o fluxo de comunicação, são gerados arquivos que devem ser lidos, processados e excluídos pela Automação. O arquivo de resposta, nomeado como <strong>InPos.sts</strong>, contém a indicação de aceite ou recusa da solicitação previamente enviada.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame has-title not-content">
+  <figcaption class="header">
+    <span class="title">Arquivo de Retorno</span>
+  </figcaption>
+  <div class="highlight" title="Arquivo de Retorno"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">  C:\TEF_DIAL\RESP\IntPos.sts</span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="diagrama-de-comunicação">Diagrama de Comunicação<a href="#diagrama-de-comunicação" class="anchor" aria-hidden="true">#</a> </h2>
+
+<figure>
+  <img
+    srcset="data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAwAwCdASoQABcAP1mMuEupJKKYBACTFYT0gAA9Yamm&#43;MAAAP7t/NDt8SgzDKzjeBl6vJaRiVY7/aSoYAAAAA=="
+        data-srcset="/images/fluxo_completo_tefdial_hu_d6d9a6125b3ce9c.webp 480w,/images/fluxo_completo_tefdial_hu_166278d244039d66.webp 576w,/images/fluxo_completo_tefdial_hu_cc03591535937a9c.webp 768w,/images/fluxo_completo_tefdial_hu_ce1180968894975a.webp 799w"
+        data-sizes="auto"
+    src="/images/fluxo_completo_tefdial_hu_d7dbace93abc13ca.jpg"
+    width="799"
+    height="1141"
+    decoding="async"
+    fetchpriority="auto"
+    loading="lazy"
+    alt="Fluxo da Transação entre Automação e Gerenciador de Pagamentos"
+    class="lazyload blur-up"
+  ><figcaption>Fluxo da Transação entre Automação e Gerenciador de Pagamentos</figcaption>
+</figure>
+<h3 id="observações">Observações<a href="#observações" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>Em caso de queda de energia durante a impressão do cupom, a Automação deverá automáticamente enviar o comando <strong>NCN</strong> apresentando a mensagem:</li>
+</ul>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>  Cancela a Transação:
+  Rede:
+  NSU:
+  Valor:</code></pre>
+  </figure>
+</div>
+<ul>
+<li>
+<p>Na exibição de mensagens de não confirmação, os campos Doc. No (campo 12) e Rede (campo 10) devem ser apresentados obrigatoriamente. O campo Valor (campo 3) deve ser exibido apenas se estiver presente no arquivo Intpos.001 localizado no diretório Resp, e possuir valor diferente de zero. Quando exibido, o campo Valor deve ser formatado como moeda.</p>
+</li>
+<li>
+<p>O número de vias impressas poderá ser parametrizado; Para fins de homologação, os testes serão realizados com a impressão de duas vias.</p>
+</li>
+<li>
+<p>A verificação da impressão correta do comprovante é de responsabilidade da automação</p>
+</li>
+<li>
+<p>Exibição da Mensagem – Campo 30</p>
+</li>
+</ul>
+<p>A mensagem contida no <strong>Campo 30</strong> deve ser apresentada pela Automação Comercial <strong>somente quando o conteúdo for diferente de vazio</strong>. Caso o campo esteja vazio, <strong>nenhum Message Box deverá ser exibido</strong>.</p>
+<ul>
+<li>
+<p><strong>Com impressão de comprovante (linhas presentes)</strong>:
+Se houver linhas a serem impressas, a mensagem do Campo 30 deve ser exibida <strong>simultaneamente à impressão do comprovante TEF</strong>.
+O Message Box <strong>não deve bloquear ou aguardar confirmação do usuário (OK)</strong> para iniciar a impressão.
+A mensagem deve permanecer visível por <strong>no mínimo 5 segundos</strong>, ou até o término da impressão.</p>
+</li>
+<li>
+<p><strong>Sem impressão de comprovante (sem linhas)</strong>:
+Na ausência de linhas para impressão, a mensagem do Campo 30 deve ser exibida e <strong>aguardar a confirmação (OK) do usuário</strong> antes de ser encerrada.</p>
+</li>
+</ul>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Anterior</div>
+					<a href="/documentacao/tef/tefdial/configuracao/" class="stretched-link text-reset text-decoration-none">Configuração/Instalação</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Próximo</div>
+					<a href="/documentacao/tef/tefdial/layoutcomunicacao/" class="stretched-link text-reset text-decoration-none">Layout das Mensagens</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Trazido a você por <a class="text-muted" href="https://thulite.io/">Thulite</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/js/app.47f6a6c3399e53195d63748449649495beae4647f054819de74bf1b3798e946e.js"
+  integrity="sha256-R/amwzmeUxldY3SESWSUlb6uRkfwVIGd50vxs3mOlG4=">
+</script>
+
+
+
+
+
+<script async
+  src="/js/flexsearch.8350d2f520e131f8552ed57c1eadd05c50eccf0427267781442dd8ddf8fdcdf7.js"
+  integrity="sha256-g1DS9SDhMfhVLtV8Hq3QXFDszwQnJneBRC3Y3fj9zfc=">
+</script>
+<script async
+  src="/js/search-modal.877cece5b6bc789456f89fa1955ccfcd8a5acdb2179e7882e292a6caa49efe68.js"
+  integrity="sha256-h3zs5ba8eJRW&#43;J&#43;hlVzPzYpazbIXnniC4pKmyqSe/mg=">
+</script>
+
+    
+  </body>
+</html>

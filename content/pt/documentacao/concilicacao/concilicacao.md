@@ -202,7 +202,7 @@ Parâmetros da Requisição
 
 | Campo         | Descrição                                                                 |
 |---------------|---------------------------------------------------------------------------|
-| Cnpj          | 05625872000169*(somente números)*                                         |
+| Cnpj          | 05625872000169 *(somente números)*                                        |
 | DataInicial   | 2024-01-01T00:00:00 – Data/hora de início do período de consulta          |
 | DataFinal     | 2024-01-01T23:59:59 – Data/hora de fim do período *(máximo de 90 dias)*   |
 | DataTipo      | Tipo de data usada como base para o filtro:                               |

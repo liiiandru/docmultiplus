@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Link Pago on Multiplus Card</title>
+    <link>http://localhost:1313/pt/documentacao/linkpago/</link>
+    <description>Recent content in Link Pago on Multiplus Card</description>
+    <generator>Hugo</generator>
+    <language>pt</language>
+    <copyright>Copyright (c) 2025 Multiplus Card</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 16:33:54 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/pt/documentacao/linkpago/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introdução</title>
+      <link>http://localhost:1313/pt/documentacao/linkpago/introducao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/linkpago/introducao/</guid>
+      <description>&lt;p&gt;O Link Pago é um gateway de pagamento que oferece suporte à geração de links de pagamento, checkout transparente e cobranças recorrentes. A integração com a plataforma é realizada por meio de requisições à API da Mutliplus Card.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Checkout</title>
+      <link>http://localhost:1313/pt/documentacao/linkpago/checkout/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/linkpago/checkout/</guid>
+      <description>&lt;p&gt;A integração do Link Pago por meio do Checkout é uma forma simples de gerir a criação e manutenção de links de pagamento, utilizando a interface já disponibilizada pela Multiplus Card para a interação do cliente na realização do Pagamento.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Checkout Transparente</title>
+      <link>http://localhost:1313/pt/documentacao/linkpago/checkouttransparente/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/linkpago/checkouttransparente/</guid>
+      <description>&lt;p&gt;A integração do Link Pago por meio do Checkout Transparente proporciona uma solução para integrar sistemas e e-commerces ao gateway de pagamentos, permitindo uma implementação flexível que se adapta ao sistema em questão. Essa abordagem elimina a necessidade de redirecionamentos para páginas externas durante o processo de pagamento, garantindo uma experiência contínua para o usuário.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Manutenção de Link de Pagamento</title>
+      <link>http://localhost:1313/pt/documentacao/linkpago/manutencao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/linkpago/manutencao/</guid>
+      <description>&lt;p&gt;A realização de manutenções em um link de pagamento consiste em realizar o cancelamento da venda, excluir link, adicionar númeor de celular, etc. Para realizar deve ser feita uma requisição &lt;code&gt;POST&lt;/code&gt; para a URL a seguir:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Obtenção de Transações</title>
+      <link>http://localhost:1313/pt/documentacao/linkpago/obtertrn/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/linkpago/obtertrn/</guid>
+      <description>&lt;p&gt;Para obter as transações realizadas com o Link Pago, verificar seu status entre outras informações, é necessário que seja feita uma requisição &lt;code&gt;GET&lt;/code&gt; na Url a seguir e informar os headers:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Recorrência</title>
+      <link>http://localhost:1313/pt/documentacao/linkpago/recorrencia/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/documentacao/linkpago/recorrencia/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

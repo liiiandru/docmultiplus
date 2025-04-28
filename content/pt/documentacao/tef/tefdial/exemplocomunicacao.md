@@ -175,5 +175,5 @@ A seguir, é apresentado um exemplo de transação via cartão de crédito, dest
 
 
 {{< callout context="note"  title="Comprovante da Transação" icon="outline/info-circle">}}
-  O Gerenciador de Pagamentos disponibiliza apenas uma cópia do comprovante da transação. A responsabilidade pela emissão de vias adicionais cabe à Aplicação de Automação Comercial, considerando as características e limitações da impressora utilizada. Recomenda-se a geração de no mínimo, duas vias: uma destinada ao cliente e outra ao estabelecimento.
+  O Gerenciador de Pagamentos emite apenas uma via do comprovante da transação. A responsabilidade pela geração de vias adicionais é da Aplicação de Automação Comercial, que deve implementar esse recurso conforme as capacidades e limitações do equipamento de impressão utilizado. Recomenda-se a emissão de pelo menos duas vias: uma para o cliente e outra para o estabelecimento.
 {{< /callout >}}

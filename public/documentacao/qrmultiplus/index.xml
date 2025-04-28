@@ -6,14 +6,57 @@
     <description>Recent content in QRMultiplus on Multiplus Card</description>
     <generator>Hugo</generator>
     <language>pt</language>
+    <copyright>Copyright (c) 2025 Multiplus Card</copyright>
     <lastBuildDate>Thu, 07 Sep 2023 16:33:54 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/documentacao/qrmultiplus/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>QRMultiplus</title>
-      <link>http://localhost:1313/documentacao/qrmultiplus/qrmultiplus/</link>
+      <title>Introdução</title>
+      <link>http://localhost:1313/documentacao/qrmultiplus/introducao/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
-      <guid>http://localhost:1313/documentacao/qrmultiplus/qrmultiplus/</guid>
-      <description>&lt;p&gt;Integração com QRMultiplus por API&lt;/p&gt;</description>
+      <guid>http://localhost:1313/documentacao/qrmultiplus/introducao/</guid>
+      <description>&lt;p&gt;O QRMultiplus é uma solução da Multiplus Card que viabiliza a integração com diferentes PSPs (Provedores de Serviços de Pagamento) para a realização de pagamentos via Pix e carteiras digitais. Com uma única integração, é possível centralizar o acesso a múltiplos PSPs, simplificando o processo de integração e manutenção do sistema.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configuração</title>
+      <link>http://localhost:1313/documentacao/qrmultiplus/configuracao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/documentacao/qrmultiplus/configuracao/</guid>
+      <description>&lt;p&gt;Ao utilizar pela primeira vez o QRMultiplus em um PDV é necessário que seja realizado o processo de configuração, este é composto por duas etapas:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Criação da Cobrança</title>
+      <link>http://localhost:1313/documentacao/qrmultiplus/criarcobranca/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/documentacao/qrmultiplus/criarcobranca/</guid>
+      <description>&lt;p&gt;Para criar uma cobrança deve ser feita uma requisição &lt;code&gt;POST&lt;/code&gt; para o endpoint &lt;code&gt;SetVendaQrCode&lt;/code&gt;, informando os seguintes headers:&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Header&lt;/th&gt;&#xA;          &lt;th&gt;Obrigatório&lt;/th&gt;&#xA;          &lt;th&gt;Descrição&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;token&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;*&lt;/td&gt;&#xA;          &lt;td&gt;Solicite seu token junto à Multiplus Card.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;cnpj&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;*&lt;/td&gt;&#xA;          &lt;td&gt;CNPJ do estabelecimento sem ponto, traço ou barra.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;caixaid&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;*&lt;/td&gt;&#xA;          &lt;td&gt;ID para identificação do caixa em nossa plataforma.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;integrador&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;*&lt;/td&gt;&#xA;          &lt;td&gt;Envie &lt;code&gt;&amp;quot;PIX&amp;quot;&lt;/code&gt; para utilizar o PSP padrão, caso haja apenas um configurado.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;valor&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;*&lt;/td&gt;&#xA;          &lt;td&gt;Valor da transação, o separador de casa decimal é a virgula. Ex: &lt;code&gt;10,99&lt;/code&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;mensagempix&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;-&lt;/td&gt;&#xA;          &lt;td&gt;Mensagem que pode exibir na hora de gerar o QrCode (Utilizável apenas no Efi Bank)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;&lt;strong&gt;Legenda:&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Consulta de Status</title>
+      <link>http://localhost:1313/documentacao/qrmultiplus/consultarcobranca/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/documentacao/qrmultiplus/consultarcobranca/</guid>
+      <description>&lt;p&gt;Para consultar o status de uma cobrança deve ser realizada uma requisição &lt;code&gt;POST&lt;/code&gt; no endpoint &lt;code&gt;GetInformacoesVendaQrCode&lt;/code&gt;, informando o código da cobrança retornado no momento da sua criação.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Remoção de Cobrança</title>
+      <link>http://localhost:1313/documentacao/qrmultiplus/removercobranca/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/documentacao/qrmultiplus/removercobranca/</guid>
+      <description>&lt;p&gt;A remoção de uma cobrança deve ser executada quando a transação atingir o tempo de expiração definido no campo &lt;code&gt;DataExpiracaoTransacao&lt;/code&gt;, ou em caso de cancelamento por parte do cliente — seja da forma de pagamento selecionada ou da compra em si. Essa operação é fundamental para assegurar que o relatório de vendas reflita apenas transações válidas e concluídas, evitando o acúmulo de registros pendentes de pagamento.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cancelamento de Cobrança</title>
+      <link>http://localhost:1313/documentacao/qrmultiplus/cancelarcobranca/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/documentacao/qrmultiplus/cancelarcobranca/</guid>
+      <description>&lt;p&gt;Para cancelar uma transação (estorno) deve ser feita uma requisição &lt;code&gt;POST&lt;/code&gt; no endpoint &lt;code&gt;SetEstornaVendaQrCode&lt;/code&gt;, informando os seguintes headers:&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Header&lt;/th&gt;&#xA;          &lt;th&gt;Obrigatório&lt;/th&gt;&#xA;          &lt;th&gt;Descrição&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;token&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;*&lt;/td&gt;&#xA;          &lt;td&gt;Solicite seu token junto à Multiplus Card.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;cnpj&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;*&lt;/td&gt;&#xA;          &lt;td&gt;CNPJ do estabelecimento sem ponto, traço ou barra.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;codigo&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;*&lt;/td&gt;&#xA;          &lt;td&gt;Código retornado no momento da criação da cobrança.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;&lt;strong&gt;Legenda:&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lista de PSPs</title>
+      <link>http://localhost:1313/documentacao/qrmultiplus/psps/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/documentacao/qrmultiplus/psps/</guid>
+      <description>&lt;p&gt;Atualmente os PSPs disponíveis para realização de transações são os seguintes:&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;PSP (Banco)&lt;/th&gt;&#xA;          &lt;th&gt;Valor&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Banco do Brasil&lt;/td&gt;&#xA;          &lt;td&gt;BB&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Mercado Pago&lt;/td&gt;&#xA;          &lt;td&gt;MERCADOPAGO&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Banco Efi (Gerencianet)&lt;/td&gt;&#xA;          &lt;td&gt;GERENCIANET&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;PicPay&lt;/td&gt;&#xA;          &lt;td&gt;PICPAY&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Itaú&lt;/td&gt;&#xA;          &lt;td&gt;ITAU&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Sicoob&lt;/td&gt;&#xA;          &lt;td&gt;SICOOB&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Sicred&lt;/td&gt;&#xA;          &lt;td&gt;SICREDI&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;LetsBank&lt;/td&gt;&#xA;          &lt;td&gt;LETSBANK&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Stark Bank&lt;/td&gt;&#xA;          &lt;td&gt;STARKBANK&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;MayBank&lt;/td&gt;&#xA;          &lt;td&gt;MAYBANK&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;C6 Bank&lt;/td&gt;&#xA;          &lt;td&gt;C6&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Santander&lt;/td&gt;&#xA;          &lt;td&gt;SANTANDER&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
     </item>
   </channel>
 </rss>

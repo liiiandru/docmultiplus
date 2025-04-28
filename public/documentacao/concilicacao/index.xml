@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conciliação on Multiplus Card</title>
+    <link>http://localhost:1313/documentacao/concilicacao/</link>
+    <description>Recent content in Conciliação on Multiplus Card</description>
+    <generator>Hugo</generator>
+    <language>pt</language>
+    <copyright>Copyright (c) 2025 Multiplus Card</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 16:33:54 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/documentacao/concilicacao/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introdução</title>
+      <link>http://localhost:1313/documentacao/concilicacao/introducao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/documentacao/concilicacao/introducao/</guid>
+      <description>&lt;p&gt;Esta API disponibiliza acesso ao processo de Pré-conciliação, etapa preliminar à conciliação financeira. A Pré-conciliação realiza o provisionamento das vendas com base em regras e parâmetros previamente configurados no sistema.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Autenticação</title>
+      <link>http://localhost:1313/documentacao/concilicacao/autenticacao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/documentacao/concilicacao/autenticacao/</guid>
+      <description>&lt;p&gt;Para acessar os recursos da API é necessário que seja realizada primeiramente a autenticação para gerar o JWT Token utilizado nas requisições.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Conciliação</title>
+      <link>http://localhost:1313/documentacao/concilicacao/concilicacao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/documentacao/concilicacao/concilicacao/</guid>
+      <description>&lt;p&gt;A Conciliação e Pré-Conciliação compartilham alguns enpoints, nestes estarão identificados o praâmetro necessário para obter a inbformação desejada.&lt;/p&gt;&#xA;&lt;h2 id=&#34;resumo---conciliaçãopré-conciliação&#34;&gt;Resumo - Conciliação/Pré-Conciliação&lt;/h2&gt;&#xA;&lt;p&gt;Parametros da requisição:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
