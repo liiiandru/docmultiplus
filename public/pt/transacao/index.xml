@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Transação on Multiplus Card</title>
+    <link>http://localhost:1313/pt/transacao/</link>
+    <description>Recent content in Transação on Multiplus Card</description>
+    <generator>Hugo</generator>
+    <language>pt</language>
+    <copyright>Copyright (c) 2025 Multiplus Card</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 16:33:54 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/pt/transacao/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introdução</title>
+      <link>http://localhost:1313/pt/transacao/indroducao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/transacao/indroducao/</guid>
+      <description>&lt;p&gt;Esta API disponibiliza o acesso as transações realizadas nas soluções da Multiplus Card.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Autenticação</title>
+      <link>http://localhost:1313/pt/transacao/autenticacao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/transacao/autenticacao/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
