@@ -1,5 +1,5 @@
 ---
-title: "Autenticação"
+title: "Credenciais/Tokens"
 description: ""
 lead: "Congrats on setting up a new Doks project!"
 date: 2023-09-07T16:33:54+02:00
@@ -7,7 +7,7 @@ lastmod: 2023-09-07T16:33:54+02:00
 draft: false
 weight: 1101
 seo:
-  title: "Autenticação" # custom title (optional)
+  title: "Credenciais/Tokens" # custom title (optional)
   description: "" # custom description (recommended)
   canonical: "" # custom canonical URL (optional)
   robots: "" # custom robot tags (optional)
@@ -108,9 +108,31 @@ Caso o token seja perdido, será necessário realizar uma nova autenticação pa
 
 ### Listagem de Tokens
 
+Lista os tokens gerados com suas respectivas validades.
+
 ```bash {title="Exemplo de Listagem de Token"}
 curl --location 'https://webapi.relatoriotef.com.br/usuario/token' \
 --header 'Authorization: Bearer ••••••'
+```
+
+```json {title="Exemplo de Retorno"}
+{
+    "paginaAtual": 1,
+    "itensPorPagina": 100,
+    "quantidadeDePaginas": 1,
+    "quantidadeTotalDeItens": 1,
+    "primeiroRegistro": 1,
+    "ultimoRegistro": 1,
+    "paginaAnterior": false,
+    "paginaProxima": false,
+    "data": [
+        {
+            "id": 123456,
+            "descricao": "TESTES PROD",
+            "dataExpiracao": "2027-12-31T23:59:59"
+        }
+    ]
+}
 ```
 
 ### Revogação/Exclusão de Token
