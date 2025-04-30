@@ -70,6 +70,16 @@ curl --request DELETE \
 Uma vez iniciada a venda no App PinPDV, somente será possível cancelar a transação através dele.
 {{< /callout >}}
 
+{{< callout context="caution" title="Atenção" icon="outline/alert-triangle" >}}
+Não sendo possível realizar o cancelamento da venda através do App (ex: Ocorreu um travamento e o App fechou), é possível realizar o cancelamento de forma forçada, utilizando o parâmetro `forca=true`.
+
+```bash {title="Abortar uma Venda Forçadamente"}
+curl --request DELETE \
+  --url 'https://webapi.pinpdv.com.br/pos-venda/{Identificador}?forca=true' \
+  --header 'Authorization: Bearer xyz' \
+```
+{{< /callout >}}
+
 ## Consulta de uma Venda
 
 Para consultar o status de uma venda é utilizado o endpoint `/pos-venda` e o identificador fornecido pelo sistema.

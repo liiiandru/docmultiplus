@@ -1096,6 +1096,49 @@
   </div>
 </div>
 
+<div class="callout callout-caution d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ 
+ class="outline/alert-triangle svg-inline callout-icon me-2 mb-3" id="svg-alert-triangle" role="img">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 9v4" />
+  <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" />
+  <path d="M12 16h.01" />
+</svg>
+  <div class="callout-content">
+    <div class="callout-title">
+        <p>Atenção</p>
+
+      </div>
+    <div class="callout-body">
+      <p>Não sendo possível realizar o cancelamento da venda através do App (ex: Ocorreu um travamento e o App fechou), é possível realizar o cancelamento de forma forçada, utilizando o parâmetro <code>forca=true</code>.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal has-title not-content">
+  <figcaption class="header">
+    <span class="title">Abortar uma Venda Forçadamente</span>
+  </figcaption>
+  <div class="highlight" title="Abortar uma Venda Forçadamente"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl --request DELETE <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --url <span class="s1">&#39;https://webapi.pinpdv.com.br/pos-venda/{Identificador}?forca=true&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --header <span class="s1">&#39;Authorization: Bearer xyz&#39;</span> <span class="err">\</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+    </div>
+  </div>
+</div>
+
 <h2 id="consulta-de-uma-venda">Consulta de uma Venda<a href="#consulta-de-uma-venda" class="anchor" aria-hidden="true">#</a> </h2>
 <p>Para consultar o status de uma venda é utilizado o endpoint <code>/pos-venda</code> e o identificador fornecido pelo sistema.</p>
 <div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
