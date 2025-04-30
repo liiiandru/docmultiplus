@@ -5,6 +5,6 @@ seo:
   canonical: "" # custom canonical URL (optional)
   robots: "" # custom robot tags (optional)
 ---
-# Bem-vindo ao Portal de Integração da Multiplus Card
+# Portal de Integração da Multiplus Card
 
-Este portal reúne toda a documentação necessária para integrar a automação comercial com as soluções da **Multiplus Card**. Aqui, você encontrará guias detalhados, exemplos de código e boas práticas para diferentes formas de integração, garantindo que sua aplicação possa se conectar de forma segura e eficiente.
+Este portal é o ponto de partida para desenvolvedores integrarem com as soluções da **Multiplus Card**. Aqui você encontra a documentação de todos os produtos, exemplos práticos e boas práticas para acelerar sua integração de forma segura e eficiente.

@@ -7,12 +7,12 @@
 <link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="http://localhost:1313/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 <script 
-  src="/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  src="http://localhost:1313/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
   integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
 </script>
 
 
-<link rel="stylesheet" href="/main.dc2f5458ab98613899cfadbb551e078821f7645691e4dfc57bb48d7697fe7be6885b7aea93d9ab15c53a25e38128c09220a1b4dcab934e04d1a7b374499b9872.css" integrity="sha512-3C9UWKuYYTiZz627VR4HiCH3ZFaR5N/Fe7SNdpf&#43;e&#43;aIW3rqk9mrFcU6JeOBKMCSIKG03KuTTgTRp7N0SZuYcg==" crossorigin="anonymous">
+<link rel="stylesheet" href="http://localhost:1313/main.dc2f5458ab98613899cfadbb551e078821f7645691e4dfc57bb48d7697fe7be6885b7aea93d9ab15c53a25e38128c09220a1b4dcab934e04d1a7b374499b9872.css" integrity="sha512-3C9UWKuYYTiZz627VR4HiCH3ZFaR5N/Fe7SNdpf&#43;e&#43;aIW3rqk9mrFcU6JeOBKMCSIKG03KuTTgTRp7N0SZuYcg==" crossorigin="anonymous">
 
 <noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/pt/documentacao/tef/webservice/descricaocampos/">
 
@@ -23,32 +23,32 @@
 <meta name="description" content="Congrats on setting up a new Doks project!">
 
     
-    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="http://localhost:1313/favicon.ico" sizes="32x32">
     
-      <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+      <link rel="icon" href="http://localhost:1313/favicon.svg" type="image/svg+xml">
     
       <link
         rel="apple-touch-icon"
-        href="/apple-touch-icon.png"
+        href="http://localhost:1313/apple-touch-icon.png"
         sizes="180x180"
         type="image/png"
       >
       <link
         rel="icon"
-        href="/favicon-192x192.png"
+        href="http://localhost:1313/favicon-192x192.png"
         sizes="192x192"
         type="image/png"
       >
       <link
         rel="icon"
-        href="/favicon-512x512.png"
+        href="http://localhost:1313/favicon-512x512.png"
         sizes="512x512"
         type="image/png"
       >
-<link rel="manifest" href="/manifest.webmanifest">
+<link rel="manifest" href="http://localhost:1313/manifest.webmanifest">
 
 <meta property="og:url" content="http://localhost:1313/pt/documentacao/tef/webservice/descricaocampos/">
-  <meta property="og:site_name" content="Multiplus Card">
+  <meta property="og:site_name" content="Multiplus Card [DEV]">
   <meta property="og:title" content="Descrição dos Campos">
   <meta property="og:description" content="Campo Conteúdo / Descrição 000-000 HEADER Finalidade: Indica o início do arquivo e o tipo de operação relacionada ao arquivo. Formato: Alfanumérico de 3 bytes. Conteúdos válidos: ATV - Verifica se o Gerenciador Padrão está ativo ADM - Administrativa REL - Relatório CRT - Cartão CPF - Solicita o CPF na tela do pinpad CEL - Recarga de Celular CNC - Cancelamento CNF - Confirmação de finalização da venda e impressão do cupom NCN - Não confirmação de finalização da venda por desistência do cliente ou erro na impressão do cupom. 001-000 IDENTIFICAÇÃO Finalidade: Indica o número de controle da solicitação que está sendo feita. Este número é gerado pelo aplicativo de automação comercial, o qual deverá colocar um conteúdo diferente a cada nova solicitação. Este mesmo conteúdo é devolvido nos arquivos de resposta. Formato: Numérico de até 10 bytes. 002-000 DOCUMENTO FISCAL VINCULADO Finalidade: Número do documento fiscal vinculado à forma de pagamento ou finalização. Formato: Numérico de até 12 bytes. 003-000 VALOR TOTAL Finalidade: Valor total desta forma de pagamento. Formato: Numérico de até 12 bytes, sendo duas casas decimais sem a virgula separadora 004-000 MOEDA Finalidade: Indica a moeda utilizada na operação Formato: Numérico de 1 byte Conteúdos Válidos: 0 – para Real 1 – para Dólar 009-000 STATUS DA TRANSAÇÃO Finalidade: Indica se a transação foi aprovada ou recusada e qual o motivo da recusa. Formato: Alfanumérico de até 3 bytes. Conteúdos Válidos: 0 – para transação aprovada Outro valor – transação negada 010-0X0 NOME DA REDE (OPERADORA/CREDENCIADORA) Finalidade: Nome da rede que tratou a transação Formato: Alfanumérico de até 16 bytes Conteúdos Válidos: CIELO REDE GETNET BIN STONE etc. 010-0X1 CNPJ DA REDE (OPERADORA/CREDENCIADORA) Finalidade: Informar o CNPJ da rede que tratou a transação Formato: Alfanumérico de até 14 bytes 010-0X2 CÓDIGO SAT DA REDE Finalidade: Informar o código SAT da rede que tratou a transação Formato: Alfanumérico de até 3 bytes 011-00X TIPO DA TRANSAÇÃO Finalidade: Código identificando o tipo da transação executada Formato: Numérico de até 2 bytes. Conteúdos Válidos: 00- Administrativas – Outras (Reimpressão, Iniciação de Terminal etc.) 01- Administrativa – Fechamento/Transmissão de Lote 10- Cartão de Crédito à Vista 11- Cartão de Crédito Parcelado pelo Estabelecimento 12- Cartão de Crédito Parcelado pela Administradora 13- Pré-Autorização com Cartão de Crédito 20- Cartão de Débito à Vista 21- Cartão de Débito Pré-Datado 22- Cartão de Débito Parcelada 23- Cartão de Débito à Vista Forçada 24- Cartão de Débito Pré-Datado Forçada 25- Cartão de Débito Pré-Datado sem Garantia 26- Cartão de Débito Pré-Pago 27- Cartão de Crédito Pré-Pago 30- Outros Cartões 40- CDC 41- Consulta CDC 50- Convênio 60- Voucher 99- Outras Obs.: No cancelamento de venda feito através da operação ADM (Administrativa) este campo conterá o tipo da transação de venda que foi cancelada. Exemplo-1: 000-000 = ADM 011-000 = 00 (Administrativas: Reimpressão, Iniciação de Terminal etc.) Exemplo-2: 000-000 = ADM 011-000 = 01 (Administrativa: Fechamento/Transmissão de Lote) Exemplo-3: 000-000 = ADM 011-000 = 03 (Cancelamento Genérico (Crédito, Débito, Private Label, qualquer que tenha sido a modalidade: à Vista, Parcelado pelo Estabelecimento ou pela Administradora)) Exemplo-4: 000-000 = ADM 011-000 = 10 (Cancelamento de Cartão de Crédito, qualquer que tenha sido a modalidade: à Vista, Parcelado pelo Estabelecimento ou pela Administradora) Exemplo-5: 000-000 = ADM 011-000 = 20 (Cancelamento de Cartão de Débito, qualquer que tenha sido a modalidade: à Vista, Pré-Datado, Parcelado etc.) 012-00X NÚMERO DA TRANSAÇÃO - NSU Finalidade: Indica o número de sequência (NSU – Número Sequencial Único) da transação atribuído pelo Host (Sistema das Redes de Cartão que recebe e trata as solicitações das transações TEF). Quando este campo é enviado do Gerenciador Padrão para o Aplicativo de Automação Comercial, ele representa o NSU do Host estabelecido para a transação. Quando este campo é enviado do Aplicativo de Automação Comercial para o Gerenciador Padrão, ele representa o NSU da transação a ser tratada (cancelada, confirmada etc.) Formato: Alfanumérico de até 12 bytes. 013-00X CÓDIGO DE AUTORIZAÇÃO DA TRANSAÇÃO Finalidade: Indica o número de autorização da transação atribuída pelo Host. Cada transação TEF possui um número de autorização. Formato: Alfanumérico de até 6 bytes. 014-000 NÚMERO DO LOTE DA TRANSAÇÃO Finalidade: Indica o número de lote da transação Formato: Alfanumérico de até 10 bytes. 015-000 TIMESTAMP DA TRANSAÇÃO HOST Finalidade: Indica a data e hora da transação no Host Formato: Numérico – DDMMHHMMSS 016-000 TIMESTAMP DA TRANSAÇÃO LOCAL Finalidade: Indica a data e hora da transação no ponto de venda. Formato: Numérico – DDMMHHMMSS 017-00X TIPO PARCELAMENTO Finalidade: Indica o tipo de parcelamento aplicado à operação Formato: Numérico de 1 byte Conteúdos Válidos: 0 – Parcelado estabelecimento 1 – Parcelado administradora 018-00X QUANTIDADE DE PARCELAS Finalidade: Indica o número de parcelas no caso de transações Parceladas (Crédito ou Débito). Formato: Numérico de até 2 bytes. 019-yyy DATA VENCIMENTO DA PARCELA Finalidade: Indica a data em que foi agendada a parcela (yyy). A parcela é indicada pelos três caracteres (yyy) do campo correspondente, onde yyy será igual a 001, 002, … respectivamente para cada uma das parcelas definidas no campo QUANTIDADE DE PARCELAS. Formato: Numérico – DDMMAAAA 020-yyy VALOR DA PARCELA Finalidade: Indica o valor da parcela (yyy). A parcela é indicada pelos três caracteres (yyy) do campo correspondente, onde yyy será igual a 001, 002, … respectivamente para cada uma das parcelas definidas no campo QUANTIDADE DE PARCELAS. Formato: Numérico de até 12 bytes, sendo duas casas decimais sem a vírgula separadora. 021-yyy NÚMERO DA TRANSAÇÃO – NSU DA PARCELA Finalidade: Indica o NSU da parcela (yyy). A parcela é indicada pelos três caracteres (yyy) do campo correspondente, onde yyy será igual a 001, 002, … respectivamente para cada uma das parcelas definidas no campo QUANTIDADE DE PARCELAS. Formato: Numérico de até 12 bytes. 022-000 DATA DA TRANSAÇÃO - COMPROVANTE Finalidade: Indica a data da transação Formato: Numérico – DDMMAAAA 023-000 HORA DA TRANSAÇÃO (LOCAL) - COMPROVANTE Finalidade: Indica a hora da transação Formato: Numérico – HHMMSS 024-000 DATA PRÉ-DATADO Finalidade: Contém data de agendamento para pré-datado. Formato: Numérico – DDMMAAAA 025-000 NÚMERO DA TRANSAÇÃO CANCELADA - NSU Finalidade: Número de sequência (NSU) da transação cancelada. Formato: Numérico de até 12 bytes. 026-000 TIMESTAMP DA TRANSAÇÃO CANCELADA - Host Finalidade: Contém a data e hora da transação cancelada no Host. Formato: Numérico – DDMMHHMMSS 027-000 FINALIZAÇÃO Finalidade: Dados recebidos do Módulo TEF que executou a transação e que devem ser devolvidos no comando de finalização de uma venda Formato: Alfanumérico de até 32 bytes 028-000 QUANTIDADE DE LINHAS DO COMPROVANTE Finalidade: Indica a quantidade de linhas do comprovante. Quando não há comprovante o campo deve conter zero. Formato: Numérico de até 3 bytes 028-001 QUANTIDADE DE LINHAS DO 1º COMPROVANTE Finalidade: Indica a quantidade de linhas do 1º comprovante (Caso possuir 2 vias, o corte será realizado após o número indicado nesse campo). Para retornar esse campo, precisa alterar o Layout de Integração para “TEF_DIAL (c/ linha 028-001)” nas configurações do Client TEF, na aba “Parâmetros”. Formato: Numérico de até 3 bytes 029-yyy IMAGEM DE CADA LINHA DO COMPROVANTE Finalidade: Apresenta a imagem a ser impressa de cada uma das linhas do comprovante. A linha de impressão é indicada pelos três caracteres (yyy) do campo correspondente, onde yyy será igual a 001, 002, … respectivamente para cada uma das linhas definidas no campo QUANTIDADE DE LINHAS DO COMPROVANTE. Formato: Alfanumérico de até 40 bytes. 030-000 TEXTO ESPECIAL OPERADOR Finalidade: Texto que, quando presente, deve ser apresentado pelo aplicativo de Automação Comercial ao operador. Formato: Alfanumérico de até 40 bytes. 031-000 TEXTO ESPECIAL CLIENTE Finalidade: Texto que, quando presente, deve ser apresentado pelo aplicativo de Automação Comercial ao cliente. Formato: Alfanumérico de até 40 bytes. 040-00X NOME DA ADMINISTRADORA (BANDEIRA) Finalidade: Identifica a Administradora do Cartão utilizado. Formato: Alfanumérico de até 12 bytes. Conteúdos Válidos: ELECTRON MAESTRO MASTERCARD VISA ELO GOODCARD VALECARD etc. 740-00X NÚMEROS DO CARTÃO Finalidade: Exibe o número do cartão que realizou a transação. Formato: Numérico de 16 bytes. Conteúdos Válidos: 0000000000000000 a 9999990000009999 741-00X NOME DO PORTADOR DO CARTÃO Finalidade: Exibe o nome do portador do cartão que realizou a transação Formato: Alfanumérico de até 20 bytes. 742-00X VALIDADE DO CARTÃO DO PORTADOR Finalidade: Exibe o número de validade do cartão que realizou a transação Formato: Numérico de 4 bytes. 743-00X VALOR RESTANTE Finalidade: Exibe o valor restante à ser pago quando utilizada a função de múltiplos cartões. Formato: Numérico de até 12 bytes, sendo duas casas decimais sem a virgula separadora. 999-999 TRAILER - REGISTRO FINAL Finalidade: Indica fim do arquivo. Formato: Numérico de 1 byte – Constante zero Campos Opcionais - Integração de forma direta – Requisição com definições da transação Campo Conteúdo / Descrição 250-000 Conteúdos Válidos: KM (Venda Frota) 250-001 Conteúdos Válidos: Placa (Venda Frota) 250-002 Conteúdos Válidos: Matrícula (Venda Frota) 261-000 Conteúdos Válidos: Quantidade de Itens 261-011 Conteúdos Válidos (ITEM 01): Código do Produto 261-012 Conteúdos Válidos (ITEM 01): Descrição do Produto 261-013 Conteúdos Válidos (ITEM 01): Quantidade (3 Casas decimais) 261-014 Conteúdos Válidos (ITEM 01): Valor Unitário (3 Casas decimais) 261-015 Conteúdos Válidos (ITEM 01): Desconto (2 Casas decimais) (Venda Frota) 261-016 Conteúdos Válidos (ITEM 01): Valor Total (2 Casas decimais) 261-021 Conteúdos Válidos (ITEM 02): Código do Produto 261-022 Conteúdos Válidos (ITEM 02): Descrição do Produto 261-023 Conteúdos Válidos (ITEM 02): Quantidade (3 Casas decimais) 261-024 Conteúdos Válidos (ITEM 02): Valor Unitário (3 Casas decimais) 261-025 Conteúdos Válidos (ITEM 02): Desconto (2 Casas decimais) (Venda Frota) 261-026 Conteúdos Válidos (ITEM 02): Valor Total (2 Casas decimais) 261-XX1 Conteúdos Válidos (ITEM XX – Alterar o ‘XX’ pelo número do item de 01 até 99): Código do Produto 261-XX2 Conteúdos Válidos (ITEM XX – Alterar o ‘XX’ pelo número do item de 01 até 99): Descrição do Produto 261-XX3 Conteúdos Válidos (ITEM XX – Alterar o ‘XX’ pelo número do item de 01 até 99): Quantidade (3 Casas decimais) 261-XX4 Conteúdos Válidos (ITEM XX – Alterar o ‘XX’ pelo número do item de 01 até 99): Valor Unitário (3 Casas decimais) 261-XX5 Conteúdos Válidos (ITEM XX – Alterar o ‘XX’ pelo número do item de 01 até 99): Desconto (2 Casas decimais) (Venda Frota) 261-XX6 Conteúdos Válidos (ITEM XX – Alterar o ‘XX’ pelo número do item de 01 até 99): Valor Total (2 Casas decimais) 800-001 Conteúdos Válidos: 0 = Crédito 1 = Débito 2 = Private Label 3 = Débito CDC 4 = Link de Pagamento 5 = Pix 6 = Lista de Link de Pagamento 7 = Parcele Mais 800-002 Conteúdos Válidos: 0 = A vista 1 = Parcelado 800-003 Conteúdos Válidos: 0 = Parcelado ADM (Juros da transação cobrado do dono do cartão) 1 = Parcelado Loja (Juros da transação cobrado da loja) 800-004 Conteúdos Válidos: (Qtde. de parcelas) 800-005 Conteúdos Válidos: (CNPJ da empresa) 800-006 Conteúdos Válidos: 1 = PINPAD (Finalização de vendas através do equipamento pinpad) 2 = CIELO LIO (Finalização de vendas através do equipamento Cielo Lio) 3 = PINPDV (Finalização de vendas através do aplicativo PINPDV no SmartPOS) 800-007 Conteúdos Válidos: (Código de controle de transação) 800-008 Conteúdos Válidos: (0-Exibe tela para consultar CPF / 1-Solicita CPF somente no pinpad) 800-009 Conteúdos Válidos: Texto Livre (Link de Pagamento) 800-010 Conteúdos Válidos: Quantidade das parcelas (Link de Pagamento) 800-011 Conteúdos Válidos: Telefone com DDD (Link de Pagamento) 800-012 Conteúdos Válidos: Texto Livre (Link de Pagamento) 800-013 Conteúdos Válidos: Parâmetros Split, válido somente para Multiplus Pay 800-014 Conteúdos Válidos: Campo Livre Split, válido somente para Multiplus Pay">
   <meta property="og:locale" content="pt">
@@ -117,7 +117,7 @@
 <header class="navbar navbar-expand-lg">
   <div class="container-lg">
   
-    <a class="navbar-brand me-auto me-lg-3" href="/pt/">Multiplus Card</a>
+    <a class="navbar-brand me-auto me-lg-3" href="http://localhost:1313/pt/">Multiplus Card [DEV]</a>
 
     
     
@@ -168,31 +168,31 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/tef/dll/transparente/introducao/">Introdução</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/transparente/introducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/transparente/configuracao/">Instalação/Configuração</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/transparente/configuracao/">Instalação/Configuração</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/transparente/funcoes/">Funções da DLL</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/transparente/funcoes/">Funções da DLL</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/transparente/pinpad/">Funções de Pinpad</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/transparente/pinpad/">Funções de Pinpad</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/transparente/intgrqrmultiplus/">Integração com QRMultiplus (PIX)</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/transparente/intgrqrmultiplus/">Integração com QRMultiplus (PIX)</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/transparente/intgrpinpdv/">Integração com App PinPDV Lite</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/transparente/intgrpinpdv/">Integração com App PinPDV Lite</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/transparente/solucaoproblemas/">Solução de Problemas</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/transparente/solucaoproblemas/">Solução de Problemas</a>
   </li>
       </ul>
     </details>
@@ -204,19 +204,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/tef/dll/comtela/introducao/">Introdução</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/comtela/introducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/comtela/configuracao/">Instalação/Configuração</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/comtela/configuracao/">Instalação/Configuração</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/comtela/funcoes/">Funções da DLL</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/comtela/funcoes/">Funções da DLL</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/comtela/retorno/">Layout do Retorno</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/comtela/retorno/">Layout do Retorno</a>
   </li>
       </ul>
     </details>
@@ -228,27 +228,27 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/tef/tefdial/introducao/">Introdução</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/tefdial/introducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/tefdial/configuracao/">Configuração/Instalação</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/tefdial/configuracao/">Configuração/Instalação</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/tefdial/fluxoutilizacao/">Fluxo de Utilização</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/tefdial/fluxoutilizacao/">Fluxo de Utilização</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/tefdial/layoutcomunicacao/">Layout das Mensagens</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/tefdial/layoutcomunicacao/">Layout das Mensagens</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/tefdial/descricaocampos/">Descrição dos Campos</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/tefdial/descricaocampos/">Descrição dos Campos</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/tefdial/exemplocomunicacao/">Exemplo de Comunicação</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/tefdial/exemplocomunicacao/">Exemplo de Comunicação</a>
   </li>
       </ul>
     </details>
@@ -260,39 +260,39 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/tef/webservice/introducao/">Introdução</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/webservice/introducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/webservice/configuracao/">Instalação/Configuração</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/webservice/configuracao/">Instalação/Configuração</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/webservice/comunicacao/">Fluxo de Comunicação</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/webservice/comunicacao/">Fluxo de Comunicação</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/webservice/criacaotrn/">Criação de Transações</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/webservice/criacaotrn/">Criação de Transações</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/webservice/consultatrn/">Consulta de Transações</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/webservice/consultatrn/">Consulta de Transações</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/webservice/layoutheader/">Layout do Header CONTEUDO</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/webservice/layoutheader/">Layout do Header CONTEUDO</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/webservice/tiposcampo/">Tipos de Campos</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/webservice/tiposcampo/">Tipos de Campos</a>
   </li>
 
   <li class="active" >
-      <a aria-current="page" href="/pt/documentacao/tef/webservice/descricaocampos/">Descrição dos Campos</a>
+      <a aria-current="page" href="http://localhost:1313/pt/documentacao/tef/webservice/descricaocampos/">Descrição dos Campos</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/webservice/exemplotrn/">Exemplo de Utilização</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/webservice/exemplotrn/">Exemplo de Utilização</a>
   </li>
       </ul>
     </details>
@@ -307,35 +307,35 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/pinpdv/introducao/">Introdução</a>
+      <a href="http://localhost:1313/pt/documentacao/pinpdv/introducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/pinpdv/infocomuns/">Informações Comuns</a>
+      <a href="http://localhost:1313/pt/documentacao/pinpdv/infocomuns/">Informações Comuns</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/pinpdv/produtos/">Cadastro de Produtos</a>
+      <a href="http://localhost:1313/pt/documentacao/pinpdv/produtos/">Cadastro de Produtos</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/pinpdv/prevenda/">Pré-venda</a>
+      <a href="http://localhost:1313/pt/documentacao/pinpdv/prevenda/">Pré-venda</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/pinpdv/postef/">POS TEF</a>
+      <a href="http://localhost:1313/pt/documentacao/pinpdv/postef/">POS TEF</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/pinpdv/vendaexpressa/">Venda Expressa</a>
+      <a href="http://localhost:1313/pt/documentacao/pinpdv/vendaexpressa/">Venda Expressa</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/pinpdv/consultatrn/">Consulta de Transações</a>
+      <a href="http://localhost:1313/pt/documentacao/pinpdv/consultatrn/">Consulta de Transações</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/pinpdv/adquirentes/">Adquirentes/Terminais</a>
+      <a href="http://localhost:1313/pt/documentacao/pinpdv/adquirentes/">Adquirentes/Terminais</a>
   </li>
       </ul>
     </details>
@@ -347,31 +347,31 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/introducao/">Introdução</a>
+      <a href="http://localhost:1313/pt/documentacao/qrmultiplus/introducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/configuracao/">Configuração</a>
+      <a href="http://localhost:1313/pt/documentacao/qrmultiplus/configuracao/">Configuração</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/criarcobranca/">Criação da Cobrança</a>
+      <a href="http://localhost:1313/pt/documentacao/qrmultiplus/criarcobranca/">Criação da Cobrança</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/consultarcobranca/">Consulta de Status</a>
+      <a href="http://localhost:1313/pt/documentacao/qrmultiplus/consultarcobranca/">Consulta de Status</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/removercobranca/">Remoção de Cobrança</a>
+      <a href="http://localhost:1313/pt/documentacao/qrmultiplus/removercobranca/">Remoção de Cobrança</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/cancelarcobranca/">Cancelamento de Cobrança</a>
+      <a href="http://localhost:1313/pt/documentacao/qrmultiplus/cancelarcobranca/">Cancelamento de Cobrança</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/psps/">Lista de PSPs</a>
+      <a href="http://localhost:1313/pt/documentacao/qrmultiplus/psps/">Lista de PSPs</a>
   </li>
       </ul>
     </details>
@@ -383,15 +383,15 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/concilicacao/introducao/">Introdução</a>
+      <a href="http://localhost:1313/pt/documentacao/concilicacao/introducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/concilicacao/autenticacao/">Autenticação</a>
+      <a href="http://localhost:1313/pt/documentacao/concilicacao/autenticacao/">Autenticação</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/concilicacao/concilicacao/">Conciliação</a>
+      <a href="http://localhost:1313/pt/documentacao/concilicacao/concilicacao/">Conciliação</a>
   </li>
       </ul>
     </details>
@@ -403,27 +403,27 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/linkpago/introducao/">Introdução</a>
+      <a href="http://localhost:1313/pt/documentacao/linkpago/introducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/linkpago/checkout/">Checkout</a>
+      <a href="http://localhost:1313/pt/documentacao/linkpago/checkout/">Checkout</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/linkpago/checkouttransparente/">Checkout Transparente</a>
+      <a href="http://localhost:1313/pt/documentacao/linkpago/checkouttransparente/">Checkout Transparente</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/linkpago/manutencao/">Manutenção de Link de Pagamento</a>
+      <a href="http://localhost:1313/pt/documentacao/linkpago/manutencao/">Manutenção de Link de Pagamento</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/linkpago/obtertrn/">Obtenção de Transações</a>
+      <a href="http://localhost:1313/pt/documentacao/linkpago/obtertrn/">Obtenção de Transações</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/linkpago/recorrencia/">Recorrência</a>
+      <a href="http://localhost:1313/pt/documentacao/linkpago/recorrencia/">Recorrência</a>
   </li>
       </ul>
     </details>
@@ -435,19 +435,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/transacao/indroducao/">Introdução</a>
+      <a href="http://localhost:1313/pt/documentacao/transacao/indroducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/transacao/autenticacao/">Autenticação</a>
+      <a href="http://localhost:1313/pt/documentacao/transacao/autenticacao/">Autenticação</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/transacao/consulta/">Consulta de Transações</a>
+      <a href="http://localhost:1313/pt/documentacao/transacao/consulta/">Consulta de Transações</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/transacao/transacaopos/">Transações de POS</a>
+      <a href="http://localhost:1313/pt/documentacao/transacao/transacaopos/">Transações de POS</a>
   </li>
       </ul>
     </details>
@@ -459,7 +459,7 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/autenticacao/autenticacao/">Credenciais/Tokens</a>
+      <a href="http://localhost:1313/pt/documentacao/autenticacao/autenticacao/">Credenciais/Tokens</a>
   </li>
       </ul>
     </details>
@@ -485,7 +485,7 @@
     
     <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Multiplus Card</h5>
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Multiplus Card [DEV]</h5>
         <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -501,12 +501,6 @@
               </li>
             <li class="nav-item">
                 <a class="nav-link" href="http://localhost:1313/pt/exemplos/">Exemplos</a>
-              </li>
-            <li class="nav-item">
-                <a class="nav-link" href="http://localhost:1313/pt/tutoriais">Tutoriais</a>
-              </li>
-            <li class="nav-item">
-                <a class="nav-link" href="http://localhost:1313/pt/faq">FAQ</a>
               </li>
             </ul>
 
@@ -545,7 +539,7 @@
             <li><hr class="dropdown-divider"></li>
 
             
-              <li><a class="dropdown-item untranslated" rel="alternate" href="/en" hreflang="en" lang="en">English</a></li>
+              <li><a class="dropdown-item untranslated" rel="alternate" href="http://localhost:1313/en" hreflang="en" lang="en">English</a></li>
             
               
           </ul>
@@ -648,31 +642,31 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/tef/dll/transparente/introducao/">Introdução</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/transparente/introducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/transparente/configuracao/">Instalação/Configuração</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/transparente/configuracao/">Instalação/Configuração</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/transparente/funcoes/">Funções da DLL</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/transparente/funcoes/">Funções da DLL</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/transparente/pinpad/">Funções de Pinpad</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/transparente/pinpad/">Funções de Pinpad</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/transparente/intgrqrmultiplus/">Integração com QRMultiplus (PIX)</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/transparente/intgrqrmultiplus/">Integração com QRMultiplus (PIX)</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/transparente/intgrpinpdv/">Integração com App PinPDV Lite</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/transparente/intgrpinpdv/">Integração com App PinPDV Lite</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/transparente/solucaoproblemas/">Solução de Problemas</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/transparente/solucaoproblemas/">Solução de Problemas</a>
   </li>
       </ul>
     </details>
@@ -684,19 +678,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/tef/dll/comtela/introducao/">Introdução</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/comtela/introducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/comtela/configuracao/">Instalação/Configuração</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/comtela/configuracao/">Instalação/Configuração</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/comtela/funcoes/">Funções da DLL</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/comtela/funcoes/">Funções da DLL</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/dll/comtela/retorno/">Layout do Retorno</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/dll/comtela/retorno/">Layout do Retorno</a>
   </li>
       </ul>
     </details>
@@ -708,27 +702,27 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/tef/tefdial/introducao/">Introdução</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/tefdial/introducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/tefdial/configuracao/">Configuração/Instalação</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/tefdial/configuracao/">Configuração/Instalação</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/tefdial/fluxoutilizacao/">Fluxo de Utilização</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/tefdial/fluxoutilizacao/">Fluxo de Utilização</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/tefdial/layoutcomunicacao/">Layout das Mensagens</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/tefdial/layoutcomunicacao/">Layout das Mensagens</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/tefdial/descricaocampos/">Descrição dos Campos</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/tefdial/descricaocampos/">Descrição dos Campos</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/tefdial/exemplocomunicacao/">Exemplo de Comunicação</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/tefdial/exemplocomunicacao/">Exemplo de Comunicação</a>
   </li>
       </ul>
     </details>
@@ -740,39 +734,39 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/tef/webservice/introducao/">Introdução</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/webservice/introducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/webservice/configuracao/">Instalação/Configuração</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/webservice/configuracao/">Instalação/Configuração</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/webservice/comunicacao/">Fluxo de Comunicação</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/webservice/comunicacao/">Fluxo de Comunicação</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/webservice/criacaotrn/">Criação de Transações</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/webservice/criacaotrn/">Criação de Transações</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/webservice/consultatrn/">Consulta de Transações</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/webservice/consultatrn/">Consulta de Transações</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/webservice/layoutheader/">Layout do Header CONTEUDO</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/webservice/layoutheader/">Layout do Header CONTEUDO</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/webservice/tiposcampo/">Tipos de Campos</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/webservice/tiposcampo/">Tipos de Campos</a>
   </li>
 
   <li class="active" >
-      <a aria-current="page" href="/pt/documentacao/tef/webservice/descricaocampos/">Descrição dos Campos</a>
+      <a aria-current="page" href="http://localhost:1313/pt/documentacao/tef/webservice/descricaocampos/">Descrição dos Campos</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/tef/webservice/exemplotrn/">Exemplo de Utilização</a>
+      <a href="http://localhost:1313/pt/documentacao/tef/webservice/exemplotrn/">Exemplo de Utilização</a>
   </li>
       </ul>
     </details>
@@ -787,35 +781,35 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/pinpdv/introducao/">Introdução</a>
+      <a href="http://localhost:1313/pt/documentacao/pinpdv/introducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/pinpdv/infocomuns/">Informações Comuns</a>
+      <a href="http://localhost:1313/pt/documentacao/pinpdv/infocomuns/">Informações Comuns</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/pinpdv/produtos/">Cadastro de Produtos</a>
+      <a href="http://localhost:1313/pt/documentacao/pinpdv/produtos/">Cadastro de Produtos</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/pinpdv/prevenda/">Pré-venda</a>
+      <a href="http://localhost:1313/pt/documentacao/pinpdv/prevenda/">Pré-venda</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/pinpdv/postef/">POS TEF</a>
+      <a href="http://localhost:1313/pt/documentacao/pinpdv/postef/">POS TEF</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/pinpdv/vendaexpressa/">Venda Expressa</a>
+      <a href="http://localhost:1313/pt/documentacao/pinpdv/vendaexpressa/">Venda Expressa</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/pinpdv/consultatrn/">Consulta de Transações</a>
+      <a href="http://localhost:1313/pt/documentacao/pinpdv/consultatrn/">Consulta de Transações</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/pinpdv/adquirentes/">Adquirentes/Terminais</a>
+      <a href="http://localhost:1313/pt/documentacao/pinpdv/adquirentes/">Adquirentes/Terminais</a>
   </li>
       </ul>
     </details>
@@ -827,31 +821,31 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/introducao/">Introdução</a>
+      <a href="http://localhost:1313/pt/documentacao/qrmultiplus/introducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/configuracao/">Configuração</a>
+      <a href="http://localhost:1313/pt/documentacao/qrmultiplus/configuracao/">Configuração</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/criarcobranca/">Criação da Cobrança</a>
+      <a href="http://localhost:1313/pt/documentacao/qrmultiplus/criarcobranca/">Criação da Cobrança</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/consultarcobranca/">Consulta de Status</a>
+      <a href="http://localhost:1313/pt/documentacao/qrmultiplus/consultarcobranca/">Consulta de Status</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/removercobranca/">Remoção de Cobrança</a>
+      <a href="http://localhost:1313/pt/documentacao/qrmultiplus/removercobranca/">Remoção de Cobrança</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/cancelarcobranca/">Cancelamento de Cobrança</a>
+      <a href="http://localhost:1313/pt/documentacao/qrmultiplus/cancelarcobranca/">Cancelamento de Cobrança</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/qrmultiplus/psps/">Lista de PSPs</a>
+      <a href="http://localhost:1313/pt/documentacao/qrmultiplus/psps/">Lista de PSPs</a>
   </li>
       </ul>
     </details>
@@ -863,15 +857,15 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/concilicacao/introducao/">Introdução</a>
+      <a href="http://localhost:1313/pt/documentacao/concilicacao/introducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/concilicacao/autenticacao/">Autenticação</a>
+      <a href="http://localhost:1313/pt/documentacao/concilicacao/autenticacao/">Autenticação</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/concilicacao/concilicacao/">Conciliação</a>
+      <a href="http://localhost:1313/pt/documentacao/concilicacao/concilicacao/">Conciliação</a>
   </li>
       </ul>
     </details>
@@ -883,27 +877,27 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/linkpago/introducao/">Introdução</a>
+      <a href="http://localhost:1313/pt/documentacao/linkpago/introducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/linkpago/checkout/">Checkout</a>
+      <a href="http://localhost:1313/pt/documentacao/linkpago/checkout/">Checkout</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/linkpago/checkouttransparente/">Checkout Transparente</a>
+      <a href="http://localhost:1313/pt/documentacao/linkpago/checkouttransparente/">Checkout Transparente</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/linkpago/manutencao/">Manutenção de Link de Pagamento</a>
+      <a href="http://localhost:1313/pt/documentacao/linkpago/manutencao/">Manutenção de Link de Pagamento</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/linkpago/obtertrn/">Obtenção de Transações</a>
+      <a href="http://localhost:1313/pt/documentacao/linkpago/obtertrn/">Obtenção de Transações</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/linkpago/recorrencia/">Recorrência</a>
+      <a href="http://localhost:1313/pt/documentacao/linkpago/recorrencia/">Recorrência</a>
   </li>
       </ul>
     </details>
@@ -915,19 +909,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/transacao/indroducao/">Introdução</a>
+      <a href="http://localhost:1313/pt/documentacao/transacao/indroducao/">Introdução</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/transacao/autenticacao/">Autenticação</a>
+      <a href="http://localhost:1313/pt/documentacao/transacao/autenticacao/">Autenticação</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/transacao/consulta/">Consulta de Transações</a>
+      <a href="http://localhost:1313/pt/documentacao/transacao/consulta/">Consulta de Transações</a>
   </li>
 
   <li>
-      <a href="/pt/documentacao/transacao/transacaopos/">Transações de POS</a>
+      <a href="http://localhost:1313/pt/documentacao/transacao/transacaopos/">Transações de POS</a>
   </li>
       </ul>
     </details>
@@ -939,7 +933,7 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/pt/documentacao/autenticacao/autenticacao/">Credenciais/Tokens</a>
+      <a href="http://localhost:1313/pt/documentacao/autenticacao/autenticacao/">Credenciais/Tokens</a>
   </li>
       </ul>
     </details>
@@ -1309,7 +1303,7 @@
 				</div>
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Anterior</div>
-					<a href="/pt/documentacao/tef/webservice/tiposcampo/" class="stretched-link text-reset text-decoration-none">Tipos de Campos</a>
+					<a href="http://localhost:1313/pt/documentacao/tef/webservice/tiposcampo/" class="stretched-link text-reset text-decoration-none">Tipos de Campos</a>
 				</div>
 			</div>
 		</div>
@@ -1318,7 +1312,7 @@
 			<div class="card-body d-flex justify-content-end">
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Próximo</div>
-					<a href="/pt/documentacao/tef/webservice/exemplotrn/" class="stretched-link text-reset text-decoration-none">Exemplo de Utilização</a>
+					<a href="http://localhost:1313/pt/documentacao/tef/webservice/exemplotrn/" class="stretched-link text-reset text-decoration-none">Exemplo de Utilização</a>
 				</div>
 				<div class="d-flex flex-column justify-content-center">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -1347,7 +1341,7 @@
     <div class="row">
       <div class="col-lg-8 text-center text-lg-start">
         <ul class="list-inline">
-          <li class="list-inline-item"><a class="text-muted" href="/privacy/">Política de Privacidade</a></li>
+          
         </ul>
       </div>
       <div class="col-lg-8 text-center text-lg-end">
@@ -1362,7 +1356,7 @@
     
 
 <script async
-  src="/js/app.47f6a6c3399e53195d63748449649495beae4647f054819de74bf1b3798e946e.js"
+  src="http://localhost:1313/js/app.47f6a6c3399e53195d63748449649495beae4647f054819de74bf1b3798e946e.js"
   integrity="sha256-R/amwzmeUxldY3SESWSUlb6uRkfwVIGd50vxs3mOlG4=">
 </script>
 
@@ -1371,11 +1365,11 @@
 
 
 <script async
-  src="/js/flexsearch.pt.623541f6d70c792115623f5c604496d8ee6f71cd620181a46dba403063824194.js"
+  src="http://localhost:1313/js/flexsearch.pt.623541f6d70c792115623f5c604496d8ee6f71cd620181a46dba403063824194.js"
   integrity="sha256-YjVB9tcMeSEVYj9cYESW2O5vcc1iAYGkbbpAMGOCQZQ=">
 </script>
 <script async
-  src="/js/search-modal.877cece5b6bc789456f89fa1955ccfcd8a5acdb2179e7882e292a6caa49efe68.js"
+  src="http://localhost:1313/js/search-modal.877cece5b6bc789456f89fa1955ccfcd8a5acdb2179e7882e292a6caa49efe68.js"
   integrity="sha256-h3zs5ba8eJRW&#43;J&#43;hlVzPzYpazbIXnniC4pKmyqSe/mg=">
 </script>
 

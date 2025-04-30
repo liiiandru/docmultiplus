@@ -1,6 +1,6 @@
-title = "Multiplus Card"
+title = "Multiplus Card [DEV]"
 baseurl = "http://localhost/"
-canonifyURLs = false
+canonifyURLs = true
 disableAliases = true
 disableHugoGeneratorInject = true
 # disableKinds = ["taxonomy", "term"]

@@ -26,15 +26,15 @@
   url = "pt/exemplos/"
   weight = 40
 
-[[main]]
-  name = "Tutoriais"
-  url = "pt/tutoriais"
-  weight = 50
-
-[[main]]
-  name = "FAQ"
-  url = "pt/faq"
-  weight = 60
+# [[main]]
+#   name = "Tutoriais"
+#   url = "pt/tutoriais"
+#   weight = 50
+#
+# [[main]]
+#   name = "FAQ"
+#   url = "pt/faq"
+#   weight = 60
 
 
 [[social]]
@@ -62,10 +62,10 @@
 #"/docs/guides"
 
 
-[[footer]]
-  name = "Política de Privacidade"
-  url = "/privacy/"
-  weight = 10
+#[[footer]]
+#  name = "Política de Privacidade"
+#  url = "/privacy/"
+#  weight = 10
 
 # [[footer]]
 #   name = "Terms of Service"
