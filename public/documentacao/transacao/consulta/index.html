@@ -48,7 +48,7 @@
 <link rel="manifest" href="/manifest.webmanifest">
 
 <meta property="og:url" content="http://localhost:1313/documentacao/transacao/consulta/">
-  <meta property="og:site_name" content="Multiplus Card">
+  <meta property="og:site_name" content="Multiplus Card [DEV]">
   <meta property="og:title" content="Consulta de Transações">
   <meta property="og:description" content="Após realizar a autenticação, as transações podem ser consultadas com os parâmetros descritos a seguir:
 Parâmetro Obrigatório Descrição Cnpj Sim CNPJ do solicitante. Exemplo: 05625872000169. DataInicial Sim Data e hora de início do período de consulta. Formato: YYYY-MM-DDTHH:MM:SS. DataFinal Sim Data e hora final do período de consulta (máximo 30 dias entre DataInicial e DataFinal). PaginaNumero Não Número da página para paginação dos resultados. Exemplo: 1. QtdRegistro Não Quantidade de registros por página (máximo 100 registros). PDV Não Filtro por PDV. Pode enviar até 5 registros. Exemplo: PDV=1&amp;PDV=2. Adquirente Não Filtro por adquirente. Pode enviar até 5 registros. Exemplo: Adquirente=1&amp;Adquirente=2. Bandeira Não Filtro por bandeira. Pode enviar até 5 registros. Exemplo: Bandeira=1&amp;Bandeira=2. GrupoServico Não Filtro por grupo de serviço. Pode enviar até 5 registros. Exemplo: GrupoServico=1&amp;GrupoServico=2. Servico Não Filtro por serviço. Pode enviar até 5 registros. Exemplo: Servico=1&amp;Servico=2. Status Não Filtro por status. Pode enviar até 5 registros. Exemplo: Status=1&amp;Status=2. Autorizacao Não Filtro por autorização. Pode enviar até 5 registros. Exemplo: Autorizacao=1&amp;Autorizacao=2. NSU Não Filtro por NSU. Pode enviar até 5 registros. Exemplo: NSU=1&amp;NSU=2. RetornaSplit Não Define se o retorno deve incluir os dados de divisão (True para ativar). RetornaComprovante Não Define se o retorno deve incluir o comprovante no modelo padrão (True para ativar). Exemplo de Consulta de Transaçõescurl --location &#39;https://webapi.relatoriotef.com.br/transacao?cnpj=05625872000169&amp; DataInicial=2024-01-01T00:00:00&amp;DataFinal=2024-01-01T23:59:59&#39; \ --header &#39;Authorization: Bearer ••••••&#39;Em caso de sucesso os dados serão retornados da seguinte forma:">
@@ -112,7 +112,7 @@ Parâmetro Obrigatório Descrição Cnpj Sim CNPJ do solicitante. Exemplo: 05625
 <header class="navbar navbar-expand-lg">
   <div class="container-lg">
   
-    <a class="navbar-brand me-auto me-lg-3" href="/">Multiplus Card</a>
+    <a class="navbar-brand me-auto me-lg-3" href="/">Multiplus Card [DEV]</a>
 
     
     
@@ -158,7 +158,7 @@ Parâmetro Obrigatório Descrição Cnpj Sim CNPJ do solicitante. Exemplo: 05625
       <ul class="list-unstyled list-nested">
 
   <li>
-    <details open>
+    <details>
       <summary>DLL TefClientMC - Modo Interativo</summary>
       <ul class="list-unstyled list-nested">
 
@@ -194,7 +194,7 @@ Parâmetro Obrigatório Descrição Cnpj Sim CNPJ do solicitante. Exemplo: 05625
   </li>
 
   <li>
-    <details open>
+    <details>
       <summary>DLL TefClientMC - Modo Client (Com Tela)</summary>
       <ul class="list-unstyled list-nested">
 
@@ -218,7 +218,7 @@ Parâmetro Obrigatório Descrição Cnpj Sim CNPJ do solicitante. Exemplo: 05625
   </li>
 
   <li>
-    <details open>
+    <details>
       <summary>Tef Dial (Troca de Arquivos)</summary>
       <ul class="list-unstyled list-nested">
 
@@ -250,7 +250,7 @@ Parâmetro Obrigatório Descrição Cnpj Sim CNPJ do solicitante. Exemplo: 05625
   </li>
 
   <li>
-    <details open>
+    <details>
       <summary>Webservice</summary>
       <ul class="list-unstyled list-nested">
 
@@ -480,7 +480,7 @@ Parâmetro Obrigatório Descrição Cnpj Sim CNPJ do solicitante. Exemplo: 05625
     
     <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Multiplus Card</h5>
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Multiplus Card [DEV]</h5>
         <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -496,12 +496,6 @@ Parâmetro Obrigatório Descrição Cnpj Sim CNPJ do solicitante. Exemplo: 05625
               </li>
             <li class="nav-item">
                 <a class="nav-link" href="http://localhost:1313/pt/exemplos/">Exemplos</a>
-              </li>
-            <li class="nav-item">
-                <a class="nav-link" href="http://localhost:1313/pt/tutoriais">Tutoriais</a>
-              </li>
-            <li class="nav-item">
-                <a class="nav-link" href="http://localhost:1313/pt/faq">FAQ</a>
               </li>
             </ul>
 
@@ -638,7 +632,7 @@ Parâmetro Obrigatório Descrição Cnpj Sim CNPJ do solicitante. Exemplo: 05625
       <ul class="list-unstyled list-nested">
 
   <li>
-    <details open>
+    <details>
       <summary>DLL TefClientMC - Modo Interativo</summary>
       <ul class="list-unstyled list-nested">
 
@@ -674,7 +668,7 @@ Parâmetro Obrigatório Descrição Cnpj Sim CNPJ do solicitante. Exemplo: 05625
   </li>
 
   <li>
-    <details open>
+    <details>
       <summary>DLL TefClientMC - Modo Client (Com Tela)</summary>
       <ul class="list-unstyled list-nested">
 
@@ -698,7 +692,7 @@ Parâmetro Obrigatório Descrição Cnpj Sim CNPJ do solicitante. Exemplo: 05625
   </li>
 
   <li>
-    <details open>
+    <details>
       <summary>Tef Dial (Troca de Arquivos)</summary>
       <ul class="list-unstyled list-nested">
 
@@ -730,7 +724,7 @@ Parâmetro Obrigatório Descrição Cnpj Sim CNPJ do solicitante. Exemplo: 05625
   </li>
 
   <li>
-    <details open>
+    <details>
       <summary>Webservice</summary>
       <ul class="list-unstyled list-nested">
 
@@ -954,6 +948,15 @@ Parâmetro Obrigatório Descrição Cnpj Sim CNPJ do solicitante. Exemplo: 05625
 		</nav>
 		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
 		
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/documentacao/">Documentacao</a></li>
+<li class="breadcrumb-item"><a href="/documentacao/transacao/">Transação</a></li>
+<li class="breadcrumb-item active" aria-current="page">Consulta de Transações</li>
+					</ol>
+				</nav>
+			
 			<h1>Consulta de Transações</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
@@ -1238,7 +1241,7 @@ Parâmetro Obrigatório Descrição Cnpj Sim CNPJ do solicitante. Exemplo: 05625
     <div class="row">
       <div class="col-lg-8 text-center text-lg-start">
         <ul class="list-inline">
-          <li class="list-inline-item"><a class="text-muted" href="/privacy/">Política de Privacidade</a></li>
+          
         </ul>
       </div>
       <div class="col-lg-8 text-center text-lg-end">
@@ -1269,6 +1272,10 @@ Parâmetro Obrigatório Descrição Cnpj Sim CNPJ do solicitante. Exemplo: 05625
   src="/js/search-modal.877cece5b6bc789456f89fa1955ccfcd8a5acdb2179e7882e292a6caa49efe68.js"
   integrity="sha256-h3zs5ba8eJRW&#43;J&#43;hlVzPzYpazbIXnniC4pKmyqSe/mg=">
 </script>
+
+    <div class="d-inline-flex fixed-bottom-right pb-4 pe-4">
+  <button id="toTop" type="button" class="btn btn-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 15l6 -6l6 6"></path></svg></button>
+</div>
 
     
   </body>

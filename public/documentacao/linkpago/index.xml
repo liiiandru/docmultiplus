@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Link Pago on Multiplus Card</title>
+    <title>Link Pago on Multiplus Card [DEV]</title>
     <link>http://localhost:1313/documentacao/linkpago/</link>
-    <description>Recent content in Link Pago on Multiplus Card</description>
+    <description>Recent content in Link Pago on Multiplus Card [DEV]</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <copyright>Copyright (c) 2025 Multiplus Card</copyright>
@@ -49,7 +49,7 @@
       <link>http://localhost:1313/documentacao/linkpago/recorrencia/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
       <guid>http://localhost:1313/documentacao/linkpago/recorrencia/</guid>
-      <description></description>
+      <description>&lt;p&gt;A integração do Link Pago com suporte a recorrência permite a criação automática de planos de cobrança periódica. Essa funcionalidade facilita a automação da gestão de cobranças, proporcionando maior eficiência no controle de assinaturas e serviços recorrentes.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
