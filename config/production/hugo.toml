@@ -1,2 +1,2 @@
 # Overrides for production environment
-baseurl = "/documentacao/pt/"
+baseurl = "https://liiiandru.github.io/documentacao/"
