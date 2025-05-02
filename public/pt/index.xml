@@ -17,6 +17,20 @@
       <description>&lt;p&gt;Navegue pelo menu lateral para acessar a documentação específica de cada integração. Caso precise de suporte ou tenha dúvidas, entre em contato com nossa equipe técnica.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Exemplos de Integração</title>
+      <link>http://localhost:1313/pt/exemplos/apresentacao/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/exemplos/apresentacao/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Integre com a Multiplus Card de forma rápida e eficiente&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Bem-vindo à área de exemplos do &lt;strong&gt;Portal do Desenvolvedor da Multiplus Card&lt;/strong&gt;!&#xA;Este espaço foi criado para facilitar o processo de integração das nossas soluções com os seus sistemas, disponibilizando exemplos práticos e didáticos em diversas linguagens de programação.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Integração com TEF</title>
+      <link>http://localhost:1313/pt/exemplos/tef/exemplo_tef/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/exemplos/tef/exemplo_tef/</guid>
+      <description>&lt;p&gt;A seguir, são apresentados exemplos de integração com o TEF da Multiplus Card em diversas linguagens de programação. Estes exemplos têm como finalidade demonstrar o fluxo operacional das soluções, facilitar a realização de testes e servir como base para o desenvolvimento da integração com sistemas de automação comercial.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Introdução</title>
       <link>http://localhost:1313/pt/documentacao/tef/dll/transparente/introducao/</link>
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
@@ -64,20 +78,6 @@
       <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
       <guid>http://localhost:1313/pt/documentacao/tef/dll/transparente/solucaoproblemas/</guid>
       <description>&lt;p&gt;Algumas situações podem retornar erros já descritos em seções anteriores, a tabela a seguir tem o objetivo de agilizar a resolução destes erros.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Introdução</title>
-      <link>http://localhost:1313/pt/documentacao/tef/dll/comtela/introducao/</link>
-      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
-      <guid>http://localhost:1313/pt/documentacao/tef/dll/comtela/introducao/</guid>
-      <description>&lt;p&gt;A DLL &lt;strong&gt;TefClientMC&lt;/strong&gt; Modo Client oferece uma integração ágil e eficiente com o Gerenciador de Pagamentos da Multiplus Card, responsável por gerenciar todo o fluxo de pagamento. Ideal para automações que exigem uma implementação simples, rápida e confiável.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Instalação/Configuração</title>
-      <link>http://localhost:1313/pt/documentacao/tef/dll/comtela/configuracao/</link>
-      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
-      <guid>http://localhost:1313/pt/documentacao/tef/dll/comtela/configuracao/</guid>
-      <description>&lt;p&gt;Esta solução foi desenhada para funcionar no modelo &lt;em&gt;standalone&lt;/em&gt;, ou seja, todos os componentes requeridos devem estar instalados no mesmo dispositivo (disco C:\). As funções TEF somente podem ser executadas através de um equipamento que possua o Pinpad, conexão de banda larga e a solução instalada.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

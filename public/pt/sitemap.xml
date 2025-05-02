@@ -7,12 +7,27 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://localhost:1313/pt/exemplos/apresentacao/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/pt/documentacao/tef/</loc>
     <lastmod>2023-09-07T16:33:54+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://localhost:1313/pt/exemplos/tef/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/pt/documentacao/tef/dll/transparente/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/pt/exemplos/tef/exemplo_tef/</loc>
     <lastmod>2023-09-07T16:33:54+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -53,6 +68,16 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/pt/documentacao/tef/dll/comtela/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/pt/exemplos/pinpdv/</loc>
+    <lastmod>2023-09-07T16:33:54+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/pt/exemplos/pinpdv/exemplo_pinpdv/</loc>
     <lastmod>2023-09-07T16:33:54+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

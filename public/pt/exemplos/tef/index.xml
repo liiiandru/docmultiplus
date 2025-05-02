@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TEF on Multiplus Card [DEV]</title>
+    <link>http://localhost:1313/pt/exemplos/tef/</link>
+    <description>Recent content in TEF on Multiplus Card [DEV]</description>
+    <generator>Hugo</generator>
+    <language>pt</language>
+    <copyright>Copyright (c) 2025 Multiplus Card</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 16:33:54 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/pt/exemplos/tef/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Integração com TEF</title>
+      <link>http://localhost:1313/pt/exemplos/tef/exemplo_tef/</link>
+      <pubDate>Thu, 07 Sep 2023 16:33:54 +0200</pubDate>
+      <guid>http://localhost:1313/pt/exemplos/tef/exemplo_tef/</guid>
+      <description>&lt;p&gt;A seguir, são apresentados exemplos de integração com o TEF da Multiplus Card em diversas linguagens de programação. Estes exemplos têm como finalidade demonstrar o fluxo operacional das soluções, facilitar a realização de testes e servir como base para o desenvolvimento da integração com sistemas de automação comercial.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
