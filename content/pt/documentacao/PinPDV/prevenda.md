@@ -18,7 +18,7 @@ No PinPDV, serão exibidas todas as pré-vendas previamente cadastradas na API P
 
 ## Cadastro
 
-O cadastro de uma pré-venda é realizado no endpoint `/pre-venda` informando o ID da empresa. É obrigatório informar tipo de pagamento, parcela e produtos.
+O cadastro de uma pré-venda é realizado no endpoint `/pre-venda` informando o ID da empresa. É opcional informar tipo de pagamento, número de parcelas e produtos.
 
 ```bash{title="Cadastro de Pré-venda"}
 curl --request POST \
