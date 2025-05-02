@@ -121,7 +121,7 @@ import Index from 'flexsearch';
     document.querySelector('.search-text').focus();
   }
 
-  function buildIndex() {
+  /*function buildIndex() {
     document.querySelector('.search-loading').classList.remove('d-none');
     fetch("{{ site.LanguagePrefix }}/search-index.json")
       .then(function (response) {
@@ -132,7 +132,24 @@ import Index from 'flexsearch';
           index.add(item);
         });
       });
-  }
+  }*/
+function buildIndex() {
+  document.querySelector('.search-loading').classList.remove('d-none');
+
+  const base = document.querySelector('base')?.getAttribute('href') || '/';
+  const indexPath = `${base}search-index.json`;
+
+  fetch(indexPath)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      data.forEach(function (item) {
+        index.add(item);
+      });
+    });
+}
+
 
   buildIndex();
   enableUI();
