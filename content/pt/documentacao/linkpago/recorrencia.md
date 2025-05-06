@@ -25,3 +25,5 @@ A seguir é apresentado o fluxo básico de criação de recorrência.
   alt="Diagrama do fluxo de recorrência"
   caption="Diagrama do fluxo de recorrência"
 >}}
+
+Em breve mais detalhes.
